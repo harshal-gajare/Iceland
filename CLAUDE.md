@@ -35,7 +35,7 @@ Built in Claude.ai artifacts, where `localStorage`/`sessionStorage` are blocked 
 - CSS: flat selectors, tokens over literals; watch specificity collisions. Two live examples: the day-dimming rule needs `#icemap .route path.dim` because a bare `#icemap .dim` loses to `#icemap .route path`; and print token overrides must target `:root[data-theme="light"]`/`[data-theme="dark"]` too, or the theme attribute out-specifies them.
 - UI copy: sentence case, plain verbs, field-log tone. Mono face for anything data-like.
 - `localStorage` keys are namespaced `iceland26.*`.
-- Booked-stay facts, flight times, insurance list and booking references are ground truth — never alter without explicit instruction. Current references: flights **CVYKHM** (Saga Club 4996508872), rental **Blue Car #Z04F2O**, whale watch **Gentle Giants GGHI-100410953**, Katla ice cave **Troll Expeditions TRO-T141847549** (order TRO-100452964), Jökulsárlón Zodiac **JOK-00049937**.
+- Booked-stay facts, flight times, insurance list and booking references are ground truth — never alter without explicit instruction. Current references: flights **CVYKHM** (Saga Club 4996508872), rental **Blue Car #Z04F2O**, whale watch **Gentle Giants GGHI-100410953**, Katla ice cave **Troll Expeditions TRO-T141847549** (order TRO-100452964), Jökulsárlón Zodiac **JOK-00049937**, Höfn Inn Guesthouse **Booking.com 6447.009.362** (PIN 9919, Plan A's night 4 only — Plan B sleeps at the lagoon).
 - Never re-suggest **Sky Lagoon**: its strict 12+ rule excludes the 11-year-old. The Blue Lagoon backup is Laugardalslaug.
 
 ## Backlog
