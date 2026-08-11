@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1422">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <title>Iceland · Sep 19–29, 2026 — Ring Road Field Plan</title>
+<script>
+/* theme before first paint — stored choice wins, else system preference */
+(function(){
+  let t = null;
+  try{ t = localStorage.getItem("iceland26.theme"); }catch(e){}
+  if(t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+})();
+</script>
 <style>
   :root{
     --night:#0a1422;
@@ -13,12 +26,52 @@
     --ice:#e9f2f8;
     --fog:#8ca3b8;
     --ember:#ffb661;
+    --ember-ink:#ffd9a3;
     --d1:#45e0a2; --d2:#2fd4c0; --d3:#3cc9e8; --d4:#57aef5; --d5:#7b96f7;
     --d6:#9b85f5; --d7:#b877ef; --d8:#d26bdd; --d9:#e967bc; --d10:#f26e93;
+    --map-1:#0c1a2e; --map-2:#0a1523;
+    --coast-fill:#12233a; --coast-stroke:#2c4664;
+    --glacier:#dcecf7; --glacier-o:.16;
+    --tip-bg:#0c1626;
+    --dotline:#1b2c42;
+    --dash:#2a3f5b;
+    --track:#152539;
+    --faint:#5b7186;
+    --veil:rgba(255,255,255,.03);
+    --rail-bg:rgba(10,20,34,.85);
+    --aurora-ink:#c3d4e2;
+    --shadow:rgba(0,0,0,.5);
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
   }
+  :root[data-theme="light"]{
+    --night:#f6f9fc;
+    --panel:#ffffff;
+    --panel-2:#fdfeff;
+    --line:#d3dee9;
+    --ice:#16283a;
+    --fog:#5b7186;
+    --ember:#c07a1a;
+    --ember-ink:#8a5a12;
+    --d1:#0e9c67; --d2:#0b9186; --d3:#0d86ad; --d4:#1e6cc0; --d5:#4a5fd3;
+    --d6:#6e4fcd; --d7:#8a41ba; --d8:#a833a0; --d9:#bf2a84; --d10:#cc3a62;
+    --map-1:#e8f1f8; --map-2:#dfeaf4;
+    --coast-fill:#cfdfec; --coast-stroke:#93aec6;
+    --glacier:#ffffff; --glacier-o:.75;
+    --tip-bg:#ffffff;
+    --dotline:#dbe5ee;
+    --dash:#b8c9d9;
+    --track:#dde7f0;
+    --faint:#7c93a8;
+    --veil:rgba(22,40,58,.04);
+    --rail-bg:rgba(246,249,252,.85);
+    --aurora-ink:#3c5468;
+    --shadow:rgba(30,60,90,.18);
+  }
+  :root[data-theme="light"] body{background-image:
+    radial-gradient(1200px 500px at 75% -10%, rgba(14,156,103,.06), transparent 60%),
+    radial-gradient(900px 420px at 15% -5%, rgba(74,95,211,.06), transparent 60%)}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--night);color:var(--ice);font-family:var(--sans);line-height:1.55;
@@ -64,30 +117,33 @@
   .ghostbtn{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);
     background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
   .ghostbtn:hover{color:var(--ice);border-color:var(--fog)}
-  #mapbox{position:relative;background:linear-gradient(180deg,#0c1a2e, #0a1523 70%);border:1px solid var(--line);border-radius:16px;padding:8px;overflow:hidden}
+  .topright{display:flex;gap:16px;align-items:center}
+  .themebtn{padding:5px 12px}
+  #mapbox{position:relative;background:linear-gradient(180deg,var(--map-1), var(--map-2) 70%);border:1px solid var(--line);border-radius:16px;padding:8px;overflow:hidden}
   #icemap{width:100%;height:auto;display:block}
-  #tip{position:absolute;pointer-events:none;background:#0c1626;border:1px solid var(--line);border-radius:10px;
-    padding:8px 11px;font-size:12.5px;max-width:240px;opacity:0;transform:translateY(4px);transition:opacity .12s;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  #tip{position:absolute;pointer-events:none;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;
+    padding:8px 11px;font-size:12.5px;max-width:240px;opacity:0;transform:translateY(4px);transition:opacity .12s;z-index:5;box-shadow:0 10px 30px var(--shadow)}
   #tip .tday{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
   #tip .tnote{color:var(--fog);font-size:11.5px;margin-top:2px}
   .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)}
   .legend span{display:inline-flex;align-items:center;gap:7px}
   .lk{width:9px;height:9px;border-radius:50%;display:inline-block}
   .lk.ring{background:transparent;border:2px solid var(--fog)}
-  .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#5b7186;text-transform:uppercase}
+  .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
 
   /* svg pieces */
-  #icemap .coast{fill:#12233a;stroke:#2c4664;stroke-width:1.4}
-  #icemap .glacier{fill:#dcecf7;opacity:.16}
+  #icemap .coast{fill:var(--coast-fill);stroke:var(--coast-stroke);stroke-width:1.4}
+  #icemap .glacier{fill:var(--glacier);opacity:var(--glacier-o)}
   #icemap .route path{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:.95;
     stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s ease forwards}
   @keyframes draw{to{stroke-dashoffset:0}}
   #icemap .stop{cursor:pointer;transition:opacity .25s}
   #icemap .stop circle{transition:r .12s}
   #icemap .stop:hover circle.core{r:7}
-  #icemap .base circle.ring{fill:#0a1422;stroke-width:2.5}
+  #icemap .base circle.ring{fill:var(--night);stroke-width:2.5}
   #icemap .base text{font-family:var(--mono);font-size:10px;fill:var(--ice);text-anchor:middle;dominant-baseline:central}
-  #icemap g.dim{opacity:.1;pointer-events:none}
+  #icemap g.dim,
+  #icemap .route path.dim{opacity:.1;pointer-events:none}
   #icemap .startpulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-in-out infinite}
   @keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.9);opacity:0}}
   @media (prefers-reduced-motion:reduce){
@@ -97,7 +153,7 @@
   }
 
   /* ---------- day rail ---------- */
-  .rail{position:sticky;top:0;z-index:20;background:rgba(10,20,34,.85);backdrop-filter:blur(10px);
+  .rail{position:sticky;top:0;z-index:20;background:var(--rail-bg);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);margin-top:30px}
   .rail .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
   .rail .wrap::-webkit-scrollbar{display:none}
@@ -138,7 +194,7 @@
   details[open] .chev{transform:rotate(-135deg)}
   .dbody{padding:4px 18px 20px 18px;border-top:1px dashed var(--line)}
   ul.stops{list-style:none;margin-top:14px}
-  ul.stops li{display:flex;gap:13px;padding:9px 0;border-bottom:1px dotted #1b2c42}
+  ul.stops li{display:flex;gap:13px;padding:9px 0;border-bottom:1px dotted var(--dotline)}
   ul.stops li:last-child{border-bottom:0}
   .sdot{margin-top:6px;width:9px;height:9px;border-radius:50%;background:var(--c);flex:0 0 auto;box-shadow:0 0 8px color-mix(in srgb, var(--c) 60%, transparent)}
   li.opt .sdot{background:transparent;border:1.5px solid var(--fog);box-shadow:none}
@@ -149,7 +205,7 @@
   .chip.book{color:#1c1206;background:var(--ember)}
   .chip.soak{color:#062026;background:#59d7e8}
   .chip.opt{color:var(--fog);border:1px solid var(--line)}
-  .stay{margin-top:16px;padding:13px 15px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px}
+  .stay{margin-top:16px;padding:13px 15px;background:var(--veil);border:1px solid var(--line);border-radius:10px}
   .stay b{font-family:var(--serif);font-size:16px;font-weight:500}
   .hotels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .hotel{font-size:12px;color:var(--fog);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
@@ -157,9 +213,9 @@
   .depart .dnum{font-size:22px;color:var(--fog)}
 
   .stime{font-family:var(--mono);font-size:10.5px;color:var(--fog);min-width:78px;text-align:right;padding-top:4px;flex:0 0 auto}
-  ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:#5b7186}
+  ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:var(--faint)}
   .vdash{width:9px;display:flex;justify-content:center;flex:0 0 auto}
-  .vdash::before{content:"";border-left:1px dashed #2a3f5b;height:15px}
+  .vdash::before{content:"";border-left:1px dashed var(--dash);height:15px}
   .hoptext{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase}
   .arr{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-left:8px}
 
@@ -173,21 +229,23 @@
   .mlinks a:hover{color:var(--ice);border-color:var(--fog)}
   a.hotel{text-decoration:none;cursor:pointer}
   a.hotel:hover{color:var(--ice);border-color:var(--fog)}
-  .daynote{margin-top:12px;font-size:13px;color:#ffd9a3;background:rgba(255,182,97,.07);border:1px dashed rgba(255,182,97,.35);border-radius:10px;padding:10px 13px;line-height:1.55}
-  .maphint{font-family:var(--mono);font-size:9px;color:#5b7186;margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
+  .daynote{margin-top:12px;font-size:13px;color:var(--ember-ink);background:rgba(255,182,97,.07);border:1px dashed rgba(255,182,97,.35);border-radius:10px;padding:10px 13px;line-height:1.55}
+  .maphint{font-family:var(--mono);font-size:9px;color:var(--faint);margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
+  .dayfoot{margin-top:12px}
+  .dayfoot .ghostbtn{font-size:10px;padding:6px 12px}
 
   /* ---------- bookings ---------- */
-  .progressbar{height:8px;background:#152539;border-radius:99px;overflow:hidden;margin:14px 0 6px}
+  .progressbar{height:8px;background:var(--track);border-radius:99px;overflow:hidden;margin:14px 0 6px}
   .progressbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--d1),var(--ember));transition:width .3s}
   .progresslabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--fog);margin-bottom:16px}
   ul.checks{list-style:none}
-  ul.checks li{display:flex;gap:14px;align-items:flex-start;padding:13px 4px;border-bottom:1px dotted #1b2c42}
+  ul.checks li{display:flex;gap:14px;align-items:flex-start;padding:13px 4px;border-bottom:1px dotted var(--dotline)}
   ul.checks input{width:18px;height:18px;margin-top:3px;accent-color:var(--ember);cursor:pointer;flex:0 0 auto}
   ul.checks label{cursor:pointer;flex:1}
   ul.checks .bidx{font-family:var(--mono);font-size:10.5px;color:var(--fog);letter-spacing:.1em;margin-right:8px}
   ul.checks .bmeta{display:block;color:var(--fog);font-size:12.5px;margin-top:1px}
   ul.checks li.done label{opacity:.45;text-decoration:line-through;text-decoration-color:var(--fog)}
-  .memnote{margin-top:12px;font-size:12px;color:#5b7186}
+  .memnote{margin-top:12px;font-size:12px;color:var(--faint)}
 
   /* ---------- logistics ---------- */
   .lockgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
@@ -195,7 +253,7 @@
   .lockcard{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:20px 20px 16px}
   .ltitle{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:12px}
   .lref{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fog);margin-top:5px;text-transform:uppercase}
-  .leg{padding:11px 0;border-top:1px dotted #1b2c42}
+  .leg{padding:11px 0;border-top:1px dotted var(--dotline)}
   .lday{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
   .lroute{font-size:14.5px;margin-top:6px}
   .lroute b{font-family:var(--mono);font-size:13.5px}
@@ -205,7 +263,7 @@
   .ins{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
   .inschip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid rgba(69,224,162,.4);border-radius:999px;padding:3px 10px;color:var(--ice)}
   .lnote{margin-top:12px;font-size:13px;color:var(--fog);line-height:1.55}
-  .lnote b{color:#ffd9a3}
+  .lnote b{color:var(--ember-ink)}
 
   /* ---------- aurora ---------- */
   .aurora{position:relative;border-radius:18px;padding:28px 26px;border:1px solid transparent;
@@ -215,8 +273,13 @@
       radial-gradient(600px 220px at 20% 0%, rgba(69,224,162,.16), transparent 60%),
       radial-gradient(600px 220px at 80% 10%, rgba(155,133,245,.14), transparent 60%);pointer-events:none}
   .aurora h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:6px;position:relative}
-  .aurora p, .aurora ol{position:relative;color:#c3d4e2;font-size:14.5px;max-width:70ch}
+  .aurora p, .aurora ol{position:relative;color:var(--aurora-ink);font-size:14.5px;max-width:70ch}
   .aurora ol{margin:14px 0 0 18px;display:grid;gap:9px}
+  /* no `display` here, ever — [hidden]'s display:none is a UA default that any
+     author display would defeat, leaving an empty strip up when the fetch fails */
+  .kpline{position:relative;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ice);margin-top:14px}
+  .kpline a{color:var(--fog)}
+  .kpline a:hover{color:var(--ice)}
   .aurora .nights{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
   .night-chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ice)}
 
@@ -225,15 +288,15 @@
   @media(max-width:760px){.watchgrid{grid-template-columns:1fr}}
   .wtitle{font-family:var(--serif);font-weight:500;font-size:19px;padding-bottom:9px;border-bottom:1px solid var(--line)}
   .wwhen{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-left:8px}
-  .res{padding:12px 0;border-bottom:1px dotted #1b2c42}
+  .res{padding:12px 0;border-bottom:1px dotted var(--dotline)}
   .res:last-of-type{border-bottom:0}
   .rname{font-family:var(--mono);font-size:13px;color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
   span.rname{text-decoration:none}
   .ralt{font-family:var(--mono);font-size:10px;color:var(--fog)}
   .rdesc{color:var(--fog);font-size:13.5px;margin-top:4px;line-height:1.55}
-  .rdesc b,.rdesc i{color:#c3d4e2}
+  .rdesc b,.rdesc i{color:var(--aurora-ink)}
   .moonnote{margin-top:10px;font-size:12.5px;color:var(--fog);border:1px dashed var(--line);border-radius:10px;padding:10px 13px}
-  .routine{margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#5b7186;text-transform:uppercase;line-height:1.9}
+  .routine{margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;line-height:1.9}
 
   /* ---------- notes ---------- */
   details.note{border-bottom:1px solid var(--line)}
@@ -244,13 +307,16 @@
   details.note .nbody b{color:var(--ice)}
 
   footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 48px;color:var(--fog);font-size:13px}
-  footer .fx{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:#5b7186}
+  footer .fx{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:var(--faint)}
 
   /* ---------- print ---------- */
   @media print{
     body{background:#fff;color:#111}
-    :root{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff}
-    .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.top nav{display:none!important}
+    /* all three selectors, or [data-theme] out-specifies the bare :root and the
+       light palette leaks into print */
+    :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
+    .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.maphint,.top nav,
+    .planswitch,.mlinks,.kpline,.dayfoot{display:none!important}
     details.day{break-inside:avoid}
   }
   @media (max-width:720px){
@@ -265,9 +331,12 @@
 <div class="wrap">
   <header class="top">
     <div class="wordmark">Iceland, by road <span>KEF ⇄ KEF</span></div>
-    <nav>
-      <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Bookings</a><a href="#logistics">Logistics</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
-    </nav>
+    <div class="topright">
+      <nav>
+        <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Bookings</a><a href="#logistics">Logistics</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
+      </nav>
+      <button class="ghostbtn themebtn" id="themeToggle" aria-label="Switch to light theme">◐ light</button>
+    </div>
   </header>
 
   <section class="hero">
@@ -276,7 +345,7 @@
     <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — in two builds: Plan A runs the classic coast, Plan B climbs into the highlands. Same bones, same booked beds, one switch. Built for a 10:00 landing and a 10:00 departure.</p>
     <div class="statline">
       <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
-      <span id="st-flex"><b>2</b> booked anchors</span><span><b id="st-soak">4</b> possible soaks</span><span><b>$145–255</b> a night, sleeps 3</span><span><b>3 of 10</b> nights booked</span>
+      <span id="st-flex"><b>2</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b>3 of 10</b> nights booked</span>
     </div>
     <div class="count"><i></i><span id="countdown">Counting down…</span></div>
   </section>
@@ -298,8 +367,8 @@
       <div id="tip"></div>
     </div>
     <div class="legend">
-      <span><i class="lk" style="background:var(--ember)"></i> booked anchor</span>
-      <span><i class="lk" style="background:#59d7e8"></i> soak</span>
+      <span><i class="lk" style="background:var(--ember)"></i> reserve ahead</span>
+      <span><i class="lk" style="background:#59d7e8"></i> walk-in soak</span>
       <span><i class="lk ring"></i> optional</span>
       <span><i class="lk" style="background:var(--fog);border-radius:2px"></i> numbered ring = overnight base</span>
     </div>
@@ -324,7 +393,7 @@
     <div class="progressbar"><i id="pbar"></i></div>
     <p class="progresslabel" id="plabel">0 of 9 booked</p>
     <ul class="checks" id="checks"></ul>
-    <p class="memnote">Progress lives on this page only — it resets if you reload.</p>
+    <p class="memnote">Progress saves in this browser, tracked separately for each plan — it survives reloads and works offline.</p>
   </section>
 
   <section class="block" id="logistics">
@@ -368,6 +437,7 @@
         <li>Phone night mode, 3–10 seconds, propped on the car roof — it catches more color than your eyes do. A mini tripod earns its space in the bag.</li>
         <li>Push alerts: <b>Hello Aurora</b> (Icelandic) or My Aurora Forecast.</li>
       </ol>
+      <p class="kpline" id="kpline" hidden></p>
       <div class="nights">
         <span class="night-chip">Best dark skies →</span>
         <span class="night-chip" style="border-color:var(--d2)">N2 · Seljalandsfoss</span>
@@ -643,7 +713,11 @@ const PLANS = {
    ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
    ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
   ],
-  stats:{km:"~2,300", stops:0, soaks:4, flex:"<b>2</b> booked anchors"}
+  /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 6 amber, 2 teal.
+     These stat numbers are TRIP FACTS from docs/itinerary.md: 2 anchor tours
+     (Katla + whales) and 4 soak options, two of which are tagged `book` because
+     they need reserving. Keep the two vocabularies disjoint. */
+  stats:{km:"~2,300", stops:0, soaks:4, flex:"<b>2</b> anchor tours"}
  },
  highland: {
   label:"Plan B · Highland edition",
@@ -666,7 +740,14 @@ const PLANS = {
 PLANS.classic.stats.stops = PLANS.classic.days.reduce((a,d)=>a+d.stops.length,0);
 PLANS.highland.stats.stops = PLANS.highland.days.reduce((a,d)=>a+d.stops.length,0);
 
+/* Restore the plan BEFORE the DAYS binding below — DAYS is evaluated once at
+   top level, so restoring later would leave every builder on classic data. */
+const PKEY = "iceland26.plan";
 let planKey = "classic";
+try{
+  const saved = localStorage.getItem(PKEY);
+  if(saved && Object.prototype.hasOwnProperty.call(PLANS, saved)) planKey = saved;
+}catch(e){}
 let DAYS = PLANS[planKey].days;
 
 /* Simplified clockwise coastline (lat, lon) */
@@ -696,7 +777,10 @@ const GLACIERS = [
 const B = {latMin:63.15, latMax:66.75, lonMin:-24.9, lonMax:-13.2};
 const W = 1000, H = Math.round(W * (B.latMax-B.latMin) / ((B.lonMax-B.lonMin)*Math.cos(65*Math.PI/180)));
 const px = ll => [ (ll[1]-B.lonMin)/(B.lonMax-B.lonMin)*W, (B.latMax-ll[0])/(B.latMax-B.latMin)*H ];
-const dayColor = n => getComputedStyle(document.documentElement).getPropertyValue("--d"+n).trim();
+/* CSS var, not a resolved color — keeps the map live across theme flips.
+   Must be assigned via .style.*, never as an SVG presentation attribute:
+   stroke="var(--d3)" is invalid as an attribute and falls back to initial. */
+const dayVar = n => `var(--d${n})`;
 
 function smoothPath(pts, close){
   if(pts.length<3) return "M"+pts.map(p=>p.join(",")).join("L");
@@ -724,7 +808,9 @@ function buildMapStatic(){
     svg.appendChild(el("ellipse",{cx:c[0],cy:c[1],rx:g[2]/(B.lonMax-B.lonMin)*W,ry:g[3]/(B.latMax-B.latMin)*H,class:"glacier"}));
   });
   const kp = px(KEF);
-  svg.appendChild(el("circle",{cx:kp[0],cy:kp[1],r:9,fill:"none",stroke:"var(--ember)","stroke-width":1.5,class:"startpulse"}));
+  const pulse = el("circle",{cx:kp[0],cy:kp[1],r:9,fill:"none","stroke-width":1.5,class:"startpulse"});
+  pulse.style.stroke = "var(--ember)";
+  svg.appendChild(pulse);
 }
 
 function buildMapDynamic(){
@@ -735,7 +821,8 @@ function buildMapDynamic(){
   DAYS.forEach((d,i)=>{
     const prev = i===0 ? KEF : DAYS[i-1].baseLL;
     const pts = [prev, ...d.stops.map(s=>s.ll), d.baseLL].map(px);
-    const p = el("path",{d:smoothPath(pts,false), stroke:dayColor(d.n), pathLength:"1", "data-day":d.n});
+    const p = el("path",{d:smoothPath(pts,false), pathLength:"1", "data-day":d.n});
+    p.style.stroke = dayVar(d.n);
     p.style.animationDelay = (i*0.12)+"s";
     routes.appendChild(p);
   });
@@ -745,11 +832,13 @@ function buildMapDynamic(){
       const c = px(s.ll);
       const grp = el("g",{class:"stop"+(s.tag==="opt"?" opt":""),tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
       grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"}));
-      let fill = dayColor(d.n), stroke="none", sw=0;
+      let fill = dayVar(d.n), stroke="none", sw=0;
       if(s.tag==="book"){fill="var(--ember)";}
       else if(s.tag==="soak"){fill="#59d7e8";}
-      else if(s.tag==="opt"){fill="transparent";stroke=dayColor(d.n);sw=1.6;}
-      grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:5,fill:fill,stroke:stroke,"stroke-width":sw,class:"core"}));
+      else if(s.tag==="opt"){fill="transparent";stroke=dayVar(d.n);sw=1.6;}
+      const core = el("circle",{cx:c[0],cy:c[1],r:5,"stroke-width":sw,class:"core"});
+      core.style.fill = fill; core.style.stroke = stroke;
+      grp.appendChild(core);
       grp.addEventListener("pointerenter",e=>showTip(e,s,d));
       grp.addEventListener("pointermove",moveTip);
       grp.addEventListener("pointerleave",hideTip);
@@ -759,7 +848,9 @@ function buildMapDynamic(){
     });
     const bc = px(d.baseLL);
     const base = el("g",{class:"base"});
-    base.appendChild(el("circle",{cx:bc[0],cy:bc[1],r:10,class:"ring",stroke:dayColor(d.n)}));
+    const ring = el("circle",{cx:bc[0],cy:bc[1],r:10,class:"ring"});
+    ring.style.stroke = dayVar(d.n);
+    base.appendChild(ring);
     const t = el("text",{x:bc[0],y:bc[1]+0.5}); t.textContent=d.n; base.appendChild(t);
     g.appendChild(base);
     dyn.appendChild(g);
@@ -770,7 +861,7 @@ function buildMapDynamic(){
 /* tooltip */
 const tip = document.getElementById("tip"), mapbox = document.getElementById("mapbox");
 function showTip(e,s,d){
-  tip.innerHTML = `<div class="tday" style="color:${dayColor(d.n)}">Day ${d.n} · ${d.dow} ${d.date}${s.time?" · "+s.time:""}</div><div><b>${s.name}</b></div><div class="tnote">${s.note||""}</div>`;
+  tip.innerHTML = `<div class="tday" style="color:${dayVar(d.n)}">Day ${d.n} · ${d.dow} ${d.date}${s.time?" · "+s.time:""}</div><div><b>${s.name}</b></div><div class="tnote">${s.note||""}</div>`;
   tip.style.opacity=1; moveTip(e);
 }
 function moveTip(e){
@@ -842,13 +933,15 @@ function buildCards(){
             </li>`).join("")}
         </ul>
         ${stayBox(d)}
+        <div class="dayfoot"><button class="ghostbtn ics" data-day="${d.n}">Add day to calendar · .ics</button></div>
       </div>
     </details>`).join("");
+  cards.querySelectorAll(".ics").forEach(b=>b.addEventListener("click",()=>downloadICS(Number(b.dataset.day))));
 }
 
 function buildRail(){
   let html = `<button class="pill all on" data-day="all">All days</button>`;
-  html += PLANS.classic.days.map(d=>`<button class="pill" data-day="${d.n}" style="--c:var(--d${d.n})"><i></i>${d.n} · ${d.dow} ${d.date.split(" ")[1]}</button>`).join("");
+  html += DAYS.map(d=>`<button class="pill" data-day="${d.n}" style="--c:var(--d${d.n})"><i></i>${d.n} · ${d.dow} ${d.date.split(" ")[1]}</button>`).join("");
   rail.innerHTML = html;
   rail.querySelectorAll(".pill").forEach(p=>{
     p.addEventListener("click",()=>{
@@ -882,7 +975,20 @@ function selectDay(n, scroll){
 
 /* ================= BOOKING TRACKER ================= */
 const checks = document.getElementById("checks");
-const bkState = { classic:new Set(), highland:new Set() };
+/* Ticks are stored per plan as a JSON array of indices. NOTE: the payload is
+   positional, so reordering a plan's `bookings` array mis-restores old ticks. */
+const bkKey = k => "iceland26.bk." + k;
+function loadBk(k){
+  try{
+    const n = PLANS[k].bookings.length;   // clamp per plan — classic 9, highland 8
+    const a = JSON.parse(localStorage.getItem(bkKey(k)) || "[]");
+    return new Set(Array.isArray(a) ? a.filter(i=>Number.isInteger(i) && i>=0 && i<n) : []);
+  }catch(e){ return new Set(); }
+}
+function saveBk(k){
+  try{ localStorage.setItem(bkKey(k), JSON.stringify([...bkState[k]].sort((a,b)=>a-b))); }catch(e){}
+}
+const bkState = { classic:loadBk("classic"), highland:loadBk("highland") };
 function buildChecks(){
   const items = PLANS[planKey].bookings;
   checks.innerHTML = items.map((b,i)=>`
@@ -891,9 +997,13 @@ function buildChecks(){
       <label for="c-${i}"><span class="bidx">${String(i+1).padStart(2,"0")}</span><b>${b[0]}</b>
       <span class="bmeta">${b[1]}</span></label>
     </li>`).join("");
+  /* Save only from this user-initiated handler. Saving inside updateProgress()
+     would fire during switchPlan(), when planKey is already the new plan but
+     #checks still holds the old plan's DOM — writing A's ticks into B's key. */
   checks.querySelectorAll("input").forEach((inp,i)=>inp.addEventListener("change",()=>{
     if(inp.checked) bkState[planKey].add(i); else bkState[planKey].delete(i);
     updateProgress();
+    saveBk(planKey);
   }));
   updateProgress();
 }
@@ -923,9 +1033,10 @@ function switchPlan(key, userAction){
   document.getElementById("st-stops").textContent = s.stops;
   document.getElementById("st-soak").textContent = s.soaks;
   document.getElementById("st-flex").innerHTML = s.flex;
-  buildMapDynamic(); buildCards(); buildUpgrades(); buildChecks();
+  buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildChecks();
   selectDay(null,false);
   if(!userAction) document.getElementById("day-1").open = true;
+  if(userAction){ try{ localStorage.setItem(PKEY, key); }catch(e){} }
 }
 
 /* ================= COUNTDOWN ================= */
@@ -945,16 +1056,136 @@ function countdown(){
   }
 }
 
+/* ================= THEME ================= */
+const themeBtn = document.getElementById("themeToggle");
+function applyTheme(t, save){
+  document.documentElement.dataset.theme = t;
+  if(save){ try{ localStorage.setItem("iceland26.theme", t); }catch(e){} }
+  const next = t==="dark" ? "light" : "dark";
+  themeBtn.textContent = "◐ " + next;
+  themeBtn.setAttribute("aria-label", "Switch to "+next+" theme");
+  const m = document.querySelector('meta[name="theme-color"]');
+  if(m) m.content = t==="dark" ? "#0a1422" : "#f6f9fc";
+}
+themeBtn.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark", true));
+applyTheme(document.documentElement.dataset.theme || "dark", false);
+
+/* ================= ICS EXPORT ================= */
+function icsEscape(s){return s.replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n")}
+function icsFold(l){ // fold at 73 octets, never splitting a character
+  const enc = new TextEncoder();
+  let out="", cur="", len=0;
+  for(const ch of l){
+    const b = enc.encode(ch).length;
+    if(len+b>73){ out+=cur+"\r\n "; cur=ch; len=b; }
+    else{ cur+=ch; len+=b; }
+  }
+  return out+cur;
+}
+/* Iceland is UTC+0 year-round with no DST — one STANDARD block, no rules.
+   Emitted inline rather than trusting a bare TZID, which Outlook floats. */
+const VTZ = ["BEGIN:VTIMEZONE","TZID:Atlantic/Reykjavik","BEGIN:STANDARD",
+  "DTSTART:19700101T000000","TZOFFSETFROM:+0000","TZOFFSETTO:+0000","TZNAME:GMT",
+  "END:STANDARD","END:VTIMEZONE"];
+/* Days identical in both plans are the same event: they share a UID so importing
+   both plans dedupes them. Divergent days get plan-scoped UIDs, or Plan B would
+   silently overwrite Plan A (same UID = update, RFC 5545). Compared by CONTENT,
+   not reference, so a future deep-copy degrades to duplicates — never to a
+   silent overwrite. */
+const SHARED_DAYS = new Set(
+  PLANS.classic.days.filter(a => PLANS.highland.days.some(b =>
+    b.n===a.n && JSON.stringify(b)===JSON.stringify(a))).map(d=>d.n)
+);
+const MON = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+const ymdUTC = t => new Date(t).toISOString().slice(0,10).replace(/-/g,"");
+function icsDate(d){                                   // "Sep 19" -> "20260919"
+  const p = String(d.date||"").trim().split(/\s+/), m = MON[p[0]], dom = parseInt(p[1],10);
+  if(m!==undefined && dom>0) return `2026${String(m+1).padStart(2,"0")}${String(dom).padStart(2,"0")}`;
+  return ymdUTC(Date.UTC(2026,8,18+d.n));              // fallback: day n = Sep 18+n
+}
+const icsNext = y => ymdUTC(Date.UTC(+y.slice(0,4), +y.slice(4,6)-1, +y.slice(6,8)+1));
+const icsTime = s => { const m=/(\d{1,2}):(\d{2})/.exec(s||""); return m ? String(m[1]).padStart(2,"0")+m[2]+"00" : null; };
+
+function dayICS(d, k){
+  const date = icsDate(d);
+  const t0 = icsTime(d.depart), t1 = icsTime(d.arrive);
+  const timed = !!(t0 && t1 && t1 > t0);               // zero-padded, so lexical == numeric
+  const shared = SHARED_DAYS.has(d.n);
+  const stamp = new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z";
+  const line = s => "• " + (s.time?s.time+"  ":"") + s.name + (s.tag?" ["+s.tag+"]":"")
+    + (s.drive?" (+"+s.drive+")":"") + (s.note?" — "+s.note:"");
+  /* pure reader — days 1/6/8/9/10 are the SAME objects in both plans, so no
+     sorting, normalizing or memoizing onto `d` is allowed here. */
+  const beds = Array.isArray(d.hotels) ? "Beds: "+d.hotels.join(", ")
+    : d.stay ? "Booked: "+d.stay.name+" — "+d.stay.addr+" ("+d.stay.status+")" : "";
+  const desc = [d.note||"", d.stops.map(line).join("\n"), "Overnight: "+d.base, beds]
+    .filter(Boolean).join("\n");
+  const when = timed
+    ? ["DTSTART;TZID=Atlantic/Reykjavik:"+date+"T"+t0,
+       "DTEND;TZID=Atlantic/Reykjavik:"+date+"T"+t1]
+    : ["DTSTART;VALUE=DATE:"+date, "DTEND;VALUE=DATE:"+icsNext(date)];
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//iceland26//trip planner//EN",
+    "CALSCALE:GREGORIAN","METHOD:PUBLISH",
+    ...(timed?VTZ:[]),
+    "BEGIN:VEVENT",
+    "UID:iceland26-"+(shared?"":k+"-")+"day-"+d.n+"@harshalgajare.com",
+    "SEQUENCE:1",
+    "DTSTAMP:"+stamp,
+    ...when,
+    icsFold("SUMMARY:"+icsEscape(shared ? `Iceland day ${d.n} — ${d.title}`
+                                        : `Iceland · ${PLANS[k].label} day ${d.n} — ${d.title}`)),
+    icsFold("LOCATION:"+icsEscape(d.stay ? d.stay.addr : d.base+", Iceland")),
+    icsFold("DESCRIPTION:"+icsEscape(desc)),
+    icsFold("CATEGORIES:"+["Iceland 2026"].concat(shared?[]:[PLANS[k].label]).map(icsEscape).join(",")),
+    "TRANSP:TRANSPARENT","X-MICROSOFT-CDO-BUSYSTATUS:FREE",
+    "END:VEVENT","END:VCALENDAR"].join("\r\n")+"\r\n";
+}
+function downloadICS(n){
+  const d = DAYS.find(x=>x.n===n); if(!d) return;
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([dayICS(d, planKey)],{type:"text/calendar;charset=utf-8"}));
+  a.download = "iceland-"+planKey+"-day-"+String(n).padStart(2,"0")+".ics";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+}
+
+/* ================= LIVE KP (NOAA — vedur.is blocks CORS) ================= */
+async function loadKp(){
+  const box = document.getElementById("kpline");
+  try{
+    const opts = typeof AbortSignal!=="undefined" && AbortSignal.timeout ? {signal:AbortSignal.timeout(8000)} : {};
+    const r = await fetch("https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json", opts);
+    if(!r.ok) throw 0;
+    const rows = (await r.json()).filter(x=>x && typeof x.kp==="number");
+    const obs = rows.filter(x=>x.observed==="observed");
+    const now = obs[obs.length-1];
+    const horizon = Date.now() + 24*3600e3;
+    const ahead = rows.filter(x=>x.observed!=="observed" && +new Date(x.time_tag+"Z")<=horizon);
+    const peak = ahead.length ? Math.max(...ahead.map(x=>x.kp)) : null;
+    if(!now && peak===null) throw 0;
+    const label = k => k>=5?"storm — go outside":k>=4?"active":k>=3?"worth a look":"quiet";
+    box.innerHTML = `live via NOAA · Kp ${now?now.kp.toFixed(1):"–"} now`
+      + (peak!==null?` · 24 h peak ${peak.toFixed(1)} — ${label(peak)}`:"")
+      + ` · clouds: <a href="https://en.vedur.is/weather/forecasts/aurora/" target="_blank" rel="noopener">vedur.is ↗</a>`;
+    box.hidden = false;
+  }catch(e){ /* offline or blocked — the routine above still stands */ }
+}
+
 /* ================= PRINT ================= */
 window.addEventListener("beforeprint",()=>{document.querySelectorAll("details").forEach(d=>{d.dataset.was=d.open?"1":"";d.open=true;});});
 window.addEventListener("afterprint",()=>{document.querySelectorAll("details").forEach(d=>{d.open=d.dataset.was==="1";});});
 
+/* ================= OFFLINE ================= */
+if("serviceWorker" in navigator && (location.protocol==="https:" || ["localhost","127.0.0.1"].includes(location.hostname))){
+  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+
 /* ================= INIT ================= */
-buildMapStatic(); buildRail();
+buildMapStatic();
 document.querySelectorAll(".ptab").forEach(t=>t.addEventListener("click",()=>switchPlan(t.dataset.plan,true)));
 document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
-switchPlan("classic", false);
-countdown();
+switchPlan(planKey, false);   // planKey was restored from localStorage above
+countdown(); loadKp();
 </script>
 </body>
 </html>

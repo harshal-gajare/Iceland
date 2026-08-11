@@ -1,7 +1,7 @@
 /* iceland26 service worker — full offline on the Ring Road.
    Navigations: network-first (fresh when online), cached index.html when not.
    Shell assets: cache-first. Cross-origin (NOAA) passes straight through. */
-const CACHE = "iceland26-v1";
+const CACHE = "iceland26-v2";
 const SHELL = ["./", "index.html", "manifest.json", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {
