@@ -133,7 +133,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 30 min* |
 | `10:15–11:45` | **Skógafoss + Kvernufoss** — The banked half-hour means Kvernufoss fits — 20-min walk from the museum lot, most people miss it. |
 | | *↓ drive 30 min* |
-| `14:00–17:00` | **Katla ice cave** **book** — Lunch in Vík 12:15 (Smiðjan Brugghús), tour desk 13:30. Super-jeep to blue glacier ice — 11 clears every operator's age rule with room to spare. If only the 10:00 slot exists, flip the day. |
+| `14:00–17:00` | **Katla ice cave** **✔ booked** — Troll Expeditions, ticket TRO-T141847549 (order TRO-100452964) — 3 adult tickets, paid in full. Lunch in Vík 12:15 (Smiðjan Brugghús), then meet in the Víkinn Hotel lobby in Vík — check in by 13:40, 20 min before the 14:00 departure, and look for the super jeeps marked Troll Expeditions. Complimentary coffee and cookies in the lobby if you're early. Super-jeep up onto Mýrdalsjökull to blue glacier ice; 17:00 is an estimate — the ticket states no duration. Jeans are not allowed on the glacier: waterproof shell, thermal base layer, hat and gloves. Boots and waterproofs rent on site, all sizes — tell the guide if you pre-booked extras. Free to cancel until 24 hrs before, nothing back inside that. Check road.is and your email (inbox and spam) before setting off; weather cancellations go out by email. |
 | | *↓ drive 15 min* |
 | `17:15–18:00` | **Dyrhólaey** — The rock arch and the best coastal panorama in the south. |
 | | *↓ drive 10 min* |
@@ -508,7 +508,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 1. **Lodging — 7 nights left (Sep 22–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Höfn, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
-3. **Katla ice cave** — Mon Sep 21, 14:00 · Katlatrack / Troll / Arctic Adventures · confirm minimum age.
+3. **Katla ice cave — ✔ booked** — Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site.
 4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 5. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
