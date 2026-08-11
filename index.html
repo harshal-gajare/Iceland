@@ -355,7 +355,7 @@
     <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — in two builds: Plan A runs the classic coast, Plan B climbs into the highlands. Same bones, same booked beds, one switch. Built for a 10:00 landing and a 10:00 departure.</p>
     <div class="statline">
       <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
-      <span id="st-flex"><b>2</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b id="st-booked">3 of 10</b> nights booked</span>
+      <span id="st-flex"><b>3</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b id="st-booked">3 of 10</b> nights booked</span>
     </div>
     <div class="count"><i></i><span id="countdown">Counting down…</span></div>
   </section>
@@ -613,16 +613,19 @@ const CLASSIC_DAYS = [
    {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"18:10–19:00", note:"Golden-hour basalt. Sneaker waves: obey the warning lights, stay off the wet sand. Farmhouse is 15 min back west — dinner in Vík first, or groceries at Krónan."},
    {name:"Lava Show, Vík", ll:[63.4187,-19.0060], drive:"10 min", time:"~20:00", tag:"opt", note:"Real molten lava indoors — if there's gas left in the tank."}
   ]},
- {n:4, dow:"Tue", date:"Sep 22", km:"~280 km", depart:"08:00", arrive:"18:10",
+ /* Skaftafell's café tail and Fjallsárlón are trimmed 20 min each so the 14:40
+    Zodiac check-in is met with margin — paying for parking and walking to the
+    ticket office eats the rest. Fjallsárlón is still the first thing to drop. */
+ {n:4, dow:"Tue", date:"Sep 22", km:"~280 km", depart:"08:00", arrive:"18:20",
   title:"Canyon · Svartifoss · glacier lagoon",
   base:"Höfn / lagoon area", baseLL:[64.2539,-15.2082],
   hotels:["Old Airline Guesthouse","Guesthouse Dyngja","Höfn HI Hostel","Lambhús cabins","Vagnsstaðir HI (halfway)"],
   stops:[
    {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"1 hr", time:"09:00–10:00", note:"Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits."},
-   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"10:50–13:20", note:"~4 km round trip, kid-doable (10:50–12:35), then café lunch at the visitor centre."},
-   {name:"Fjallsárlón", ll:[64.0152,-16.3771], drive:"45 min", time:"14:05–14:35", tag:"opt", note:"The smaller, quieter iceberg lagoon — first thing to skip if behind."},
-   {name:"Jökulsárlón", ll:[64.0478,-16.1809], drive:"10 min", time:"14:50–16:05", note:"Icebergs drifting to sea. At 11 the Zodiac tour is unlocked (min age 10) — closer to the ice than the amphibian boat; pre-book a ~15:00 slot if tempted."},
-   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:05–16:50", note:"Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner."}
+   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"10:50–13:00", note:"~4 km round trip, kid-doable (10:50–12:35), then a quick café lunch at the visitor centre — be rolling by 13:00, the boat check-in is the day's hard edge."},
+   {name:"Fjallsárlón", ll:[64.0152,-16.3771], drive:"45 min", time:"13:45–14:10", tag:"opt", note:"The smaller, quieter iceberg lagoon — 25 minutes is enough for the view, and it stays the first thing to cut if the morning has slipped."},
+   {name:"Jökulsárlón — Zodiac boat tour", ll:[64.0478,-16.1809], drive:"10 min", time:"15:10–16:25", tag:"booked", note:"Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. Check in at the ticket office by 14:40: the Zodiac wants 30 min, not the amphibian's 20. Exchange the voucher for tickets before boarding — printed or on a phone. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222."},
+   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:35–17:15", note:"Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner."}
   ]},
  {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:30", arrive:"18:30",
   title:"Stokksnes · the East Fjords",
@@ -676,17 +679,22 @@ const HIGHLAND_DAYS = [
    {name:"Landmannalaugar", ll:[63.9832,-19.0605], drive:"40 min", time:"11:00–14:45", tag:"soak", note:"Park at the footbridge lot before the ford — never drive the river. Laugahraun–Grænagil loop (~4 km, 2 hrs, rhyolite in orange, red and green), picnic, then the natural hot-spring soak. Rustic changing; mind the kid near the hot inlets."},
    {name:"Skógafoss — on the way home", ll:[63.5321,-19.5114], drive:"2 hr 20", time:"17:45–18:15", note:"Five minutes off the road as you come off the mountain. Dinner: Vík (15 min past the farmhouse) or the farmhouse kitchen."}
   ]},
- {n:4, dow:"Tue", date:"Sep 22", km:"~260 km", depart:"08:15", arrive:"17:50",
+ /* depart is set by the Zodiac check-in, not by taste: 14:40 at the ticket office,
+    minus the 55 min from Skaftafell, minus a 1 hr 45 Svartifoss hike, walks the
+    whole morning back to 07:25 — 25 min after sunrise, so Dyrhólaey still gets
+    light. Lunch moves off Skaftafell's café to the lagoon café while you wait to
+    board. A no-show is charged in full, so this one does not flex. */
+ {n:4, dow:"Tue", date:"Sep 22", km:"~260 km", depart:"07:25", arrive:"17:30",
   title:"Dyrhólaey · Reynisfjara · Svartifoss · the lagoon",
   base:"Jökulsárlón / Hali area", baseLL:[64.07,-16.02],
   hotels:["Vagnsstaðir HI Hostel","Skyrhúsið Guesthouse","Gerði Guesthouse","Hali Country Hotel","Mid: Fosshotel Glacier Lagoon"],
   stops:[
-   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"10 min", time:"08:25–09:10", note:"Ten minutes from the farmhouse — the arch and the panorama before the buses arrive."},
-   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"09:20–10:10", note:"Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does."},
-   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"45 min", time:"10:55–11:45", note:"Canyon rim walk; last 3 km gravel — trivial in the 4x4."},
-   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"12:35–15:00", note:"Café lunch first (12:35–13:10), then the ~4 km round trip to the basalt-column falls."},
-   {name:"Jökulsárlón", ll:[64.0478,-16.1809], drive:"55 min", time:"15:55–17:00", note:"Icebergs at golden hour — better light than midday. Fjallsárlón is one of this plan's casualties."},
-   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"17:00–17:40", note:"Ice on black sand — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow."}
+   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"10 min", time:"07:35–08:20", note:"Ten minutes from the farmhouse — the arch and the panorama in first light, long before the buses. Sunrise is 07:00, so this is as early as it is worth being here."},
+   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"08:30–09:20", note:"Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does."},
+   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"45 min", time:"10:05–10:55", note:"Canyon rim walk; last 3 km gravel — trivial in the 4x4."},
+   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"11:45–13:30", note:"Straight onto the ~4 km round trip to the basalt-column falls — the full 1 hr 45 is kept, but the visitor-centre café is out today. Lunch is at the lagoon café once you have checked in for the boat."},
+   {name:"Jökulsárlón — Zodiac boat tour", ll:[64.0478,-16.1809], drive:"55 min", time:"15:10–16:25", tag:"booked", note:"Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. You reach the car park about 14:25: check in at the ticket office by 14:40 (the Zodiac wants 30 min, not the amphibian's 20), exchange the voucher for tickets — printed or on a phone — then eat at the lagoon café until boarding. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222."},
+   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:35–17:15", note:"Ice on black sand, and better light than the old midday slot gave it — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow."}
   ]},
  {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:15", arrive:"18:15",
   title:"Stokksnes · the East Fjords",
@@ -729,13 +737,15 @@ const PLANS = {
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations."],
    ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
    ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
-   ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
+   ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."],
+   ["Lava Show, Vík","Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine."]
   ],
   /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 6 amber, 2 teal.
-     These stat numbers are TRIP FACTS from docs/itinerary.md: 2 anchor tours
-     (Katla + whales) and 4 soak options, two of which are tagged `book` because
+     These stat numbers are TRIP FACTS from docs/itinerary.md: 3 anchor tours
+     (Katla, whales, the Jökulsárlón Zodiac — each a paid timed slot its day is
+     built around) and 4 soak options, two of which are tagged `book` because
      they need reserving. Keep the two vocabularies disjoint. */
-  stats:{km:"~2,300", stops:0, soaks:4, flex:"<b>2</b> anchor tours"}
+  stats:{km:"~2,300", stops:0, soaks:4, flex:"<b>3</b> anchor tours"}
  },
  highland: {
   label:"Plan B · Highland edition",
@@ -750,7 +760,7 @@ const PLANS = {
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur)."],
    ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
    ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
-   ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
+   ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."]
   ],
   stats:{km:"~2,600", stops:0, soaks:5, flex:"<b>1</b> highland weather-gated day"}
  }

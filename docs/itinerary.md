@@ -63,7 +63,7 @@ Nights 4–10 are open on both plans — book refundable rates.
 
 Plan A — every south-coast icon including the Katla ice cave. No F-roads; a regular automatic SUV does the whole loop. Night 4 in Höfn.
 
-**~2,300 km · 51 stops · 4 soak options · 2 anchor tours**
+**~2,300 km · 51 stops · 4 soak options · 3 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
@@ -143,7 +143,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 4 — Tue, Sep 22 · Canyon · Svartifoss · glacier lagoon
 
-*~280 km · out 08:00 · in 18:10 · overnight Höfn / lagoon area*
+*~280 km · out 08:00 · in 18:20 · overnight Höfn / lagoon area*
 
 *Daylight 07:00 Mýrdalur → 19:02 Höfn · 12 h 02 m*
 
@@ -152,13 +152,13 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 1 hr* |
 | `09:00–10:00` | **Fjaðrárgljúfur** — Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits. |
 | | *↓ drive 50 min* |
-| `10:50–13:20` | **Skaftafell — Svartifoss hike** — ~4 km round trip, kid-doable (10:50–12:35), then café lunch at the visitor centre. |
+| `10:50–13:00` | **Skaftafell — Svartifoss hike** — ~4 km round trip, kid-doable (10:50–12:35), then a quick café lunch at the visitor centre — be rolling by 13:00, the boat check-in is the day's hard edge. |
 | | *↓ drive 45 min* |
-| `14:05–14:35` | **Fjallsárlón** _optional_ — The smaller, quieter iceberg lagoon — first thing to skip if behind. |
+| `13:45–14:10` | **Fjallsárlón** _optional_ — The smaller, quieter iceberg lagoon — 25 minutes is enough for the view, and it stays the first thing to cut if the morning has slipped. |
 | | *↓ drive 10 min* |
-| `14:50–16:05` | **Jökulsárlón** — Icebergs drifting to sea. At 11 the Zodiac tour is unlocked (min age 10) — closer to the ice than the amphibian boat; pre-book a ~15:00 slot if tempted. |
+| `15:10–16:25` | **Jökulsárlón — Zodiac boat tour** **✔ booked** — Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. Check in at the ticket office by 14:40: the Zodiac wants 30 min, not the amphibian's 20. Exchange the voucher for tickets before boarding — printed or on a phone. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222. |
 | | *↓ drive 2 min* |
-| `16:05–16:50` | **Diamond Beach** — Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner. |
+| `16:35–17:15` | **Diamond Beach** — Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner. |
 
 ### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
 
@@ -367,24 +367,24 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ### Day 4 — Tue, Sep 22 · Dyrhólaey · Reynisfjara · Svartifoss · the lagoon
 
-*~260 km · out 08:15 · in 17:50 · overnight Jökulsárlón / Hali area*
+*~260 km · out 07:25 · in 17:30 · overnight Jökulsárlón / Hali area*
 
 *Daylight 07:00 Mýrdalur → 19:05 Jökulsárlón · 12 h 05 m*
 
 | Time | Plan |
 |---|---|
 | | *↓ drive 10 min* |
-| `08:25–09:10` | **Dyrhólaey** — Ten minutes from the farmhouse — the arch and the panorama before the buses arrive. |
+| `07:35–08:20` | **Dyrhólaey** — Ten minutes from the farmhouse — the arch and the panorama in first light, long before the buses. Sunrise is 07:00, so this is as early as it is worth being here. |
 | | *↓ drive 10 min* |
-| `09:20–10:10` | **Reynisfjara** — Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does. |
+| `08:30–09:20` | **Reynisfjara** — Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does. |
 | | *↓ drive 45 min* |
-| `10:55–11:45` | **Fjaðrárgljúfur** — Canyon rim walk; last 3 km gravel — trivial in the 4x4. |
+| `10:05–10:55` | **Fjaðrárgljúfur** — Canyon rim walk; last 3 km gravel — trivial in the 4x4. |
 | | *↓ drive 50 min* |
-| `12:35–15:00` | **Skaftafell — Svartifoss hike** — Café lunch first (12:35–13:10), then the ~4 km round trip to the basalt-column falls. |
+| `11:45–13:30` | **Skaftafell — Svartifoss hike** — Straight onto the ~4 km round trip to the basalt-column falls — the full 1 hr 45 is kept, but the visitor-centre café is out today. Lunch is at the lagoon café once you have checked in for the boat. |
 | | *↓ drive 55 min* |
-| `15:55–17:00` | **Jökulsárlón** — Icebergs at golden hour — better light than midday. Fjallsárlón is one of this plan's casualties. |
+| `15:10–16:25` | **Jökulsárlón — Zodiac boat tour** **✔ booked** — Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. You reach the car park about 14:25: check in at the ticket office by 14:40 (the Zodiac wants 30 min, not the amphibian's 20), exchange the voucher for tickets — printed or on a phone — then eat at the lagoon café until boarding. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222. |
 | | *↓ drive 2 min* |
-| `17:00–17:40` | **Diamond Beach** — Ice on black sand — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow. |
+| `16:35–17:15` | **Diamond Beach** — Ice on black sand, and better light than the old midday slot gave it — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow. |
 
 ### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
 
@@ -504,7 +504,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 # Shared
 
-## Booking checklist — Plan A (9 items)
+## Booking checklist — Plan A (10 items)
 
 1. **Lodging — 7 nights left (Sep 22–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Höfn, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
@@ -514,7 +514,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
 7. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.
 8. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
-9. **Lava Show / Jökulsárlón boat** — Optional · 1–2 weeks out is fine.
+9. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
+10. **Lava Show, Vík** — Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine.
 
 ## Booking checklist — Plan B (8 items)
 
@@ -525,7 +526,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 5. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur).
 6. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.
 7. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
-8. **Lava Show / Jökulsárlón boat** — Optional · 1–2 weeks out is fine.
+8. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
 
 ## The aurora game plan
 
