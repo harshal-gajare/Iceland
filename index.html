@@ -243,8 +243,6 @@
   a.hotel:hover{color:var(--ice);border-color:var(--fog)}
   .daynote{margin-top:12px;font-size:13px;color:var(--ember-ink);background:rgba(255,182,97,.07);border:1px dashed rgba(255,182,97,.35);border-radius:10px;padding:10px 13px;line-height:1.55}
   .maphint{font-family:var(--mono);font-size:9px;color:var(--faint);margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
-  .dayfoot{margin-top:12px}
-  .dayfoot .ghostbtn{font-size:10px;padding:6px 12px}
 
   /* ---------- bookings ---------- */
   .progressbar{height:8px;background:var(--track);border-radius:99px;overflow:hidden;margin:14px 0 6px}
@@ -328,7 +326,7 @@
        light palette leaks into print */
     :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
     .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.maphint,.top nav,
-    .planswitch,.mlinks,.kpline,.dayfoot{display:none!important}
+    .planswitch,.mlinks,.kpline{display:none!important}
     details.day{break-inside:avoid}
   }
   @media (max-width:720px){
@@ -771,7 +769,6 @@ PLANS.highland.stats.stops = PLANS.highland.days.reduce((a,d)=>a+d.stops.length,
    the approximate event time.
 
    Iceland is UTC+0 year-round with no DST, so UTC minutes ARE local minutes —
-   the same fact the .ics VTIMEZONE relies on.
 
    Sea-level horizon (zenith 90.833°, covering refraction + the sun's radius):
    verified to the minute against published tables at Höfn, which is at 0 m.
@@ -1014,9 +1011,9 @@ function stayBox(d){
 }
 
 /* Names the two places only when they differ, so most days stay a clean strip
-   and the two long driving days explain themselves. */
-function sunStrip(d, prev){
-  const s = dayLight(d, prev);
+   and the two long driving days explain themselves. Takes the already-computed
+   daylight rather than recomputing — the summary needs the same numbers. */
+function sunStrip(s){
   if(s.rise==null || s.set==null) return "";           // no strip beats a row of dashes
   const at = w => s.moved ? " " + shortBase(w) : "";
   return `<p class="sunline">sunrise <b>${hhmm(s.rise)}</b>${at(s.riseAt)}`
@@ -1025,19 +1022,26 @@ function sunStrip(d, prev){
 }
 
 function buildCards(){
-  cards.innerHTML = DAYS.map((d,i)=>`
+  cards.innerHTML = DAYS.map((d,i)=>{
+    /* Computed once per card: the collapsed summary shows the range, the open
+       body shows the same numbers with the two places and the total. Nine of
+       ten cards are collapsed on load, so the summary is the only place most
+       of these are ever seen. */
+    const s = dayLight(d, DAYS[i-1]);
+    const light = (s.rise!=null && s.set!=null) ? ` · light ${hhmm(s.rise)}–${hhmm(s.set)}` : "";
+    return `
     <details class="day" id="day-${d.n}" style="--c:var(--d${d.n})">
       <summary>
         <span class="dnum">${String(d.n).padStart(2,"0")}</span>
         <span class="dmeta">
-          <span class="eyebrow">${d.dow} ${d.date}${d.depart?" · out "+d.depart:""} · ${d.km}${d.stay?" · stay booked":""}</span>
+          <span class="eyebrow">${d.dow} ${d.date}${d.depart?" · out "+d.depart:""}${light} · ${d.km}${d.stay?" · stay booked":""}</span>
           <span class="dtitle">${d.title}</span>
         </span>
         <span class="dbase">night in <b>${d.base}</b></span>
         <span class="chev"></span>
       </summary>
       <div class="dbody">
-        ${sunStrip(d, DAYS[i-1])}
+        ${sunStrip(s)}
         ${d.note?`<p class="daynote">${d.note}</p>`:""}
         <ul class="stops">
           ${d.stops.map(s=>`
@@ -1050,10 +1054,9 @@ function buildCards(){
             </li>`).join("")}
         </ul>
         ${stayBox(d)}
-        <div class="dayfoot"><button class="ghostbtn ics" data-day="${d.n}">Add day to calendar · .ics</button></div>
       </div>
-    </details>`).join("");
-  cards.querySelectorAll(".ics").forEach(b=>b.addEventListener("click",()=>downloadICS(Number(b.dataset.day))));
+    </details>`;
+  }).join("");
 }
 
 function buildRail(){
@@ -1191,98 +1194,6 @@ function applyTheme(t, save){
 }
 themeBtn.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark", true));
 applyTheme(document.documentElement.dataset.theme || "dark", false);
-
-/* ================= ICS EXPORT ================= */
-function icsEscape(s){return s.replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n")}
-function icsFold(l){ // fold at 73 octets, never splitting a character
-  const enc = new TextEncoder();
-  let out="", cur="", len=0;
-  for(const ch of l){
-    const b = enc.encode(ch).length;
-    if(len+b>73){ out+=cur+"\r\n "; cur=ch; len=b; }
-    else{ cur+=ch; len+=b; }
-  }
-  return out+cur;
-}
-/* Iceland is UTC+0 year-round with no DST — one STANDARD block, no rules.
-   Emitted inline rather than trusting a bare TZID, which Outlook floats. */
-const VTZ = ["BEGIN:VTIMEZONE","TZID:Atlantic/Reykjavik","BEGIN:STANDARD",
-  "DTSTART:19700101T000000","TZOFFSETFROM:+0000","TZOFFSETTO:+0000","TZNAME:GMT",
-  "END:STANDARD","END:VTIMEZONE"];
-/* Days identical in both plans are the same event: they share a UID so importing
-   both plans dedupes them. Divergent days get plan-scoped UIDs, or Plan B would
-   silently overwrite Plan A (same UID = update, RFC 5545). Compared by CONTENT,
-   not reference, so a future deep-copy degrades to duplicates — never to a
-   silent overwrite.
-   Where the traveller WOKE must match too: the event prints sunrise, which is
-   computed at the previous night's base, so two plans can agree on a day and
-   still owe it different daylight. Compare only the predecessor's base, not the
-   whole predecessor — Plan A and Plan B diverge through all of day 5 yet both
-   sleep at Egilsstaðir, so day 6's event really is identical and must keep its
-   shared UID. Comparing whole days would drop 6 and 8 and duplicate them on
-   import. If a base ever stops matching, that day falls back to a plan-scoped
-   UID — failing toward duplicates, never toward silent overwrite. */
-const sameJSON = (a,b) => JSON.stringify(a)===JSON.stringify(b);  // undefined==undefined on day 1
-const wokeAt = d => d && [d.base, d.baseLL];
-const SHARED_DAYS = new Set(
-  PLANS.classic.days.filter((a,i) => PLANS.highland.days.some((b,j) =>
-    b.n===a.n && sameJSON(b,a)
-    && sameJSON(wokeAt(PLANS.highland.days[j-1]), wokeAt(PLANS.classic.days[i-1])))).map(d=>d.n)
-);
-const ymdUTC = t => new Date(t).toISOString().slice(0,10).replace(/-/g,"");
-const icsDate = d => ymdUTC(dayUTC(d));                // "Sep 19" -> "20260919"
-const icsNext = y => ymdUTC(Date.UTC(+y.slice(0,4), +y.slice(4,6)-1, +y.slice(6,8)+1));
-const icsTime = s => { const m=/(\d{1,2}):(\d{2})/.exec(s||""); return m ? String(m[1]).padStart(2,"0")+m[2]+"00" : null; };
-
-function dayICS(d, k){
-  const date = icsDate(d);
-  const t0 = icsTime(d.depart), t1 = icsTime(d.arrive);
-  const timed = !!(t0 && t1 && t1 > t0);               // zero-padded, so lexical == numeric
-  const shared = SHARED_DAYS.has(d.n);
-  const stamp = new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z";
-  const line = s => "• " + (s.time?s.time+"  ":"") + s.name + (s.tag?" ["+s.tag+"]":"")
-    + (s.drive?" (+"+s.drive+")":"") + (s.note?" — "+s.note:"");
-  /* pure reader — days 1/6/8/9/10 are the SAME objects in both plans, so no
-     sorting, normalizing or memoizing onto `d` is allowed here. */
-  const beds = Array.isArray(d.hotels) ? "Beds: "+d.hotels.join(", ")
-    : d.stay ? "Booked: "+d.stay.name+" — "+d.stay.addr+" ("+d.stay.status+")" : "";
-  const di = PLANS[k].days.indexOf(d);                 // prev day within THIS plan
-  const s = dayLight(d, di>0 ? PLANS[k].days[di-1] : undefined);
-  const light = (s.rise!=null && s.set!=null)
-    ? "Daylight: "+hhmm(s.rise)+(s.moved?" "+shortBase(s.riseAt):"")
-      +" – "+hhmm(s.set)+(s.moved?" "+shortBase(s.setAt):"")
-      +" ("+hoursMins(s.mins)+")"
-    : "";
-  const desc = [d.note||"", d.stops.map(line).join("\n"), light, "Overnight: "+d.base, beds]
-    .filter(Boolean).join("\n");
-  const when = timed
-    ? ["DTSTART;TZID=Atlantic/Reykjavik:"+date+"T"+t0,
-       "DTEND;TZID=Atlantic/Reykjavik:"+date+"T"+t1]
-    : ["DTSTART;VALUE=DATE:"+date, "DTEND;VALUE=DATE:"+icsNext(date)];
-  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//iceland26//trip planner//EN",
-    "CALSCALE:GREGORIAN","METHOD:PUBLISH",
-    ...(timed?VTZ:[]),
-    "BEGIN:VEVENT",
-    "UID:iceland26-"+(shared?"":k+"-")+"day-"+d.n+"@harshalgajare.com",
-    "SEQUENCE:1",
-    "DTSTAMP:"+stamp,
-    ...when,
-    icsFold("SUMMARY:"+icsEscape(shared ? `Iceland day ${d.n} — ${d.title}`
-                                        : `Iceland · ${PLANS[k].label} day ${d.n} — ${d.title}`)),
-    icsFold("LOCATION:"+icsEscape(d.stay ? d.stay.addr : d.base+", Iceland")),
-    icsFold("DESCRIPTION:"+icsEscape(desc)),
-    icsFold("CATEGORIES:"+["Iceland 2026"].concat(shared?[]:[PLANS[k].label]).map(icsEscape).join(",")),
-    "TRANSP:TRANSPARENT","X-MICROSOFT-CDO-BUSYSTATUS:FREE",
-    "END:VEVENT","END:VCALENDAR"].join("\r\n")+"\r\n";
-}
-function downloadICS(n){
-  const d = DAYS.find(x=>x.n===n); if(!d) return;
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([dayICS(d, planKey)],{type:"text/calendar;charset=utf-8"}));
-  a.download = "iceland-"+planKey+"-day-"+String(n).padStart(2,"0")+".ics";
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
-}
 
 /* ================= LIVE KP (NOAA — vedur.is blocks CORS) ================= */
 async function loadKp(){
