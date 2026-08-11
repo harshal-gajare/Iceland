@@ -3,20 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0a1422">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
 <title>Iceland · Sep 19–29, 2026 — Ring Road Field Plan</title>
-<script>
-/* theme before first paint — stored choice wins, else system preference */
-(function(){
-  let t = null;
-  try{ t = localStorage.getItem("iceland26.theme"); }catch(e){}
-  if(t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  document.documentElement.dataset.theme = t;
-})();
-</script>
 <style>
   :root{
     --night:#0a1422;
@@ -28,46 +15,10 @@
     --ember:#ffb661;
     --d1:#45e0a2; --d2:#2fd4c0; --d3:#3cc9e8; --d4:#57aef5; --d5:#7b96f7;
     --d6:#9b85f5; --d7:#b877ef; --d8:#d26bdd; --d9:#e967bc; --d10:#f26e93;
-    --map-1:#0c1a2e; --map-2:#0a1523;
-    --coast-fill:#12233a; --coast-stroke:#2c4664;
-    --glacier:#dcecf7; --glacier-o:.16;
-    --tip-bg:#0c1626;
-    --dotline:#1b2c42;
-    --track:#152539;
-    --faint:#5b7186;
-    --veil:rgba(255,255,255,.03);
-    --rail-bg:rgba(10,20,34,.85);
-    --aurora-ink:#c3d4e2;
-    --shadow:rgba(0,0,0,.5);
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
   }
-  :root[data-theme="light"]{
-    --night:#f6f9fc;
-    --panel:#ffffff;
-    --panel-2:#fdfeff;
-    --line:#d3dee9;
-    --ice:#16283a;
-    --fog:#5b7186;
-    --ember:#c07a1a;
-    --d1:#0e9c67; --d2:#0b9186; --d3:#0d86ad; --d4:#1e6cc0; --d5:#4a5fd3;
-    --d6:#6e4fcd; --d7:#8a41ba; --d8:#a833a0; --d9:#bf2a84; --d10:#cc3a62;
-    --map-1:#e8f1f8; --map-2:#dfeaf4;
-    --coast-fill:#cfdfec; --coast-stroke:#93aec6;
-    --glacier:#ffffff; --glacier-o:.75;
-    --tip-bg:#ffffff;
-    --dotline:#dbe5ee;
-    --track:#dde7f0;
-    --faint:#7c93a8;
-    --veil:rgba(22,40,58,.04);
-    --rail-bg:rgba(246,249,252,.85);
-    --aurora-ink:#3c5468;
-    --shadow:rgba(30,60,90,.18);
-  }
-  :root[data-theme="light"] body{background-image:
-    radial-gradient(1200px 500px at 75% -10%, rgba(14,156,103,.06), transparent 60%),
-    radial-gradient(900px 420px at 15% -5%, rgba(74,95,211,.06), transparent 60%)}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--night);color:var(--ice);font-family:var(--sans);line-height:1.55;
@@ -97,6 +48,14 @@
   .count{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;background:rgba(255,182,97,.06)}
   .count i{width:7px;height:7px;border-radius:50%;background:var(--ember);display:inline-block;box-shadow:0 0 10px var(--ember)}
 
+  /* ---------- plan switch ---------- */
+  .planswitch{display:flex;margin-top:36px;border:1px solid var(--line);border-radius:12px;overflow:hidden;width:fit-content}
+  .ptab{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:11px 18px;background:transparent;border:0;color:var(--fog);cursor:pointer}
+  .ptab+.ptab{border-left:1px solid var(--line)}
+  .ptab.on{background:var(--ice);color:var(--night);font-weight:700}
+  .plandesc{margin-top:12px;color:var(--fog);font-size:13.5px;max-width:72ch}
+  @media(max-width:560px){.ptab{padding:10px 12px;font-size:10.5px}}
+
   /* ---------- map ---------- */
   .mapwrap{margin-top:38px}
   .maphead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
@@ -105,30 +64,28 @@
   .ghostbtn{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);
     background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
   .ghostbtn:hover{color:var(--ice);border-color:var(--fog)}
-  .topright{display:flex;gap:16px;align-items:center}
-  .themebtn{padding:5px 12px}
-  #mapbox{position:relative;background:linear-gradient(180deg,var(--map-1), var(--map-2) 70%);border:1px solid var(--line);border-radius:16px;padding:8px;overflow:hidden}
+  #mapbox{position:relative;background:linear-gradient(180deg,#0c1a2e, #0a1523 70%);border:1px solid var(--line);border-radius:16px;padding:8px;overflow:hidden}
   #icemap{width:100%;height:auto;display:block}
-  #tip{position:absolute;pointer-events:none;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;
-    padding:8px 11px;font-size:12.5px;max-width:240px;opacity:0;transform:translateY(4px);transition:opacity .12s;z-index:5;box-shadow:0 10px 30px var(--shadow)}
+  #tip{position:absolute;pointer-events:none;background:#0c1626;border:1px solid var(--line);border-radius:10px;
+    padding:8px 11px;font-size:12.5px;max-width:240px;opacity:0;transform:translateY(4px);transition:opacity .12s;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.5)}
   #tip .tday{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
   #tip .tnote{color:var(--fog);font-size:11.5px;margin-top:2px}
   .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)}
   .legend span{display:inline-flex;align-items:center;gap:7px}
   .lk{width:9px;height:9px;border-radius:50%;display:inline-block}
   .lk.ring{background:transparent;border:2px solid var(--fog)}
-  .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
+  .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#5b7186;text-transform:uppercase}
 
   /* svg pieces */
-  #icemap .coast{fill:var(--coast-fill);stroke:var(--coast-stroke);stroke-width:1.4}
-  #icemap .glacier{fill:var(--glacier);opacity:var(--glacier-o)}
+  #icemap .coast{fill:#12233a;stroke:#2c4664;stroke-width:1.4}
+  #icemap .glacier{fill:#dcecf7;opacity:.16}
   #icemap .route path{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:.95;
     stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s ease forwards}
   @keyframes draw{to{stroke-dashoffset:0}}
   #icemap .stop{cursor:pointer;transition:opacity .25s}
   #icemap .stop circle{transition:r .12s}
   #icemap .stop:hover circle.core{r:7}
-  #icemap .base circle.ring{fill:var(--map-2);stroke-width:2.5}
+  #icemap .base circle.ring{fill:#0a1422;stroke-width:2.5}
   #icemap .base text{font-family:var(--mono);font-size:10px;fill:var(--ice);text-anchor:middle;dominant-baseline:central}
   #icemap g.dim{opacity:.1;pointer-events:none}
   #icemap .startpulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-in-out infinite}
@@ -140,7 +97,7 @@
   }
 
   /* ---------- day rail ---------- */
-  .rail{position:sticky;top:0;z-index:20;background:var(--rail-bg);backdrop-filter:blur(10px);
+  .rail{position:sticky;top:0;z-index:20;background:rgba(10,20,34,.85);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);margin-top:30px}
   .rail .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
   .rail .wrap::-webkit-scrollbar{display:none}
@@ -181,41 +138,74 @@
   details[open] .chev{transform:rotate(-135deg)}
   .dbody{padding:4px 18px 20px 18px;border-top:1px dashed var(--line)}
   ul.stops{list-style:none;margin-top:14px}
-  ul.stops li{display:flex;gap:13px;padding:9px 0;border-bottom:1px dotted var(--dotline)}
+  ul.stops li{display:flex;gap:13px;padding:9px 0;border-bottom:1px dotted #1b2c42}
   ul.stops li:last-child{border-bottom:0}
   .sdot{margin-top:6px;width:9px;height:9px;border-radius:50%;background:var(--c);flex:0 0 auto;box-shadow:0 0 8px color-mix(in srgb, var(--c) 60%, transparent)}
   li.opt .sdot{background:transparent;border:1.5px solid var(--fog);box-shadow:none}
   .sname{font-weight:600;font-size:15px}
   .snote{color:var(--fog);font-size:13.5px;margin-top:1px}
-  .maplink{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);
-    text-decoration:none;border-bottom:1px dotted var(--fog);margin-left:8px;white-space:nowrap;vertical-align:2px}
-  .maplink:hover{color:var(--ice);border-bottom-color:var(--ice)}
-  .dayfoot{margin-top:12px}
-  .dayfoot .ghostbtn{font-size:10px;padding:6px 12px}
   .chip{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
     border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:2px}
   .chip.book{color:#1c1206;background:var(--ember)}
   .chip.soak{color:#062026;background:#59d7e8}
   .chip.opt{color:var(--fog);border:1px solid var(--line)}
-  .stay{margin-top:16px;padding:13px 15px;background:var(--veil);border:1px solid var(--line);border-radius:10px}
+  .stay{margin-top:16px;padding:13px 15px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px}
   .stay b{font-family:var(--serif);font-size:16px;font-weight:500}
   .hotels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .hotel{font-size:12px;color:var(--fog);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
   .depart{border:1px dashed var(--line);border-radius:14px;padding:16px 18px;color:var(--fog);font-size:14px;display:flex;gap:16px;align-items:center}
   .depart .dnum{font-size:22px;color:var(--fog)}
 
+  .stime{font-family:var(--mono);font-size:10.5px;color:var(--fog);min-width:78px;text-align:right;padding-top:4px;flex:0 0 auto}
+  ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:#5b7186}
+  .vdash{width:9px;display:flex;justify-content:center;flex:0 0 auto}
+  .vdash::before{content:"";border-left:1px dashed #2a3f5b;height:15px}
+  .hoptext{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase}
+  .arr{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-left:8px}
+
+  .stay.booked{border-color:rgba(69,224,162,.45);background:rgba(69,224,162,.06)}
+  .chip.bkd{color:#03160c;background:var(--d1);margin-left:0;margin-right:6px;vertical-align:1px}
+  .addr{margin-top:7px;font-size:13.5px}
+  .addr>a{color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
+  .cxl{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:5px;letter-spacing:.05em}
+  .mlinks{display:inline-flex;gap:5px;margin-left:8px;vertical-align:1px}
+  .mlinks a{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--fog);text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+  .mlinks a:hover{color:var(--ice);border-color:var(--fog)}
+  a.hotel{text-decoration:none;cursor:pointer}
+  a.hotel:hover{color:var(--ice);border-color:var(--fog)}
+  .daynote{margin-top:12px;font-size:13px;color:#ffd9a3;background:rgba(255,182,97,.07);border:1px dashed rgba(255,182,97,.35);border-radius:10px;padding:10px 13px;line-height:1.55}
+  .maphint{font-family:var(--mono);font-size:9px;color:#5b7186;margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
+
   /* ---------- bookings ---------- */
-  .progressbar{height:8px;background:var(--track);border-radius:99px;overflow:hidden;margin:14px 0 6px}
+  .progressbar{height:8px;background:#152539;border-radius:99px;overflow:hidden;margin:14px 0 6px}
   .progressbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--d1),var(--ember));transition:width .3s}
   .progresslabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--fog);margin-bottom:16px}
   ul.checks{list-style:none}
-  ul.checks li{display:flex;gap:14px;align-items:flex-start;padding:13px 4px;border-bottom:1px dotted var(--dotline)}
+  ul.checks li{display:flex;gap:14px;align-items:flex-start;padding:13px 4px;border-bottom:1px dotted #1b2c42}
   ul.checks input{width:18px;height:18px;margin-top:3px;accent-color:var(--ember);cursor:pointer;flex:0 0 auto}
   ul.checks label{cursor:pointer;flex:1}
   ul.checks .bidx{font-family:var(--mono);font-size:10.5px;color:var(--fog);letter-spacing:.1em;margin-right:8px}
   ul.checks .bmeta{display:block;color:var(--fog);font-size:12.5px;margin-top:1px}
   ul.checks li.done label{opacity:.45;text-decoration:line-through;text-decoration-color:var(--fog)}
-  .memnote{margin-top:12px;font-size:12px;color:var(--faint)}
+  .memnote{margin-top:12px;font-size:12px;color:#5b7186}
+
+  /* ---------- logistics ---------- */
+  .lockgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media(max-width:820px){.lockgrid{grid-template-columns:1fr}}
+  .lockcard{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:20px 20px 16px}
+  .ltitle{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:12px}
+  .lref{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fog);margin-top:5px;text-transform:uppercase}
+  .leg{padding:11px 0;border-top:1px dotted #1b2c42}
+  .lday{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
+  .lroute{font-size:14.5px;margin-top:6px}
+  .lroute b{font-family:var(--mono);font-size:13.5px}
+  .lmeta{display:block;font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:2px;letter-spacing:.04em}
+  .lbags,.lvisa{margin-top:12px;font-size:13px;color:var(--fog)}
+  .lvisa .chip{margin-left:0;margin-right:8px;vertical-align:1px}
+  .ins{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .inschip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid rgba(69,224,162,.4);border-radius:999px;padding:3px 10px;color:var(--ice)}
+  .lnote{margin-top:12px;font-size:13px;color:var(--fog);line-height:1.55}
+  .lnote b{color:#ffd9a3}
 
   /* ---------- aurora ---------- */
   .aurora{position:relative;border-radius:18px;padding:28px 26px;border:1px solid transparent;
@@ -225,13 +215,25 @@
       radial-gradient(600px 220px at 20% 0%, rgba(69,224,162,.16), transparent 60%),
       radial-gradient(600px 220px at 80% 10%, rgba(155,133,245,.14), transparent 60%);pointer-events:none}
   .aurora h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:6px;position:relative}
-  .aurora p, .aurora ol{position:relative;color:var(--aurora-ink);font-size:14.5px;max-width:70ch}
+  .aurora p, .aurora ol{position:relative;color:#c3d4e2;font-size:14.5px;max-width:70ch}
   .aurora ol{margin:14px 0 0 18px;display:grid;gap:9px}
-  .kpline{position:relative;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ice);margin-top:14px}
-  .kpline a{color:var(--fog)}
-  .kpline a:hover{color:var(--ice)}
   .aurora .nights{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
   .night-chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ice)}
+
+  /* ---------- daily watch ---------- */
+  .watchgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:6px}
+  @media(max-width:760px){.watchgrid{grid-template-columns:1fr}}
+  .wtitle{font-family:var(--serif);font-weight:500;font-size:19px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+  .wwhen{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-left:8px}
+  .res{padding:12px 0;border-bottom:1px dotted #1b2c42}
+  .res:last-of-type{border-bottom:0}
+  .rname{font-family:var(--mono);font-size:13px;color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
+  span.rname{text-decoration:none}
+  .ralt{font-family:var(--mono);font-size:10px;color:var(--fog)}
+  .rdesc{color:var(--fog);font-size:13.5px;margin-top:4px;line-height:1.55}
+  .rdesc b,.rdesc i{color:#c3d4e2}
+  .moonnote{margin-top:10px;font-size:12.5px;color:var(--fog);border:1px dashed var(--line);border-radius:10px;padding:10px 13px}
+  .routine{margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#5b7186;text-transform:uppercase;line-height:1.9}
 
   /* ---------- notes ---------- */
   details.note{border-bottom:1px solid var(--line)}
@@ -242,19 +244,20 @@
   details.note .nbody b{color:var(--ice)}
 
   footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 48px;color:var(--fog);font-size:13px}
-  footer .fx{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:var(--faint)}
+  footer .fx{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:#5b7186}
 
   /* ---------- print ---------- */
   @media print{
     body{background:#fff;color:#111}
-    :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333}
-    .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.top nav,.maplink,.kpline,.dayfoot{display:none!important}
+    :root{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff}
+    .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.top nav{display:none!important}
     details.day{break-inside:avoid}
   }
   @media (max-width:720px){
     .hero{padding-top:40px}
     details.day summary{gap:12px;padding:14px}
     .dbase{display:none}
+    .stime{min-width:62px;font-size:9.5px}
   }
 </style>
 </head>
@@ -262,24 +265,27 @@
 <div class="wrap">
   <header class="top">
     <div class="wordmark">Iceland, by road <span>KEF ⇄ KEF</span></div>
-    <div class="topright">
-      <nav>
-        <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Bookings</a><a href="#aurora">Aurora</a><a href="#notes">Field notes</a>
-      </nav>
-      <button class="ghostbtn themebtn" id="themeToggle" aria-label="Switch to light theme">◐ light</button>
-    </div>
+    <nav>
+      <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Bookings</a><a href="#logistics">Logistics</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
+    </nav>
   </header>
 
   <section class="hero">
     <p class="eyebrow">Family field plan · Sep 19 – 29, 2026</p>
     <h1>Ten nights around the <em>whole island.</em></h1>
-    <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — Golden Circle first, glacier country by day four, whales in the north, seals on the way home. Built for a 10:00 landing and a 10:00 departure.</p>
+    <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — in two builds: Plan A runs the classic coast, Plan B climbs into the highlands. Same bones, same booked beds, one switch. Built for a 10:00 landing and a 10:00 departure.</p>
     <div class="statline">
-      <span><b>10</b> nights</span><span><b>~2,300</b> km</span><span><b>51</b> stops</span>
-      <span><b>2</b> booked anchors</span><span><b>4</b> possible soaks</span>
+      <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
+      <span id="st-flex"><b>2</b> booked anchors</span><span><b id="st-soak">4</b> possible soaks</span><span><b>$145–255</b> a night, sleeps 3</span><span><b>3 of 10</b> nights booked</span>
     </div>
     <div class="count"><i></i><span id="countdown">Counting down…</span></div>
   </section>
+
+  <div class="planswitch" role="tablist" aria-label="Itinerary plan">
+    <button class="ptab on" data-plan="classic" role="tab" aria-selected="true">Plan A · Classic coast</button>
+    <button class="ptab" data-plan="highland" role="tab" aria-selected="false">Plan B · Highland edition</button>
+  </div>
+  <p class="plandesc" id="plandesc"></p>
 
   <section class="mapwrap" id="map">
     <div class="maphead">
@@ -306,10 +312,10 @@
 <main class="wrap">
   <section class="block" id="days">
     <div class="sechead"><h2>Day by day</h2><span class="eyebrow">counterclockwise</span></div>
-    <p class="seclede">Every card holds the stops in driving order, the night's base, and hotels worth checking first. The seven upgrades are locked in below — tap one to jump to its day.</p>
+    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, every stop and stay opens in Google or Apple Maps, and your three booked nights (Sep 19–21) work under either plan. Headline upgrades are pinned below — tap one to jump to its day.</p>
     <div class="upgrades" id="upgrades"></div>
     <div id="cards"></div>
-    <div class="depart"><span class="dnum">✈</span><div><b style="color:var(--ice)">Tue, Sep 29 — wheels up 10:00.</b> Return the car ~7:00; terminal by 7:15–7:30. Keflavík hotels sit 10–15 minutes from the gate. No alarm-clock heroics required.</div></div>
+    <div class="depart"><span class="dnum">✈</span><div><b style="color:var(--ice)">Tue, Sep 29 — KEF 17:10 → BOS → ATL 00:12.</b> The Vitara is due back at 11:00 but the flight isn't until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend drop-off to ~14:00 and keep the morning properly unhurried. Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.</div></div>
   </section>
 
   <section class="block" id="bookings">
@@ -318,7 +324,38 @@
     <div class="progressbar"><i id="pbar"></i></div>
     <p class="progresslabel" id="plabel">0 of 9 booked</p>
     <ul class="checks" id="checks"></ul>
-    <p class="memnote">Progress saves in this browser — it survives reloads and works offline.</p>
+    <p class="memnote">Progress lives on this page only — it resets if you reload.</p>
+  </section>
+
+  <section class="block" id="logistics">
+    <div class="sechead"><h2>Locked in</h2><span class="eyebrow">flights · visa · wheels</span></div>
+    <div class="lockgrid">
+      <div class="lockcard">
+        <h3 class="ltitle">Flights<span class="lref">Icelandair PNR CVYKHM · Saga Club 4996508872</span></h3>
+        <div class="leg"><span class="lday">Fri Sep 18 — outbound</span>
+          <div class="lroute">ATL <b>18:45</b> → JFK <b>21:02</b><span class="lmeta">2h 08m layover at JFK</span></div>
+          <div class="lroute">JFK <b>23:10</b> → KEF <b>08:55</b><span class="lmeta">overnight — lands Sat Sep 19 morning; sleep on the plane, Day 1 starts rested-ish</span></div>
+        </div>
+        <div class="leg"><span class="lday">Tue Sep 29 — home</span>
+          <div class="lroute">KEF <b>17:10</b> → BOS <b>18:50</b><span class="lmeta">2h 09m layover at BOS</span></div>
+          <div class="lroute">BOS <b>20:59</b> → ATL <b>00:12</b><span class="lmeta">lands Wed Sep 30, just past midnight</span></div>
+        </div>
+        <div class="lbags">Per person: 1 carry-on (22 lbs) + 1 checked (50 lbs) included</div>
+        <div class="lvisa"><span class="chip bkd">Visa approved</span> Schengen — carry passports + printed confirmations in the day bag anyway</div>
+      </div>
+      <div class="lockcard">
+        <h3 class="ltitle">Rental<span class="lref">Blue Car Rental · booking #Z04F2O</span></h3>
+        <div class="leg"><span class="lday">Suzuki Vitara · automatic</span>
+          <div class="lroute">Pick up <b>Sep 19, 11:00</b> · drop <b>Sep 29, 11:00</b><span class="lmeta">Keflavík Airport — short shuttle between terminal and lot, both directions</span></div>
+        </div>
+        <div class="ins">
+          <span class="inschip">CDW</span><span class="inschip">SCDW super-collision</span><span class="inschip">TP theft</span><span class="inschip">GP gravel</span><span class="inschip">SAAP sand &amp; ash</span><span class="inschip">Roadside</span><span class="inschip">Road tax</span>
+        </div>
+        <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>One email to send:</b> confirm the Vitara is the AllGrip 4x4 and that F-roads (name F208 North) are permitted — that single yes unlocks Plan B. River fords are never insured on any Icelandic contract; the Landmannalaugar plan parks before the ford regardless.</p>
+        <p class="lnote"><b>Return-day math:</b> car back 11:00, flight 17:10. Either run a Reykjanes morning and drop at 11:00 with a slow airport lunch — or ask Blue Car to extend drop-off to ~14:00 and keep the last morning properly free.</p>
+        <p class="lnote"><b>Booster check:</b> Icelandic law requires a booster seat below 135 cm. Most 11-year-olds clear that — if yours doesn't yet, add one to the Blue Car booking or bring your own.</p>
+      </div>
+    </div>
   </section>
 
   <section class="block" id="aurora">
@@ -327,19 +364,42 @@
       <p>These dates straddle the autumn equinox — statistically one of the best northern-lights windows of the year — and 8 of your 10 nights are in dark-sky country. The routine:</p>
       <ol>
         <li>At dinner, check the aurora forecast and <b>cloud-cover map</b> at en.vedur.is. Gaps in cloud matter more than the Kp number — Kp 2–3 is already a show out here.</li>
-        <li>Ask <b>every</b> hotel for a northern-lights wake-up call. Countryside hotels expect the request; Hótel Rangá (night 2) is famous for it.</li>
+        <li>Ask <b>every</b> hotel for a northern-lights wake-up call. Countryside hosts expect the request — make it at every check-in.</li>
         <li>Phone night mode, 3–10 seconds, propped on the car roof — it catches more color than your eyes do. A mini tripod earns its space in the bag.</li>
         <li>Push alerts: <b>Hello Aurora</b> (Icelandic) or My Aurora Forecast.</li>
       </ol>
-      <p class="kpline" id="kpline" hidden></p>
       <div class="nights">
         <span class="night-chip">Best dark skies →</span>
-        <span class="night-chip" style="border-color:var(--d2)">N2 · Hella</span>
+        <span class="night-chip" style="border-color:var(--d2)">N2 · Seljalandsfoss</span>
         <span class="night-chip" style="border-color:var(--d4)">N4 · Höfn / lagoon</span>
         <span class="night-chip" style="border-color:var(--d6)">N6 · Mývatn</span>
         <span class="night-chip" style="border-color:var(--d8)">N8 · Grundarfjörður — Kirkjufell under the lights is the trip photo</span>
       </div>
     </div>
+  </section>
+
+  <section class="block" id="watch">
+    <div class="sechead"><h2>The daily watch</h2><span class="eyebrow">two checks a day, five minutes each</span></div>
+    <p class="seclede">Iceland weather is a wind problem, not a rain problem — and aurora hunting is a cloud problem, not a Kp problem. These are the sources locals actually use; every link opens in a new tab.</p>
+    <div class="watchgrid">
+      <div class="watchcol">
+        <h3 class="wtitle">Morning · weather &amp; roads <span class="wwhen">~07:45 over breakfast</span></h3>
+        <div class="res"><a class="rname" href="https://en.vedur.is" target="_blank" rel="noopener">en.vedur.is</a><p class="rdesc">Icelandic Met Office — the national forecast, and the accurate one. Wind is in m/s: <b>15 m/s</b> = hold the doors and expect a workout; <b>20+ m/s or an orange warning</b> = rebuild the day around indoor stops; <b>red</b> = the car stays parked. Warning banners show right on the map.</p></div>
+        <div class="res"><a class="rname" href="https://umferdin.is/en" target="_blank" rel="noopener">umferdin.is</a> <span class="ralt">(road.is)</span><p class="rdesc">Road Administration live map — closures, surface conditions, and measured gusts on the exact stretches you're driving. On the long days (4, 6, 8), check tomorrow's legs the night before too.</p></div>
+        <div class="res"><a class="rname" href="https://safetravel.is" target="_blank" rel="noopener">safetravel.is</a><p class="rdesc">ICE-SAR's alert feed — storm advisories, area and volcano closures. Register your travel plan once, and install the <b>112 Iceland</b> app: one-tap emergency with your location, works everywhere.</p></div>
+        <div class="res"><a class="rname" href="https://www.windy.com" target="_blank" rel="noopener">windy.com</a><p class="rdesc">Visual gust animation — the supplementary check for timing photo stops and deciding which side of a headland to stand on.</p></div>
+      </div>
+      <div class="watchcol">
+        <h3 class="wtitle">Evening · aurora <span class="wwhen">~19:00 at dinner</span></h3>
+        <div class="res"><a class="rname" href="https://en.vedur.is/weather/forecasts/aurora/" target="_blank" rel="noopener">vedur.is aurora forecast</a><p class="rdesc">The one that matters: the Kp number <i>plus</i> the cloud-cover map. White gaps = clear sky — chase those. A clear-sky Kp 2–3 beats a cloudy Kp 6 every time at this latitude.</p></div>
+        <div class="res"><span class="rname">Hello Aurora</span> <span class="ralt">iOS / Android</span><p class="rdesc">Icelandic-made push alerts plus live sightings from people actually standing outside in Iceland right now. Set the alert, phone by the bed, host knock requested as backup.</p></div>
+        <div class="res"><a class="rname" href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast" target="_blank" rel="noopener">NOAA SWPC 30-min forecast</a><p class="rdesc">The US space-weather authority. The OVATION oval shows where the aurora is <i>right now</i>, refreshed every half hour — when the green blob drapes over Iceland, go outside.</p></div>
+        <div class="res"><a class="rname" href="https://www.spaceweatherlive.com" target="_blank" rel="noopener">spaceweatherlive.com</a><p class="rdesc">The nerd upgrade: live solar-wind speed and Bz. When <b>Bz swings south (negative)</b>, a display usually follows within the hour.</p></div>
+        <div class="res"><a class="rname" href="https://www.gi.alaska.edu/monitors/aurora-forecast" target="_blank" rel="noopener">UAF Geophysical Institute</a><p class="rdesc">University of Alaska's nightly + 27-day outlook — good for watching how your specific dates trend before you fly.</p></div>
+        <p class="moonnote">Moon check: your dates wax toward a full moon ~<b>Sep 25–26</b>. Faint glows wash out; strong displays punch through. So lean on the alerts rather than patient sky-staring — and use the moonlit landscape as foreground.</p>
+      </div>
+    </div>
+    <p class="routine">The rhythm — 07:45 vedur + umferdin over breakfast · drive · 19:00 cloud map + Kp at dinner · Hello Aurora alert set · host knock requested · 22:30 step outside, look north</p>
   </section>
 
   <section class="block" id="notes">
@@ -354,10 +414,10 @@
       <div class="nbody"><b>Hold car doors against the wind</b> — the number-one rental damage claim in Iceland. Single-lane bridges in the southeast: first to arrive has right of way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI. Check road.is each morning; no 4x4 needed on this route, but take gravel <b>and</b> sand/ash protection on the rental.</div>
     </details>
     <details class="note"><summary>Ocean safety — Reynisfjara &amp; Djúpalónssandur<span class="chev"></span></summary>
-      <div class="nbody">Both beaches have genuinely dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn your back on the sea, stay off the wet sand, and keep the little one's hand in yours.</div>
+      <div class="nbody">Both beaches have genuinely dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn your back on the sea, stay off the wet sand — and brief the 11-year-old hard: sneaker waves outrun sprinting adults.</div>
     </details>
     <details class="note"><summary>If a day goes sideways, trim these first<span class="chev"></span></summary>
-      <div class="nbody">Weather will steal at least half a day somewhere. Protect the two booked anchors (Katla, whales) and cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, Raufarhólshellir or the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, GeoSea, Fontana.</div>
+      <div class="nbody">Weather will steal at least half a day somewhere. On Plan B, the highland day carries its own built-in fallback (the classic coast day). Beyond that, protect the booked tours — Katla on Plan A, the whale watch on both — and cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, Raufarhólshellir or the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, GeoSea, Fontana.</div>
     </details>
     <details class="note"><summary>Food, fuel &amp; phones<span class="chev"></span></summary>
       <div class="nbody">N1/Orkan stations all along the route — bring a credit card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn (Pakkhús or Otto). eSIM from Nova or Síminn, or carrier roaming — Ring Road coverage is excellent.</div>
@@ -367,8 +427,8 @@
 
 <footer>
   <div class="wrap">
-    <p class="fx">Live sources on the road</p>
-    <p>vedur.is — weather + aurora · road.is — road conditions · safetravel.is — alerts &amp; volcano access. Herring Era Museum, Hofsós pool and Glaumbær keep short September hours — confirm the morning of.</p>
+    <p class="fx">Small print</p>
+    <p>The full monitoring kit lives in "The daily watch" above. Herring Era Museum, Hofsós pool and Glaumbær keep short September hours — confirm the night before, every time.</p>
   </div>
 </footer>
 
@@ -376,126 +436,238 @@
 /* ================= DATA ================= */
 const KEF = [63.985,-22.605];
 
-const DAYS = [
- {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", title:"Arrival · Blue Lagoon · Reykjavík",
-  base:"Reykjavík", baseLL:[64.147,-21.935],
-  hotels:["Center Hotels","Fosshótel Reykjavík","Canopy by Hilton","Laugavegur apartments"],
+const STAY1 = {name:"Nordic Apartments", addr:"Snorrabraut 56, 105 Reykjavík",
+  ll:[64.137,-21.916], q:"Nordic Apartments, Snorrabraut 56, 105 Reykjavík, Iceland",
+  status:"Booked · Booking.com · free cancellation until Sep 4"};
+const STAY2 = {name:"Paradise Cave Hostel & Guesthouse", addr:"Seljalandsskóli, 861 — at Seljalandsfoss",
+  ll:[63.599,-19.965], q:"Paradise Cave Hostel & Guesthouse, Seljalandsskóli, Iceland",
+  status:"Booked · non-refundable · check-in 16:00–22:00 · breakfast included"};
+const STAY3 = {name:"Farmhouse Lodge (Airbnb)", addr:"Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík",
+  ll:[63.4374645,-19.1899663], q:null,
+  status:"Booked · Airbnb · free cancellation until Sep 7"};
+
+const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
+  title:"Arrival · Blue Lagoon · Reykjavík",
+  base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:00",
   stops:[
-   {name:"Keflavík Airport", ll:KEF, note:"Land 10:00 — bags and rental car by ~11:15."},
-   {name:"Blue Lagoon", ll:[63.880,-22.449], tag:"book", note:"12:00–14:30 pre-booked slot; luggage storage on site. Fills the gap before 15:00 check-in. Backup if closed: Sky Lagoon (12+ only)."},
-   {name:"Hallgrímskirkja · Sun Voyager · Harpa", ll:[64.1417,-21.9266], note:"Easy downtown loop once you're checked in."},
-   {name:"Perlan or FlyOver Iceland", ll:[64.129,-21.919], tag:"opt", note:"If there's energy left — both are excellent with a kid."}
-  ]},
- {n:2, dow:"Sun", date:"Sep 20", km:"~200 km", title:"Golden Circle",
-  base:"Hella / Hvolsvöllur", baseLL:[63.8343,-20.3987],
-  hotels:["Hótel Rangá (splurge + aurora wake-up)","Stracta Hotel","Landhotel","Midgard Base Camp"],
-  stops:[
-   {name:"Þingvellir National Park", ll:[64.2559,-21.1295], note:"Almannagjá rift walk, Öxarárfoss, the plate boundary — about 2 hrs."},
-   {name:"Efstidalur II — lunch", ll:[64.246,-20.633], tag:"book", note:"Friðheimar plan B: working dairy farm, ice-cream barn with cows behind the glass. Reserve now; watch Friðheimar for cancellations."},
-   {name:"Laugarvatn Fontana bakery", ll:[64.2151,-20.7307], tag:"opt", note:"Rye bread dug steaming from black sand, eaten on the spot."},
-   {name:"Geysir", ll:[64.3104,-20.3024], note:"Strokkur erupts every 5–10 minutes."},
-   {name:"Gullfoss", ll:[64.3271,-20.1199], note:"Two-tier torrent into the canyon — 45 min."},
-   {name:"Kerið · Secret Lagoon · Brúarfoss", ll:[64.0413,-20.885], tag:"opt", note:"Pick one on the way south if the day is running smooth."}
-  ]},
- {n:3, dow:"Mon", date:"Sep 21", km:"~130 km + tour", title:"Waterfalls · Katla ice cave · Reynisfjara",
-  base:"Vík", baseLL:[63.4187,-19.006],
-  hotels:["Hótel Kría","Icelandair Hótel Vík","Black Beach Suites","Puffin Hotel"],
-  stops:[
-   {name:"Seljalandsfoss + Gljúfrabúi", ll:[63.6156,-19.9886], note:"Walk behind the falls (raincoats); the hidden canyon falls are 600 m up the path."},
-   {name:"Skógafoss (+ Kvernufoss)", ll:[63.5321,-19.5114], note:"Kvernufoss only if you're ahead of schedule — 20-min walk from the museum lot."},
-   {name:"Katla ice cave — 14:00", ll:[63.60,-18.88], tag:"book", note:"Super-jeep to blue glacier ice under Mýrdalsjökull; ~3 hrs, kids ~6+. The only ice cave reliably open in September. If only 10:00 exists, flip the day."},
-   {name:"Dyrhólaey", ll:[63.4022,-19.1306], note:"The rock arch and the best coastal panorama in the south."},
-   {name:"Reynisfjara", ll:[63.4043,-19.0446], note:"Basalt columns in golden-hour light. Sneaker waves: obey the warning lights, stay off the wet sand."},
-   {name:"Lava Show, Vík", ll:[63.4187,-19.0060], tag:"opt", note:"Real molten lava indoors — if there's gas left in the tank."}
-  ]},
- {n:4, dow:"Tue", date:"Sep 22", km:"~270 km", title:"Canyon · Svartifoss · glacier lagoon",
-  base:"Höfn / lagoon area", baseLL:[64.2539,-15.2082],
-  hotels:["Fosshotel Glacier Lagoon","Hali Country Hotel","Hótel Höfn","Milk Factory","Seljavellir Guesthouse"],
-  stops:[
-   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], note:"Serpentine mossy canyon — 1 hr; last 3 km gravel."},
-   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], note:"1.5–2 hr round trip to the basalt-column falls; lunch at the visitor centre."},
-   {name:"Fjallsárlón", ll:[64.0152,-16.3771], tag:"opt", note:"The smaller, quieter iceberg lagoon."},
-   {name:"Jökulsárlón", ll:[64.0478,-16.1809], note:"Icebergs drifting to sea; optional amphibian boat, usually still running late September."},
-   {name:"Diamond Beach", ll:[64.0427,-16.1755], note:"Ice glittering on black sand, straight across the road."}
-  ]},
- {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", title:"Stokksnes · the East Fjords",
-  base:"Egilsstaðir", baseLL:[65.2637,-14.3945],
-  hotels:["Lake Hotel Egilsstaðir","Hótel Hérað","Hótel Eyvindará"],
-  stops:[
-   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], note:"Morning light on the black dunes; small access fee at the Viking Café."},
-   {name:"Djúpivogur", ll:[64.6562,-14.2846], note:"Eggin í Gleðivík egg sculptures; coffee stop."},
-   {name:"Petra's Stone Collection", ll:[64.836,-13.877], tag:"opt", note:"Quirky, kid-friendly, right on the coastal route in Stöðvarfjörður."},
-   {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
-  ]},
- {n:6, dow:"Thu", date:"Sep 24", km:"~250 km", title:"Stuðlagil · Dettifoss · Hverir · the baths",
+   {name:"Keflavík Airport → Blue Car", ll:KEF, time:"08:55–11:00", note:"Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early."},
+   {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"11:30–14:00", tag:"book", note:"Book the ~11:30 slot — the 08:55 landing makes it comfortable, and under-14s swim free, so the 11-year-old costs nothing. Paid luggage storage; light lunch at the café. Backup if closed: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+)."},
+   {name:"Hallgrímskirkja · Sun Voyager · Harpa", ll:[64.1417,-21.9266], drive:"50 min", time:"15:45–18:15", note:"Check in ~15:00 (drop bags if the room isn't ready) — the apartment is a 15-min walk from the church — then tower elevator first, waterfront after."},
+   {name:"Perlan or FlyOver Iceland", ll:[64.129,-21.919], drive:"5 min", time:"19:00–21:00", tag:"opt", note:"Only if everyone's still upright — FlyOver Iceland is peak 11-year-old."}
+  ]};
+
+const D5TO10 = [
+ {n:6, dow:"Thu", date:"Sep 24", km:"~250 km", depart:"08:15", arrive:"16:10",
+  title:"Stuðlagil · Dettifoss · Hverir · the baths",
   base:"Mývatn", baseLL:[65.6465,-16.9127],
-  hotels:["Fosshotel Mývatn","Hótel Laxá","Sel-Hótel","Vogafjós Farm Resort"],
+  hotels:["Eldá Guesthouse","Hlíð Huts & Rooms","Skútustaðir farmhouse","Worth-it mid: Vogafjós"],
   stops:[
-   {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], note:"East-side walk (~5 km RT) for the river-level basalt view; west-side stairs if short on time. Color varies with dam overflow."},
-   {name:"Möðrudalur", ll:[65.3606,-15.8867], tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert."},
-   {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], note:"Europe's most powerful waterfall — Route 862, paved. Add the 30-min walk to Selfoss."},
-   {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], note:"Boiling mud pots and fumaroles — 45 min."},
-   {name:"Grjótagjá", ll:[65.6262,-16.8827], note:"Quick photo stop; viewing only, no bathing."},
-   {name:"Dimmuborgir", ll:[65.5911,-16.9119], tag:"opt", note:"Lava labyrinth — squeeze in if energy allows."},
-   {name:"Mývatn Nature Baths — ~18:30", ll:[65.6304,-16.848], tag:"book", note:"The north's Blue Lagoon at a fraction of the crowd; steam over the lake at sunset. Timed entry online."}
+   {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], drive:"55 min", time:"09:10–11:10", note:"East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow."},
+   {name:"Möðrudalur", ll:[65.3606,-15.8867], drive:"30 min", time:"11:45–12:05", tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert."},
+   {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], drive:"50 min", time:"12:55–14:10", note:"Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here."},
+   {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], drive:"45 min", time:"14:55–15:40", note:"Boiling mud pots and fumaroles."},
+   {name:"Grjótagjá", ll:[65.6262,-16.8827], drive:"5 min", time:"15:45–16:00", note:"Photo stop; viewing only, no bathing."},
+   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth after check-in — skip if the tank is empty."},
+   {name:"Mývatn Nature Baths", ll:[65.6304,-16.848], drive:"10 min", time:"18:00–20:00", tag:"book", note:"Booked timed entry — under-13s are free, so the 11-year-old rides along at no cost. Sunset steam over the lake; late dinner at Vogafjós ~20:15."}
   ]},
- {n:7, dow:"Fri", date:"Sep 25", km:"~200 km", title:"Húsavík whales · Goðafoss · Akureyri",
-  base:"Akureyri", baseLL:[65.6885,-18.1262],
-  hotels:["Hótel Kea","Icelandair Hotel Akureyri","Skjaldarvík Guesthouse"],
-  stops:[
-   {name:"Húsavík whale watching — ~10:00", ll:[66.045,-17.3383], tag:"book", note:"3 hrs on Skjálfandi Bay; humpbacks near-guaranteed even late September. Gentle Giants or North Sailing; warm overalls down to kid sizes. Lunch after at Naustið."},
-   {name:"GeoSea", ll:[66.053,-17.356], tag:"soak", note:"Seawater infinity baths on the cliff — skip if that's too many soaks in 24 hrs."},
-   {name:"Goðafoss", ll:[65.6828,-17.5502], note:"The waterfall of the gods — 45-min stop on the drive south."},
-   {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], note:"Church, botanical garden, Hafnarstræti — and the famous ice cream."}
-  ]},
- {n:8, dow:"Sat", date:"Sep 26", km:"~430 km", title:"Tröllaskagi · Hofsós pool · the long haul west",
+ {n:8, dow:"Sat", date:"Sep 26", km:"~430 km", depart:"08:00", arrive:"18:40",
+  title:"Tröllaskagi · Hofsós pool · the long haul west",
   base:"Grundarfjörður (or Stykkishólmur)", baseLL:[64.9226,-23.2585],
-  hotels:["Kirkjufell Hotel","Hótel Framnes","Fosshotel Stykkishólmur","Hótel Egilsen","Fallback: Borgarnes"],
+  hotels:["Grundarfjörður HI Hostel","Old Post Office Guesthouse","Harbour Hostel Stykkishólmur"],
   stops:[
-   {name:"Siglufjörður — Herring Era Museum", ll:[66.1512,-18.9054], note:"One of Iceland's best museums; September = afternoon hours, verify and plan around it."},
-   {name:"Hofsós pool", ll:[65.8965,-19.4108], tag:"soak", note:"The fjord-edge infinity pool. Swimsuits in the day bag; confirm Saturday hours before leaving Siglufjörður."},
-   {name:"Glaumbær turf farm", ll:[65.6099,-19.5058], note:"Late-September hours may be limited — striking from outside regardless."},
-   {name:"Kolugljúfur", ll:[65.3293,-20.5732], tag:"opt", note:"15-minute leg stretch just off Route 1."}
+   {name:"Siglufjörður", ll:[66.1512,-18.9054], drive:"1 hr 15", time:"09:15–10:30", note:"Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before."},
+   {name:"Hofsós pool", ll:[65.8965,-19.4108], drive:"45 min", time:"11:15–12:15", tag:"soak", note:"Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45."},
+   {name:"Glaumbær turf farm", ll:[65.6099,-19.5058], drive:"35 min", time:"13:20–14:05", note:"Exterior is the show if the museum's on short hours."},
+   {name:"Kolugljúfur", ll:[65.3293,-20.5732], drive:"1 hr 15", time:"15:20–15:40", tag:"opt", note:"15-min leg stretch off Rte 1, then ~3 hrs west — fuel + snack in Borgarnes ~17:20. Running late? Sleep Borgarnes, start Day 9 an hour earlier."}
   ]},
- {n:9, dow:"Sun", date:"Sep 27", km:"~230 km loop", title:"Snæfellsnes, tip to toe",
-  base:"Borgarnes (or Hótel Búðir)", baseLL:[64.539,-21.921],
-  hotels:["Hótel Borgarnes","B59 Hotel","Hótel Hafnarfjall","Fossatún (troll-themed)","Hótel Búðir"],
+ {n:9, dow:"Sun", date:"Sep 27", km:"~230 km loop", depart:"08:30", arrive:"17:45",
+  title:"Snæfellsnes, tip to toe",
+  base:"Borgarnes (or Fossatún)", baseLL:[64.539,-21.921],
+  hotels:["Borgarnes HI Hostel","Bjarg guesthouse & cabins","Fossatún pods (20 min east)"],
   stops:[
-   {name:"Kirkjufell + Kirkjufellsfoss", ll:[64.942,-23.3068], note:"Morning light, 2 km from Grundarfjörður."},
-   {name:"Stykkishólmur", ll:[65.0757,-22.7297], note:"Harbor, Súgandisey lighthouse hill, Danish-era houses."},
-   {name:"Djúpalónssandur", ll:[64.7527,-23.9033], note:"Black-pebble beach, lifting stones, shipwreck remains — same ocean caution as Reynisfjara."},
-   {name:"Vatnshellir lava cave", ll:[64.748,-23.818], tag:"opt", note:"45-min guided cave, kid-friendly."},
-   {name:"Arnarstapi · Gatklettur", ll:[64.7686,-23.6216], note:"Stone arch plus a stretch of the clifftop walk toward Hellnar."},
-   {name:"Búðakirkja", ll:[64.8221,-23.3843], note:"The black church in the lava field."},
-   {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], note:"Seals haul out most days; free, 20–30 minutes, right on the way off the peninsula."}
+   {name:"Kirkjufell + Kirkjufellsfoss", ll:[64.942,-23.3068], drive:"5 min", time:"08:30–09:15", note:"Morning light, five minutes from town."},
+   {name:"Stykkishólmur", ll:[65.0757,-22.7297], drive:"35 min", time:"09:50–11:00", note:"Harbor, Súgandisey lighthouse hill, Danish-era houses."},
+   {name:"Djúpalónssandur", ll:[64.7527,-23.9033], drive:"75 min + Ólafsvík lunch", time:"12:30–13:15", note:"Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara."},
+   {name:"Vatnshellir lava cave", ll:[64.748,-23.818], drive:"5 min", time:"13:20–14:05", tag:"opt", note:"45-min guided cave, tours on the hour, kid-friendly."},
+   {name:"Arnarstapi · Gatklettur", ll:[64.7686,-23.6216], drive:"10 min", time:"14:15–15:10", note:"Stone arch plus a stretch of the clifftop walk toward Hellnar."},
+   {name:"Búðakirkja", ll:[64.8221,-23.3843], drive:"10 min", time:"15:20–15:45", note:"The black church in the lava field."},
+   {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], drive:"15 min", time:"16:00–16:40", note:"Seals haul out most days; then 1:05 to Borgarnes."}
   ]},
- {n:10, dow:"Mon", date:"Sep 28", km:"~220 km", title:"Lava tunnel · Reykjanes · airport night",
+ {n:10, dow:"Mon", date:"Sep 28", km:"~220 km", depart:null, arrive:"17:00",
+  title:"Lava tunnel · Reykjanes · airport night",
   base:"Keflavík", baseLL:[64.0049,-22.5624],
-  hotels:["Courtyard by Marriott Keflavík","Airport Hotel Aurora Star","Hótel Berg"],
+  hotels:["Base Hotel","Guesthouse 1x6","Njarðvík Airbnb apartments"],
   stops:[
-   {name:"Hraunfossar · Deildartunguhver · Krauma", ll:[64.7028,-20.975], tag:"opt", note:"Morning mini-loop option (~2 hrs) — or the Settlement Centre in Borgarnes instead."},
-   {name:"Raufarhólshellir", ll:[63.9394,-21.397], tag:"book", note:"Lava tunnel with walkways and lights — book the early-afternoon standard tour (1 hr)."},
-   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], tag:"opt", note:"The 2021–23 lava has cooled and the crater hike is 2–4 hrs — only if trails are open and legs are willing. Check safetravel.is."},
-   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], tag:"opt", note:"The quick Reykjanes substitutes if the hike is out."}
+   {name:"Hraunfossar · Deildartunguhver — or Settlement Centre", ll:[64.7028,-20.975], time:"09:00–11:15", tag:"opt", note:"Choose one easy morning from Borgarnes; back and rolling south by 11:30."},
+   {name:"Raufarhólshellir", ll:[63.9394,-21.397], drive:"1 hr 20", time:"14:00–15:00", tag:"book", note:"Booked standard tour — walkways and lights. Lunch in Hveragerði 12:50–13:30 en route."},
+   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"50 min", time:"flex · 2–4 hr", tag:"opt", note:"The crater hike — only if trails are open and legs vote yes. Check safetravel.is."},
+   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], time:"15:50–16:40", tag:"opt", note:"The quick Reykjanes substitute — though with the 17:10 departure these fit even better on tomorrow's free morning. Refuel tonight or before the 11:00 drop."}
   ]}
 ];
 
-const UPGRADES = [
- ["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],
- ["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]
+const CLASSIC_DAYS = [
+ DAY1,
+ {n:2, dow:"Sun", date:"Sep 20", km:"~200 km", depart:"08:30", arrive:"17:45",
+  title:"Golden Circle", base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
+  stops:[
+   {name:"Þingvellir National Park", ll:[64.2559,-21.1295], drive:"45 min", time:"09:15–11:15", note:"Almannagjá rift walk, Öxarárfoss, the plate boundary."},
+   {name:"Efstidalur II — lunch", ll:[64.246,-20.633], drive:"45 min", time:"12:00–13:15", tag:"book", note:"Friðheimar plan B: dairy-farm lunch, ice-cream barn. Keep watching Friðheimar for cancellations."},
+   {name:"Laugarvatn Fontana bakery", ll:[64.2151,-20.7307], time:"flex", tag:"opt", note:"Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth."},
+   {name:"Geysir", ll:[64.3104,-20.3024], drive:"20 min", time:"13:35–14:20", note:"Strokkur erupts every 5–10 minutes."},
+   {name:"Gullfoss", ll:[64.3271,-20.1199], drive:"10 min", time:"14:30–15:15", note:"Two-tier torrent into the canyon."},
+   {name:"Kerið · Secret Lagoon · Brúarfoss", ll:[64.0413,-20.885], drive:"30 min", time:"15:45–16:45", tag:"opt", note:"Pick one on the way south, then ~1:15 to the hostel — you sleep next door to tomorrow's first stop. Aurora watch from 21:30; Drífandi falls in the backyard."}
+  ]},
+ {n:3, dow:"Mon", date:"Sep 21", km:"~120 km + tour", depart:"08:25", arrive:"19:15",
+  title:"Waterfalls · Katla ice cave · Reynisfjara",
+  base:"Mýrdalur (near Dyrhólaey)", baseLL:[63.4375,-19.19], stay:STAY3,
+  stops:[
+   {name:"Seljalandsfoss + Gljúfrabúi", ll:[63.6156,-19.9886], drive:"2 min", time:"08:30–09:45", note:"You wake up next to it — beat the tour buses. Walk behind the falls (raincoats); Gljúfrabúi is 600 m up the path."},
+   {name:"Skógafoss + Kvernufoss", ll:[63.5321,-19.5114], drive:"30 min", time:"10:15–11:45", note:"The banked half-hour means Kvernufoss fits — 20-min walk from the museum lot, most people miss it."},
+   {name:"Katla ice cave", ll:[63.60,-18.88], drive:"30 min", time:"14:00–17:00", tag:"book", note:"Lunch in Vík 12:15 (Smiðjan Brugghús), tour desk 13:30. Super-jeep to blue glacier ice — 11 clears every operator's age rule with room to spare. If only the 10:00 slot exists, flip the day."},
+   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"15 min", time:"17:15–18:00", note:"The rock arch and the best coastal panorama in the south."},
+   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"18:10–19:00", note:"Golden-hour basalt. Sneaker waves: obey the warning lights, stay off the wet sand. Farmhouse is 15 min back west — dinner in Vík first, or groceries at Krónan."},
+   {name:"Lava Show, Vík", ll:[63.4187,-19.0060], drive:"10 min", time:"~20:00", tag:"opt", note:"Real molten lava indoors — if there's gas left in the tank."}
+  ]},
+ {n:4, dow:"Tue", date:"Sep 22", km:"~280 km", depart:"08:00", arrive:"18:10",
+  title:"Canyon · Svartifoss · glacier lagoon",
+  base:"Höfn / lagoon area", baseLL:[64.2539,-15.2082],
+  hotels:["Old Airline Guesthouse","Guesthouse Dyngja","Höfn HI Hostel","Lambhús cabins","Vagnsstaðir HI (halfway)"],
+  stops:[
+   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"1 hr", time:"09:00–10:00", note:"Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits."},
+   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"10:50–13:20", note:"~4 km round trip, kid-doable (10:50–12:35), then café lunch at the visitor centre."},
+   {name:"Fjallsárlón", ll:[64.0152,-16.3771], drive:"45 min", time:"14:05–14:35", tag:"opt", note:"The smaller, quieter iceberg lagoon — first thing to skip if behind."},
+   {name:"Jökulsárlón", ll:[64.0478,-16.1809], drive:"10 min", time:"14:50–16:05", note:"Icebergs drifting to sea. At 11 the Zodiac tour is unlocked (min age 10) — closer to the ice than the amphibian boat; pre-book a ~15:00 slot if tempted."},
+   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:05–16:50", note:"Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner."}
+  ]},
+ {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:30", arrive:"18:30",
+  title:"Stokksnes · the East Fjords",
+  base:"Egilsstaðir", baseLL:[65.2637,-14.3945],
+  hotels:["Olga Guesthouse","Lyngás Guesthouse","Skipalækur lakeside cabins"],
+  stops:[
+   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"20 min", time:"08:50–10:00", note:"Morning light on the black dunes; small access fee at the Viking Café."},
+   {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr 05", time:"11:05–11:45", note:"Eggin í Gleðivík egg sculptures + coffee."},
+   {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"1 hr", time:"12:45–13:45", tag:"opt", note:"Quirky, kid-friendly, right on the coastal route — packed lunch here."},
+   {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"15:30–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
+  ]},
+ D5TO10[0],
+ {n:7, dow:"Fri", date:"Sep 25", km:"~200 km", depart:"08:45", arrive:"17:20",
+  title:"Húsavík whales · Goðafoss · Akureyri",
+  base:"Akureyri", baseLL:[65.6885,-18.1262],
+  hotels:["Akureyri Backpackers (private)","Hafnarstræti Hostel (private)","Akureyri HI Hostel","Sæluhús apartments"],
+  stops:[
+   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"10:00–13:00", tag:"book", note:"Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45."},
+   {name:"GeoSea", ll:[66.053,-17.356], drive:"3 min", time:"14:00–15:00", tag:"soak", note:"Seawater infinity baths on the cliff — skip if that's too many soaks in 24 hrs."},
+   {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"50 min", time:"15:50–16:35", note:"The waterfall of the gods, right off the route south."},
+   {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"45 min", time:"17:30–19:00", note:"Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00."}
+  ]},
+ D5TO10[1], D5TO10[2], D5TO10[3]
 ];
 
-const BOOKINGS = [
- ["Hotels — all 10 nights","Today. Refundable rates, family rooms. Vík, Höfn, Egilsstaðir, Grundarfjörður go first."],
- ["Rental car","Automatic SUV; add gravel AND sand/ash protection — south-coast wind is the classic claim."],
- ["Katla ice cave","Mon Sep 21, 14:00 · Katlatrack / Troll / Arctic Adventures · confirm minimum age."],
- ["Húsavík whale watching","Fri Sep 25, ~10:00 · Gentle Giants or North Sailing."],
- ["Blue Lagoon","Sat Sep 19, ~12:00 · flexible/refundable ticket, given the volcano watch."],
- ["Golden Circle lunch","Efstidalur II, Sun Sep 20 · keep watching Friðheimar for cancellations and swap if one appears."],
- ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
- ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
- ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
+const HIGHLAND_DAYS = [
+ DAY1,
+ {n:2, dow:"Sun", date:"Sep 20", km:"~270 km", depart:"08:15", arrive:"19:15",
+  title:"Golden Circle → Þjórsárdalur highlands edge",
+  base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
+  note:"Hardcore alternative: from Gullfoss, run the washboard Kjölur track to Kerlingarfjöll's Hveradalir geothermal valley instead of Þjórsárdalur (1:45 each way + a 1.5 hr walk). Adds ~2 hrs — only with an early start and a patient kid.",
+  stops:[
+   {name:"Þingvellir National Park", ll:[64.2559,-21.1295], drive:"45 min", time:"09:00–10:45", note:"Almannagjá rift walk, Öxarárfoss — the compressed version; the afternoon is spent in the hills."},
+   {name:"Efstidalur II — early lunch", ll:[64.246,-20.633], drive:"45 min", time:"11:30–12:35", tag:"book", note:"Book the 11:30 table. Dairy-farm lunch, ice-cream barn with cows behind the glass."},
+   {name:"Geysir", ll:[64.3104,-20.3024], drive:"20 min", time:"12:55–13:35", note:"Strokkur erupts every 5–10 minutes."},
+   {name:"Gullfoss", ll:[64.3271,-20.1199], drive:"10 min", time:"13:45–14:25", note:"Two-tier torrent — and the mouth of the Kjölur highland track."},
+   {name:"Hjálparfoss", ll:[64.11,-19.87], drive:"45 min", time:"15:10–15:30", note:"Twin falls braided through a lava bowl, two minutes from the car."},
+   {name:"Gjáin (+ Stöng)", ll:[64.147,-19.735], drive:"20 min", time:"15:50–16:45", note:"A hidden green rift of springs, mini-falls and basalt — the kid's favorite 45 minutes of the trip. The Stöng Viking longhouse ruin is next door. Last stretch rough — the 4x4's warm-up."},
+   {name:"Háifoss", ll:[64.2065,-19.6868], drive:"25 min", time:"17:10–17:55", note:"122 m of freefall into a canyon, Iceland's #4 waterfall. Rough 7 km track (Rd 332) — skip if the day has run long. Then 1:25 down to the hostel; dinner at the hostel bar or Gallery Pizza, Hvolsvöllur."}
+  ]},
+ {n:3, dow:"Mon", date:"Sep 21", km:"~255 km · 90 on gravel", depart:"07:40", arrive:"18:45",
+  title:"Landmannalaugar — the highland day",
+  base:"Mýrdalur (near Dyrhólaey)", baseLL:[63.4375,-19.19], stay:STAY3,
+  note:"Weather gate — F-road day. Over breakfast check umferdin.is (F208 North status) and vedur.is wind. Closed road or 15+ m/s gusts → run the classic coast day instead: Skógafoss + Kvernufoss, Dyrhólaey, Reynisfjara, and a walk-up Katla ice-cave slot if one exists. Tonight's farmhouse works either way.",
+  stops:[
+   {name:"Seljalandsfoss at dawn", ll:[63.6156,-19.9886], drive:"2 min", time:"07:40–08:25", note:"Sunrise ~07:05, nobody there. Walk behind the curtain, then roll."},
+   {name:"Fuel + provisions, Hvolsvöllur", ll:[63.752,-20.224], drive:"15 min", time:"08:45–09:05", note:"Last fuel and a picnic run — there is nothing to buy in the highlands. Towels and suits in the day bag."},
+   {name:"Sigöldugljúfur", ll:[64.17,-19.24], drive:"1 hr 15", time:"10:20–10:35", tag:"opt", note:"Five-minute walk to a canyon of braided blue water — the highlands' opening argument."},
+   {name:"Landmannalaugar", ll:[63.9832,-19.0605], drive:"40 min", time:"11:00–14:45", tag:"soak", note:"Park at the footbridge lot before the ford — never drive the river. Laugahraun–Grænagil loop (~4 km, 2 hrs, rhyolite in orange, red and green), picnic, then the natural hot-spring soak. Rustic changing; mind the kid near the hot inlets."},
+   {name:"Skógafoss — on the way home", ll:[63.5321,-19.5114], drive:"2 hr 20", time:"17:45–18:15", note:"Five minutes off the road as you come off the mountain. Dinner: Vík (15 min past the farmhouse) or the farmhouse kitchen."}
+  ]},
+ {n:4, dow:"Tue", date:"Sep 22", km:"~260 km", depart:"08:15", arrive:"17:50",
+  title:"Dyrhólaey · Reynisfjara · Svartifoss · the lagoon",
+  base:"Jökulsárlón / Hali area", baseLL:[64.07,-16.02],
+  hotels:["Vagnsstaðir HI Hostel","Skyrhúsið Guesthouse","Gerði Guesthouse","Hali Country Hotel","Mid: Fosshotel Glacier Lagoon"],
+  stops:[
+   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"10 min", time:"08:25–09:10", note:"Ten minutes from the farmhouse — the arch and the panorama before the buses arrive."},
+   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"09:20–10:10", note:"Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does."},
+   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"45 min", time:"10:55–11:45", note:"Canyon rim walk; last 3 km gravel — trivial in the 4x4."},
+   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"12:35–15:00", note:"Café lunch first (12:35–13:10), then the ~4 km round trip to the basalt-column falls."},
+   {name:"Jökulsárlón", ll:[64.0478,-16.1809], drive:"55 min", time:"15:55–17:00", note:"Icebergs at golden hour — better light than midday. Fjallsárlón is one of this plan's casualties."},
+   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"17:00–17:40", note:"Ice on black sand — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow."}
+  ]},
+ {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:15", arrive:"18:15",
+  title:"Stokksnes · the East Fjords",
+  base:"Egilsstaðir", baseLL:[65.2637,-14.3945],
+  hotels:["Olga Guesthouse","Lyngás Guesthouse","Skipalækur lakeside cabins"],
+  stops:[
+   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"1 hr", time:"09:15–10:15", note:"Morning light on the black dunes; small access fee at the Viking Café."},
+   {name:"Höfn — fuel + Hafnarbúðin", ll:[64.2539,-15.2082], drive:"20 min", time:"10:35–11:00", note:"Fuel up, plus the famous langoustine baguette window — early lunch or takeaway."},
+   {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr", time:"12:05–12:40", note:"Eggin í Gleðivík egg sculptures + coffee."},
+   {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"55 min", time:"13:35–14:20", tag:"opt", note:"Quirky, kid-friendly, right on the coastal route."},
+   {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"16:00–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
+  ]},
+ D5TO10[0],
+ {n:7, dow:"Fri", date:"Sep 25", km:"~250 km", depart:"08:45", arrive:"17:35",
+  title:"Húsavík whales · Goðafoss · Aldeyjarfoss",
+  base:"Akureyri", baseLL:[65.6885,-18.1262],
+  hotels:["Akureyri Backpackers (private)","Hafnarstræti Hostel (private)","Akureyri HI Hostel","Sæluhús apartments"],
+  stops:[
+   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"10:00–13:00", tag:"book", note:"Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45."},
+   {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"50 min", time:"14:50–15:30", note:"The waterfall of the gods. (GeoSea is this plan's trade for the falls run — swap back if you'd rather soak.)"},
+   {name:"Aldeyjarfoss", ll:[65.366,-17.342], drive:"40 min", time:"16:10–16:50", tag:"opt", note:"A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls."},
+   {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"50 min", time:"17:45–19:00", note:"Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00."}
+  ]},
+ D5TO10[1], D5TO10[2], D5TO10[3]
 ];
+
+const PLANS = {
+ classic: {
+  label:"Plan A · Classic coast",
+  desc:"Plan A — every south-coast icon including the Katla ice cave. No F-roads; a regular automatic SUV does the whole loop. Night 4 in Höfn.",
+  days: CLASSIC_DAYS,
+  upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
+  bookings: [
+   ["Lodging — 7 nights left (Sep 22–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Höfn, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
+   ["Rental car — ✔ booked","Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF."],
+   ["Katla ice cave","Mon Sep 21, 14:00 · Katlatrack / Troll / Arctic Adventures · confirm minimum age."],
+   ["Húsavík whale watching","Fri Sep 25, ~10:00 · Gentle Giants or North Sailing."],
+   ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
+   ["Golden Circle lunch","Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations."],
+   ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
+   ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
+   ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
+  ],
+  stats:{km:"~2,300", stops:0, soaks:4, flex:"<b>2</b> booked anchors"}
+ },
+ highland: {
+  label:"Plan B · Highland edition",
+  desc:"Plan B — the same loop with the best of the highlands folded in: Gjáin + Háifoss on day two, a full Landmannalaugar day with the natural hot-spring soak, Aldeyjarfoss after the whales. Needs a genuine F-road-legal 4x4. Trades away: Katla ice cave, Kvernufoss, Fjallsárlón, GeoSea. Night 4 moves from Höfn to the lagoon.",
+  days: HIGHLAND_DAYS,
+  upgrades: [["Landmannalaugar",3],["Gjáin + Háifoss",2],["Aldeyjarfoss",7],["Dyrhólaey",4],["Svartifoss",4],["Húsavík whales",7],["Hofsós pool",8]],
+  bookings: [
+   ["Lodging — 7 nights left (Sep 22–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Jökulsárlón/Hali, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
+   ["Rental car — ✔ booked, one confirm","Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford."],
+   ["Húsavík whale watching","Fri Sep 25, ~10:00 · Gentle Giants or North Sailing."],
+   ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
+   ["Golden Circle lunch","Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur)."],
+   ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
+   ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
+   ["Lava Show / Jökulsárlón boat","Optional · 1–2 weeks out is fine."]
+  ],
+  stats:{km:"~2,600", stops:0, soaks:5, flex:"<b>1</b> highland weather-gated day"}
+ }
+};
+PLANS.classic.stats.stops = PLANS.classic.days.reduce((a,d)=>a+d.stops.length,0);
+PLANS.highland.stats.stops = PLANS.highland.days.reduce((a,d)=>a+d.stops.length,0);
+
+let planKey = "classic";
+let DAYS = PLANS[planKey].days;
 
 /* Simplified clockwise coastline (lat, lon) */
 const COAST = [
@@ -515,7 +687,7 @@ const COAST = [
  [63.40,-18.80],[63.40,-19.15],[63.46,-19.75],[63.56,-20.35],[63.72,-20.75],[63.80,-21.10],
  [63.84,-21.45],[63.82,-21.80],[63.86,-22.30]
 ];
-const GLACIERS = [ // [lat, lon, rLonDeg, rLatDeg]
+const GLACIERS = [
  [64.42,-16.80,0.85,0.38],[64.68,-20.05,0.30,0.30],[64.80,-18.85,0.27,0.23],
  [63.65,-19.15,0.25,0.15],[64.80,-23.77,0.09,0.07]
 ];
@@ -524,7 +696,7 @@ const GLACIERS = [ // [lat, lon, rLonDeg, rLatDeg]
 const B = {latMin:63.15, latMax:66.75, lonMin:-24.9, lonMax:-13.2};
 const W = 1000, H = Math.round(W * (B.latMax-B.latMin) / ((B.lonMax-B.lonMin)*Math.cos(65*Math.PI/180)));
 const px = ll => [ (ll[1]-B.lonMin)/(B.lonMax-B.lonMin)*W, (B.latMax-ll[0])/(B.latMax-B.latMin)*H ];
-const dayVar = n => `var(--d${n})`; // CSS var, not a resolved color — keeps the map live across theme flips
+const dayColor = n => getComputedStyle(document.documentElement).getPropertyValue("--d"+n).trim();
 
 function smoothPath(pts, close){
   if(pts.length<3) return "M"+pts.map(p=>p.join(",")).join("L");
@@ -544,44 +716,40 @@ const svg = document.getElementById("icemap");
 const NS = "http://www.w3.org/2000/svg";
 const el = (t,attrs)=>{const e=document.createElementNS(NS,t);for(const k in attrs)e.setAttribute(k,attrs[k]);return e};
 
-function buildMap(){
+function buildMapStatic(){
   svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
-  // coast
-  const coast = el("path",{d:smoothPath(COAST.map(px),true),class:"coast"});
-  svg.appendChild(coast);
-  // glaciers
+  svg.appendChild(el("path",{d:smoothPath(COAST.map(px),true),class:"coast"}));
   GLACIERS.forEach(g=>{
     const c=px([g[0],g[1]]);
-    const rx=g[2]/(B.lonMax-B.lonMin)*W, ry=g[3]/(B.latMax-B.latMin)*H;
-    svg.appendChild(el("ellipse",{cx:c[0],cy:c[1],rx:rx,ry:ry,class:"glacier"}));
+    svg.appendChild(el("ellipse",{cx:c[0],cy:c[1],rx:g[2]/(B.lonMax-B.lonMin)*W,ry:g[3]/(B.latMax-B.latMin)*H,class:"glacier"}));
   });
-  // routes per day
-  const routes = el("g",{class:"route"}); svg.appendChild(routes);
+  const kp = px(KEF);
+  svg.appendChild(el("circle",{cx:kp[0],cy:kp[1],r:9,fill:"none",stroke:"var(--ember)","stroke-width":1.5,class:"startpulse"}));
+}
+
+function buildMapDynamic(){
+  const old = document.getElementById("dyn");
+  if(old) old.remove();
+  const dyn = el("g",{id:"dyn"});
+  const routes = el("g",{class:"route"}); dyn.appendChild(routes);
   DAYS.forEach((d,i)=>{
     const prev = i===0 ? KEF : DAYS[i-1].baseLL;
     const pts = [prev, ...d.stops.map(s=>s.ll), d.baseLL].map(px);
-    const p = el("path",{d:smoothPath(pts,false), pathLength:"1", "data-day":d.n});
-    p.style.stroke = dayVar(d.n);
+    const p = el("path",{d:smoothPath(pts,false), stroke:dayColor(d.n), pathLength:"1", "data-day":d.n});
     p.style.animationDelay = (i*0.12)+"s";
     routes.appendChild(p);
   });
-  // start pulse at KEF
-  const kp = px(KEF);
-  svg.appendChild(el("circle",{cx:kp[0],cy:kp[1],r:9,fill:"none",stroke:"var(--ember)","stroke-width":1.5,class:"startpulse"}));
-  // stops
   DAYS.forEach(d=>{
     const g = el("g",{class:"daylayer","data-day":d.n});
     d.stops.forEach(s=>{
       const c = px(s.ll);
       const grp = el("g",{class:"stop"+(s.tag==="opt"?" opt":""),tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
-      const halo = el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"});
-      let fill = dayVar(d.n), stroke="none", sw=0;
+      grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"}));
+      let fill = dayColor(d.n), stroke="none", sw=0;
       if(s.tag==="book"){fill="var(--ember)";}
       else if(s.tag==="soak"){fill="#59d7e8";}
-      else if(s.tag==="opt"){fill="transparent";stroke=dayVar(d.n);sw=1.6;}
-      const core = el("circle",{cx:c[0],cy:c[1],r:5,"stroke-width":sw,class:"core"});
-      core.style.fill = fill; core.style.stroke = stroke;
-      grp.appendChild(halo); grp.appendChild(core);
+      else if(s.tag==="opt"){fill="transparent";stroke=dayColor(d.n);sw=1.6;}
+      grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:5,fill:fill,stroke:stroke,"stroke-width":sw,class:"core"}));
       grp.addEventListener("pointerenter",e=>showTip(e,s,d));
       grp.addEventListener("pointermove",moveTip);
       grp.addEventListener("pointerleave",hideTip);
@@ -589,22 +757,20 @@ function buildMap(){
       grp.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectDay(d.n,true);}});
       g.appendChild(grp);
     });
-    // base marker
     const bc = px(d.baseLL);
     const base = el("g",{class:"base"});
-    const ring = el("circle",{cx:bc[0],cy:bc[1],r:10,class:"ring"});
-    ring.style.stroke = dayVar(d.n);
-    base.appendChild(ring);
+    base.appendChild(el("circle",{cx:bc[0],cy:bc[1],r:10,class:"ring",stroke:dayColor(d.n)}));
     const t = el("text",{x:bc[0],y:bc[1]+0.5}); t.textContent=d.n; base.appendChild(t);
     g.appendChild(base);
-    svg.appendChild(g);
+    dyn.appendChild(g);
   });
+  svg.appendChild(dyn);
 }
 
 /* tooltip */
 const tip = document.getElementById("tip"), mapbox = document.getElementById("mapbox");
 function showTip(e,s,d){
-  tip.innerHTML = `<div class="tday" style="color:${dayVar(d.n)}">Day ${d.n} · ${d.dow} ${d.date}</div><div><b>${s.name}</b></div><div class="tnote">${s.note||""}</div>`;
+  tip.innerHTML = `<div class="tday" style="color:${dayColor(d.n)}">Day ${d.n} · ${d.dow} ${d.date}${s.time?" · "+s.time:""}</div><div><b>${s.name}</b></div><div class="tnote">${s.note||""}</div>`;
   tip.style.opacity=1; moveTip(e);
 }
 function moveTip(e){
@@ -616,9 +782,17 @@ function moveTip(e){
 }
 function hideTip(){ tip.style.opacity=0; }
 
-/* ================= DAY CARDS + RAIL ================= */
+/* ================= CARDS + RAIL ================= */
 const cards = document.getElementById("cards");
 const rail = document.getElementById("rail");
+
+const gURL = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const aURL = q => "https://maps.apple.com/?q=" + encodeURIComponent(q);
+const gLL = ll => "https://www.google.com/maps/search/?api=1&query=" + ll[0] + "," + ll[1];
+const aLL = (ll,name) => "https://maps.apple.com/?ll=" + ll[0] + "," + ll[1] + "&q=" + encodeURIComponent(name);
+const stayG = st => st.q ? gURL(st.q) : gLL(st.ll);
+const stayA = st => st.q ? aURL(st.q) : aLL(st.ll, st.name);
+const hotelQ = (h,base) => h.replace(/^(Alt:|Worth-it mid:|Mid:)\s*/,"").replace(/\s*\(.*?\)/g,"") + " " + base.replace(/\s*\(.*?\)/g,"") + " Iceland";
 
 function chip(tag){
   if(tag==="book") return '<span class="chip book">Book now</span>';
@@ -627,40 +801,54 @@ function chip(tag){
   return "";
 }
 
+function stayBox(d){
+  if(d.stay){
+    return `<div class="stay booked">
+      <span class="eyebrow">Overnight · confirmed</span>
+      <div style="margin-top:7px"><span class="chip bkd">Booked</span> <b>${d.stay.name}</b>${d.arrive?` <span class="arr">check-in ~${d.arrive}</span>`:""}</div>
+      <div class="addr"><a href="${stayG(d.stay)}" target="_blank" rel="noopener">${d.stay.addr}</a><span class="mlinks"><a href="${stayG(d.stay)}" target="_blank" rel="noopener" title="Open in Google Maps">Google Maps</a><a href="${stayA(d.stay)}" target="_blank" rel="noopener" title="Open in Apple Maps">Apple Maps</a></span></div>
+      <div class="cxl">${d.stay.status}</div>
+    </div>`;
+  }
+  return `<div class="stay">
+    <span class="eyebrow">Overnight · budget picks, sleeps 3</span> &nbsp;<b>${d.base}</b>${d.arrive?` <span class="arr">check-in ~${d.arrive}</span>`:""}
+    <div class="hotels">${d.hotels.map(h=>`<a class="hotel" href="${gURL(hotelQ(h,d.base))}" target="_blank" rel="noopener">${h}</a>`).join("")}</div>
+    <div class="maphint">not booked yet — tap a name to open it in Google Maps</div>
+  </div>`;
+}
+
 function buildCards(){
   cards.innerHTML = DAYS.map(d=>`
     <details class="day" id="day-${d.n}" style="--c:var(--d${d.n})">
       <summary>
         <span class="dnum">${String(d.n).padStart(2,"0")}</span>
         <span class="dmeta">
-          <span class="eyebrow">${d.dow} ${d.date} · ${d.km}</span>
+          <span class="eyebrow">${d.dow} ${d.date}${d.depart?" · out "+d.depart:""} · ${d.km}${d.stay?" · stay booked":""}</span>
           <span class="dtitle">${d.title}</span>
         </span>
         <span class="dbase">night in <b>${d.base}</b></span>
         <span class="chev"></span>
       </summary>
       <div class="dbody">
+        ${d.note?`<p class="daynote">${d.note}</p>`:""}
         <ul class="stops">
           ${d.stops.map(s=>`
+            ${s.drive?`<li class="hop"><span class="stime"></span><span class="vdash"></span><span class="hoptext">drive ${s.drive}</span></li>`:""}
             <li class="${s.tag==="opt"?"opt":""}">
+              <span class="stime">${s.time||"flex"}</span>
               <span class="sdot"></span>
-              <div><div class="sname">${s.name}${chip(s.tag)}<a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=${s.ll[0]},${s.ll[1]}" target="_blank" rel="noopener" aria-label="Open ${s.name} in Google Maps">map ↗</a></div>
+              <div><div class="sname">${s.name}${chip(s.tag)}<span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a></span></div>
               <div class="snote">${s.note||""}</div></div>
             </li>`).join("")}
         </ul>
-        <div class="stay">
-          <span class="eyebrow">Overnight</span> &nbsp;<b>${d.base}</b>
-          <div class="hotels">${d.hotels.map(h=>`<span class="hotel">${h}</span>`).join("")}</div>
-        </div>
-        <div class="dayfoot"><button class="ghostbtn ics" data-day="${d.n}">Add day to calendar · .ics</button></div>
+        ${stayBox(d)}
       </div>
     </details>`).join("");
-  cards.querySelectorAll(".ics").forEach(b=>b.addEventListener("click",()=>downloadICS(Number(b.dataset.day))));
 }
 
 function buildRail(){
   let html = `<button class="pill all on" data-day="all">All days</button>`;
-  html += DAYS.map(d=>`<button class="pill" data-day="${d.n}" style="--c:var(--d${d.n})"><i></i>${d.n} · ${d.dow} ${d.date.split(" ")[1]}</button>`).join("");
+  html += PLANS.classic.days.map(d=>`<button class="pill" data-day="${d.n}" style="--c:var(--d${d.n})"><i></i>${d.n} · ${d.dow} ${d.date.split(" ")[1]}</button>`).join("");
   rail.innerHTML = html;
   rail.querySelectorAll(".pill").forEach(p=>{
     p.addEventListener("click",()=>{
@@ -672,7 +860,7 @@ function buildRail(){
 
 function buildUpgrades(){
   document.getElementById("upgrades").innerHTML =
-    UPGRADES.map(u=>`<button class="upg" data-day="${u[1]}">${u[0]}<b>· Day ${u[1]}</b></button>`).join("");
+    PLANS[planKey].upgrades.map(u=>`<button class="upg" data-day="${u[1]}">${u[0]}<b>· Day ${u[1]}</b></button>`).join("");
   document.querySelectorAll(".upg").forEach(b=>b.addEventListener("click",()=>selectDay(Number(b.dataset.day),true)));
 }
 
@@ -680,7 +868,7 @@ let activeDay = null;
 function selectDay(n, scroll){
   activeDay = n;
   document.querySelectorAll("#icemap .daylayer, #icemap .route path").forEach(g=>{
-    const d = Number(g.getAttribute("data-day")||g.dataset.day);
+    const d = Number(g.getAttribute("data-day"));
     g.classList.toggle("dim", n!==null && d!==n);
   });
   rail.querySelectorAll(".pill").forEach(p=>{
@@ -691,32 +879,23 @@ function selectDay(n, scroll){
     if(card){ card.open = true; if(scroll) card.scrollIntoView({block:"start",behavior:"smooth"}); }
   }
 }
-document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
 
 /* ================= BOOKING TRACKER ================= */
 const checks = document.getElementById("checks");
-const BKEY = "iceland26.bookings";
-function loadBookings(){
-  try{
-    const a = JSON.parse(localStorage.getItem(BKEY) || "[]");
-    return Array.isArray(a) ? a.filter(i=>Number.isInteger(i) && i>=0 && i<BOOKINGS.length) : [];
-  }catch(e){ return []; }
-}
-function saveBookings(){
-  try{
-    const done = [...checks.querySelectorAll("input")].flatMap((inp,i)=>inp.checked?[i]:[]);
-    localStorage.setItem(BKEY, JSON.stringify(done));
-  }catch(e){}
-}
+const bkState = { classic:new Set(), highland:new Set() };
 function buildChecks(){
-  checks.innerHTML = BOOKINGS.map((b,i)=>`
+  const items = PLANS[planKey].bookings;
+  checks.innerHTML = items.map((b,i)=>`
     <li id="bk-${i}">
-      <input type="checkbox" id="c-${i}" aria-label="Mark booked: ${b[0]}">
+      <input type="checkbox" id="c-${i}" aria-label="Mark booked: ${b[0]}" ${bkState[planKey].has(i)?"checked":""}>
       <label for="c-${i}"><span class="bidx">${String(i+1).padStart(2,"0")}</span><b>${b[0]}</b>
       <span class="bmeta">${b[1]}</span></label>
     </li>`).join("");
-  loadBookings().forEach(i=>{ const c=document.getElementById("c-"+i); if(c) c.checked=true; });
-  checks.querySelectorAll("input").forEach(inp=>inp.addEventListener("change",()=>{updateProgress();saveBookings();}));
+  checks.querySelectorAll("input").forEach((inp,i)=>inp.addEventListener("change",()=>{
+    if(inp.checked) bkState[planKey].add(i); else bkState[planKey].delete(i);
+    updateProgress();
+  }));
+  updateProgress();
 }
 function updateProgress(){
   const inputs = [...checks.querySelectorAll("input")];
@@ -724,114 +903,58 @@ function updateProgress(){
   inputs.forEach(i=>i.closest("li").classList.toggle("done",i.checked));
   document.getElementById("pbar").style.width = (done/inputs.length*100)+"%";
   document.getElementById("plabel").textContent =
-    done===0 ? `0 of ${inputs.length} booked — start with hotels` :
-    done===inputs.length ? `All ${inputs.length} booked. Iceland is officially inevitable.` :
+    done===0 ? "0 of "+inputs.length+" booked — start with lodging and the rental" :
+    done===inputs.length ? "All "+inputs.length+" booked. Iceland is officially inevitable." :
     `${done} of ${inputs.length} booked`;
+}
+
+/* ================= PLAN SWITCH ================= */
+function switchPlan(key, userAction){
+  planKey = key;
+  DAYS = PLANS[key].days;
+  document.querySelectorAll(".ptab").forEach(t=>{
+    const on = t.dataset.plan===key;
+    t.classList.toggle("on", on);
+    t.setAttribute("aria-selected", on?"true":"false");
+  });
+  document.getElementById("plandesc").textContent = PLANS[key].desc;
+  const s = PLANS[key].stats;
+  document.getElementById("st-km").textContent = s.km;
+  document.getElementById("st-stops").textContent = s.stops;
+  document.getElementById("st-soak").textContent = s.soaks;
+  document.getElementById("st-flex").innerHTML = s.flex;
+  buildMapDynamic(); buildCards(); buildUpgrades(); buildChecks();
+  selectDay(null,false);
+  if(!userAction) document.getElementById("day-1").open = true;
 }
 
 /* ================= COUNTDOWN ================= */
 function countdown(){
   const now = new Date();
-  const start = new Date(2026,8,19,10,0,0);   // Sep 19, 2026
-  const end   = new Date(2026,8,29,10,0,0);   // Sep 29, 2026
+  const dep  = new Date(2026,8,18,18,45);
+  const home = new Date(2026,8,30,0,15);
   const c = document.getElementById("countdown");
-  if(now < start){
-    const days = Math.ceil((start-now)/86400000);
-    c.textContent = days+" day"+(days===1?"":"s")+" to wheels-up · KEF, 10:00";
-  } else if(now <= end){
-    const dayN = Math.min(10, Math.floor((now-start)/86400000)+1);
+  if(now < dep){
+    const days = Math.ceil((dep-now)/86400000);
+    c.textContent = days+" day"+(days===1?"":"s")+" to wheels-up · ATL 18:45 → KEF 08:55";
+  } else if(now <= home){
+    const dayN = Math.min(10, Math.max(1, Math.floor((now-new Date(2026,8,19))/86400000)+1));
     c.textContent = "Trip in progress — day "+dayN+" of 10";
   } else {
     c.textContent = "Loop complete · Sep 2026";
   }
 }
 
-/* ================= THEME ================= */
-const themeBtn = document.getElementById("themeToggle");
-function applyTheme(t, save){
-  document.documentElement.dataset.theme = t;
-  if(save){ try{ localStorage.setItem("iceland26.theme", t); }catch(e){} }
-  const next = t==="dark" ? "light" : "dark";
-  themeBtn.textContent = "◐ " + next;
-  themeBtn.setAttribute("aria-label", "Switch to "+next+" theme");
-  const m = document.querySelector('meta[name="theme-color"]');
-  if(m) m.content = t==="dark" ? "#0a1422" : "#f6f9fc";
-}
-themeBtn.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark", true));
-applyTheme(document.documentElement.dataset.theme || "dark", false);
-
-/* ================= ICS EXPORT ================= */
-function icsEscape(s){return s.replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n")}
-function icsFold(l){ // fold at 73 octets, never splitting a character
-  const enc = new TextEncoder();
-  let out="", cur="", len=0;
-  for(const ch of l){
-    const b = enc.encode(ch).length;
-    if(len+b>73){ out+=cur+"\r\n "; cur=ch; len=b; }
-    else{ cur+=ch; len+=b; }
-  }
-  return out+cur;
-}
-function dayICS(d){
-  const fmt = t => t.toISOString().slice(0,10).replace(/-/g,"");
-  const start = new Date(Date.UTC(2026,8,18+d.n)), end = new Date(Date.UTC(2026,8,19+d.n));
-  const stamp = new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z";
-  const desc = d.stops.map(s=>"• "+s.name+(s.tag?" ["+s.tag+"]":"")+(s.note?" — "+s.note:"")).join("\n")
-    + "\nOvernight: "+d.base+"\nHotels: "+d.hotels.join(", ");
-  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//iceland26//trip planner//EN","CALSCALE:GREGORIAN",
-    "BEGIN:VEVENT",
-    "UID:iceland26-day-"+d.n+"@harshalgajare.com",
-    "DTSTAMP:"+stamp,
-    "DTSTART;VALUE=DATE:"+fmt(start),
-    "DTEND;VALUE=DATE:"+fmt(end),
-    icsFold("SUMMARY:"+icsEscape("Iceland day "+d.n+" — "+d.title)),
-    icsFold("LOCATION:"+icsEscape(d.base+", Iceland")),
-    icsFold("DESCRIPTION:"+icsEscape(desc)),
-    "END:VEVENT","END:VCALENDAR"].join("\r\n")+"\r\n";
-}
-function downloadICS(n){
-  const d = DAYS.find(x=>x.n===n); if(!d) return;
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([dayICS(d)],{type:"text/calendar;charset=utf-8"}));
-  a.download = "iceland-day-"+String(n).padStart(2,"0")+".ics";
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
-}
-
-/* ================= LIVE KP (NOAA — vedur.is blocks CORS) ================= */
-async function loadKp(){
-  const box = document.getElementById("kpline");
-  try{
-    const opts = typeof AbortSignal!=="undefined" && AbortSignal.timeout ? {signal:AbortSignal.timeout(8000)} : {};
-    const r = await fetch("https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json", opts);
-    if(!r.ok) throw 0;
-    const rows = (await r.json()).filter(x=>x && typeof x.kp==="number");
-    const obs = rows.filter(x=>x.observed==="observed");
-    const now = obs[obs.length-1];
-    const horizon = Date.now() + 24*3600e3;
-    const ahead = rows.filter(x=>x.observed!=="observed" && +new Date(x.time_tag+"Z")<=horizon);
-    const peak = ahead.length ? Math.max(...ahead.map(x=>x.kp)) : null;
-    if(!now && peak===null) throw 0;
-    const label = k => k>=5?"storm — go outside":k>=4?"active":k>=3?"worth a look":"quiet";
-    box.innerHTML = `live via NOAA · Kp ${now?now.kp.toFixed(1):"–"} now`
-      + (peak!==null?` · 24 h peak ${peak.toFixed(1)} — ${label(peak)}`:"")
-      + ` · clouds: <a href="https://en.vedur.is/weather/forecasts/aurora/" target="_blank" rel="noopener">vedur.is ↗</a>`;
-    box.hidden = false;
-  }catch(e){ /* offline or blocked — the routine above still stands */ }
-}
-
 /* ================= PRINT ================= */
 window.addEventListener("beforeprint",()=>{document.querySelectorAll("details").forEach(d=>{d.dataset.was=d.open?"1":"";d.open=true;});});
 window.addEventListener("afterprint",()=>{document.querySelectorAll("details").forEach(d=>{d.open=d.dataset.was==="1";});});
 
-/* ================= OFFLINE ================= */
-if("serviceWorker" in navigator && (location.protocol==="https:" || ["localhost","127.0.0.1"].includes(location.hostname))){
-  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
-}
-
 /* ================= INIT ================= */
-buildMap(); buildCards(); buildRail(); buildUpgrades(); buildChecks(); updateProgress(); countdown(); loadKp();
-document.getElementById("day-1").open = true;
+buildMapStatic(); buildRail();
+document.querySelectorAll(".ptab").forEach(t=>t.addEventListener("click",()=>switchPlan(t.dataset.plan,true)));
+document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
+switchPlan("classic", false);
+countdown();
 </script>
 </body>
 </html>
