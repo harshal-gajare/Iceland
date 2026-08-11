@@ -536,6 +536,18 @@ const STAY3 = {name:"Farmhouse Lodge (Airbnb)", addr:"Skeiðflöt, 871 Mýrdalur
 const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 20 min from Stokksnes",
   ll:[64.2593,-15.2073], q:"Höfn Inn Guesthouse, Vesturbraut 3, 780 Höfn, Iceland",
   status:"Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544"};
+/* Night 5 in BOTH plans: day 5 is a plan-specific literal in each, but both base
+   on Egilsstaðir, so the same object hangs off both — do not mutate it.
+   The guesthouse is ~10 km southwest of Egilsstaðir town, not in it, so ll is the
+   confirmation's own GPS (N 065° 11.332, W 14° 30.153) and the map links land on
+   the farm rather than the town centre. baseLL stays the town coordinate: the
+   difference is 26 seconds of sunset, well under the minute the strip prints.
+   Booking.com spells it "Eyjólfsstadir"; the eth is restored here to match how
+   every other Icelandic place on the page is written. The confirmation number is
+   what identifies the booking, so nothing factual moves. */
+const STAY5 = {name:"Eyjólfsstaðir Guesthouse", addr:"Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town",
+  ll:[65.1889,-14.5026], q:"Eyjólfsstaðir Guesthouse, 701 Egilsstaðir, Iceland",
+  status:"Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
 
 const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
   title:"Arrival · Blue Lagoon · Reykjavík",
@@ -634,8 +646,7 @@ const CLASSIC_DAYS = [
   ]},
  {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:30", arrive:"18:30",
   title:"Stokksnes · the East Fjords",
-  base:"Egilsstaðir", baseLL:[65.2637,-14.3945],
-  hotels:["Olga Guesthouse","Lyngás Guesthouse","Skipalækur lakeside cabins"],
+  base:"Egilsstaðir", baseLL:[65.2637,-14.3945], stay:STAY5,
   stops:[
    {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"20 min", time:"08:50–10:00", note:"Morning light on the black dunes; small access fee at the Viking Café."},
    {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr 05", time:"11:05–11:45", note:"Eggin í Gleðivík egg sculptures + coffee."},
@@ -703,8 +714,7 @@ const HIGHLAND_DAYS = [
   ]},
  {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:15", arrive:"18:15",
   title:"Stokksnes · the East Fjords",
-  base:"Egilsstaðir", baseLL:[65.2637,-14.3945],
-  hotels:["Olga Guesthouse","Lyngás Guesthouse","Skipalækur lakeside cabins"],
+  base:"Egilsstaðir", baseLL:[65.2637,-14.3945], stay:STAY5,
   stops:[
    {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"1 hr", time:"09:15–10:15", note:"Morning light on the black dunes; small access fee at the Viking Café."},
    {name:"Höfn — fuel + Hafnarbúðin", ll:[64.2539,-15.2082], drive:"20 min", time:"10:35–11:00", note:"Fuel up, plus the famous langoustine baguette window — early lunch or takeaway."},
@@ -734,7 +744,7 @@ const PLANS = {
   days: CLASSIC_DAYS,
   upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
   bookings: [
-   ["Lodging — 6 nights left (Sep 23–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn Guesthouse (22nd, free until Sep 19). Still open: Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
+   ["Lodging — 5 nights left (Sep 24–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20). Still open: Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
    ["Rental car — ✔ booked","Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF."],
    ["Katla ice cave — ✔ booked","Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site."],
    ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
@@ -758,7 +768,7 @@ const PLANS = {
   days: HIGHLAND_DAYS,
   upgrades: [["Landmannalaugar",3],["Gjáin + Háifoss",2],["Aldeyjarfoss",7],["Dyrhólaey",4],["Svartifoss",4],["Húsavík whales",7],["Hofsós pool",8]],
   bookings: [
-   ["Lodging — 7 nights left (Sep 22–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Jökulsárlón/Hali, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn."],
+   ["Lodging — 6 nights left (Sep 22, 24–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20 — this one works under either plan). Still open: Jökulsárlón/Hali, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn."],
    ["Rental car — ✔ booked, one confirm","Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford."],
    ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],

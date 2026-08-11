@@ -75,7 +75,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | 2 | Sun Sep 20 | Seljalandsfoss | **Paradise Cave Hostel & Guesthouse** — Seljalandsskóli, 861 — at Seljalandsfoss<br>Booked · non-refundable · check-in 16:00–22:00 · breakfast included |
 | 3 | Mon Sep 21 | Mýrdalur (near Dyrhólaey) | **Farmhouse Lodge (Airbnb)** — Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík<br>Booked · Airbnb · free cancellation until Sep 7 |
 | 4 | Tue Sep 22 | Höfn | **Höfn Inn Guesthouse** — Vesturbraut 3, 780 Höfn — 20 min from Stokksnes<br>Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544 |
-| 5 | Wed Sep 23 | Egilsstaðir | _not booked_ — Olga Guesthouse · Lyngás Guesthouse · Skipalækur lakeside cabins |
+| 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
 | 6 | Thu Sep 24 | Mývatn | _not booked_ — Eldá Guesthouse · Hlíð Huts & Rooms · Skútustaðir farmhouse · Worth-it mid: Vogafjós |
 | 7 | Fri Sep 25 | Akureyri | _not booked_ — Akureyri Backpackers (private) · Hafnarstræti Hostel (private) · Akureyri HI Hostel · Sæluhús apartments |
 | 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
@@ -294,7 +294,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 | 2 | Sun Sep 20 | Seljalandsfoss | **Paradise Cave Hostel & Guesthouse** — Seljalandsskóli, 861 — at Seljalandsfoss<br>Booked · non-refundable · check-in 16:00–22:00 · breakfast included |
 | 3 | Mon Sep 21 | Mýrdalur (near Dyrhólaey) | **Farmhouse Lodge (Airbnb)** — Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík<br>Booked · Airbnb · free cancellation until Sep 7 |
 | 4 | Tue Sep 22 | Jökulsárlón / Hali area | _not booked_ — Vagnsstaðir HI Hostel · Skyrhúsið Guesthouse · Gerði Guesthouse · Hali Country Hotel · Mid: Fosshotel Glacier Lagoon |
-| 5 | Wed Sep 23 | Egilsstaðir | _not booked_ — Olga Guesthouse · Lyngás Guesthouse · Skipalækur lakeside cabins |
+| 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
 | 6 | Thu Sep 24 | Mývatn | _not booked_ — Eldá Guesthouse · Hlíð Huts & Rooms · Skútustaðir farmhouse · Worth-it mid: Vogafjós |
 | 7 | Fri Sep 25 | Akureyri | _not booked_ — Akureyri Backpackers (private) · Hafnarstræti Hostel (private) · Akureyri HI Hostel · Sæluhús apartments |
 | 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
@@ -506,7 +506,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ## Booking checklist — Plan A (10 items)
 
-1. **Lodging — 6 nights left (Sep 23–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn Guesthouse (22nd, free until Sep 19). Still open: Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
+1. **Lodging — 5 nights left (Sep 24–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20). Still open: Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
 3. **Katla ice cave — ✔ booked** — Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site.
 4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
@@ -519,7 +519,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ## Booking checklist — Plan B (8 items)
 
-1. **Lodging — 7 nights left (Sep 22–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Jökulsárlón/Hali, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn.
+1. **Lodging — 6 nights left (Sep 22, 24–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20 — this one works under either plan). Still open: Jökulsárlón/Hali, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn.
 2. **Rental car — ✔ booked, one confirm** — Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford.
 3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 4. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
