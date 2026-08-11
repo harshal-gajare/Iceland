@@ -198,7 +198,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 15 min* |
 | `16:30–17:30` | **Dimmuborgir** _optional_ — Lava labyrinth after check-in — skip if the tank is empty. |
 | | *↓ drive 10 min* |
-| `18:00–20:00` | **Mývatn Nature Baths** **book** — Booked timed entry — under-13s are free, so the 11-year-old rides along at no cost. Sunset steam over the lake; late dinner at Vogafjós ~20:15. |
+| `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Akureyri
 
@@ -426,7 +426,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 | | *↓ drive 15 min* |
 | `16:30–17:30` | **Dimmuborgir** _optional_ — Lava labyrinth after check-in — skip if the tank is empty. |
 | | *↓ drive 10 min* |
-| `18:00–20:00` | **Mývatn Nature Baths** **book** — Booked timed entry — under-13s are free, so the 11-year-old rides along at no cost. Sunset steam over the lake; late dinner at Vogafjós ~20:15. |
+| `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Aldeyjarfoss
 
@@ -512,7 +512,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 5. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
-7. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.
+7. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
 8. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
 9. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
 10. **Lava Show, Vík** — Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine.
@@ -524,7 +524,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 4. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 5. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur).
-6. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.
+6. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
 7. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
 8. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
 
