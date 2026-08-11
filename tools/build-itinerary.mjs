@@ -40,11 +40,19 @@ function loadPlans() {
   }
   const ctx = { PLANS: null };
   vm.createContext(ctx);
-  new vm.Script(html.slice(a, b) + "\nthis.PLANS = PLANS;").runInContext(ctx);
+  /* Daylight is computed by the page, not transcribed here — pull the same
+     functions out of the sandbox so the doc cannot drift from the app. */
+  new vm.Script(html.slice(a, b) +
+    "\nthis.PLANS = PLANS; this.dayLight = dayLight;" +
+    "\nthis.hhmm = hhmm; this.hoursMins = hoursMins; this.shortBase = shortBase;"
+  ).runInContext(ctx);
   if (!ctx.PLANS?.classic?.days?.length || !ctx.PLANS?.highland?.days?.length) {
     throw new Error("Evaluated the DATA section but PLANS looks empty.");
   }
-  return ctx.PLANS;
+  if (typeof ctx.dayLight !== "function") {
+    throw new Error("Evaluated the DATA section but dayLight is missing.");
+  }
+  return ctx;
 }
 
 const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
@@ -62,13 +70,26 @@ function baseTable(p) {
   return out.join("\n");
 }
 
+/* Sunrise where you wake, sunset where you land — see the DAYLIGHT block in
+   index.html for why the two ends can be different places. */
+function daylightLine(d, prev) {
+  const { dayLight, hhmm, hoursMins, shortBase } = SB;
+  const s = dayLight(d, prev);
+  if (s.rise == null || s.set == null) return null;
+  const at = (w) => (s.moved ? " " + shortBase(w) : "");
+  return `*Daylight ${hhmm(s.rise)}${at(s.riseAt)} → ${hhmm(s.set)}${at(s.setAt)}` +
+    ` · ${hoursMins(s.mins)}*`;
+}
+
 function dayTables(p) {
   const out = [];
-  for (const d of p.days) {
+  for (const [i, d] of p.days.entries()) {
     const window = [d.depart ? `out ${d.depart}` : null, d.arrive ? `in ${d.arrive}` : null]
       .filter(Boolean).join(" · ");
     out.push(`### Day ${d.n} — ${d.dow}, ${d.date} · ${esc(d.title)}`, "");
     out.push(`*${esc(d.km)}${window ? " · " + window : ""} · overnight ${esc(d.base)}*`, "");
+    const light = daylightLine(d, p.days[i - 1]);
+    if (light) out.push(light, "");
     if (d.note) out.push("> " + esc(d.note), "");
     out.push("| Time | Plan |", "|---|---|");
     for (const s of d.stops) {
@@ -99,6 +120,10 @@ against the same flights, car and first three nights.
 > Generated from the \`PLANS\` object in \`index.html\` — that file is the source of
 > truth. After changing a stop, a time or a base there, run
 > \`node tools/build-itinerary.mjs\` rather than editing this file by hand.
+
+Daylight is computed for each day's own coordinates — sunrise where you wake,
+sunset where you land — against a flat sea horizon. Iceland's mountains take a
+bigger bite than the minutes suggest, so treat these as the outer bound.
 
 ## Flights — Icelandair, PNR CVYKHM · Saga Club 4996508872
 
@@ -311,7 +336,8 @@ the night before, every time.*
 `;
 }
 
-const doc = render(loadPlans());
+const SB = loadPlans();          // { PLANS, dayLight, hhmm, hoursMins, shortBase }
+const doc = render(SB.PLANS);
 
 if (process.argv.includes("--check")) {
   let current = "";

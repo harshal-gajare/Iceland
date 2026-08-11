@@ -228,6 +228,8 @@
   .vdash::before{content:"";border-left:1px dashed var(--dash);height:15px}
   .hoptext{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase}
   .arr{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-left:8px}
+  .sunline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);margin-top:12px}
+  .sunline b{color:var(--fog);font-weight:600}
 
   .stay.booked{border-color:rgba(69,224,162,.45);background:rgba(69,224,162,.06)}
   .chip.bkd{color:#03160c;background:var(--d1);margin-left:0;margin-right:6px;vertical-align:1px}
@@ -394,7 +396,7 @@
 <main class="wrap">
   <section class="block" id="days">
     <div class="sechead"><h2>Day by day</h2><span class="eyebrow">counterclockwise</span></div>
-    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, every stop and stay opens in Google or Apple Maps, and your three booked nights (Sep 19–21) work under either plan. Headline upgrades are pinned below — tap one to jump to its day.</p>
+    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, every stop and stay opens in Google or Apple Maps, and your three booked nights (Sep 19–21) work under either plan. Headline upgrades are pinned below — tap one to jump to its day. Each day also carries its own daylight: sunrise where you wake, sunset where you land, computed for those coordinates against a flat sea horizon — Iceland's mountains will take a bigger bite than the minutes suggest.</p>
     <div class="upgrades" id="upgrades"></div>
     <div id="cards"></div>
     <div class="depart"><span class="dnum">✈</span><div><b style="color:var(--ice)">Tue, Sep 29 — KEF 17:10 → BOS → ATL 00:12.</b> The Vitara is due back at 11:00 but the flight isn't until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend drop-off to ~14:00 and keep the morning properly unhurried. Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.</div></div>
@@ -758,6 +760,88 @@ const PLANS = {
 PLANS.classic.stats.stops = PLANS.classic.days.reduce((a,d)=>a+d.stops.length,0);
 PLANS.highland.stats.stops = PLANS.highland.days.reduce((a,d)=>a+d.stops.length,0);
 
+/* ---------------- DAYLIGHT ----------------
+   Sunrise/sunset are computed, never typed in — the bases move ~9° of longitude
+   across the trip, which is 35 minutes of solar time, so one national number
+   would be wrong most days.
+
+   NOAA solar-position equations, run TWICE: declination shifts ~23'/day near the
+   equinox, so evaluating it once at midday skews sunrise and sunset in opposite
+   directions (~2 min each way on these dates). The second pass re-evaluates at
+   the approximate event time.
+
+   Iceland is UTC+0 year-round with no DST, so UTC minutes ARE local minutes —
+   the same fact the .ics VTIMEZONE relies on.
+
+   Sea-level horizon (zenith 90.833°, covering refraction + the sun's radius):
+   verified to the minute against published tables at Höfn, which is at 0 m.
+   Adding an elevation dip would shift these 2–3 min, and it is deliberately not
+   modelled: Iceland's real horizon is mountains, not sea. At Seljalandsfoss the
+   sun clears the cliff far later than any dip term would suggest, so a flat
+   horizon is the honest number to print and the page says so.
+
+   A day's sunrise is taken at the PREVIOUS night's base — that is where you wake
+   and set off — and its sunset at that day's own base. On day 8 those are 5° of
+   longitude apart, worth ~20 minutes, and the difference falls on a 430 km
+   driving day. The span between them is the light you actually travel through,
+   which is why driving west lengthens it and driving east shortens it.
+
+   Everything here is a PURE READER. Days 1/6/8/9/10 are the same objects in both
+   plans, so nothing may be memoized onto `d`. */
+const MON = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+const dayUTC = d => {                                  // "Sep 19" -> UTC ms at 00:00
+  const p = String(d.date||"").trim().split(/\s+/), m = MON[p[0]], dom = parseInt(p[1],10);
+  return (m!==undefined && dom>0) ? Date.UTC(2026,m,dom) : Date.UTC(2026,8,18+d.n);
+};
+const SRAD = Math.PI/180;
+const sSin = a => Math.sin(a*SRAD), sCos = a => Math.cos(a*SRAD), sTan = a => Math.tan(a*SRAD);
+const jCent = ms => (ms/86400000 + 2440587.5 - 2451545)/36525;   // Julian centuries from J2000
+function solarPos(T){
+  const L0 = 280.46646 + T*(36000.76983 + T*0.0003032);
+  const M  = 357.52911 + T*(35999.05029 - 0.0001537*T);
+  const e  = 0.016708634 - T*(0.000042037 + 0.0000001267*T);
+  const C  = sSin(M)*(1.914602 - T*(0.004817 + 0.000014*T))
+           + sSin(2*M)*(0.019993 - 0.000101*T) + sSin(3*M)*0.000289;
+  const lam = L0 + C - 0.00569 - 0.00478*sSin(125.04 - 1934.136*T);   // apparent longitude
+  const e0  = 23 + (26 + (21.448 - T*(46.815 + T*(0.00059 - T*0.001813)))/60)/60;
+  const eps = e0 + 0.00256*sCos(125.04 - 1934.136*T);
+  const y = sTan(eps/2)**2;
+  return {decl: Math.asin(sSin(eps)*sSin(lam))/SRAD,
+    eqTime: 4/SRAD*(y*Math.sin(2*L0*SRAD) - 2*e*Math.sin(M*SRAD)
+      + 4*e*y*Math.sin(M*SRAD)*Math.cos(2*L0*SRAD)
+      - 0.5*y*y*Math.sin(4*L0*SRAD) - 1.25*e*e*Math.sin(2*M*SRAD))};
+}
+/* minutes after local 00:00, or null when the sun never crosses the horizon */
+function sunEvent(lat, lon, utcMs, sign){              // sign: -1 sunrise, +1 sunset
+  let min = 720 + sign*360;                            // rough first guess
+  for(let i=0;i<2;i++){
+    const {decl, eqTime} = solarPos(jCent(utcMs + min*60000));
+    const cosH = sCos(90.833)/(sCos(lat)*sCos(decl)) - sTan(lat)*sTan(decl);
+    if(Math.abs(cosH) > 1) return null;                // polar day / polar night
+    min = 720 - 4*lon - eqTime + sign*4*(Math.acos(cosH)/SRAD);   // lon east-positive
+  }
+  return min;
+}
+const hhmm = m => {
+  if(m == null) return "—";
+  const t = ((Math.round(m) % 1440) + 1440) % 1440;    // round ONCE, then split
+  return String(Math.floor(t/60)).padStart(2,"0") + ":" + String(t%60).padStart(2,"0");
+};
+const hoursMins = m => {
+  const t = Math.round(m);                             // round before splitting, or 11 h 60 m
+  return Math.floor(t/60) + " h " + String(t%60).padStart(2,"0") + " m";
+};
+const shortBase = b => String(b).replace(/\s*\(.*?\)/g,"").replace(/\s*\/.*$/,"").trim();
+/* prev = the day before IN THE SAME PLAN; undefined on day 1, where you are
+   still in the air at sunrise and the day's own base is the honest stand-in. */
+function dayLight(d, prev){
+  const up = (prev||d).baseLL, down = d.baseLL, ms = dayUTC(d);
+  const rise = sunEvent(up[0], up[1], ms, -1), set = sunEvent(down[0], down[1], ms, +1);
+  return {rise, set, riseAt:(prev||d).base, setAt:d.base,
+    moved: !!prev && shortBase((prev||d).base) !== shortBase(d.base),
+    mins: (rise!=null && set!=null) ? set - rise : null};
+}
+
 /* Restore the plan BEFORE the DAYS binding below — DAYS is evaluated once at
    top level, so restoring later would leave every builder on classic data. */
 const PKEY = "iceland26.plan";
@@ -929,8 +1013,19 @@ function stayBox(d){
   </div>`;
 }
 
+/* Names the two places only when they differ, so most days stay a clean strip
+   and the two long driving days explain themselves. */
+function sunStrip(d, prev){
+  const s = dayLight(d, prev);
+  if(s.rise==null || s.set==null) return "";           // no strip beats a row of dashes
+  const at = w => s.moved ? " " + shortBase(w) : "";
+  return `<p class="sunline">sunrise <b>${hhmm(s.rise)}</b>${at(s.riseAt)}`
+    + ` · sunset <b>${hhmm(s.set)}</b>${at(s.setAt)}`
+    + ` · <b>${hoursMins(s.mins)}</b> of daylight</p>`;
+}
+
 function buildCards(){
-  cards.innerHTML = DAYS.map(d=>`
+  cards.innerHTML = DAYS.map((d,i)=>`
     <details class="day" id="day-${d.n}" style="--c:var(--d${d.n})">
       <summary>
         <span class="dnum">${String(d.n).padStart(2,"0")}</span>
@@ -942,6 +1037,7 @@ function buildCards(){
         <span class="chev"></span>
       </summary>
       <div class="dbody">
+        ${sunStrip(d, DAYS[i-1])}
         ${d.note?`<p class="daynote">${d.note}</p>`:""}
         <ul class="stops">
           ${d.stops.map(s=>`
@@ -1117,18 +1213,24 @@ const VTZ = ["BEGIN:VTIMEZONE","TZID:Atlantic/Reykjavik","BEGIN:STANDARD",
    both plans dedupes them. Divergent days get plan-scoped UIDs, or Plan B would
    silently overwrite Plan A (same UID = update, RFC 5545). Compared by CONTENT,
    not reference, so a future deep-copy degrades to duplicates — never to a
-   silent overwrite. */
+   silent overwrite.
+   Where the traveller WOKE must match too: the event prints sunrise, which is
+   computed at the previous night's base, so two plans can agree on a day and
+   still owe it different daylight. Compare only the predecessor's base, not the
+   whole predecessor — Plan A and Plan B diverge through all of day 5 yet both
+   sleep at Egilsstaðir, so day 6's event really is identical and must keep its
+   shared UID. Comparing whole days would drop 6 and 8 and duplicate them on
+   import. If a base ever stops matching, that day falls back to a plan-scoped
+   UID — failing toward duplicates, never toward silent overwrite. */
+const sameJSON = (a,b) => JSON.stringify(a)===JSON.stringify(b);  // undefined==undefined on day 1
+const wokeAt = d => d && [d.base, d.baseLL];
 const SHARED_DAYS = new Set(
-  PLANS.classic.days.filter(a => PLANS.highland.days.some(b =>
-    b.n===a.n && JSON.stringify(b)===JSON.stringify(a))).map(d=>d.n)
+  PLANS.classic.days.filter((a,i) => PLANS.highland.days.some((b,j) =>
+    b.n===a.n && sameJSON(b,a)
+    && sameJSON(wokeAt(PLANS.highland.days[j-1]), wokeAt(PLANS.classic.days[i-1])))).map(d=>d.n)
 );
-const MON = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
 const ymdUTC = t => new Date(t).toISOString().slice(0,10).replace(/-/g,"");
-function icsDate(d){                                   // "Sep 19" -> "20260919"
-  const p = String(d.date||"").trim().split(/\s+/), m = MON[p[0]], dom = parseInt(p[1],10);
-  if(m!==undefined && dom>0) return `2026${String(m+1).padStart(2,"0")}${String(dom).padStart(2,"0")}`;
-  return ymdUTC(Date.UTC(2026,8,18+d.n));              // fallback: day n = Sep 18+n
-}
+const icsDate = d => ymdUTC(dayUTC(d));                // "Sep 19" -> "20260919"
 const icsNext = y => ymdUTC(Date.UTC(+y.slice(0,4), +y.slice(4,6)-1, +y.slice(6,8)+1));
 const icsTime = s => { const m=/(\d{1,2}):(\d{2})/.exec(s||""); return m ? String(m[1]).padStart(2,"0")+m[2]+"00" : null; };
 
@@ -1144,7 +1246,14 @@ function dayICS(d, k){
      sorting, normalizing or memoizing onto `d` is allowed here. */
   const beds = Array.isArray(d.hotels) ? "Beds: "+d.hotels.join(", ")
     : d.stay ? "Booked: "+d.stay.name+" — "+d.stay.addr+" ("+d.stay.status+")" : "";
-  const desc = [d.note||"", d.stops.map(line).join("\n"), "Overnight: "+d.base, beds]
+  const di = PLANS[k].days.indexOf(d);                 // prev day within THIS plan
+  const s = dayLight(d, di>0 ? PLANS[k].days[di-1] : undefined);
+  const light = (s.rise!=null && s.set!=null)
+    ? "Daylight: "+hhmm(s.rise)+(s.moved?" "+shortBase(s.riseAt):"")
+      +" – "+hhmm(s.set)+(s.moved?" "+shortBase(s.setAt):"")
+      +" ("+hoursMins(s.mins)+")"
+    : "";
+  const desc = [d.note||"", d.stops.map(line).join("\n"), light, "Overnight: "+d.base, beds]
     .filter(Boolean).join("\n");
   const when = timed
     ? ["DTSTART;TZID=Atlantic/Reykjavik:"+date+"T"+t0,

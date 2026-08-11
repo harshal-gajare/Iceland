@@ -38,6 +38,7 @@ node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 - **Map** — hand-projected Iceland coastline, per-day route segments in an aurora color spectrum, tooltips on every stop, tap-to-jump into the matching day card. Amber = timed booking, teal = walk-in soak, hollow = optional, numbered rings = overnight bases.
 - **Day rail** — sticky selector that dims the map to a single day's leg.
 - **Day cards** — timed run-sheets in driving order with drive legs between stops, **Google + Apple Maps links on every stop**, and a per-day **add-to-calendar (.ics)** export.
+- **Daylight per day** — sunrise, sunset and the length of the light window, computed from each day's own coordinates (sunrise where you wake, sunset where you land) rather than one number for the whole country: the bases span ~9° of longitude, which is 35 minutes of solar time. Flat sea horizon, so Iceland's mountains take a bigger bite.
 - **Booked stays** — nights 1–3 render as confirmed cards with addresses and cancellation terms; unbooked nights show budget picks that open a Maps search.
 - **Booking tracker** — the priority reservations per plan with a progress bar; state **persists in `localStorage`, separately for each plan**.
 - **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that unlocks Plan B.
@@ -57,6 +58,6 @@ When shell files change, bump the `CACHE` version in `sw.js` so clients pick up 
 
 ## Editing the trip
 
-All trip data lives in the `PLANS` object in `index.html`; days 1, 6, 8, 9 and 10 are shared *by reference* between the two plans, so editing one edits both — and nothing may mutate a day object at runtime. Coordinates are `[lat, lon]` and the map is stylized — close is good enough. Map links and `.ics` files are generated from the same data.
+All trip data lives in the `PLANS` object in `index.html`; days 1, 6, 8, 9 and 10 are shared *by reference* between the two plans, so editing one edits both — and nothing may mutate a day object at runtime. Coordinates are `[lat, lon]` and the map is stylized — close is good enough, though `baseLL` also drives each day's sunrise/sunset, which are real to the minute. Map links, `.ics` files and daylight are all generated from the same data.
 
 `docs/itinerary.md` is generated from `PLANS` — run `node tools/build-itinerary.mjs` after an itinerary change rather than editing the doc by hand. Its prose sections are transcribed inside the generator, so page copy and doc copy need editing together.

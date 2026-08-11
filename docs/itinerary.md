@@ -9,6 +9,10 @@ against the same flights, car and first three nights.
 > truth. After changing a stop, a time or a base there, run
 > `node tools/build-itinerary.mjs` rather than editing this file by hand.
 
+Daylight is computed for each day's own coordinates — sunrise where you wake,
+sunset where you land — against a flat sea horizon. Iceland's mountains take a
+bigger bite than the minutes suggest, so treat these as the outer bound.
+
 ## Flights — Icelandair, PNR CVYKHM · Saga Club 4996508872
 
 | When | Leg | Notes |
@@ -84,6 +88,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *~100 km · in 15:00 · overnight Reykjavík*
 
+*Daylight 07:02 → 19:39 · 12 h 37 m*
+
 | Time | Plan |
 |---|---|
 | `08:55–11:00` | **Keflavík Airport → Blue Car** — Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early. |
@@ -97,6 +103,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 ### Day 2 — Sun, Sep 20 · Golden Circle
 
 *~200 km · out 08:30 · in 17:45 · overnight Seljalandsfoss*
+
+*Daylight 07:05 Reykjavík → 19:28 Seljalandsfoss · 12 h 23 m*
 
 | Time | Plan |
 |---|---|
@@ -115,6 +123,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
 
 *~120 km + tour · out 08:25 · in 19:15 · overnight Mýrdalur (near Dyrhólaey)*
+
+*Daylight 07:00 Seljalandsfoss → 19:21 Mýrdalur · 12 h 21 m*
 
 | Time | Plan |
 |---|---|
@@ -135,6 +145,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *~280 km · out 08:00 · in 18:10 · overnight Höfn / lagoon area*
 
+*Daylight 07:00 Mýrdalur → 19:02 Höfn · 12 h 02 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 1 hr* |
@@ -152,6 +164,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *~270 km · out 08:30 · in 18:30 · overnight Egilsstaðir*
 
+*Daylight 06:47 Höfn → 18:55 Egilsstaðir · 12 h 09 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 20 min* |
@@ -166,6 +180,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
 
 *~250 km · out 08:15 · in 16:10 · overnight Mývatn*
+
+*Daylight 06:46 Egilsstaðir → 19:02 Mývatn · 12 h 15 m*
 
 | Time | Plan |
 |---|---|
@@ -188,6 +204,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *~200 km · out 08:10 · in 17:20 · overnight Akureyri*
 
+*Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 45 min* |
@@ -203,6 +221,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *~430 km · out 08:00 · in 18:40 · overnight Grundarfjörður (or Stykkishólmur)*
 
+*Daylight 07:07 Akureyri → 19:19 Grundarfjörður · 12 h 12 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 1 hr 15* |
@@ -217,6 +237,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 ### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
 
 *~230 km loop · out 08:30 · in 17:45 · overnight Borgarnes (or Fossatún)*
+
+*Daylight 07:31 Grundarfjörður → 19:11 Borgarnes · 11 h 40 m*
 
 | Time | Plan |
 |---|---|
@@ -238,6 +260,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 ### Day 10 — Mon, Sep 28 · Lava tunnel · Reykjanes · airport night
 
 *~220 km · in 17:00 · overnight Keflavík*
+
+*Daylight 07:28 Borgarnes → 19:10 Keflavík · 11 h 42 m*
 
 | Time | Plan |
 |---|---|
@@ -283,6 +307,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 *~100 km · in 15:00 · overnight Reykjavík*
 
+*Daylight 07:02 → 19:39 · 12 h 37 m*
+
 | Time | Plan |
 |---|---|
 | `08:55–11:00` | **Keflavík Airport → Blue Car** — Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early. |
@@ -296,6 +322,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 ### Day 2 — Sun, Sep 20 · Golden Circle → Þjórsárdalur highlands edge
 
 *~270 km · out 08:15 · in 19:15 · overnight Seljalandsfoss*
+
+*Daylight 07:05 Reykjavík → 19:28 Seljalandsfoss · 12 h 23 m*
 
 > Hardcore alternative: from Gullfoss, run the washboard Kjölur track to Kerlingarfjöll's Hveradalir geothermal valley instead of Þjórsárdalur (1:45 each way + a 1.5 hr walk). Adds ~2 hrs — only with an early start and a patient kid.
 
@@ -320,6 +348,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 *~255 km · 90 on gravel · out 07:40 · in 18:45 · overnight Mýrdalur (near Dyrhólaey)*
 
+*Daylight 07:00 Seljalandsfoss → 19:21 Mýrdalur · 12 h 21 m*
+
 > Weather gate — F-road day. Over breakfast check umferdin.is (F208 North status) and vedur.is wind. Closed road or 15+ m/s gusts → run the classic coast day instead: Skógafoss + Kvernufoss, Dyrhólaey, Reynisfjara, and a walk-up Katla ice-cave slot if one exists. Tonight's farmhouse works either way.
 
 | Time | Plan |
@@ -338,6 +368,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 ### Day 4 — Tue, Sep 22 · Dyrhólaey · Reynisfjara · Svartifoss · the lagoon
 
 *~260 km · out 08:15 · in 17:50 · overnight Jökulsárlón / Hali area*
+
+*Daylight 07:00 Mýrdalur → 19:05 Jökulsárlón · 12 h 05 m*
 
 | Time | Plan |
 |---|---|
@@ -358,6 +390,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 *~270 km · out 08:15 · in 18:15 · overnight Egilsstaðir*
 
+*Daylight 06:50 Jökulsárlón → 18:55 Egilsstaðir · 12 h 05 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 1 hr* |
@@ -374,6 +408,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
 
 *~250 km · out 08:15 · in 16:10 · overnight Mývatn*
+
+*Daylight 06:46 Egilsstaðir → 19:02 Mývatn · 12 h 15 m*
 
 | Time | Plan |
 |---|---|
@@ -396,6 +432,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 *~250 km · out 08:10 · in 17:35 · overnight Akureyri*
 
+*Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 45 min* |
@@ -411,6 +449,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 *~430 km · out 08:00 · in 18:40 · overnight Grundarfjörður (or Stykkishólmur)*
 
+*Daylight 07:07 Akureyri → 19:19 Grundarfjörður · 12 h 12 m*
+
 | Time | Plan |
 |---|---|
 | | *↓ drive 1 hr 15* |
@@ -425,6 +465,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 ### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
 
 *~230 km loop · out 08:30 · in 17:45 · overnight Borgarnes (or Fossatún)*
+
+*Daylight 07:31 Grundarfjörður → 19:11 Borgarnes · 11 h 40 m*
 
 | Time | Plan |
 |---|---|
@@ -446,6 +488,8 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 ### Day 10 — Mon, Sep 28 · Lava tunnel · Reykjanes · airport night
 
 *~220 km · in 17:00 · overnight Keflavík*
+
+*Daylight 07:28 Borgarnes → 19:10 Keflavík · 11 h 42 m*
 
 | Time | Plan |
 |---|---|
