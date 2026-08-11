@@ -6,7 +6,8 @@ classic coast, Plan B folds in the highlands. Pick one on the page; both work
 against the same flights, car and first three nights.
 
 > Generated from the `PLANS` object in `index.html` — that file is the source of
-> truth. If you change a stop, a time or a base there, regenerate this document.
+> truth. After changing a stop, a time or a base there, run
+> `node tools/build-itinerary.mjs` rather than editing this file by hand.
 
 ## Flights — Icelandair, PNR CVYKHM · Saga Club 4996508872
 

@@ -15,12 +15,21 @@ npx serve .
 ## Repo layout
 
 ```
-index.html          the entire app (markup + CSS + JS inline)
-sw.js               service worker — offline caching for the Ring Road
-manifest.json       PWA manifest (installable, standalone)
-icons/              app icon (SVG source + rasterized PNGs)
-docs/itinerary.md   prose itinerary for both plans — generated from PLANS
-CLAUDE.md           project context for Claude Code
+index.html                    the entire app (markup + CSS + JS inline)
+sw.js                         service worker — offline caching for the Ring Road
+manifest.json                 PWA manifest (installable, standalone)
+icons/                        app icon (SVG source + rasterized PNGs)
+docs/itinerary.md             prose itinerary for both plans — generated
+tools/build-itinerary.mjs     regenerates that doc from PLANS (no deps)
+CLAUDE.md                     project context for Claude Code
+```
+
+There is no build step for the app itself — `index.html` ships as written. The
+one tool is the docs generator:
+
+```bash
+node tools/build-itinerary.mjs           # rewrite docs/itinerary.md
+node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 ```
 
 ## Features
@@ -50,4 +59,4 @@ When shell files change, bump the `CACHE` version in `sw.js` so clients pick up 
 
 All trip data lives in the `PLANS` object in `index.html`; days 1, 6, 8, 9 and 10 are shared *by reference* between the two plans, so editing one edits both — and nothing may mutate a day object at runtime. Coordinates are `[lat, lon]` and the map is stylized — close is good enough. Map links and `.ics` files are generated from the same data.
 
-`docs/itinerary.md` is generated from `PLANS`, so regenerate it when the itinerary changes rather than editing it by hand.
+`docs/itinerary.md` is generated from `PLANS` — run `node tools/build-itinerary.mjs` after an itinerary change rather than editing the doc by hand. Its prose sections are transcribed inside the generator, so page copy and doc copy need editing together.

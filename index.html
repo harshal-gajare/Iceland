@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a1422">
+<meta name="description" content="Ten nights around the whole island by road, Sep 19–29 2026 — two switchable itineraries, timed run-sheets, every stop mapped, and an aurora plan.">
+<!-- Social-preview tags are the one place absolute URLs are required (scrapers
+     don't resolve relative paths). Update these two if the deploy host moves;
+     every other asset path in this file stays relative. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iceland · Sep 19–29, 2026 — Ring Road Field Plan">
+<meta property="og:description" content="Ten nights around the whole island by road — two switchable itineraries, timed run-sheets, every stop mapped, and an aurora plan.">
+<meta property="og:url" content="https://harshalgajare.com/Iceland/">
+<meta property="og:image" content="https://harshalgajare.com/Iceland/icons/icon-512.png">
+<meta name="twitter:card" content="summary">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -345,16 +355,19 @@
     <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — in two builds: Plan A runs the classic coast, Plan B climbs into the highlands. Same bones, same booked beds, one switch. Built for a 10:00 landing and a 10:00 departure.</p>
     <div class="statline">
       <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
-      <span id="st-flex"><b>2</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b>3 of 10</b> nights booked</span>
+      <span id="st-flex"><b>2</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b id="st-booked">3 of 10</b> nights booked</span>
     </div>
     <div class="count"><i></i><span id="countdown">Counting down…</span></div>
   </section>
 
-  <div class="planswitch" role="tablist" aria-label="Itinerary plan">
-    <button class="ptab on" data-plan="classic" role="tab" aria-selected="true">Plan A · Classic coast</button>
-    <button class="ptab" data-plan="highland" role="tab" aria-selected="false">Plan B · Highland edition</button>
+  <!-- Not role="tablist": these buttons re-render the whole page (map, cards,
+       bookings, stats), not one tabpanel, so tab semantics would promise an
+       associated panel that doesn't exist. Pressed-state buttons are honest. -->
+  <div class="planswitch" role="group" aria-label="Itinerary plan">
+    <button class="ptab on" data-plan="classic" aria-pressed="true">Plan A · Classic coast</button>
+    <button class="ptab" data-plan="highland" aria-pressed="false">Plan B · Highland edition</button>
   </div>
-  <p class="plandesc" id="plandesc"></p>
+  <p class="plandesc" id="plandesc" aria-live="polite"></p>
 
   <section class="mapwrap" id="map">
     <div class="maphead">
@@ -391,7 +404,9 @@
     <div class="sechead"><h2>Booking tracker</h2><span class="eyebrow">in priority order</span></div>
     <p class="seclede">Six weeks out, hotels move first — Vík, Höfn, Egilsstaðir and Grundarfjörður run out of family rooms early. Tick things off as they're confirmed.</p>
     <div class="progressbar"><i id="pbar"></i></div>
-    <p class="progresslabel" id="plabel">0 of 9 booked</p>
+    <!-- filled by updateProgress() on init; left empty so a restored Plan B
+         (8 items) never flashes classic's count -->
+    <p class="progresslabel" id="plabel"></p>
     <ul class="checks" id="checks"></ul>
     <p class="memnote">Progress saves in this browser, tracked separately for each plan — it survives reloads and works offline.</p>
   </section>
@@ -1025,7 +1040,7 @@ function switchPlan(key, userAction){
   document.querySelectorAll(".ptab").forEach(t=>{
     const on = t.dataset.plan===key;
     t.classList.toggle("on", on);
-    t.setAttribute("aria-selected", on?"true":"false");
+    t.setAttribute("aria-pressed", on?"true":"false");
   });
   document.getElementById("plandesc").textContent = PLANS[key].desc;
   const s = PLANS[key].stats;
@@ -1033,6 +1048,11 @@ function switchPlan(key, userAction){
   document.getElementById("st-stops").textContent = s.stops;
   document.getElementById("st-soak").textContent = s.soaks;
   document.getElementById("st-flex").innerHTML = s.flex;
+  /* derived, not hardcoded — nights 4-10 are actively being booked, so a
+     literal here would go stale the moment one is confirmed */
+  const days = PLANS[key].days;
+  document.getElementById("st-booked").textContent =
+    days.filter(d=>d.stay).length + " of " + days.length;
   buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildChecks();
   selectDay(null,false);
   if(!userAction) document.getElementById("day-1").open = true;
