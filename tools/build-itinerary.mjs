@@ -49,7 +49,7 @@ function loadPlans() {
 
 const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 const plain = (s) => String(s).replace(/<[^>]+>/g, "");
-const TAG = { book: "**book**", soak: "_soak_", opt: "_optional_" };
+const TAG = { booked: "**✔ booked**", book: "**book**", soak: "_soak_", opt: "_optional_" };
 
 function baseTable(p) {
   const out = ["| Night | Date | Base | Bed |", "|---|---|---|---|"];

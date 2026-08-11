@@ -186,12 +186,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Akureyri
 
-*~200 km · out 08:45 · in 17:20 · overnight Akureyri*
+*~200 km · out 08:10 · in 17:20 · overnight Akureyri*
 
 | Time | Plan |
 |---|---|
 | | *↓ drive 45 min* |
-| `10:00–13:00` | **Húsavík whale watching** **book** — Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45. |
+| `09:45–12:45` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG1, ref GGHI-100410953 — 2 adults + 1 youth. Check in at the Ticket Center above the harbour by 09:05 — 40 min before departure, and a missed check-in is charged in full. Boarding 09:20. Warm overalls provided on board; bring hats, gloves and a waterproof layer anyway. Humpbacks near-guaranteed on Skjálfandi Bay. Lunch after at Naustið 12:45–13:30. Free to move or cancel up to 24 hrs before; weather cancellations are refunded or rebooked. |
 | | *↓ drive 3 min* |
 | `14:00–15:00` | **GeoSea** _soak_ — Seawater infinity baths on the cliff — skip if that's too many soaks in 24 hrs. |
 | | *↓ drive 50 min* |
@@ -394,12 +394,12 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Aldeyjarfoss
 
-*~250 km · out 08:45 · in 17:35 · overnight Akureyri*
+*~250 km · out 08:10 · in 17:35 · overnight Akureyri*
 
 | Time | Plan |
 |---|---|
 | | *↓ drive 45 min* |
-| `10:00–13:00` | **Húsavík whale watching** **book** — Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45. |
+| `09:45–12:45` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG1, ref GGHI-100410953 — 2 adults + 1 youth. Check in at the Ticket Center above the harbour by 09:05 — 40 min before departure, and a missed check-in is charged in full. Boarding 09:20. Warm overalls provided on board; bring hats, gloves and a waterproof layer anyway. Humpbacks near-guaranteed on Skjálfandi Bay. Lunch after at Naustið 12:45–13:30. Free to move or cancel up to 24 hrs before; weather cancellations are refunded or rebooked. |
 | | *↓ drive 50 min* |
 | `14:50–15:30` | **Goðafoss** — The waterfall of the gods. (GeoSea is this plan's trade for the falls run — swap back if you'd rather soak.) |
 | | *↓ drive 40 min* |
@@ -465,7 +465,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 1. **Lodging — 7 nights left (Sep 22–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Höfn, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
 3. **Katla ice cave** — Mon Sep 21, 14:00 · Katlatrack / Troll / Arctic Adventures · confirm minimum age.
-4. **Húsavík whale watching** — Fri Sep 25, ~10:00 · Gentle Giants or North Sailing.
+4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 5. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
 7. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.
@@ -476,7 +476,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 1. **Lodging — 7 nights left (Sep 22–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Jökulsárlón/Hali, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates.
 2. **Rental car — ✔ booked, one confirm** — Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford.
-3. **Húsavík whale watching** — Fri Sep 25, ~10:00 · Gentle Giants or North Sailing.
+3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before.
 4. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 5. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur).
 6. **Mývatn Nature Baths** — Thu Sep 24 evening · timed entry online.

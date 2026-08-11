@@ -380,7 +380,7 @@
       <div id="tip"></div>
     </div>
     <div class="legend">
-      <span><i class="lk" style="background:var(--ember)"></i> reserve ahead</span>
+      <span><i class="lk" style="background:var(--ember)"></i> timed booking</span>
       <span><i class="lk" style="background:#59d7e8"></i> walk-in soak</span>
       <span><i class="lk ring"></i> optional</span>
       <span><i class="lk" style="background:var(--fog);border-radius:2px"></i> numbered ring = overnight base</span>
@@ -635,12 +635,14 @@ const CLASSIC_DAYS = [
    {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"15:30–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
   ]},
  D5TO10[0],
- {n:7, dow:"Fri", date:"Sep 25", km:"~200 km", depart:"08:45", arrive:"17:20",
+ /* depart is set by the whale-watch check-in, not by taste: 09:05 deadline
+    minus the 45-min drive from Mývatn, plus a little margin. */
+ {n:7, dow:"Fri", date:"Sep 25", km:"~200 km", depart:"08:10", arrive:"17:20",
   title:"Húsavík whales · Goðafoss · Akureyri",
   base:"Akureyri", baseLL:[65.6885,-18.1262],
   hotels:["Akureyri Backpackers (private)","Hafnarstræti Hostel (private)","Akureyri HI Hostel","Sæluhús apartments"],
   stops:[
-   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"10:00–13:00", tag:"book", note:"Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45."},
+   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"09:45–12:45", tag:"booked", note:"Gentle Giants GG1, ref GGHI-100410953 — 2 adults + 1 youth. Check in at the Ticket Center above the harbour by 09:05 — 40 min before departure, and a missed check-in is charged in full. Boarding 09:20. Warm overalls provided on board; bring hats, gloves and a waterproof layer anyway. Humpbacks near-guaranteed on Skjálfandi Bay. Lunch after at Naustið 12:45–13:30. Free to move or cancel up to 24 hrs before; weather cancellations are refunded or rebooked."},
    {name:"GeoSea", ll:[66.053,-17.356], drive:"3 min", time:"14:00–15:00", tag:"soak", note:"Seawater infinity baths on the cliff — skip if that's too many soaks in 24 hrs."},
    {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"50 min", time:"15:50–16:35", note:"The waterfall of the gods, right off the route south."},
    {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"45 min", time:"17:30–19:00", note:"Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00."}
@@ -698,12 +700,13 @@ const HIGHLAND_DAYS = [
    {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"16:00–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
   ]},
  D5TO10[0],
- {n:7, dow:"Fri", date:"Sep 25", km:"~250 km", depart:"08:45", arrive:"17:35",
+ /* same check-in constraint as Plan A's day 7 — see the note there */
+ {n:7, dow:"Fri", date:"Sep 25", km:"~250 km", depart:"08:10", arrive:"17:35",
   title:"Húsavík whales · Goðafoss · Aldeyjarfoss",
   base:"Akureyri", baseLL:[65.6885,-18.1262],
   hotels:["Akureyri Backpackers (private)","Hafnarstræti Hostel (private)","Akureyri HI Hostel","Sæluhús apartments"],
   stops:[
-   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"10:00–13:00", tag:"book", note:"Tour desk 09:30. Humpbacks near-guaranteed on Skjálfandi Bay; kid-size overalls provided. Lunch after at Naustið 13:00–13:45."},
+   {name:"Húsavík whale watching", ll:[66.045,-17.3383], drive:"45 min", time:"09:45–12:45", tag:"booked", note:"Gentle Giants GG1, ref GGHI-100410953 — 2 adults + 1 youth. Check in at the Ticket Center above the harbour by 09:05 — 40 min before departure, and a missed check-in is charged in full. Boarding 09:20. Warm overalls provided on board; bring hats, gloves and a waterproof layer anyway. Humpbacks near-guaranteed on Skjálfandi Bay. Lunch after at Naustið 12:45–13:30. Free to move or cancel up to 24 hrs before; weather cancellations are refunded or rebooked."},
    {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"50 min", time:"14:50–15:30", note:"The waterfall of the gods. (GeoSea is this plan's trade for the falls run — swap back if you'd rather soak.)"},
    {name:"Aldeyjarfoss", ll:[65.366,-17.342], drive:"40 min", time:"16:10–16:50", tag:"opt", note:"A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls."},
    {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"50 min", time:"17:45–19:00", note:"Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00."}
@@ -721,7 +724,7 @@ const PLANS = {
    ["Lodging — 7 nights left (Sep 22–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Höfn, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
    ["Rental car — ✔ booked","Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF."],
    ["Katla ice cave","Mon Sep 21, 14:00 · Katlatrack / Troll / Arctic Adventures · confirm minimum age."],
-   ["Húsavík whale watching","Fri Sep 25, ~10:00 · Gentle Giants or North Sailing."],
+   ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations."],
    ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
@@ -742,7 +745,7 @@ const PLANS = {
   bookings: [
    ["Lodging — 7 nights left (Sep 22–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st). Still open: Jökulsárlón/Hali, Egilsstaðir, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
    ["Rental car — ✔ booked, one confirm","Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford."],
-   ["Húsavík whale watching","Fri Sep 25, ~10:00 · Gentle Giants or North Sailing."],
+   ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur)."],
    ["Mývatn Nature Baths","Thu Sep 24 evening · timed entry online."],
@@ -848,7 +851,9 @@ function buildMapDynamic(){
       const grp = el("g",{class:"stop"+(s.tag==="opt"?" opt":""),tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
       grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"}));
       let fill = dayVar(d.n), stroke="none", sw=0;
-      if(s.tag==="book"){fill="var(--ember)";}
+      // amber = a timed booking, whether or not it's confirmed yet; the card
+      // chip carries the "Book now" vs "Booked" state
+      if(s.tag==="book"||s.tag==="booked"){fill="var(--ember)";}
       else if(s.tag==="soak"){fill="#59d7e8";}
       else if(s.tag==="opt"){fill="transparent";stroke=dayVar(d.n);sw=1.6;}
       const core = el("circle",{cx:c[0],cy:c[1],r:5,"stroke-width":sw,class:"core"});
@@ -901,6 +906,7 @@ const stayA = st => st.q ? aURL(st.q) : aLL(st.ll, st.name);
 const hotelQ = (h,base) => h.replace(/^(Alt:|Worth-it mid:|Mid:)\s*/,"").replace(/\s*\(.*?\)/g,"") + " " + base.replace(/\s*\(.*?\)/g,"") + " Iceland";
 
 function chip(tag){
+  if(tag==="booked") return '<span class="chip bkd">Booked</span>';   // same green chip as a confirmed stay
   if(tag==="book") return '<span class="chip book">Book now</span>';
   if(tag==="soak") return '<span class="chip soak">Soak</span>';
   if(tag==="opt")  return '<span class="chip opt">Optional</span>';

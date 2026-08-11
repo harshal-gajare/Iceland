@@ -35,7 +35,7 @@ node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 ## Features
 
 - **Two plans behind tabs** — Plan A runs the classic coast (Katla ice cave, Höfn night 4, any automatic SUV); Plan B folds in the highlands (Gjáin + Háifoss, a full Landmannalaugar day with a weather-gated fallback, Aldeyjarfoss) and needs an F-road-legal 4x4. Same flights, same car, same first three nights. Switching re-renders the map, cards, upgrade chips, booking list and hero stats.
-- **Map** — hand-projected Iceland coastline, per-day route segments in an aurora color spectrum, tooltips on every stop, tap-to-jump into the matching day card. Amber = reserve ahead, teal = walk-in soak, hollow = optional, numbered rings = overnight bases.
+- **Map** — hand-projected Iceland coastline, per-day route segments in an aurora color spectrum, tooltips on every stop, tap-to-jump into the matching day card. Amber = timed booking, teal = walk-in soak, hollow = optional, numbered rings = overnight bases.
 - **Day rail** — sticky selector that dims the map to a single day's leg.
 - **Day cards** — timed run-sheets in driving order with drive legs between stops, **Google + Apple Maps links on every stop**, and a per-day **add-to-calendar (.ics)** export.
 - **Booked stays** — nights 1–3 render as confirmed cards with addresses and cancellation terms; unbooked nights show budget picks that open a Maps search.
