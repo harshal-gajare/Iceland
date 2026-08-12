@@ -312,13 +312,13 @@ waterslides. Blue Lagoon itself is free under 14; Mývatn Nature Baths free unde
 
 Weather will steal at least half a day somewhere. On Plan B the highland day
 carries its own built-in fallback (the classic coast day). Beyond that, protect
-the booked tours — Katla on Plan A, the horses and the whale watch on both — and
-cut in this order:
+the booked tours — Katla on Plan A, the horses, the whale watch and Into the
+Glacier on both — and cut in this order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
 2. Stykkishólmur's backtrack (day 9).
 3. Aldeyjarfoss (day 7, Plan B) — with the horses in, it now lands at dusk.
-4. Raufarhólshellir or the Fagradalsfjall hike (day 10).
+4. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
 5. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
 
 ## Departure day — Tue Sep 29

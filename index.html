@@ -435,7 +435,7 @@
         <div class="ins">
           <span class="inschip">CDW</span><span class="inschip">SCDW super-collision</span><span class="inschip">TP theft</span><span class="inschip">GP gravel</span><span class="inschip">SAAP sand &amp; ash</span><span class="inschip">Roadside</span><span class="inschip">Road tax</span>
         </div>
-        <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>One email to send:</b> confirm the Vitara is the AllGrip 4x4 and that F-roads (name F208 North) are permitted — that single yes unlocks Plan B. River fords are never insured on any Icelandic contract; the Landmannalaugar plan parks before the ford regardless.</p>
+        <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>One email to send, and it matters on both plans now:</b> confirm the Vitara is the AllGrip 4x4 and that F-roads (name F208 North and 550 to Klaki) are permitted. That single yes unlocks Plan B — and it also gates day 10's Into the Glacier tour, which is paid for and sits at the top of an F-road on either plan. A no there means booking the operator's shuttle from Húsafell; driving it regardless would void the CDW and SCDW. River fords are never insured on any Icelandic contract; the Landmannalaugar plan parks before the ford regardless.</p>
         <p class="lnote"><b>Return-day math:</b> car back 11:00, flight 17:10. Either run a Reykjanes morning and drop at 11:00 with a slow airport lunch — or ask Blue Car to extend drop-off to ~14:00 and keep the last morning properly free.</p>
         <p class="lnote"><b>Booster check:</b> Icelandic law requires a booster seat below 135 cm. Most 11-year-olds clear that — if yours doesn't yet, add one to the Blue Car booking or bring your own.</p>
       </div>
@@ -502,7 +502,7 @@
       <div class="nbody">Both beaches have genuinely dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn your back on the sea, stay off the wet sand — and brief the 11-year-old hard: sneaker waves outrun sprinting adults.</div>
     </details>
     <details class="note"><summary>If a day goes sideways, trim these first<span class="chev"></span></summary>
-      <div class="nbody">Weather will steal at least half a day somewhere. On Plan B, the highland day carries its own built-in fallback (the classic coast day). Beyond that, protect the booked tours — Katla on Plan A, the horses and the whale watch on both — and cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, Aldeyjarfoss on Plan B, Raufarhólshellir or the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, Fontana.</div>
+      <div class="nbody">Weather will steal at least half a day somewhere. On Plan B, the highland day carries its own built-in fallback (the classic coast day). Beyond that, protect the booked tours — Katla on Plan A, the horses, the whale watch and Into the Glacier on both — and cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, Aldeyjarfoss on Plan B, the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, Fontana.</div>
     </details>
     <details class="note"><summary>Food, fuel &amp; phones<span class="chev"></span></summary>
       <div class="nbody">N1/Orkan stations all along the route — bring a credit card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn (Pakkhús or Otto). eSIM from Nova or Síminn, or carrier roaming — Ring Road coverage is excellent.</div>
@@ -616,15 +616,18 @@ const D5TO10 = [
    {name:"Búðakirkja", ll:[64.8221,-23.3843], drive:"10 min", time:"15:20–15:45", note:"The black church in the lava field."},
    {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], drive:"15 min", time:"16:00–16:40", note:"Seals haul out most days; then 1:05 to Borgarnes."}
   ]},
- {n:10, dow:"Mon", date:"Sep 28", km:"~220 km", depart:null, arrive:"17:00",
-  title:"Lava tunnel · Reykjanes · airport night",
+ /* depart is load-bearing, like day 7's: a 10:30 tour sits 1 hr 40 away up a
+    mountain road — 1 hr 10 to Húsafell, then ~30 min on 518/550 — so 08:10 puts
+    you at Klaki with 40 min spare. From Fossatún, 18 km closer, 08:30 does it. */
+ {n:10, dow:"Mon", date:"Sep 28", km:"~360 km", depart:"08:10", arrive:"19:20",
+  title:"Into the Glacier · Reykjanes · airport night",
   base:"Keflavík", baseLL:[64.0049,-22.5624],
   hotels:["Base Hotel","Guesthouse 1x6","Njarðvík Airbnb apartments"],
+  note:"Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for, not just on Plan B. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are roadside in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.",
   stops:[
-   {name:"Hraunfossar · Deildartunguhver — or Settlement Centre", ll:[64.7028,-20.975], time:"09:00–11:15", tag:"opt", note:"Choose one easy morning from Borgarnes; back and rolling south by 11:30."},
-   {name:"Raufarhólshellir", ll:[63.9394,-21.397], drive:"1 hr 20", time:"14:00–15:00", tag:"book", note:"Booked standard tour — walkways and lights. Lunch in Hveragerði 12:50–13:30 en route."},
-   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"50 min", time:"flex · 2–4 hr", tag:"opt", note:"The crater hike — only if trails are open and legs vote yes. Check safetravel.is."},
-   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], time:"15:50–16:40", tag:"opt", note:"The quick Reykjanes substitute — though with the 17:10 departure these fit even better on tomorrow's free morning. Refuel tonight or before the 11:00 drop."}
+   {name:"Into the Glacier — Klaki Base Camp", ll:[64.6502,-20.5827], drive:"1 hr 40", time:"10:30–13:30", tag:"booked", note:"Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is."},
+   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"3 hr", time:"16:30–18:45", tag:"opt", note:"The crater hike, and the reason Hraunfossar came off this day: leaving Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning, and see the note above for what to do instead."},
+   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], time:"flex · Sep 29 morning", tag:"opt", note:"There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop."}
   ]}
 ];
 
@@ -774,21 +777,25 @@ const PLANS = {
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations."],
    ["Earth Lagoon Mývatn — ✔ booked","Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs."],
-   ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
+   ["Raufarhólshellir — dropped, not booked","Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors."],
    ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."],
    ["Lava Show, Vík","Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine."],
    /* appended, never inserted: booking ticks persist by array index, so slotting a
       new row into the middle would mis-restore every tick after it. */
-   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."]
+   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."],
+   ["Into the Glacier — ✔ booked, one dependency","Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is."]
   ],
   /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 8 amber, 1 teal.
-     These stat numbers are TRIP FACTS from docs/itinerary.md: 4 anchor tours
-     (Katla, the Jökulsárlón Zodiac, the Saltvík horses and the whale watch —
-     each a paid timed slot its day is built around) and 3 soak options, two of
-     which are tagged `book` because they need reserving. Earth Lagoon is counted
-     as a soak, not a tour, so it isn't double-counted. GeoSea was the fourth soak
-     until the horse ride displaced it. Keep the two vocabularies disjoint. */
-  stats:{km:"~2,300", stops:0, soaks:3, flex:"<b>4</b> anchor tours"}
+     These stat numbers are TRIP FACTS from docs/itinerary.md: 5 anchor tours
+     (Katla, the Jökulsárlón Zodiac, the Saltvík horses, the whale watch and Into
+     the Glacier — each a paid timed slot its day is built around) and 3 soak
+     options, two of which are tagged `book` because they need reserving. Earth
+     Lagoon is counted as a soak, not a tour, so it isn't double-counted. GeoSea
+     was the fourth soak until the horse ride displaced it. km is the sum of the
+     day km and classic's is exact — keep it that way; highland's day 3 prints a
+     gravel subset rather than a second leg, so its total is rounded instead.
+     Keep the two vocabularies disjoint. */
+  stats:{km:"~2,440", stops:0, soaks:3, flex:"<b>5</b> anchor tours"}
  },
  highland: {
   label:"Plan B · Highland edition",
@@ -802,12 +809,13 @@ const PLANS = {
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
    ["Golden Circle lunch","Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur)."],
    ["Earth Lagoon Mývatn — ✔ booked","Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs."],
-   ["Raufarhólshellir","Mon Sep 28 · early-afternoon tour."],
+   ["Raufarhólshellir — dropped, not booked","Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors."],
    ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."],
    /* appended, not inserted — see the note on Plan A's list */
-   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."]
+   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."],
+   ["Into the Glacier — ✔ booked, one dependency","Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is."]
   ],
-  stats:{km:"~2,600", stops:0, soaks:5, flex:"<b>1</b> highland weather-gated day"}
+  stats:{km:"~2,700", stops:0, soaks:5, flex:"<b>1</b> highland weather-gated day"}
  }
 };
 PLANS.classic.stats.stops = PLANS.classic.days.reduce((a,d)=>a+d.stops.length,0);
