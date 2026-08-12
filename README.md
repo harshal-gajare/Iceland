@@ -39,7 +39,7 @@ node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 - **Day rail** — sticky selector that dims the map to a single day's leg.
 - **Day cards** — timed run-sheets in driving order with drive legs between stops and **Google + Apple Maps links on every stop**.
 - **Daylight per day** — sunrise, sunset and the length of the light window, computed from each day's own coordinates (sunrise where you wake, sunset where you land) rather than one number for the whole country: the bases span ~9° of longitude, which is 35 minutes of solar time. Flat sea horizon, so Iceland's mountains take a bigger bite.
-- **Booked stays** — nights 1–3 render as confirmed cards with addresses and cancellation terms; unbooked nights show budget picks that open a Maps search.
+- **Booked stays** — every confirmed night renders as a card with its address, terms and map links; unbooked nights show budget picks that open a Maps search.
 - **Booking tracker** — the priority reservations per plan with a progress bar; state **persists in `localStorage`, separately for each plan**.
 - **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that unlocks Plan B.
 - **Dark & light themes** — toggle in the top bar, follows system preference by default, remembered per browser.
