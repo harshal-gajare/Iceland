@@ -196,8 +196,8 @@ ${esc(H.desc)}
 
 Headline stops: ${H.upgrades.map((u) => `${esc(u[0])} (day ${u[1]})`).join(" · ")}.
 
-**What Plan B trades away:** the Katla ice cave, Kvernufoss, Fjallsárlón and
-GeoSea. Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
+**What Plan B trades away:** the Katla ice cave, Kvernufoss and Fjallsárlón.
+Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
 genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ## Bases — Plan B
@@ -284,9 +284,9 @@ you fly.
 
 **Weather & packing.** 4–12 °C, wind always, rain somewhere on the loop.
 Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
-and quick-dry towels ride in the **day bag** — there are four soak options (Blue
-Lagoon, Mývatn baths, Hofsós, GeoSea; Plan B adds the Landmannalaugar hot
-spring). Raincoats for everyone at the walk-behind waterfalls.
+and quick-dry towels ride in the **day bag** — three soak options on Plan A (Blue
+Lagoon, Earth Lagoon at Mývatn, Hofsós), and Plan B adds the Landmannalaugar hot
+spring. They also cover Akureyri Backpackers, which charges for towels. Raincoats for everyone at the walk-behind waterfalls.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
@@ -312,13 +312,14 @@ waterslides. Blue Lagoon itself is free under 14; Mývatn Nature Baths free unde
 
 Weather will steal at least half a day somewhere. On Plan B the highland day
 carries its own built-in fallback (the classic coast day). Beyond that, protect
-the booked tours — Katla on Plan A, the whale watch on both — and cut in this
-order:
+the booked tours — Katla on Plan A, the horses and the whale watch on both — and
+cut in this order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
 2. Stykkishólmur's backtrack (day 9).
-3. Raufarhólshellir or the Fagradalsfjall hike (day 10).
-4. The 15-minute stops — Grjótagjá, Petra's Stones, GeoSea, Fontana.
+3. Aldeyjarfoss (day 7, Plan B) — with the horses in, it now lands at dusk.
+4. Raufarhólshellir or the Fagradalsfjall hike (day 10).
+5. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
 
 ## Departure day — Tue Sep 29
 

@@ -63,9 +63,9 @@ Nights 4–10 are open on both plans — book refundable rates.
 
 Plan A — every south-coast icon including the Katla ice cave. No F-roads; a regular automatic SUV does the whole loop. Night 4 in Höfn.
 
-**~2,300 km · 51 stops · 4 soak options · 3 anchor tours**
+**~2,300 km · 51 stops · 3 soak options · 4 anchor tours**
 
-Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
+Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
 ## Bases — Plan A
 
@@ -76,7 +76,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | 3 | Mon Sep 21 | Mýrdalur (near Dyrhólaey) | **Farmhouse Lodge (Airbnb)** — Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík<br>Booked · Airbnb · free cancellation until Sep 7 |
 | 4 | Tue Sep 22 | Höfn | **Höfn Inn Guesthouse** — Vesturbraut 3, 780 Höfn — 20 min from Stokksnes<br>Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544 |
 | 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
-| 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
+| 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 08:20 for the horses · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
 | 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
 | 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
 | 9 | Sun Sep 27 | Borgarnes (or Fossatún) | _not booked_ — Borgarnes HI Hostel · Bjarg guesthouse & cabins · Fossatún pods (20 min east) |
@@ -200,22 +200,24 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 10 min* |
 | `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
 
-### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Akureyri
+### Day 7 — Fri, Sep 25 · Saltvík horses · Húsavík whales · Akureyri
 
-*~200 km · out 07:55 · in 17:20 · overnight Akureyri*
+*~200 km · out 08:20 · in 17:40 · overnight Akureyri*
 
 *Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
 
+> Two paid bookings sit back to back this morning and they only just fit. The ride runs 10:00–12:00, and Gentle Giants' standard check-in for the 12:30 sailing closes at 11:50 — before you are off the horse. Their own wording is to arrive at the latest 40 minutes before departure, so the way through is to check in early: stop at the Ticket Center on the way into Húsavík around 09:05, then drive the 10 minutes out to Saltvík. Confirm they will do that, because if they won't, move the sailing to a later departure — free up to 24 hrs before. Doing it the standard way doesn't work: the ride ends ten minutes after check-in closes, and you'd be twenty minutes late by the time you had driven back into town. Either way don't linger at the farm: boarding is about 15 minutes before the sail, which leaves roughly five minutes of slack.
+
 | Time | Plan |
 |---|---|
-| | *↓ drive 45 min* |
-| `09:30–11:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Check in at the Ticket Center by 08:50 — 40 min before departure, and a missed check-in is charged in full. It is the white house with blue flags on the main road through town rather than down on the pier, and the pin here is that door. A RIB speedboat this time, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaces. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Two hours instead of three hands the morning back — unhurried lunch at Naustið 11:45–12:45, the Whale Museum a short walk from the ticket office if you want it, and the afternoon left exactly where it was. |
-| | *↓ drive 3 min* |
-| `14:00–15:00` | **GeoSea** _soak_ — Seawater infinity baths on the cliff — skip if that's too many soaks in 24 hrs. |
+| | *↓ drive 55 min* |
+| `10:00–12:00` | **Saltvík horse ride — The Seaside tour** **✔ booked** — Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. A 1.5-hr ride along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sail two hours later. The other half-hour is getting on and off, which is why this reads 10:00–12:00 rather than 90 minutes. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, so you pass it on the way in from Mývatn; the 55 min above includes the stop in town first. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund. |
+| | *↓ drive 10 min* |
+| `12:30–14:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Now the 12:30 sailing, which is what makes check-in the tight part of the morning — see the note above the run-sheet. Standard check-in is 11:50, 40 min before departure, at the Ticket Center: the white house with blue flags on the main road through town rather than down on the pier, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Late lunch at Naustið after, 14:45–15:30. |
 | | *↓ drive 50 min* |
-| `15:50–16:35` | **Goðafoss** — The waterfall of the gods, right off the route south. |
+| `16:20–17:00` | **Goðafoss** — The waterfall of the gods, right off the route south. |
 | | *↓ drive 45 min* |
-| `17:30–19:00` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
+| `17:45–19:15` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
 
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
 
@@ -276,14 +278,14 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 # Plan B — Highland edition
 
-Plan B — the same loop with the best of the highlands folded in: Gjáin + Háifoss on day two, a full Landmannalaugar day with the natural hot-spring soak, Aldeyjarfoss after the whales. Needs a genuine F-road-legal 4x4. Trades away: Katla ice cave, Kvernufoss, Fjallsárlón, GeoSea. Night 4 moves from Höfn to the lagoon.
+Plan B — the same loop with the best of the highlands folded in: Gjáin + Háifoss on day two, a full Landmannalaugar day with the natural hot-spring soak, Aldeyjarfoss after the whales. Needs a genuine F-road-legal 4x4. Trades away: Katla ice cave, Kvernufoss, Fjallsárlón. Night 4 moves from Höfn to the lagoon.
 
-**~2,600 km · 53 stops · 5 soak options · 1 highland weather-gated day**
+**~2,600 km · 54 stops · 5 soak options · 1 highland weather-gated day**
 
-Headline stops: Landmannalaugar (day 3) · Gjáin + Háifoss (day 2) · Aldeyjarfoss (day 7) · Dyrhólaey (day 4) · Svartifoss (day 4) · Húsavík whales (day 7) · Hofsós pool (day 8).
+Headline stops: Landmannalaugar (day 3) · Gjáin + Háifoss (day 2) · Aldeyjarfoss (day 7) · Dyrhólaey (day 4) · Svartifoss (day 4) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8).
 
-**What Plan B trades away:** the Katla ice cave, Kvernufoss, Fjallsárlón and
-GeoSea. Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
+**What Plan B trades away:** the Katla ice cave, Kvernufoss and Fjallsárlón.
+Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
 genuine F-road-legal 4x4 — see the Blue Car email above.
 
 ## Bases — Plan B
@@ -295,7 +297,7 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 | 3 | Mon Sep 21 | Mýrdalur (near Dyrhólaey) | **Farmhouse Lodge (Airbnb)** — Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík<br>Booked · Airbnb · free cancellation until Sep 7 |
 | 4 | Tue Sep 22 | Jökulsárlón / Hali area | _not booked_ — Vagnsstaðir HI Hostel · Skyrhúsið Guesthouse · Gerði Guesthouse · Hali Country Hotel · Mid: Fosshotel Glacier Lagoon |
 | 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
-| 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
+| 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 08:20 for the horses · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
 | 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
 | 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
 | 9 | Sun Sep 27 | Borgarnes (or Fossatún) | _not booked_ — Borgarnes HI Hostel · Bjarg guesthouse & cabins · Fossatún pods (20 min east) |
@@ -428,22 +430,26 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 | | *↓ drive 10 min* |
 | `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
 
-### Day 7 — Fri, Sep 25 · Húsavík whales · Goðafoss · Aldeyjarfoss
+### Day 7 — Fri, Sep 25 · Saltvík horses · Húsavík whales · Aldeyjarfoss
 
-*~250 km · out 07:55 · in 17:35 · overnight Akureyri*
+*~250 km · out 08:20 · in 19:05 · overnight Akureyri*
 
 *Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
 
+> Two paid bookings sit back to back this morning and they only just fit. The ride runs 10:00–12:00, and Gentle Giants' standard check-in for the 12:30 sailing closes at 11:50 — before you are off the horse. Their own wording is to arrive at the latest 40 minutes before departure, so the way through is to check in early: stop at the Ticket Center on the way into Húsavík around 09:05, then drive the 10 minutes out to Saltvík. Confirm they will do that, because if they won't, move the sailing to a later departure — free up to 24 hrs before. Doing it the standard way doesn't work: the ride ends ten minutes after check-in closes, and you'd be twenty minutes late by the time you had driven back into town. Then the afternoon: with the horses in, this plan's Aldeyjarfoss detour lands at dusk and pushes Akureyri past 19:00. It is the stop to drop if the day slips.
+
 | Time | Plan |
 |---|---|
-| | *↓ drive 45 min* |
-| `09:30–11:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Check in at the Ticket Center by 08:50 — 40 min before departure, and a missed check-in is charged in full. It is the white house with blue flags on the main road through town rather than down on the pier, and the pin here is that door. A RIB speedboat this time, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaces. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Two hours instead of three hands the morning back — unhurried lunch at Naustið 11:45–12:45, the Whale Museum a short walk from the ticket office if you want it, and the afternoon left exactly where it was. |
+| | *↓ drive 55 min* |
+| `10:00–12:00` | **Saltvík horse ride — The Seaside tour** **✔ booked** — Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. A 1.5-hr ride along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sail two hours later. The other half-hour is getting on and off, which is why this reads 10:00–12:00 rather than 90 minutes. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, so you pass it on the way in from Mývatn; the 55 min above includes the stop in town first. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund. |
+| | *↓ drive 10 min* |
+| `12:30–14:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Now the 12:30 sailing, which is what makes check-in the tight part of the morning — see the note above the run-sheet. Standard check-in is 11:50, 40 min before departure, at the Ticket Center: the white house with blue flags on the main road through town rather than down on the pier, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Late lunch at Naustið after, 14:45–15:30. |
 | | *↓ drive 50 min* |
-| `14:50–15:30` | **Goðafoss** — The waterfall of the gods. (GeoSea is this plan's trade for the falls run — swap back if you'd rather soak.) |
+| `16:20–17:00` | **Goðafoss** — The waterfall of the gods, right off the route south. |
 | | *↓ drive 40 min* |
-| `16:10–16:50` | **Aldeyjarfoss** _optional_ — A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls. |
+| `17:40–18:20` | **Aldeyjarfoss** _optional_ — A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls. With the horse ride in the morning this now sits in the last of the light — sunset is 19:03 — and the gravel run back out is in the dark, so it's the first thing to cut on a day that has already slipped. |
 | | *↓ drive 50 min* |
-| `17:45–19:00` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream. Dinner 19:00. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
+| `19:10–20:30` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
 
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
 
@@ -504,29 +510,31 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 
 # Shared
 
-## Booking checklist — Plan A (10 items)
+## Booking checklist — Plan A (11 items)
 
 1. **Lodging — 3 nights left (Sep 26–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22). Still open: Grundarfjörður, Borgarnes, Keflavík — refundable rates. To settle: Akureyri Backpackers' house rules say children must be over 12 to stay in the rooms, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before the free window shuts on Sep 22.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
 3. **Katla ice cave — ✔ booked** — Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site.
-4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · check in at the Ticket Center by 08:50 — day 7 now leaves Mývatn at 07:55. RIB speedboat, ~2 hrs, minimum height 130 cm. Free to move or cancel until 24 hrs before. Loose end: the GG1 sailing this replaced (ref GGHI-100410953, 09:45) — confirm it is actually cancelled, or you are exposed to a no-show charge on the same morning.
+4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 12:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm. Standard check-in is 11:50, but the horse ride runs to 12:00 — check in early on the way into town around 09:05, or move the sailing to a later departure. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled.
 5. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
 7. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
 8. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
 9. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
 10. **Lava Show, Vík** — Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine.
+11. **Saltvík horse ride — ✔ booked** — The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print.
 
-## Booking checklist — Plan B (8 items)
+## Booking checklist — Plan B (9 items)
 
 1. **Lodging — 4 nights left (Sep 22, 26–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22) — those last three work under either plan. Still open: Jökulsárlón/Hali, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn. Also to settle: Akureyri Backpackers' house rules say children must be over 12, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22.
 2. **Rental car — ✔ booked, one confirm** — Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford.
-3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · check in at the Ticket Center by 08:50 — day 7 now leaves Mývatn at 07:55. RIB speedboat, ~2 hrs, minimum height 130 cm. Free to move or cancel until 24 hrs before. Loose end: the GG1 sailing this replaced (ref GGHI-100410953, 09:45) — confirm it is actually cancelled, or you are exposed to a no-show charge on the same morning.
+3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 12:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm. Standard check-in is 11:50, but the horse ride runs to 12:00 — check in early on the way into town around 09:05, or move the sailing to a later departure. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled.
 4. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
 5. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur).
 6. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
 7. **Raufarhólshellir** — Mon Sep 28 · early-afternoon tour.
 8. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
+9. **Saltvík horse ride — ✔ booked** — The Seaside tour · Fri Sep 25, 10:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1.5-hr ride plus about half an hour getting on and off, so block 10:00–12:00 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print.
 
 ## The aurora game plan
 
@@ -593,9 +601,9 @@ you fly.
 
 **Weather & packing.** 4–12 °C, wind always, rain somewhere on the loop.
 Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
-and quick-dry towels ride in the **day bag** — there are four soak options (Blue
-Lagoon, Mývatn baths, Hofsós, GeoSea; Plan B adds the Landmannalaugar hot
-spring). Raincoats for everyone at the walk-behind waterfalls.
+and quick-dry towels ride in the **day bag** — three soak options on Plan A (Blue
+Lagoon, Earth Lagoon at Mývatn, Hofsós), and Plan B adds the Landmannalaugar hot
+spring. They also cover Akureyri Backpackers, which charges for towels. Raincoats for everyone at the walk-behind waterfalls.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
@@ -621,13 +629,14 @@ waterslides. Blue Lagoon itself is free under 14; Mývatn Nature Baths free unde
 
 Weather will steal at least half a day somewhere. On Plan B the highland day
 carries its own built-in fallback (the classic coast day). Beyond that, protect
-the booked tours — Katla on Plan A, the whale watch on both — and cut in this
-order:
+the booked tours — Katla on Plan A, the horses and the whale watch on both — and
+cut in this order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
 2. Stykkishólmur's backtrack (day 9).
-3. Raufarhólshellir or the Fagradalsfjall hike (day 10).
-4. The 15-minute stops — Grjótagjá, Petra's Stones, GeoSea, Fontana.
+3. Aldeyjarfoss (day 7, Plan B) — with the horses in, it now lands at dusk.
+4. Raufarhólshellir or the Fagradalsfjall hike (day 10).
+5. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
 
 ## Departure day — Tue Sep 29
 
