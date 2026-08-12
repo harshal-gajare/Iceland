@@ -548,6 +548,14 @@ const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 2
 const STAY5 = {name:"Eyjólfsstaðir Guesthouse", addr:"Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town",
   ll:[65.1889,-14.5026], q:"Eyjólfsstaðir Guesthouse, 701 Egilsstaðir, Iceland",
   status:"Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
+/* Night 6 in BOTH plans — day 6 is a shared object, so this one stay covers both.
+   Booked direct with the guesthouse rather than through Booking.com, so the
+   confirmation carries no GPS: `q` holds the address and drives both map links,
+   and ll falls back to the Dimmuborgir lava-field coordinate the guesthouse sits
+   beside. Don't upgrade that to a precise pin without a real source. */
+const STAY6 = {name:"Dimmuborgir Guesthouse", addr:"Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field",
+  ll:[65.5911,-16.9119], q:"Dimmuborgir Guesthouse, Geiteyjarströnd 1, 660 Mývatn, Iceland",
+  status:"Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is"};
 
 const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
   title:"Arrival · Blue Lagoon · Reykjavík",
@@ -562,15 +570,14 @@ const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
 const D5TO10 = [
  {n:6, dow:"Thu", date:"Sep 24", km:"~250 km", depart:"08:15", arrive:"16:10",
   title:"Stuðlagil · Dettifoss · Hverir · the baths",
-  base:"Mývatn", baseLL:[65.6465,-16.9127],
-  hotels:["Eldá Guesthouse","Hlíð Huts & Rooms","Skútustaðir farmhouse","Worth-it mid: Vogafjós"],
+  base:"Mývatn", baseLL:[65.6465,-16.9127], stay:STAY6,
   stops:[
    {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], drive:"55 min", time:"09:10–11:10", note:"East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow."},
    {name:"Möðrudalur", ll:[65.3606,-15.8867], drive:"30 min", time:"11:45–12:05", tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert."},
    {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], drive:"50 min", time:"12:55–14:10", note:"Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here."},
    {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], drive:"45 min", time:"14:55–15:40", note:"Boiling mud pots and fumaroles."},
    {name:"Grjótagjá", ll:[65.6262,-16.8827], drive:"5 min", time:"15:45–16:00", note:"Photo stop; viewing only, no bathing."},
-   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth after check-in — skip if the tank is empty."},
+   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty."},
    {name:"Earth Lagoon Mývatn", ll:[65.6304,-16.848], drive:"10 min", time:"18:00–20:00", tag:"booked", note:"Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount."}
   ]},
  {n:8, dow:"Sat", date:"Sep 26", km:"~430 km", depart:"08:00", arrive:"18:40",
@@ -744,7 +751,7 @@ const PLANS = {
   days: CLASSIC_DAYS,
   upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
   bookings: [
-   ["Lodging — 5 nights left (Sep 24–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20). Still open: Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
+   ["Lodging — 4 nights left (Sep 25–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22). Still open: Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates."],
    ["Rental car — ✔ booked","Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF."],
    ["Katla ice cave — ✔ booked","Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site."],
    ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
@@ -768,7 +775,7 @@ const PLANS = {
   days: HIGHLAND_DAYS,
   upgrades: [["Landmannalaugar",3],["Gjáin + Háifoss",2],["Aldeyjarfoss",7],["Dyrhólaey",4],["Svartifoss",4],["Húsavík whales",7],["Hofsós pool",8]],
   bookings: [
-   ["Lodging — 6 nights left (Sep 22, 24–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20 — this one works under either plan). Still open: Jökulsárlón/Hali, Mývatn, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn."],
+   ["Lodging — 5 nights left (Sep 22, 25–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) — those last two work under either plan. Still open: Jökulsárlón/Hali, Akureyri, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn."],
    ["Rental car — ✔ booked, one confirm","Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford."],
    ["Húsavík whale watching — ✔ booked","Gentle Giants GG1 · Fri Sep 25, 09:45 · ref GGHI-100410953 · 2 adults + 1 youth · check in by 09:05. Free to move or cancel until 24 hrs before."],
    ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
