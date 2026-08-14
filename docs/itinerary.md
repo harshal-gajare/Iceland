@@ -5,7 +5,7 @@ Snæfellsnes. This is the printable twin of the page — the whole trip in one
 document, including every reservation number and the emergency block, for the
 glovebox and for the case where there is no signal and no battery.
 
-Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — which the rental has to be cleared for.
+Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — and the rental is cleared for it.
 
 > Generated from the `TRIP` object in `index.html` — that file is the source of
 > truth. After changing a stop, a time or a base there, run
@@ -36,16 +36,20 @@ Insurance on the contract: CDW · SCDW super-collision · TP theft · GP gravel 
 SAAP sand & ash · Roadside · Road tax. GP + SAAP is exactly the cover this route
 wants — gravel chips and south-coast ash storms are the two classic claims.
 
-> **One email to send, and a paid tour rides on it.** Confirm the Vitara is the
-> AllGrip 4x4 and that **Road 550 to Klaki** is permitted. Day 10's Into the
-> Glacier tour meets at the top of that F-road and is already paid for; a no
-> there means booking the operator's shuttle from Húsafell, and driving it
-> regardless would void the CDW and SCDW. River fords are never insured on any
-> Icelandic contract, and nothing on this route asks you to cross one.
+> **Road 550 is cleared.** Blue Car have confirmed the Vitara for the Klaki road,
+> which was the one open question on the trip — day 10's Into the Glacier tour
+> meets at the top of it and is paid for. You drive yourself; there is no Húsafell
+> shuttle to book. It is still a rough gravel mountain road: gravel speed, honest
+> tyre pressure. River fords are never insured on any Icelandic contract, and
+> nothing on this route asks you to cross one.
 
-**Return-day math:** car back 11:00, flight 17:10. Either run a Reykjanes
-morning and drop at 11:00 with a slow airport lunch, or ask Blue Car to extend
-drop-off to ~14:00 and keep the last morning properly free.
+**Return-day math — drop at 14:00.** The flight is 17:10 and Icelandair check-in
+opens 2.5 hrs before, so be in the terminal by **14:40**. Back off 30 min for the
+handover and the lot shuttle → keys back **14:10**; 15 more for the last fill in
+Njarðvík → pump by **13:55**; so the morning's last activity ends about **13:40**.
+Sunrise is 07:33, leaving just over six hours of daylight. Later is not worth it:
+a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with
+three checked bags, and bag drop shuts 45–60 min out.
 
 **Booster check:** Icelandic law requires a booster seat below 135 cm. Most
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
@@ -343,7 +347,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *Daylight 07:28 Borgarnes → 19:10 Keflavík · 11 h 42 m*
 
-> Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
+> Read this before the day starts. Road 550 up to Klaki is an F-road — 4x4 only, and the operator's own page has it closed October to June. Blue Car have cleared the Vitara for it, so you drive yourself and there is no shuttle to book; what is left is the road itself, which is rough gravel and wants gravel speed rather than confidence. If the tour falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
 
 | Time | Plan |
 |---|---|
@@ -387,14 +391,10 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Sep 24, 18:00 | **Earth Lagoon Mývatn** | ref **ABK00150634**<br>Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456). Doors 18:00–18:30 — show the emailed ticket, not the booking number. Towel, one drink and an Earth Bistro discount included. |
 | Sep 25, 09:30 | **Húsavík whales — Gentle Giants GG2** | ref **GGHI-100464358**<br>Big Whale Safari &amp; Puffins, 09:30–11:30, 2 adults + 1 youth · ISK 53,973, pay on arrival. Check in by 08:50 at the Ticket Center, Hafnarstétt 7. RIB, min height 130 cm. Free to move or cancel until 24 hrs before. |
 | Sep 25, 14:00 | **Saltvík horse ride — The Seaside tour** | ref **SAL-100467323** · +354 847 9515<br>14:00–15:30, 2 adults + 1 teenager · ISK 41,500 paid in full. Hestamiðstöðin Saltvík, 4 km south of Húsavík — start is inside the riding hall. Min age 10, 110 kg per rider. info@saltvik.is |
-| Sep 28, 10:30 | **Into the Glacier — Klaki Base Camp** | ref **ARC-T141867953** · +354 578 2550<br>Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road: 4x4 or their Húsafell shuttle. Free to cancel until 24 hrs out. info@intotheglacier.is |
+| Sep 28, 10:30 | **Into the Glacier — Klaki Base Camp** | ref **ARC-T141867953** · +354 578 2550<br>Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road and the Vitara is cleared for it — no shuttle needed. Free to cancel until 24 hrs out. info@intotheglacier.is |
 
 ### Before you fly — still open
 
-- **Blue Car, in writing.** Confirm the Vitara is the AllGrip 4x4 and that Road
-  550 to Klaki is permitted. Into the Glacier is paid for and meets at the top of
-  that F-road; a no means booking their Húsafell shuttle instead, and driving it
-  regardless voids the CDW and SCDW.
 - **Akureyri Backpackers, in writing.** House rules say children must be over 12;
   they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
   **Sep 22**.
@@ -402,7 +402,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
   (28th). Refundable rates.
 - **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
   **Efstidalur II** table at 12:00 on the 20th.
-- **Ask Blue Car** to extend drop-off to ~14:00 on the 29th.
+- **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
 
 ## If something goes wrong
@@ -431,9 +431,16 @@ plan; umferdin.is has roads, vedur.is has weather.
 agreement at pickup and keep it with the keys. It is deliberately not printed
 here, because a wrong number in this section is worse than no number.
 
+**Embassy of India, Reykjavík** — Túngata 7, 101 Reykjavík · +354 534 9955 ·
+08:30–17:00 Mon–Fri, consular counter 09:00–12:00 · cons.reykjavik@mea.gov.in ·
+hoc.reykjavik@mea.gov.in. Both adults travel on Indian passports, so a lost
+passport starts here. Directory listings also give a mobile, +354 841 7870, which
+is not printed on the embassy's own site — treat it as a maybe.
+
 **U.S. Embassy Reykjavík** — Engjateigur 7, 105 Reykjavík · +354 595 2200 ·
-after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Carry a
-photo of each passport separately from the passports themselves.
+after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Relevant
+for residency documents rather than the adults' passports. Carry a photo of every
+travel document separately from the documents themselves.
 
 **The two that actually catch people here:** sneaker waves at Reynisfjara and
 Djúpalónssandur — never turn your back on the sea, obey the warning lights, and

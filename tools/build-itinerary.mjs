@@ -174,16 +174,20 @@ Insurance on the contract: CDW · SCDW super-collision · TP theft · GP gravel 
 SAAP sand & ash · Roadside · Road tax. GP + SAAP is exactly the cover this route
 wants — gravel chips and south-coast ash storms are the two classic claims.
 
-> **One email to send, and a paid tour rides on it.** Confirm the Vitara is the
-> AllGrip 4x4 and that **Road 550 to Klaki** is permitted. Day 10's Into the
-> Glacier tour meets at the top of that F-road and is already paid for; a no
-> there means booking the operator's shuttle from Húsafell, and driving it
-> regardless would void the CDW and SCDW. River fords are never insured on any
-> Icelandic contract, and nothing on this route asks you to cross one.
+> **Road 550 is cleared.** Blue Car have confirmed the Vitara for the Klaki road,
+> which was the one open question on the trip — day 10's Into the Glacier tour
+> meets at the top of it and is paid for. You drive yourself; there is no Húsafell
+> shuttle to book. It is still a rough gravel mountain road: gravel speed, honest
+> tyre pressure. River fords are never insured on any Icelandic contract, and
+> nothing on this route asks you to cross one.
 
-**Return-day math:** car back 11:00, flight 17:10. Either run a Reykjanes
-morning and drop at 11:00 with a slow airport lunch, or ask Blue Car to extend
-drop-off to ~14:00 and keep the last morning properly free.
+**Return-day math — drop at 14:00.** The flight is 17:10 and Icelandair check-in
+opens 2.5 hrs before, so be in the terminal by **14:40**. Back off 30 min for the
+handover and the lot shuttle → keys back **14:10**; 15 more for the last fill in
+Njarðvík → pump by **13:55**; so the morning's last activity ends about **13:40**.
+Sunrise is 07:33, leaving just over six hours of daylight. Later is not worth it:
+a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with
+three checked bags, and bag drop shuts 45–60 min out.
 
 **Booster check:** Icelandic law requires a booster seat below 135 cm. Most
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
@@ -210,10 +214,6 @@ ${reservationTable(C)}
 
 ### Before you fly — still open
 
-- **Blue Car, in writing.** Confirm the Vitara is the AllGrip 4x4 and that Road
-  550 to Klaki is permitted. Into the Glacier is paid for and meets at the top of
-  that F-road; a no means booking their Húsafell shuttle instead, and driving it
-  regardless voids the CDW and SCDW.
 - **Akureyri Backpackers, in writing.** House rules say children must be over 12;
   they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
   **Sep 22**.
@@ -221,7 +221,7 @@ ${reservationTable(C)}
   (28th). Refundable rates.
 - **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
   **Efstidalur II** table at 12:00 on the 20th.
-- **Ask Blue Car** to extend drop-off to ~14:00 on the 29th.
+- **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
 
 ## If something goes wrong
@@ -250,9 +250,16 @@ plan; umferdin.is has roads, vedur.is has weather.
 agreement at pickup and keep it with the keys. It is deliberately not printed
 here, because a wrong number in this section is worse than no number.
 
+**Embassy of India, Reykjavík** — Túngata 7, 101 Reykjavík · +354 534 9955 ·
+08:30–17:00 Mon–Fri, consular counter 09:00–12:00 · cons.reykjavik@mea.gov.in ·
+hoc.reykjavik@mea.gov.in. Both adults travel on Indian passports, so a lost
+passport starts here. Directory listings also give a mobile, +354 841 7870, which
+is not printed on the embassy's own site — treat it as a maybe.
+
 **U.S. Embassy Reykjavík** — Engjateigur 7, 105 Reykjavík · +354 595 2200 ·
-after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Carry a
-photo of each passport separately from the passports themselves.
+after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Relevant
+for residency documents rather than the adults' passports. Carry a photo of every
+travel document separately from the documents themselves.
 
 **The two that actually catch people here:** sneaker waves at Reynisfjara and
 Djúpalónssandur — never turn your back on the sea, obey the warning lights, and
