@@ -102,8 +102,9 @@ function dayTables(p) {
     }
     out.push("");
     if (d.food) {
-      const rows = [["Lunch", d.food.lunch], ["Dinner", d.food.dinner], ["Detour", d.food.extra]]
-        .filter(([, v]) => v);
+      const rows = [["Lunch", d.food.lunch], ["Dinner", d.food.dinner],
+                    ["Coffee", d.food.coffee], ["Sweet", d.food.sweet],
+                    ["Detour", d.food.extra]].filter(([, v]) => v);
       if (rows.length) {
         out.push("| Eating | |", "|---|---|");
         for (const [k, v] of rows) out.push(`| **${k}** | ${bold(v)} |`);
@@ -303,7 +304,9 @@ KEF 17:10 → BOS → ATL 00:12. The Vitara is due back at 11:00 but the flight 
 until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between
 Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop
 the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend
-drop-off to ~14:00 and keep the morning properly unhurried. Bag drop opens
+drop-off to ~14:00 and keep the morning properly unhurried. If you want one last
+proper coffee, Keflavík's harbour has it — the airport side is chain-only past
+security. Bag drop opens
 ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.
 
 ---

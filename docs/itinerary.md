@@ -91,7 +91,9 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Eating | |
 |---|---|
 | **Lunch** | The **Blue Café** inside the lagoon does soup and sandwiches without leaving your robe; **Lava Restaurant** is the sit-down one built into the lava wall, and it wants a booking. |
-| **Dinner** | **Messinn** on Lækjargata for the pan-fried fish pans that made its name — book, it fills. If Perlan or FlyOver runs to 21:00, **Bæjarins Beztu Pylsur** by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds. |
+| **Dinner** | **Messinn** on Lækjargata for the pan-fried fish pans that made its name — book, it fills. For sushi, **Sushi Social** runs Icelandic fish through a Japanese-Peruvian lens, and **Osushi** is a conveyor belt, which is its own kind of entertainment at eleven. If Perlan or FlyOver runs to 21:00, **Bæjarins Beztu Pylsur** by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds. |
+| **Coffee** | **Reykjavík Roasters** on Kárastígur, two minutes downhill from Hallgrímskirkja and the city's benchmark. **Mokka Kaffi** has poured since 1958 and its waffles with jam and whipped cream run on a family-secret recipe. |
+| **Sweet** | **Brauð &amp; Co** on Frakkastígur — the graffiti-covered bakery that reset the city's standard, and the cinnamon buns are the thing. **Valdís** does ice cream in flavours like rye bread and salted liquorice: either a dare or a discovery. |
 | **Detour** | **Grillmarkaðurinn** is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye. |
 
 ### Day 2 — Sun, Sep 20 · Golden Circle
@@ -118,6 +120,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | Booked: **Efstidalur II** at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. |
 | **Dinner** | **Gamla Fjósið** — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm. |
+| **Coffee** | Thin country once you leave the Golden Circle. Efstidalur pours its own with lunch, and the **Geysir** centre across the road is the last dependable stop before the coast. |
+| **Sweet** | Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The **Laugarvatn Fontana** rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after. |
 | **Detour** | **Friðheimar**, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan; the tracker says keep watching for cancellations. |
 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
@@ -145,6 +149,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | **Smiðjan Brugghús** in Vík at 12:15, already in the run-sheet — brewpub burgers five minutes from the ice-cave check-in. |
 | **Dinner** | Back in Vík after Reynisfjara: **Suður-Vík** in the old house up the hill, or **Halldórskaffi** in the middle of town. The Lava Show is 20:00, so eat first. |
+| **Coffee** | **Skool Beans** — a bright yellow school bus in Vík that roasts its own beans, with a log fire and a book exchange inside. The best coffee on the south coast, and a short walk from the ice-cave meeting point. |
+| **Sweet** | Skool Beans bakes as well as roasts. Beyond that the south coast runs on supermarket skyr: Ísey, with the berry lids, is the national pudding and costs a couple of hundred krónur at the Vík Krónan. |
 | **Detour** | **Black Crust Pizzeria** in Vík colours its dough with activated charcoal. A jet-black pizza is an easy sell to an 11-year-old on a day that has already run long. |
 
 ### Day 4 — Tue, Sep 22 · Canyon · Svartifoss · glacier lagoon
@@ -170,6 +176,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | The café at the **Skaftafell visitor centre**, quick, straight off the Svartifoss hike — the Zodiac check-in is the day's hard edge, so this is a refuel, not a meal. |
 | **Dinner** | Langoustine night, and Höfn is the town for it: **Pakkhús** in the old harbour warehouse, **Humarhöfnin** a street away, or **Otto Matur &amp; Drykkur**. Book — this is the one splurge dinner of the trip. |
+| **Coffee** | A thin stretch. Skaftafell's visitor centre is the only real stop between Kirkjubæjarklaustur and the lagoon, and the café at the **Jökulsárlón** ticket office pours while you wait for the Zodiac. |
+| **Sweet** | Höfn is a langoustine town rather than a cake town, so take dessert at Pakkhús. The Icelandic road alternative is the soft-serve counter inside the N1 — petrol-station ice cream is a genuine national habit, not a joke. |
 | **Detour** | **Hafnarbúðin** is the roadside window the locals use — the same langoustine in a baguette for a fraction of the price, no booking, eaten standing up. |
 
 ### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
@@ -193,6 +201,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | **Við Voginn** at Djúpivogur, right where the 11:05 stop already is — a harbour shack with a local reputation for fish and chips and burgers. Otherwise it's the packed lunch at Petra's, where there is nothing. |
 | **Dinner** | **Nielsen Restaurant** in Egilsstaðir, in the oldest house in town with a garden behind it, or **Salt Bistro** for something simpler and later. |
+| **Coffee** | The **Viking Café** at Stokksnes, where you are paying the access fee anyway — coffee with the best view of the morning. If the afternoon goes to **Vök Baths** instead of Seyðisfjörður, its swim-up bar is the one place you can order without leaving the water. |
+| **Sweet** | Djúpivogur and Egilsstaðir both have a bakery on the main street and that is the honest extent of it — this is the day to raid a bakery counter at opening rather than hunt for dessert at night. |
 | **Detour** | **Norð Austur** in Seyðisfjörður is an acclaimed sushi room working the fjord's own catch — but it is over the pass and its season is short, so only if you pick Seyðisfjörður over Vök and it is still open. |
 
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
@@ -222,7 +232,9 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | **Fjalladýrð** at Möðrudalur, the 11:45 stop — Iceland's highest farm, doing lamb soup and kleinur in the middle of the desert. The alternative is the Dettifoss picnic, where there is no kitchen for 50 km. |
 | **Dinner** | **Vogafjós** at 20:15, already the plan: the cowshed restaurant where you eat alongside the herd, with rye bread baked in the geothermal ground and mozzarella from their own milk. |
-| **Detour** | **Kaffi Borgir** overlooks the Dimmuborgir lava field a minute from the guesthouse, and **Daddi's Pizza** in Reykjahlíð is the cheap night — either is easier than Vogafjós if the lagoon runs long. |
+| **Coffee** | Möðrudalur is the coffee stop by design — the 11:45 slot exists for it. At the lake, **Kaffi Borgir** looks out over the Dimmuborgir lava field a minute from the guesthouse. |
+| **Sweet** | Vogafjós makes ice cream and skyr from the herd you are sitting beside. Möðrudalur's kleinur — twisted Icelandic doughnuts, fried — are the mid-desert version, and the better story. |
+| **Detour** | **Daddi's Pizza** in Reykjahlíð is the cheap night and easier than Vogafjós if the lagoon runs long. |
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Saltvík horses · Akureyri
 
@@ -244,8 +256,10 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Eating | |
 |---|---|
 | **Lunch** | **Naustið** in Húsavík at 11:45, already in the run-sheet — a tiny place doing fish soup and plokkfiskur two minutes from where the boat lands. **Gamli Baukur**, the timber house on the harbour, is the fallback if it is full. |
-| **Dinner** | Akureyri, after the old-town walk: **Strikið** on the top floor for the fjord view — book — or **Bautinn**, the town's dependable family standby. **Brynja** for the ice cream is already a stop. |
-| **Detour** | **Rub23** does the best fish and sushi in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse. |
+| **Dinner** | Akureyri, after the old-town walk: **Strikið** on the top floor for the fjord view — book — or **Bautinn**, the town's dependable family standby. |
+| **Coffee** | **Bláa Kannan** — the deep-blue timber house with the red roof on Hafnarstræti, standing directly on the old-town walk, serving homemade cake all day. |
+| **Sweet** | **Brynja** is already a stop and is the whole point: Akureyri's ice-cream institution, thick soft-serve that people drive in from the countryside for. |
+| **Detour** | **Rub23** is the best sushi and fish in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse. |
 
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
 
@@ -268,6 +282,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | The thin day — 430 km and almost nothing open between them. **Kaffi Rauðka**, the red house on Siglufjörður's marina, is open year-round, but you are there at 09:15, which is coffee rather than lunch. Provision in Akureyri before you leave and eat at Hofsós. |
 | **Dinner** | **Bjargarsteinn Mathús** in Grundarfjörður — a small wooden house moved 140 km to sit on the harbour, serving the best food on Snæfellsnes with Kirkjufell out of the window. Book ahead; it is most of the reason to sleep in Grundarfjörður. |
+| **Coffee** | Kaffi Rauðka at 09:15 is exactly right for this, and it is the last good cup for a long time — after Siglufjörður it is petrol-station coffee for most of 400 km. |
+| **Sweet** | **Geirabakarí**, the bakery and café on the main road through Borgarnes, catches the 17:20 fuel stop — a proper bakery at the hour of the day when morale needs one. |
 | **Detour** | **Hannes Boy**, next door to Rauðka in the restored herring quarter, is the full meal rather than the coffee — worth it only if you leave Akureyri early enough to make it brunch. |
 
 ### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
@@ -297,6 +313,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | **Ólafsvík** at 11:40 as planned, between Stykkishólmur and Djúpalónssandur — the harbour town holds the only dependable kitchens on that stretch of the peninsula. |
 | **Dinner** | The **Settlement Centre** restaurant in Borgarnes, in a late-19th-century warehouse beside the old trading store: mashed fish, lamb, mussels, langoustine tails — and the museum is attached if the weather has been unkind. |
+| **Coffee** | Stykkishólmur at 09:50 is the morning stop, and its harbour cafés open early for the Flatey ferry crowd. **Arnarstapi** at 14:15 is the only other dependable one on the peninsula's south side. |
+| **Sweet** | The Settlement Centre does homemade cake and Italian coffee, which makes dessert the easy move since you are already sitting there. **Geirabakarí** is the morning version if you missed it yesterday. |
 | **Detour** | **Sjávarpakkhúsið** on Stykkishólmur's harbour is known for Breiðafjörður blue mussels, but you pass through at 09:50, which is three hours too early to eat them. |
 
 ### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · airport night
@@ -321,7 +339,9 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | **Lunch** | **Húsafell Bistró**, open 11:00–17:00 daily, sits fifteen minutes down from the glacier road and lands exactly when you come off the ice — buffet, burgers, waffles. |
 | **Dinner** | **Kaffi Duus** on Keflavík's harbour, fish its speciality and long used to people arriving late off the airport road. You get in about 19:20, so ring ahead. |
-| **Detour** | **Krauma**'s café sits over the Deildartunguhver hot spring 25 min from Húsafell — the natural stop if the glacier tour is weathered off and the day becomes a slow drive south. |
+| **Coffee** | **Krauma** at Deildartunguhver, 25 min down from Húsafell — a café built over Europe's highest-flow hot spring, and the natural stop on the long drive south. |
+| **Sweet** | Húsafell's bistro does waffles, which is the correct thing to eat coming off a glacier. |
+| **Detour** | If the glacier tour is weathered off, Krauma stops being a coffee stop and becomes the afternoon — the baths are right there. See the day note. |
 
 ---
 
@@ -452,7 +472,9 @@ KEF 17:10 → BOS → ATL 00:12. The Vitara is due back at 11:00 but the flight 
 until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between
 Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop
 the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend
-drop-off to ~14:00 and keep the morning properly unhurried. Bag drop opens
+drop-off to ~14:00 and keep the morning properly unhurried. If you want one last
+proper coffee, Keflavík's harbour has it — the airport side is chain-only past
+security. Bag drop opens
 ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.
 
 ---
