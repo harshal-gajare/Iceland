@@ -220,7 +220,9 @@ ${reservationTable(C)}
   volcano watch. The only meal needing a reservation is Höfn on the 22nd;
   Efstidalur takes bookings only for parties of ten or more.
 - **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
-- **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
+- **Ask Dimmuborgir to pack breakfast** for the morning of the 25th. Service is
+  08:00–10:00 and day 7 leaves at 07:55, so the buffet is unusable — but it is
+  included in the €364 and they will bag it if you ask at check-in.
 
 ## If something goes wrong
 
