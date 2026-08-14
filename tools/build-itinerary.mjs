@@ -4,7 +4,7 @@
  *   node tools/build-itinerary.mjs            # write docs/itinerary.md
  *   node tools/build-itinerary.mjs --check    # exit 1 if the file is stale
  *
- * Day tables, base tables and booking checklists are generated straight from
+ * Day tables, base tables and the reservations table are generated straight from
  * the data so they cannot drift from the app. The prose sections below are
  * transcribed from the static sections of index.html — if you edit those
  * sections in the page, edit them here too.
@@ -116,8 +116,21 @@ function dayTables(p) {
   return out.join("\n");
 }
 
-const checklist = (p) =>
-  p.bookings.map((b, i) => `${i + 1}. **${esc(b[0])}** — ${esc(b[1])}`).join("\n");
+/* Mirrors buildReservations() on the page: lodging derived from the days so it
+   cannot drift, then the hand-kept car and tours. */
+function reservationTable(p) {
+  const out = ["| When | What | Reference and terms |", "|---|---|---|"];
+  for (const d of p.days) {
+    const when = `Night ${d.n} · ${d.dow} ${d.date}`;
+    if (d.stay) out.push(`| ${when} | **${esc(d.stay.name)}**<br>${esc(d.stay.addr)} | ${esc(d.stay.status)} |`);
+    else out.push(`| ${when} | ${esc(d.base)} | *not booked* — budget picks are on the day |`);
+  }
+  for (const r of p.reservations) {
+    const ref = [r.ref ? `ref **${esc(r.ref)}**` : null, r.tel ? esc(r.tel) : null].filter(Boolean).join(" · ");
+    out.push(`| ${esc(r.when)} | **${esc(r.what)}** | ${ref ? ref + "<br>" : ""}${bold(r.meta)} |`);
+  }
+  return out.join("\n");
+}
 
 const statLine = (p) =>
   `${p.stats.km} km · ${p.stats.stops} stops · ${p.stats.soaks} soak options · ${plain(p.stats.flex)}`;
@@ -126,7 +139,9 @@ function render(C) {
   return `# Iceland Ring Road + Snæfellsnes — September 19–29, 2026
 
 Family of three (one 11-year-old), ten nights, counterclockwise Ring Road plus
-Snæfellsnes.
+Snæfellsnes. This is the printable twin of the page — the whole trip in one
+document, including every reservation number and the emergency block, for the
+glovebox and for the case where there is no signal and no battery.
 
 ${esc(C.desc)}
 
@@ -189,9 +204,60 @@ ${baseTable(C)}
 ${dayTables(C)}
 ---
 
-## Booking checklist (${C.bookings.length} items)
+## Reservations
 
-${checklist(C)}
+${reservationTable(C)}
+
+### Before you fly — still open
+
+- **Blue Car, in writing.** Confirm the Vitara is the AllGrip 4x4 and that Road
+  550 to Klaki is permitted. Into the Glacier is paid for and meets at the top of
+  that F-road; a no means booking their Húsafell shuttle instead, and driving it
+  regardless voids the CDW and SCDW.
+- **Akureyri Backpackers, in writing.** House rules say children must be over 12;
+  they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
+  **Sep 22**.
+- **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
+  (28th). Refundable rates.
+- **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
+  **Efstidalur II** table at 12:00 on the 20th.
+- **Ask Blue Car** to extend drop-off to ~14:00 on the 29th.
+- **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
+
+## If something goes wrong
+
+Iceland runs one emergency number for police, fire, ambulance, coastguard and
+mountain rescue. It is free from any phone, works with no credit and no SIM, and
+the operators speak English.
+
+| | |
+|---|---|
+| **112** | Police · fire · ambulance · rescue. Install the **112 Iceland** app before flying — its emergency button sends your GPS with the call, which is what matters on a gravel road with no landmarks. |
+| **1700** | Health line, 24/7 medical advice in English |
+| **1770** | Læknavaktin — the after-hours doctor |
+| **+354 543 2000** | Landspítali emergency department, Reykjavík |
+| **+354 543 2222** | Poison information centre |
+| **+354 575 0505** | Emergency dental |
+| **+354 444 1000** | Police, non-emergency |
+| **+354 570 5900** | ICE-SAR, search and rescue |
+| **118** | Directory enquiries |
+
+Every town you sleep in has a *heilsugæsla* (health centre) for the ordinary
+things; pharmacies are *apótek*. safetravel.is carries alerts and takes a travel
+plan; umferdin.is has roads, vedur.is has weather.
+
+**Roadside assistance** is on the Blue Car contract — take the number off the
+agreement at pickup and keep it with the keys. It is deliberately not printed
+here, because a wrong number in this section is worse than no number.
+
+**U.S. Embassy Reykjavík** — Engjateigur 7, 105 Reykjavík · +354 595 2200 ·
+after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Carry a
+photo of each passport separately from the passports themselves.
+
+**The two that actually catch people here:** sneaker waves at Reynisfjara and
+Djúpalónssandur — never turn your back on the sea, obey the warning lights, and
+brief the 11-year-old properly, because those waves outrun sprinting adults. And
+wind: hold the car doors, and if a gust warning says 20 m/s, believe it.
 
 ## The aurora game plan
 

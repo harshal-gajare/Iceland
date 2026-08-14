@@ -1,7 +1,9 @@
 # Iceland Ring Road + Snæfellsnes — September 19–29, 2026
 
 Family of three (one 11-year-old), ten nights, counterclockwise Ring Road plus
-Snæfellsnes.
+Snæfellsnes. This is the printable twin of the page — the whole trip in one
+document, including every reservation number and the emergency block, for the
+glovebox and for the case where there is no signal and no battery.
 
 Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — which the rental has to be cleared for.
 
@@ -365,20 +367,78 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ---
 
-## Booking checklist (12 items)
+## Reservations
 
-1. **Lodging — 3 nights left (Sep 26–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22). Still open: Grundarfjörður, Borgarnes, Keflavík — refundable rates. To settle: Akureyri Backpackers' house rules say children must be over 12 to stay in the rooms, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before the free window shuts on Sep 22.
-2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
-3. **Katla ice cave — ✔ booked** — Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site.
-4. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30–11:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm · check in by 08:50 at the Ticket Center, Hafnarstétt 7 — day 7 leaves Mývatn at 07:55. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled.
-5. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
-6. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations.
-7. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
-8. **Raufarhólshellir — dropped, not booked** — Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors.
-9. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
-10. **Lava Show, Vík** — Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine.
-11. **Saltvík horse ride — ✔ booked** — The Seaside tour · Fri Sep 25, 14:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1-hr ride plus about half an hour getting on and off, so block 14:00–15:30 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print.
-12. **Into the Glacier — ✔ booked, one dependency** — Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is.
+| When | What | Reference and terms |
+|---|---|---|
+| Night 1 · Sat Sep 19 | **Nordic Apartments**<br>Snorrabraut 56, 105 Reykjavík | Booked · Booking.com · free cancellation until Sep 4 |
+| Night 2 · Sun Sep 20 | **Paradise Cave Hostel & Guesthouse**<br>Seljalandsskóli, 861 — at Seljalandsfoss | Booked · non-refundable · check-in 16:00–22:00 · breakfast included |
+| Night 3 · Mon Sep 21 | **Farmhouse Lodge (Airbnb)**<br>Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík | Booked · Airbnb · free cancellation until Sep 7 |
+| Night 4 · Tue Sep 22 | **Höfn Inn Guesthouse**<br>Vesturbraut 3, 780 Höfn — 20 min from Stokksnes | Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544 |
+| Night 5 · Wed Sep 23 | **Eyjólfsstaðir Guesthouse**<br>Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town | Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
+| Night 6 · Thu Sep 24 | **Dimmuborgir Guesthouse**<br>Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field | Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
+| Night 7 · Fri Sep 25 | **Akureyri Backpackers**<br>Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks | Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
+| Night 8 · Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | *not booked* — budget picks are on the day |
+| Night 9 · Sun Sep 27 | Borgarnes (or Fossatún) | *not booked* — budget picks are on the day |
+| Night 10 · Mon Sep 28 | Keflavík | *not booked* — budget picks are on the day |
+| Sep 19, 11:00 | **Blue Car Rental — Suzuki Vitara, automatic** | ref **#Z04F2O**<br>Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions. |
+| Sep 21, 14:00 | **Katla ice cave — Troll Expeditions** | ref **TRO-T141847549**<br>Order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before. |
+| Sep 22, 15:10 | **Jökulsárlón — Zodiac boat tour** | ref **JOK-00049937** · +354 478 2222<br>15:10–16:25. Check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full. |
+| Sep 24, 18:00 | **Earth Lagoon Mývatn** | ref **ABK00150634**<br>Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456). Doors 18:00–18:30 — show the emailed ticket, not the booking number. Towel, one drink and an Earth Bistro discount included. |
+| Sep 25, 09:30 | **Húsavík whales — Gentle Giants GG2** | ref **GGHI-100464358**<br>Big Whale Safari &amp; Puffins, 09:30–11:30, 2 adults + 1 youth · ISK 53,973, pay on arrival. Check in by 08:50 at the Ticket Center, Hafnarstétt 7. RIB, min height 130 cm. Free to move or cancel until 24 hrs before. |
+| Sep 25, 14:00 | **Saltvík horse ride — The Seaside tour** | ref **SAL-100467323** · +354 847 9515<br>14:00–15:30, 2 adults + 1 teenager · ISK 41,500 paid in full. Hestamiðstöðin Saltvík, 4 km south of Húsavík — start is inside the riding hall. Min age 10, 110 kg per rider. info@saltvik.is |
+| Sep 28, 10:30 | **Into the Glacier — Klaki Base Camp** | ref **ARC-T141867953** · +354 578 2550<br>Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road: 4x4 or their Húsafell shuttle. Free to cancel until 24 hrs out. info@intotheglacier.is |
+
+### Before you fly — still open
+
+- **Blue Car, in writing.** Confirm the Vitara is the AllGrip 4x4 and that Road
+  550 to Klaki is permitted. Into the Glacier is paid for and meets at the top of
+  that F-road; a no means booking their Húsafell shuttle instead, and driving it
+  regardless voids the CDW and SCDW.
+- **Akureyri Backpackers, in writing.** House rules say children must be over 12;
+  they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
+  **Sep 22**.
+- **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
+  (28th). Refundable rates.
+- **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
+  **Efstidalur II** table at 12:00 on the 20th.
+- **Ask Blue Car** to extend drop-off to ~14:00 on the 29th.
+- **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
+
+## If something goes wrong
+
+Iceland runs one emergency number for police, fire, ambulance, coastguard and
+mountain rescue. It is free from any phone, works with no credit and no SIM, and
+the operators speak English.
+
+| | |
+|---|---|
+| **112** | Police · fire · ambulance · rescue. Install the **112 Iceland** app before flying — its emergency button sends your GPS with the call, which is what matters on a gravel road with no landmarks. |
+| **1700** | Health line, 24/7 medical advice in English |
+| **1770** | Læknavaktin — the after-hours doctor |
+| **+354 543 2000** | Landspítali emergency department, Reykjavík |
+| **+354 543 2222** | Poison information centre |
+| **+354 575 0505** | Emergency dental |
+| **+354 444 1000** | Police, non-emergency |
+| **+354 570 5900** | ICE-SAR, search and rescue |
+| **118** | Directory enquiries |
+
+Every town you sleep in has a *heilsugæsla* (health centre) for the ordinary
+things; pharmacies are *apótek*. safetravel.is carries alerts and takes a travel
+plan; umferdin.is has roads, vedur.is has weather.
+
+**Roadside assistance** is on the Blue Car contract — take the number off the
+agreement at pickup and keep it with the keys. It is deliberately not printed
+here, because a wrong number in this section is worse than no number.
+
+**U.S. Embassy Reykjavík** — Engjateigur 7, 105 Reykjavík · +354 595 2200 ·
+after hours +354 693 9207 · State Dept 24/7 from abroad +1 202 501 4444. Carry a
+photo of each passport separately from the passports themselves.
+
+**The two that actually catch people here:** sneaker waves at Reynisfjara and
+Djúpalónssandur — never turn your back on the sea, obey the warning lights, and
+brief the 11-year-old properly, because those waves outrun sprinting adults. And
+wind: hold the car doors, and if a gust warning says 20 m/s, believe it.
 
 ## The aurora game plan
 

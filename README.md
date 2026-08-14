@@ -1,6 +1,6 @@
 # Iceland Trip Planner · Sep 19–29, 2026
 
-Interactive planner for a 10-night family Ring Road + Snæfellsnes loop — 51 timed stops over a stylized SVG map with a day-colored route ribbon, run-sheets with drive legs, confirmed-booking cards, a booking tracker, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
+On-the-road reference for a 10-night family Ring Road + Snæfellsnes loop — 51 timed stops over a stylized SVG map with a day-colored route ribbon, run-sheets with drive legs, a meal/fuel/grocery card per day, a reservations reference, emergency numbers, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
 
 **Live:** [harshalgajare.com/Iceland](https://harshalgajare.com/Iceland/)
 
@@ -39,7 +39,8 @@ node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 - **Day cards** — timed run-sheets in driving order with drive legs between stops and **Google + Apple Maps links on every stop**.
 - **Daylight per day** — sunrise, sunset and the length of the light window, computed from each day's own coordinates (sunrise where you wake, sunset where you land) rather than one number for the whole country: the bases span ~9° of longitude, which is 35 minutes of solar time. Flat sea horizon, so Iceland's mountains take a bigger bite.
 - **Booked stays** — every confirmed night renders as a card with its address, terms and map links; unbooked nights show budget picks that open a Maps search.
-- **Booking tracker** — the priority reservations with a progress bar; state **persists in `localStorage`**.
+- **Reservations** — every booking in date order with its reference, phone and cancellation terms. Lodging rows are derived from the same stay records the day cards use, so the two can't drift apart.
+- **Emergency** — 112 and the 112 app, health line, after-hours doctor, poison centre, ICE-SAR, road and weather authorities, embassy.
 - **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that day 10's glacier tour depends on.
 - **Dark & light themes** — toggle in the top bar, follows system preference by default, remembered per browser.
 - **Live aurora data** — current Kp and the next-24h peak from NOAA SWPC, with a link to vedur.is for cloud cover (vedur.is itself blocks CORS). Vanishes gracefully offline.
