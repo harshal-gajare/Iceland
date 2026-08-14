@@ -214,13 +214,11 @@ ${reservationTable(C)}
 
 ### Before you fly — still open
 
-- **Akureyri Backpackers, in writing.** House rules say children must be over 12;
-  they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
-  **Sep 22**.
 - **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
   (28th). Refundable rates.
-- **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
-  **Efstidalur II** table at 12:00 on the 20th.
+- **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
+  volcano watch. The only meal needing a reservation is Höfn on the 22nd;
+  Efstidalur takes bookings only for parties of ten or more.
 - **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
 

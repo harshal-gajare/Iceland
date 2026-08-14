@@ -418,9 +418,8 @@
     <div class="prefly">
       <span class="eyebrow">Before you fly — still open</span>
       <ul>
-        <li><b>Akureyri Backpackers, in writing.</b> Their house rules say children must be over 12, and they sold a family room for 2 adults + 1 child aged 10. Free cancellation runs out <b>Sep 22</b> — get the yes before then.</li>
         <li><b>Three nights unbooked</b> — Grundarfjörður (26th), Borgarnes (27th), Keflavík (28th). Refundable rates; budget picks are on each day card.</li>
-        <li><b>Blue Lagoon</b> ~11:30 slot on the 19th, flexible ticket given the volcano watch — and the <b>Efstidalur II</b> table at 12:00 on the 20th.</li>
+        <li><b>Blue Lagoon</b> — the ~11:30 slot on the 19th, flexible ticket given the volcano watch. The only meal that needs reserving is Höfn on the 22nd; Efstidalur takes bookings only for parties of ten or more.</li>
         <li><b>Lock the drop-off at 14:00</b> on the 29th. Blue Car will go later than 11:00, and 14:00 is the number that fits the flight — the arithmetic is in Logistics.</li>
         <li><b>Ask Dimmuborgir</b> what time breakfast opens — day 7 rolls out at 07:55.</li>
       </ul>
@@ -620,12 +619,13 @@ const STAY6 = {name:"Dimmuborgir Guesthouse", addr:"Geiteyjarströnd 1, 660 Mýv
    lands on Hafnarstræti a couple of minutes' walk from day 7's own old-town stop.
    baseLL stays the town coordinate: the 0.04° of longitude between them is 9
    seconds of sunset, far under the minute the daylight strip prints.
-   The "children must be over 12" house rule is quoted in status on purpose. It is
-   their stated policy and it contradicts the room they sold, so it needs a written
-   answer from the property — not a quiet edit here. */
+   Their published house rules say children must be over 12, which contradicted the
+   family room they sold. That was taken up with the property and settled in Aug
+   2026, so the room stands. The status still names the discrepancy rather than
+   deleting it — if anyone queries it at the desk, you want to know it was asked. */
 const STAY7 = {name:"Akureyri Backpackers", addr:"Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks",
   ll:[65.6815,-18.0899], q:"Akureyri Backpackers, Hafnarstræti 98, 600 Akureyri, Iceland",
-  status:"Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free."};
+  status:"Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk."};
 
 
 
@@ -647,10 +647,10 @@ const DAYS = [
   ]},
  {n:2, dow:"Sun", date:"Sep 20", km:"~200 km", depart:"08:30", arrive:"17:45",
   title:"Golden Circle", base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
-  food:{lunch:"Booked: <b>Efstidalur II</b> at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed.", dinner:"<b>Gamla Fjósið</b> — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm.", coffee:"Thin country once you leave the Golden Circle. Efstidalur pours its own with lunch, and the <b>Geysir</b> centre across the road is the last dependable stop before the coast.", sweet:"Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The <b>Laugarvatn Fontana</b> rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after.", fuel:"Fill in Reykjavík before you leave. <b>Selfoss</b> is the big service town on the way out; the Golden Circle's own pumps at Laugarvatn and Reykholt are small ones.", shop:"<b>Selfoss</b> is the last full-size supermarket before the south coast — Bónus, Krónan and Nettó all sit there. Load the cool bag here for the next three days.", extra:"<b>Friðheimar</b>, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan; the tracker says keep watching for cancellations."},
+  food:{lunch:"<b>Efstidalur II</b> at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. No booking — they only reserve for parties of ten or more.", dinner:"<b>Gamla Fjósið</b> — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm.", coffee:"Thin country once you leave the Golden Circle. Efstidalur pours its own with lunch, and the <b>Geysir</b> centre across the road is the last dependable stop before the coast.", sweet:"Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The <b>Laugarvatn Fontana</b> rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after.", fuel:"Fill in Reykjavík before you leave. <b>Selfoss</b> is the big service town on the way out; the Golden Circle's own pumps at Laugarvatn and Reykholt are small ones.", shop:"<b>Selfoss</b> is the last full-size supermarket before the south coast — Bónus, Krónan and Nettó all sit there. Load the cool bag here for the next three days.", extra:"<b>Friðheimar</b>, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan — and Efstidalur needs no reservation at all, so the swap costs nothing if a cancellation ever turns up."},
   stops:[
    {name:"Þingvellir National Park", ll:[64.2559,-21.1295], drive:"45 min", time:"09:15–11:15", note:"Almannagjá rift walk, Öxarárfoss, the plate boundary."},
-   {name:"Efstidalur II — lunch", ll:[64.246,-20.633], drive:"45 min", time:"12:00–13:15", tag:"book", note:"Friðheimar plan B: dairy-farm lunch, ice-cream barn. Keep watching Friðheimar for cancellations."},
+   {name:"Efstidalur II — lunch", ll:[64.246,-20.633], drive:"45 min", time:"12:00–13:15", note:"Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar remains the fancier alternative if a cancellation ever appears."},
    {name:"Laugarvatn Fontana bakery", ll:[64.2151,-20.7307], time:"flex", tag:"opt", note:"Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth."},
    {name:"Geysir", ll:[64.3104,-20.3024], drive:"20 min", time:"13:35–14:20", note:"Strokkur erupts every 5–10 minutes."},
    {name:"Gullfoss", ll:[64.3271,-20.1199], drive:"10 min", time:"14:30–15:15", note:"Two-tier torrent into the canyon."},
@@ -792,7 +792,7 @@ const TRIP = {
    {when:"Sep 28, 10:30", what:"Into the Glacier — Klaki Base Camp", ref:"ARC-T141867953", tel:"+354 578 2550",
     meta:"Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road and the Vitara is cleared for it — no shuttle needed. Free to cancel until 24 hrs out. info@intotheglacier.is"}
   ],
-  /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 8 amber, 1 teal.
+  /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 7 amber, 1 teal.
      These stat numbers are TRIP FACTS from docs/itinerary.md: 5 anchor tours
      (Katla, the Jökulsárlón Zodiac, the Saltvík horses, the whale watch and Into
      the Glacier — each a paid timed slot its day is built around) and 3 soak

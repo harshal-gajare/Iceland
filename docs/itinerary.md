@@ -71,7 +71,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | 4 | Tue Sep 22 | Höfn | **Höfn Inn Guesthouse** — Vesturbraut 3, 780 Höfn — 20 min from Stokksnes<br>Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544 |
 | 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
 | 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
-| 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
+| 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk. |
 | 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
 | 9 | Sun Sep 27 | Borgarnes (or Fossatún) | _not booked_ — Borgarnes HI Hostel · Bjarg guesthouse & cabins · Fossatún pods (20 min east) |
 | 10 | Mon Sep 28 | Keflavík | _not booked_ — Base Hotel · Guesthouse 1x6 · Njarðvík Airbnb apartments |
@@ -115,7 +115,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 45 min* |
 | `09:15–11:15` | **Þingvellir National Park** — Almannagjá rift walk, Öxarárfoss, the plate boundary. |
 | | *↓ drive 45 min* |
-| `12:00–13:15` | **Efstidalur II — lunch** **book** — Friðheimar plan B: dairy-farm lunch, ice-cream barn. Keep watching Friðheimar for cancellations. |
+| `12:00–13:15` | **Efstidalur II — lunch** — Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar remains the fancier alternative if a cancellation ever appears. |
 | `flex` | **Laugarvatn Fontana bakery** _optional_ — Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth. |
 | | *↓ drive 20 min* |
 | `13:35–14:20` | **Geysir** — Strokkur erupts every 5–10 minutes. |
@@ -126,13 +126,13 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 | Eating | |
 |---|---|
-| **Lunch** | Booked: **Efstidalur II** at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. |
+| **Lunch** | **Efstidalur II** at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. No booking — they only reserve for parties of ten or more. |
 | **Dinner** | **Gamla Fjósið** — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm. |
 | **Coffee** | Thin country once you leave the Golden Circle. Efstidalur pours its own with lunch, and the **Geysir** centre across the road is the last dependable stop before the coast. |
 | **Sweet** | Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The **Laugarvatn Fontana** rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after. |
 | **Fuel** | Fill in Reykjavík before you leave. **Selfoss** is the big service town on the way out; the Golden Circle's own pumps at Laugarvatn and Reykholt are small ones. |
 | **Shop** | **Selfoss** is the last full-size supermarket before the south coast — Bónus, Krónan and Nettó all sit there. Load the cool bag here for the next three days. |
-| **Detour** | **Friðheimar**, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan; the tracker says keep watching for cancellations. |
+| **Detour** | **Friðheimar**, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan — and Efstidalur needs no reservation at all, so the swap costs nothing if a cancellation ever turns up. |
 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
 
@@ -381,7 +381,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Night 4 · Tue Sep 22 | **Höfn Inn Guesthouse**<br>Vesturbraut 3, 780 Höfn — 20 min from Stokksnes | Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544 |
 | Night 5 · Wed Sep 23 | **Eyjólfsstaðir Guesthouse**<br>Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town | Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
 | Night 6 · Thu Sep 24 | **Dimmuborgir Guesthouse**<br>Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field | Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
-| Night 7 · Fri Sep 25 | **Akureyri Backpackers**<br>Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks | Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
+| Night 7 · Fri Sep 25 | **Akureyri Backpackers**<br>Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks | Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk. |
 | Night 8 · Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | *not booked* — budget picks are on the day |
 | Night 9 · Sun Sep 27 | Borgarnes (or Fossatún) | *not booked* — budget picks are on the day |
 | Night 10 · Mon Sep 28 | Keflavík | *not booked* — budget picks are on the day |
@@ -395,13 +395,11 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Before you fly — still open
 
-- **Akureyri Backpackers, in writing.** House rules say children must be over 12;
-  they sold a family room for 2 adults + 1 child aged 10. Free cancellation ends
-  **Sep 22**.
 - **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
   (28th). Refundable rates.
-- **Blue Lagoon** ~11:30 on the 19th (flexible ticket, volcano watch) and the
-  **Efstidalur II** table at 12:00 on the 20th.
+- **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
+  volcano watch. The only meal needing a reservation is Höfn on the 22nd;
+  Efstidalur takes bookings only for parties of ten or more.
 - **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir** what time breakfast opens — day 7 rolls out at 07:55.
 
