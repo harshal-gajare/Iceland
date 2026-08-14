@@ -57,6 +57,9 @@ function loadPlans() {
 
 const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 const plain = (s) => String(s).replace(/<[^>]+>/g, "");
+/* `food` fields carry <b> on purpose — the page injects them with innerHTML.
+   Convert to markdown emphasis rather than stripping it. */
+const bold = (s) => esc(String(s ?? "").replace(/<\/?b>/g, "**"));
 const TAG = { booked: "**✔ booked**", book: "**book**", soak: "_soak_", opt: "_optional_" };
 
 function baseTable(p) {
@@ -98,6 +101,15 @@ function dayTables(p) {
       out.push(`| \`${esc(s.time || "flex")}\` | **${esc(s.name)}**${tag} — ${esc(s.note)} |`);
     }
     out.push("");
+    if (d.food) {
+      const rows = [["Lunch", d.food.lunch], ["Dinner", d.food.dinner], ["Detour", d.food.extra]]
+        .filter(([, v]) => v);
+      if (rows.length) {
+        out.push("| Eating | |", "|---|---|");
+        for (const [k, v] of rows) out.push(`| **${k}** | ${bold(v)} |`);
+        out.push("");
+      }
+    }
   }
   return out.join("\n");
 }
@@ -262,8 +274,10 @@ sneaker waves outrun sprinting adults.
 **Food, fuel & phones.** N1/Orkan stations all along the route — bring a credit
 card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
 costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn
-(Pakkhús or Otto). eSIM from Nova or Síminn, or carrier roaming — Ring Road
-coverage is excellent.
+(Pakkhús or Otto). Every day section carries a lunch and a dinner pick; late
+September thins the rural kitchens, so ring the same morning for anything that
+matters and book Pakkhús, Bjargarsteinn and Strikið ahead. eSIM from Nova or
+Síminn, or carrier roaming — Ring Road coverage is excellent.
 
 **Pool note.** Sky Lagoon is out — a strict 12+ rule excludes the 11-year-old.
 The Blue Lagoon backup is Laugardalslaug, Reykjavík's big public pool with

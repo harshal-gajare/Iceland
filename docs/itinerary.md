@@ -88,6 +88,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 5 min* |
 | `19:00–21:00` | **Perlan or FlyOver Iceland** _optional_ — Only if everyone's still upright — FlyOver Iceland is peak 11-year-old. |
 
+| Eating | |
+|---|---|
+| **Lunch** | The **Blue Café** inside the lagoon does soup and sandwiches without leaving your robe; **Lava Restaurant** is the sit-down one built into the lava wall, and it wants a booking. |
+| **Dinner** | **Messinn** on Lækjargata for the pan-fried fish pans that made its name — book, it fills. If Perlan or FlyOver runs to 21:00, **Bæjarins Beztu Pylsur** by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds. |
+| **Detour** | **Grillmarkaðurinn** is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye. |
+
 ### Day 2 — Sun, Sep 20 · Golden Circle
 
 *~200 km · out 08:30 · in 17:45 · overnight Seljalandsfoss*
@@ -107,6 +113,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `14:30–15:15` | **Gullfoss** — Two-tier torrent into the canyon. |
 | | *↓ drive 30 min* |
 | `15:45–16:45` | **Kerið · Secret Lagoon · Brúarfoss** _optional_ — Pick one on the way south, then ~1:15 to the hostel — you sleep next door to tomorrow's first stop. Aurora watch from 21:30; Drífandi falls in the backyard. |
+
+| Eating | |
+|---|---|
+| **Lunch** | Booked: **Efstidalur II** at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. |
+| **Dinner** | **Gamla Fjósið** — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm. |
+| **Detour** | **Friðheimar**, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan; the tracker says keep watching for cancellations. |
 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
 
@@ -129,6 +141,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 10 min* |
 | `~20:00` | **Lava Show, Vík** _optional_ — Real molten lava indoors — if there's gas left in the tank. |
 
+| Eating | |
+|---|---|
+| **Lunch** | **Smiðjan Brugghús** in Vík at 12:15, already in the run-sheet — brewpub burgers five minutes from the ice-cave check-in. |
+| **Dinner** | Back in Vík after Reynisfjara: **Suður-Vík** in the old house up the hill, or **Halldórskaffi** in the middle of town. The Lava Show is 20:00, so eat first. |
+| **Detour** | **Black Crust Pizzeria** in Vík colours its dough with activated charcoal. A jet-black pizza is an easy sell to an 11-year-old on a day that has already run long. |
+
 ### Day 4 — Tue, Sep 22 · Canyon · Svartifoss · glacier lagoon
 
 *~280 km · out 08:00 · in 18:20 · overnight Höfn*
@@ -148,6 +166,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 2 min* |
 | `16:35–17:15` | **Diamond Beach** — Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner. |
 
+| Eating | |
+|---|---|
+| **Lunch** | The café at the **Skaftafell visitor centre**, quick, straight off the Svartifoss hike — the Zodiac check-in is the day's hard edge, so this is a refuel, not a meal. |
+| **Dinner** | Langoustine night, and Höfn is the town for it: **Pakkhús** in the old harbour warehouse, **Humarhöfnin** a street away, or **Otto Matur &amp; Drykkur**. Book — this is the one splurge dinner of the trip. |
+| **Detour** | **Hafnarbúðin** is the roadside window the locals use — the same langoustine in a baguette for a fraction of the price, no booking, eaten standing up. |
+
 ### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
 
 *~270 km · out 08:30 · in 18:30 · overnight Egilsstaðir*
@@ -164,6 +188,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `12:45–13:45` | **Petra's Stone Collection** _optional_ — Quirky, kid-friendly, right on the coastal route — packed lunch here. |
 | | *↓ drive 1 hr 20* |
 | `15:30–18:00` | **Seyðisfjörður or Vök Baths** _optional_ — Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. |
+
+| Eating | |
+|---|---|
+| **Lunch** | **Við Voginn** at Djúpivogur, right where the 11:05 stop already is — a harbour shack with a local reputation for fish and chips and burgers. Otherwise it's the packed lunch at Petra's, where there is nothing. |
+| **Dinner** | **Nielsen Restaurant** in Egilsstaðir, in the oldest house in town with a garden behind it, or **Salt Bistro** for something simpler and later. |
+| **Detour** | **Norð Austur** in Seyðisfjörður is an acclaimed sushi room working the fjord's own catch — but it is over the pass and its season is short, so only if you pick Seyðisfjörður over Vök and it is still open. |
 
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
 
@@ -188,6 +218,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 10 min* |
 | `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
 
+| Eating | |
+|---|---|
+| **Lunch** | **Fjalladýrð** at Möðrudalur, the 11:45 stop — Iceland's highest farm, doing lamb soup and kleinur in the middle of the desert. The alternative is the Dettifoss picnic, where there is no kitchen for 50 km. |
+| **Dinner** | **Vogafjós** at 20:15, already the plan: the cowshed restaurant where you eat alongside the herd, with rye bread baked in the geothermal ground and mozzarella from their own milk. |
+| **Detour** | **Kaffi Borgir** overlooks the Dimmuborgir lava field a minute from the guesthouse, and **Daddi's Pizza** in Reykjahlíð is the cheap night — either is easier than Vogafjós if the lagoon runs long. |
+
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Saltvík horses · Akureyri
 
 *~200 km · out 07:55 · in 17:35 · overnight Akureyri*
@@ -205,6 +241,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 45 min* |
 | `17:40–19:10` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
 
+| Eating | |
+|---|---|
+| **Lunch** | **Naustið** in Húsavík at 11:45, already in the run-sheet — a tiny place doing fish soup and plokkfiskur two minutes from where the boat lands. **Gamli Baukur**, the timber house on the harbour, is the fallback if it is full. |
+| **Dinner** | Akureyri, after the old-town walk: **Strikið** on the top floor for the fjord view — book — or **Bautinn**, the town's dependable family standby. **Brynja** for the ice cream is already a stop. |
+| **Detour** | **Rub23** does the best fish and sushi in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse. |
+
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
 
 *~430 km · out 08:00 · in 18:40 · overnight Grundarfjörður (or Stykkishólmur)*
@@ -221,6 +263,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `13:20–14:05` | **Glaumbær turf farm** — Exterior is the show if the museum's on short hours. |
 | | *↓ drive 1 hr 15* |
 | `15:20–15:40` | **Kolugljúfur** _optional_ — 15-min leg stretch off Rte 1, then ~3 hrs west — fuel + snack in Borgarnes ~17:20. Running late? Sleep Borgarnes, start Day 9 an hour earlier. |
+
+| Eating | |
+|---|---|
+| **Lunch** | The thin day — 430 km and almost nothing open between them. **Kaffi Rauðka**, the red house on Siglufjörður's marina, is open year-round, but you are there at 09:15, which is coffee rather than lunch. Provision in Akureyri before you leave and eat at Hofsós. |
+| **Dinner** | **Bjargarsteinn Mathús** in Grundarfjörður — a small wooden house moved 140 km to sit on the harbour, serving the best food on Snæfellsnes with Kirkjufell out of the window. Book ahead; it is most of the reason to sleep in Grundarfjörður. |
+| **Detour** | **Hannes Boy**, next door to Rauðka in the restored herring quarter, is the full meal rather than the coffee — worth it only if you leave Akureyri early enough to make it brunch. |
 
 ### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
 
@@ -245,6 +293,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 15 min* |
 | `16:00–16:40` | **Ytri-Tunga seal beach** — Seals haul out most days; then 1:05 to Borgarnes. |
 
+| Eating | |
+|---|---|
+| **Lunch** | **Ólafsvík** at 11:40 as planned, between Stykkishólmur and Djúpalónssandur — the harbour town holds the only dependable kitchens on that stretch of the peninsula. |
+| **Dinner** | The **Settlement Centre** restaurant in Borgarnes, in a late-19th-century warehouse beside the old trading store: mashed fish, lamb, mussels, langoustine tails — and the museum is attached if the weather has been unkind. |
+| **Detour** | **Sjávarpakkhúsið** on Stykkishólmur's harbour is known for Breiðafjörður blue mussels, but you pass through at 09:50, which is three hours too early to eat them. |
+
 ### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · airport night
 
 *~360 km · out 08:10 · in 19:20 · overnight Keflavík*
@@ -262,6 +316,12 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 3 hr* |
 | `16:30–18:45` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest. |
 | `flex · Sep 29 morning` | **Bridge Between Continents · Gunnuhver** _optional_ — There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop. |
+
+| Eating | |
+|---|---|
+| **Lunch** | **Húsafell Bistró**, open 11:00–17:00 daily, sits fifteen minutes down from the glacier road and lands exactly when you come off the ice — buffet, burgers, waffles. |
+| **Dinner** | **Kaffi Duus** on Keflavík's harbour, fish its speciality and long used to people arriving late off the airport road. You get in about 19:20, so ring ahead. |
+| **Detour** | **Krauma**'s café sits over the Deildartunguhver hot spring 25 min from Húsafell — the natural stop if the glacier tour is weathered off and the day becomes a slow drive south. |
 
 ---
 
@@ -363,8 +423,10 @@ sneaker waves outrun sprinting adults.
 **Food, fuel & phones.** N1/Orkan stations all along the route — bring a credit
 card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
 costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn
-(Pakkhús or Otto). eSIM from Nova or Síminn, or carrier roaming — Ring Road
-coverage is excellent.
+(Pakkhús or Otto). Every day section carries a lunch and a dinner pick; late
+September thins the rural kitchens, so ring the same morning for anything that
+matters and book Pakkhús, Bjargarsteinn and Strikið ahead. eSIM from Nova or
+Síminn, or carrier roaming — Ring Road coverage is excellent.
 
 **Pool note.** Sky Lagoon is out — a strict 12+ rule excludes the 11-year-old.
 The Blue Lagoon backup is Laugardalslaug, Reykjavík's big public pool with
