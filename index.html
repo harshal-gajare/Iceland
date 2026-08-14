@@ -248,15 +248,31 @@
   /* ---------- bookings ---------- */
   .progressbar{height:8px;background:var(--track);border-radius:99px;overflow:hidden;margin:14px 0 6px}
   .progressbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--d1),var(--ember));transition:width .3s}
-  .progresslabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--fog);margin-bottom:16px}
-  ul.checks{list-style:none}
-  ul.checks li{display:flex;gap:14px;align-items:flex-start;padding:13px 4px;border-bottom:1px dotted var(--dotline)}
-  ul.checks input{width:18px;height:18px;margin-top:3px;accent-color:var(--ember);cursor:pointer;flex:0 0 auto}
-  ul.checks label{cursor:pointer;flex:1}
-  ul.checks .bidx{font-family:var(--mono);font-size:10.5px;color:var(--fog);letter-spacing:.1em;margin-right:8px}
-  ul.checks .bmeta{display:block;color:var(--fog);font-size:12.5px;margin-top:1px}
-  ul.checks li.done label{opacity:.45;text-decoration:line-through;text-decoration-color:var(--fog)}
-  .memnote{margin-top:12px;font-size:12px;color:var(--faint)}
+  ul.resv{list-style:none}
+  ul.resv li{display:flex;gap:16px;align-items:flex-start;padding:14px 4px;border-bottom:1px dotted var(--dotline)}
+  ul.resv li.open{opacity:.72}
+  .rwhen{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--fog);min-width:132px;flex:0 0 auto;padding-top:3px}
+  .rbody{flex:1;min-width:0}
+  .rwhat{font-family:var(--serif);font-size:16px}
+  .rsub{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ember-ink);margin-top:3px}
+  ul.resv li.open .rsub{color:var(--fog)}
+  .rmeta{color:var(--fog);font-size:12.5px;margin-top:5px;line-height:1.55}
+  @media(max-width:620px){ul.resv li{flex-direction:column;gap:5px}.rwhen{min-width:0}}
+
+  .prefly{margin-top:26px;padding:16px 18px;border:1px dashed rgba(255,182,97,.35);background:rgba(255,182,97,.05);border-radius:12px}
+  .prefly ul{list-style:none;margin-top:9px}
+  .prefly li{color:var(--fog);font-size:13.5px;line-height:1.6;padding:5px 0 5px 16px;position:relative}
+  .prefly li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:99px;background:var(--ember)}
+  .prefly b{color:var(--ember-ink)}
+
+  .sosgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:18px}
+  .soscard{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:var(--veil)}
+  .soscard p{color:var(--fog);font-size:13px;line-height:1.7;margin-top:9px}
+  .soscard a{color:var(--ice);text-decoration:none;border-bottom:1px solid var(--line)}
+  .soscard a:hover{border-bottom-color:var(--ice)}
+  .soscard.urgent{border-color:rgba(255,120,120,.4);background:rgba(255,120,120,.06)}
+  .sosnum{display:block;font-family:var(--mono);font-size:44px;letter-spacing:.06em;margin:6px 0 2px;border-bottom:0!important;color:var(--ice)!important}
+  .sosnote{font-size:12px!important;color:var(--faint)!important;margin-top:10px!important}
 
   /* ---------- logistics ---------- */
   .lockgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
@@ -344,7 +360,7 @@
     <div class="wordmark">Iceland, by road <span>KEF ⇄ KEF</span></div>
     <div class="topright">
       <nav>
-        <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Bookings</a><a href="#logistics">Logistics</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
+        <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Reservations</a><a href="#sos">Emergency</a><a href="#logistics">Logistics</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
       </nav>
       <button class="ghostbtn themebtn" id="themeToggle" aria-label="Switch to light theme">◐ light</button>
     </div>
@@ -395,13 +411,62 @@
   </section>
 
   <section class="block" id="bookings">
-    <div class="sechead"><h2>Booking tracker</h2><span class="eyebrow">in priority order</span></div>
-    <p class="seclede">Six weeks out, hotels move first — Vík, Höfn, Egilsstaðir and Grundarfjörður run out of family rooms early. Tick things off as they're confirmed.</p>
-    <div class="progressbar"><i id="pbar"></i></div>
-    <!-- filled by updateProgress() on init, so the count is never hardcoded -->
-    <p class="progresslabel" id="plabel"></p>
-    <ul class="checks" id="checks"></ul>
-    <p class="memnote">Progress saves in this browser, tracked separately for each plan — it survives reloads and works offline.</p>
+    <div class="sechead"><h2>Reservations</h2><span class="eyebrow">everything with a reference, in date order</span></div>
+    <p class="seclede">One list for the road: where you sleep, what you have paid for, and the number to ring when something slips. Lodging rows are generated from the same stay records the day cards use, so an address here and an address there cannot drift apart.</p>
+    <ul class="resv" id="resv"></ul>
+
+    <div class="prefly">
+      <span class="eyebrow">Before you fly — still open</span>
+      <ul>
+        <li><b>Blue Car, in writing.</b> Confirm the Vitara is the AllGrip 4x4 and that Road 550 to Klaki is permitted. Into the Glacier is paid for and meets at the top of that F-road; a no means booking their Húsafell shuttle instead. Driving it regardless voids the CDW and SCDW.</li>
+        <li><b>Akureyri Backpackers, in writing.</b> Their house rules say children must be over 12, and they sold a family room for 2 adults + 1 child aged 10. Free cancellation runs out <b>Sep 22</b> — get the yes before then.</li>
+        <li><b>Three nights unbooked</b> — Grundarfjörður (26th), Borgarnes (27th), Keflavík (28th). Refundable rates; budget picks are on each day card.</li>
+        <li><b>Blue Lagoon</b> ~11:30 slot on the 19th, flexible ticket given the volcano watch — and the <b>Efstidalur II</b> table at 12:00 on the 20th.</li>
+        <li><b>Ask Blue Car</b> to extend drop-off to ~14:00 on the 29th, which turns the last morning from a scramble into a Reykjanes loop.</li>
+        <li><b>Ask Dimmuborgir</b> what time breakfast opens — day 7 rolls out at 07:55.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sos">
+    <div class="sechead"><h2>If something goes wrong</h2><span class="eyebrow">one number covers almost all of it</span></div>
+    <p class="seclede">Iceland runs a single emergency number for police, fire, ambulance, coastguard and mountain rescue. It is free from any phone, works with no credit and no SIM, and the operators speak English.</p>
+
+    <div class="sosgrid">
+      <div class="soscard urgent">
+        <span class="eyebrow">Emergency — police · fire · ambulance · rescue</span>
+        <a class="sosnum" href="tel:112">112</a>
+        <p>Install the <b>112 Iceland</b> app before you fly. Its emergency button sends your GPS position with the call, which is the difference that matters on a gravel road with no landmarks. It also has a check-in button that leaves a trail rescuers can follow.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">Health, not an emergency</span>
+        <p><a href="tel:1700">1700</a> — health line, 24/7 medical advice in English.<br>
+           <a href="tel:1770">1770</a> — Læknavaktin, the after-hours doctor.<br>
+           <a href="tel:+3545432000">+354 543 2000</a> — Landspítali emergency department, Reykjavík.<br>
+           <a href="tel:+3545432222">+354 543 2222</a> — poison information centre.<br>
+           <a href="tel:+3545750505">+354 575 0505</a> — emergency dental.</p>
+        <p class="sosnote">Every town you sleep in has a <i>heilsugæsla</i> — a health centre — and they handle the ordinary things. Pharmacies are <i>apótek</i>.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">Road, weather and rescue</span>
+        <p><a href="tel:+3544441000">+354 444 1000</a> — police, non-emergency.<br>
+           <a href="tel:+3545705900">+354 570 5900</a> — ICE-SAR, search and rescue.<br>
+           <a href="https://safetravel.is" target="_blank" rel="noopener">safetravel.is</a> — alerts, and you can leave a travel plan.<br>
+           <a href="https://umferdin.is" target="_blank" rel="noopener">umferdin.is</a> · <a href="https://vedur.is" target="_blank" rel="noopener">vedur.is</a> — roads and weather.<br>
+           <a href="tel:118">118</a> — directory enquiries.</p>
+        <p class="sosnote">Roadside assistance is on the Blue Car contract — take the number off the agreement at pickup and keep it with the keys, because it is not printed here.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">US citizens</span>
+        <p><b>U.S. Embassy Reykjavík</b><br>Engjateigur 7, 105 Reykjavík<br>
+           <a href="tel:+3545952200">+354 595 2200</a> — main<br>
+           <a href="tel:+3546939207">+354 693 9207</a> — after hours<br>
+           <a href="tel:+12025014444">+1 202 501 4444</a> — State Dept, 24/7 from abroad</p>
+        <p class="sosnote">Carry a photo of each passport separately from the passports. Travel insurance and card-block numbers belong in the same photo.</p>
+      </div>
+    </div>
+
+    <p class="lnote"><b>The two that actually catch people here:</b> sneaker waves at Reynisfjara and Djúpalónssandur — never turn your back on the sea, obey the warning lights, and brief the 11-year-old properly, because those waves outrun sprinting adults. And wind: hold the car doors, and if a gust warning says 20 m/s, believe it and change the day.</p>
   </section>
 
   <section class="block" id="logistics">
@@ -700,21 +765,25 @@ const TRIP = {
   desc:"Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — which the rental has to be cleared for.",
   days: DAYS,
   upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Saltvík horses",7],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
-  bookings: [
-   ["Lodging — 3 nights left (Sep 26–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22). Still open: Grundarfjörður, Borgarnes, Keflavík — refundable rates. To settle: Akureyri Backpackers' house rules say children must be over 12 to stay in the rooms, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before the free window shuts on Sep 22."],
-   ["Rental car — ✔ booked","Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF."],
-   ["Katla ice cave — ✔ booked","Troll Expeditions · Mon Sep 21, 14:00 · ticket TRO-T141847549, order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. Free to cancel until 24 hrs before. No jeans; boots and waterproofs rent on site."],
-   ["Húsavík whale watching — ✔ booked","Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30–11:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm · check in by 08:50 at the Ticket Center, Hafnarstétt 7 — day 7 leaves Mývatn at 07:55. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled."],
-   ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
-   ["Golden Circle lunch","Efstidalur II, Sun Sep 20 ~12:00; keep watching Friðheimar for cancellations."],
-   ["Earth Lagoon Mývatn — ✔ booked","Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs."],
-   ["Raufarhólshellir — dropped, not booked","Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors."],
-   ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."],
-   ["Lava Show, Vík","Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine."],
-   /* appended, never inserted: booking ticks persist by array index, so slotting a
-      new row into the middle would mis-restore every tick after it. */
-   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 14:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1-hr ride plus about half an hour getting on and off, so block 14:00–15:30 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."],
-   ["Into the Glacier — ✔ booked, one dependency","Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is."]
+  /* Lodging is NOT listed here — buildReservations() derives it from DAYS[].stay,
+     so an address or a cancellation term can only ever be written once. This list
+     is the car and the timed tours, whose refs live in prose inside stop notes.
+     Date order, because that is the order you need them on the road. */
+  reservations: [
+   {when:"Sep 19, 11:00", what:"Blue Car Rental — Suzuki Vitara, automatic", ref:"#Z04F2O", tel:null,
+    meta:"Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions."},
+   {when:"Sep 21, 14:00", what:"Katla ice cave — Troll Expeditions", ref:"TRO-T141847549", tel:null,
+    meta:"Order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before."},
+   {when:"Sep 22, 15:10", what:"Jökulsárlón — Zodiac boat tour", ref:"JOK-00049937", tel:"+354 478 2222",
+    meta:"15:10–16:25. Check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."},
+   {when:"Sep 24, 18:00", what:"Earth Lagoon Mývatn", ref:"ABK00150634", tel:null,
+    meta:"Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456). Doors 18:00–18:30 — show the emailed ticket, not the booking number. Towel, one drink and an Earth Bistro discount included."},
+   {when:"Sep 25, 09:30", what:"Húsavík whales — Gentle Giants GG2", ref:"GGHI-100464358", tel:null,
+    meta:"Big Whale Safari &amp; Puffins, 09:30–11:30, 2 adults + 1 youth · ISK 53,973, pay on arrival. Check in by 08:50 at the Ticket Center, Hafnarstétt 7. RIB, min height 130 cm. Free to move or cancel until 24 hrs before."},
+   {when:"Sep 25, 14:00", what:"Saltvík horse ride — The Seaside tour", ref:"SAL-100467323", tel:"+354 847 9515",
+    meta:"14:00–15:30, 2 adults + 1 teenager · ISK 41,500 paid in full. Hestamiðstöðin Saltvík, 4 km south of Húsavík — start is inside the riding hall. Min age 10, 110 kg per rider. info@saltvik.is"},
+   {when:"Sep 28, 10:30", what:"Into the Glacier — Klaki Base Camp", ref:"ARC-T141867953", tel:"+354 578 2550",
+    meta:"Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road: 4x4 or their Húsafell shuttle. Free to cancel until 24 hrs out. info@intotheglacier.is"}
   ],
   /* Legend labels describe MARKER RULES (tag: book|soak|opt) — 8 amber, 1 teal.
      These stat numbers are TRIP FACTS from docs/itinerary.md: 5 anchor tours
@@ -1072,51 +1141,37 @@ function selectDay(n, scroll){
   }
 }
 
-/* ================= BOOKING TRACKER ================= */
-const checks = document.getElementById("checks");
-/* Ticks are a JSON array of indices. NOTE: the payload is positional, so
-   reordering the `bookings` array mis-restores old ticks — append, never insert.
-   Reads fall back to the old per-plan key so ticks saved while Plan B still
-   existed still restore; the next save migrates them forward. */
-const BKEY = "iceland26.bk", BKEY_OLD = "iceland26.bk.classic";
-function loadBk(){
-  try{
-    const n = TRIP.bookings.length;
-    const raw = localStorage.getItem(BKEY) ?? localStorage.getItem(BKEY_OLD);
-    const a = JSON.parse(raw || "[]");
-    return new Set(Array.isArray(a) ? a.filter(i=>Number.isInteger(i) && i>=0 && i<n) : []);
-  }catch(e){ return new Set(); }
-}
-function saveBk(){
-  try{ localStorage.setItem(BKEY, JSON.stringify([...bkState].sort((a,b)=>a-b))); }catch(e){}
-}
-const bkState = loadBk();
-function buildChecks(){
-  const items = TRIP.bookings;
-  checks.innerHTML = items.map((b,i)=>`
-    <li id="bk-${i}">
-      <input type="checkbox" id="c-${i}" aria-label="Mark booked: ${b[0]}" ${bkState.has(i)?"checked":""}>
-      <label for="c-${i}"><span class="bidx">${String(i+1).padStart(2,"0")}</span><b>${b[0]}</b>
-      <span class="bmeta">${b[1]}</span></label>
+/* ================= RESERVATIONS ================= */
+/* Lodging rows are DERIVED from DAYS[].stay — the address, the reference and the
+   cancellation terms exist once, on the stay object the day card also renders, so
+   the two can never disagree. Unbooked nights fall out of the same pass and are
+   what the "before you fly" list points at. Tours and the car come from
+   TRIP.reservations because their refs live in prose inside stop notes. */
+const resv = document.getElementById("resv");
+function buildReservations(){
+  const rows = [];
+  for(const d of DAYS){
+    const night = `Night ${d.n} · ${d.dow} ${d.date}`;
+    if(d.stay){
+      rows.push({when:night, what:d.stay.name, sub:d.stay.addr, meta:d.stay.status, open:false});
+    }else{
+      rows.push({when:night, what:d.base, sub:null,
+        meta:"Not booked. Budget picks are on the day card — take a refundable rate.", open:true});
+    }
+  }
+  for(const r of TRIP.reservations){
+    rows.push({when:r.when, what:r.what, sub:r.ref ? `ref ${r.ref}${r.tel?" · "+r.tel:""}` : (r.tel||null),
+      meta:r.meta, open:false});
+  }
+  resv.innerHTML = rows.map(r=>`
+    <li${r.open?' class="open"':""}>
+      <span class="rwhen">${r.when}</span>
+      <div class="rbody">
+        <div class="rwhat">${r.what}</div>
+        ${r.sub?`<div class="rsub">${r.sub}</div>`:""}
+        <div class="rmeta">${r.meta}</div>
+      </div>
     </li>`).join("");
-  /* Save only from this user-initiated handler — updateProgress() also runs on
-     the initial render, where writing back would be pointless churn. */
-  checks.querySelectorAll("input").forEach((inp,i)=>inp.addEventListener("change",()=>{
-    if(inp.checked) bkState.add(i); else bkState.delete(i);
-    updateProgress();
-    saveBk();
-  }));
-  updateProgress();
-}
-function updateProgress(){
-  const inputs = [...checks.querySelectorAll("input")];
-  const done = inputs.filter(i=>i.checked).length;
-  inputs.forEach(i=>i.closest("li").classList.toggle("done",i.checked));
-  document.getElementById("pbar").style.width = (done/inputs.length*100)+"%";
-  document.getElementById("plabel").textContent =
-    done===0 ? "0 of "+inputs.length+" booked — start with lodging and the rental" :
-    done===inputs.length ? "All "+inputs.length+" booked. Iceland is officially inevitable." :
-    `${done} of ${inputs.length} booked`;
 }
 
 /* ================= RENDER ================= */
@@ -1131,7 +1186,7 @@ function render(){
      here would go stale the moment one is confirmed */
   document.getElementById("st-booked").textContent =
     DAYS.filter(d=>d.stay).length + " of " + DAYS.length;
-  buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildChecks();
+  buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildReservations();
   selectDay(null,false);
   document.getElementById("day-1").open = true;
 }
