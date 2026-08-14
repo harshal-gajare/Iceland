@@ -419,7 +419,7 @@
       <span class="eyebrow">Before you fly — still open</span>
       <ul>
         <li><b>One night unbooked</b> — Keflavík (28th), the airport night. Budget picks are on the day card; a refundable rate is enough, it is the easiest bed on the trip to find.</li>
-        <li><b>Blue Lagoon</b> — the ~11:30 slot on the 19th, flexible ticket given the volcano watch. No meal on the trip needs reserving: Efstidalur books only for parties of ten or more, and Pakkhús in Höfn takes no reservations at all.</li>
+        <li><b>Nothing else needs booking.</b> No meal on the trip needs a reservation — Efstidalur takes them only for parties of ten or more, and Pakkhús in Höfn takes none at all.</li>
         <li><b>Lock the drop-off at 14:00</b> on the 29th. Blue Car will go later than 11:00, and 14:00 is the number that fits the flight — the arithmetic is in Logistics.</li>
         <li><b>Ask Dimmuborgir to pack breakfast</b> for the morning of the 25th. Service is 08:00–10:00 and day 7 leaves at 07:55, so the buffet is unusable — but it is included in the €364 and they will bag it if you ask at check-in.</li>
       </ul>
@@ -557,7 +557,7 @@
       <div class="nbody">The eruption series is between episodes: the last one ended August 2025, magma is re-accumulating, and another eruption is considered likely at some point. <b>Blue Lagoon and Grindavík are open.</b> Past eruptions haven't touched KEF flights, Reykjavík, or the Ring Road — only a small zone near Grindavík. Book the lagoon flexible and check safetravel.is the week you fly.</div>
     </details>
     <details class="note"><summary>Weather &amp; packing<span class="chev"></span></summary>
-      <div class="nbody">4–12 °C, wind always, rain somewhere on the loop. Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits and quick-dry towels ride in the <b>day bag</b> — three possible soaks (Blue Lagoon, Earth Lagoon at Mývatn, Hofsós). The towels double for Akureyri Backpackers, which charges for theirs. Raincoats for everyone at the walk-behind waterfalls.</div>
+      <div class="nbody">4–12 °C, wind always, rain somewhere on the loop. Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits ride in the <b>day bag</b> for three soaks (Blue Lagoon, Earth Lagoon at Mývatn, Hofsós) — but the first two lend you a towel with the ticket, so the quick-dry towels are really for Hofsós and for Akureyri Backpackers, which charges for theirs. Raincoats for everyone at the walk-behind waterfalls.</div>
     </details>
     <details class="note"><summary>Driving<span class="chev"></span></summary>
       <div class="nbody"><b>Hold car doors against the wind</b> — the number-one rental damage claim in Iceland. Single-lane bridges in the southeast: first to arrive has right of way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI. Check road.is each morning; no 4x4 needed on this route, but take gravel <b>and</b> sand/ash protection on the rental.</div>
@@ -652,11 +652,11 @@ const STAY9 = {name:"Fosshotel Reykholt", addr:"Reykholt, 320 Reykholt — inlan
 const DAYS = [
  {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
   title:"Arrival · Blue Lagoon · Reykjavík",
-  base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:00",
+  base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:20",
   food:{lunch:"The <b>Blue Café</b> inside the lagoon does soup and sandwiches without leaving your robe; <b>Lava Restaurant</b> is the sit-down one built into the lava wall, and it wants a booking.", dinner:"<b>Messinn</b> on Lækjargata for the pan-fried fish pans that made its name — book, it fills. For sushi, <b>Sushi Social</b> runs Icelandic fish through a Japanese-Peruvian lens, and <b>Osushi</b> is a conveyor belt, which is its own kind of entertainment at eleven. If Perlan or FlyOver runs to 21:00, <b>Bæjarins Beztu Pylsur</b> by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds.", coffee:"<b>Reykjavík Roasters</b> on Kárastígur, two minutes downhill from Hallgrímskirkja and the city's benchmark. <b>Mokka Kaffi</b> has poured since 1958 and its waffles with jam and whipped cream run on a family-secret recipe.", sweet:"<b>Brauð &amp; Co</b> on Frakkastígur — the graffiti-covered bakery that reset the city's standard, and the cinnamon buns are the thing. <b>Valdís</b> does ice cream in flavours like rye bread and salted liquorice: either a dare or a discovery.", fuel:"Confirm the fuel policy at pickup — full-to-full is the Icelandic norm, and it is the only fuel rule that matters all trip. Nothing needed today: Reykjavík has Orkan and N1 everywhere, and city fuel is the cheapest you will see.", shop:"<b>Bónus</b> is the cheap chain and there are branches minutes from Snorrabraut. Worth a first run tonight for breakfast things, water bottles and snacks — everything outside the capital costs more.", extra:"<b>Grillmarkaðurinn</b> is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye."},
   stops:[
    {name:"Keflavík Airport → Blue Car", ll:KEF, time:"08:55–11:00", note:"Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early."},
-   {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"11:30–14:00", tag:"book", note:"Book the ~11:30 slot — the 08:55 landing makes it comfortable, and under-14s swim free, so the 11-year-old costs nothing. Paid luggage storage; light lunch at the café. Backup if closed: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+)."},
+   {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"12:00–14:30", tag:"booked", note:"Booking WBL05868696 — <b>Premium</b>, 2 adults + 1 child, entry at 12:00. That is 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+)."},
    {name:"Hallgrímskirkja · Sun Voyager · Harpa", ll:[64.1417,-21.9266], drive:"50 min", time:"15:45–18:15", note:"Check in ~15:00 (drop bags if the room isn't ready) — the apartment is a 15-min walk from the church — then tower elevator first, waterfront after."},
    {name:"Perlan or FlyOver Iceland", ll:[64.129,-21.919], drive:"5 min", time:"19:00–21:00", tag:"opt", note:"Only if everyone's still upright — FlyOver Iceland is peak 11-year-old."}
   ]},
@@ -796,6 +796,8 @@ const TRIP = {
   reservations: [
    {when:"Sep 19, 11:00", what:"Blue Car Rental — Suzuki Vitara, automatic", ref:"#Z04F2O", tel:null,
     meta:"Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions."},
+   {when:"Sep 19, 12:00", what:"Blue Lagoon — Premium", ref:"WBL05868696", tel:null,
+    meta:"2 adults + 1 child, entry 12:00. Premium covers three in-water mask-bar masks, one drink, a bathrobe and towel on loan, and a skincare gift. Voucher downloads from the booking page — put it on a phone before you fly. The page keeps Edit and Cancel live; check the voucher for the cancellation window."},
    {when:"Sep 21, 14:00", what:"Katla ice cave — Troll Expeditions", ref:"TRO-T141847549", tel:null,
     meta:"Order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before."},
    {when:"Sep 22, 15:10", what:"Jökulsárlón — Zodiac boat tour", ref:"JOK-00049937", tel:"+354 478 2222",
@@ -813,8 +815,9 @@ const TRIP = {
      These stat numbers are TRIP FACTS from docs/itinerary.md: 5 anchor tours
      (Katla, the Jökulsárlón Zodiac, the Saltvík horses, the whale watch and Into
      the Glacier — each a paid timed slot its day is built around) and 3 soak
-     options, two of which are tagged `book` because they need reserving. Earth
-     Lagoon is counted as a soak, not a tour, so it isn't double-counted. GeoSea
+     options, two of which are now `booked` because they are paid, timed tickets:
+     the Blue Lagoon and Earth Lagoon are counted as SOAKS, not tours, so neither
+     inflates the anchor-tour number — that stays the five built-around slots. GeoSea
      was the fourth soak until the horse ride displaced it. km is the sum of the
      day km and it is exact — keep it that way.
      Keep the two vocabularies disjoint. */

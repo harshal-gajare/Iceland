@@ -80,7 +80,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 1 — Sat, Sep 19 · Arrival · Blue Lagoon · Reykjavík
 
-*~100 km · in 15:00 · overnight Reykjavík*
+*~100 km · in 15:20 · overnight Reykjavík*
 
 *Daylight 07:02 → 19:39 · 12 h 37 m*
 
@@ -88,7 +88,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | `08:55–11:00` | **Keflavík Airport → Blue Car** — Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early. |
 | | *↓ drive 20 min* |
-| `11:30–14:00` | **Blue Lagoon** **book** — Book the ~11:30 slot — the 08:55 landing makes it comfortable, and under-14s swim free, so the 11-year-old costs nothing. Paid luggage storage; light lunch at the café. Backup if closed: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+). |
+| `12:00–14:30` | **Blue Lagoon** **✔ booked** — Booking WBL05868696 — <b>Premium</b>, 2 adults + 1 child, entry at 12:00. That is 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+). |
 | | *↓ drive 50 min* |
 | `15:45–18:15` | **Hallgrímskirkja · Sun Voyager · Harpa** — Check in ~15:00 (drop bags if the room isn't ready) — the apartment is a 15-min walk from the church — then tower elevator first, waterfront after. |
 | | *↓ drive 5 min* |
@@ -386,6 +386,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Night 9 · Sun Sep 27 | **Fosshotel Reykholt**<br>Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell | Booked · Booking.com 5909.613.873, PIN 1732 · superior double, private bathroom · listed as 1 single bed + 1 sofa bed, which is thin for three — extra beds are not in the price, so ring and check before you arrive · no meal included · free parking on site, free WiFi · ~$344 incl. VAT and city tax, charged in EUR at the day's rate · free cancellation until Sep 25, the full amount after that · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260 |
 | Night 10 · Mon Sep 28 | Keflavík | *not booked* — budget picks are on the day |
 | Sep 19, 11:00 | **Blue Car Rental — Suzuki Vitara, automatic** | ref **#Z04F2O**<br>Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions. |
+| Sep 19, 12:00 | **Blue Lagoon — Premium** | ref **WBL05868696**<br>2 adults + 1 child, entry 12:00. Premium covers three in-water mask-bar masks, one drink, a bathrobe and towel on loan, and a skincare gift. Voucher downloads from the booking page — put it on a phone before you fly. The page keeps Edit and Cancel live; check the voucher for the cancellation window. |
 | Sep 21, 14:00 | **Katla ice cave — Troll Expeditions** | ref **TRO-T141847549**<br>Order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before. |
 | Sep 22, 15:10 | **Jökulsárlón — Zodiac boat tour** | ref **JOK-00049937** · +354 478 2222<br>15:10–16:25. Check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full. |
 | Sep 24, 18:00 | **Earth Lagoon Mývatn** | ref **ABK00150634**<br>Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456). Doors 18:00–18:30 — show the emailed ticket, not the booking number. Towel, one drink and an Earth Bistro discount included. |
