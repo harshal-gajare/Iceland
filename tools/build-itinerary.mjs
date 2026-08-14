@@ -214,8 +214,8 @@ ${reservationTable(C)}
 
 ### Before you fly — still open
 
-- **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
-  (28th). Refundable rates.
+- **One night unbooked** — Keflavík (28th), the airport night. A refundable rate
+  is enough; it is the easiest bed on the trip to find.
 - **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
   volcano watch. No meal on the trip needs reserving: Efstidalur books only for
   parties of ten or more, and Pakkhús in Höfn takes no reservations at all.
@@ -368,9 +368,8 @@ Weather will steal at least half a day somewhere. Protect the booked tours first
 order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
-2. Stykkishólmur's backtrack (day 9).
-3. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
-4. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
+2. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
+3. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
 
 Day 10 carries its own wet-weather list in the day card — Víðgelmir, Krauma and
 the rest — for the case where the glacier tour itself is called off.
