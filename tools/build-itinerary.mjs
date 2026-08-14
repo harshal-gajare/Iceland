@@ -44,13 +44,20 @@ function loadPlans() {
      functions out of the sandbox so the doc cannot drift from the app. */
   new vm.Script(html.slice(a, b) +
     "\nthis.TRIP = TRIP; this.DAYS = DAYS; this.dayLight = dayLight;" +
-    "\nthis.hhmm = hhmm; this.hoursMins = hoursMins; this.shortBase = shortBase;"
+    "\nthis.hhmm = hhmm; this.hoursMins = hoursMins; this.shortBase = shortBase;" +
+    "\nthis.DEPARTURE = DEPARTURE;"
   ).runInContext(ctx);
   if (!ctx.TRIP?.days?.length) {
     throw new Error("Evaluated the DATA section but TRIP looks empty.");
   }
   if (typeof ctx.dayLight !== "function") {
     throw new Error("Evaluated the DATA section but dayLight is missing.");
+  }
+  /* The departure day used to be prose transcribed into this file, which drifted:
+     its sunrise was typed in and ran 3 min behind the page's own solar math. It is
+     data now, so fail loudly rather than silently dropping the section. */
+  if (!ctx.DEPARTURE?.stops?.length) {
+    throw new Error("Evaluated the DATA section but DEPARTURE looks empty.");
   }
   return ctx;
 }
@@ -112,6 +119,23 @@ function dayTables(p) {
         out.push("");
       }
     }
+  }
+  return out.join("\n");
+}
+
+/* Mirrors buildDeparture() on the page — same object, same run-sheet, so the
+   flight-home morning cannot say one thing here and another there. `prev` is the
+   last real day, which is what puts sunrise at Kríunes and sunset at KEF. */
+function departureSection(p) {
+  const D = SB.DEPARTURE, out = [];
+  out.push(`## Departure day — ${D.dow}, ${D.date} · ${esc(D.title)}`, "");
+  out.push(`*out ${D.depart} · keys back ${D.keys} · flight ${esc(D.flight)}*`, "");
+  const light = daylightLine(D, p.days[p.days.length - 1]);
+  if (light) out.push(light, "");
+  if (D.note) out.push("> " + esc(D.note), "");
+  out.push("| Time | Plan |", "|---|---|");
+  for (const s of D.stops) {
+    out.push(`| \`${esc(s.time || "flex")}\` | **${esc(s.name)}** — ${esc(s.note)} |`);
   }
   return out.join("\n");
 }
@@ -388,16 +412,7 @@ order:
 Day 10 carries its own wet-weather list in the day card — Víðgelmir, Krauma and
 the rest — for the case where the glacier tour itself is called off.
 
-## Departure day — Tue Sep 29
-
-KEF 17:10 → BOS → ATL 00:12. The Vitara is due back at 11:00 but the flight isn't
-until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between
-Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop
-the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend
-drop-off to ~14:00 and keep the morning properly unhurried. If you want one last
-proper coffee, Keflavík's harbour has it — the airport side is chain-only past
-security. Bag drop opens
-~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.
+${departureSection(C)}
 
 ---
 

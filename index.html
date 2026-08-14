@@ -232,11 +232,12 @@
   .stay b{font-family:var(--serif);font-size:16px;font-weight:500}
   .hotels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .hotel{font-size:12px;color:var(--fog);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-  .depart{border:1px dashed var(--line);border-radius:14px;padding:16px 18px;color:var(--fog);font-size:14px;display:flex;gap:16px;align-items:center}
-  .depart .dnum{font-size:22px;color:var(--fog)}
-  .depsheet{display:block;margin:12px 0;padding-left:2px}
-  .deprow{display:block;padding:4px 0 4px 14px;border-left:1px dashed var(--dash);font-size:13.5px;line-height:1.55}
-  .deprow b{color:var(--ice);font-weight:600}
+  /* The departure card is a day card with the day taken out: a glyph instead of a
+     numbered spectrum color, and a dashed edge to say it is not one of the ten. */
+  /* border-left keeps the 3px of the numbered cards — at 1px the whole content
+     column shifted 2px out of line with the ten above it. */
+  details.day.depday{border:1px dashed var(--line);border-left:3px dashed var(--line)}
+  .depday .dnum{font-size:22px;font-style:normal;color:var(--fog)}
 
   .stime{font-family:var(--mono);font-size:10.5px;color:var(--fog);min-width:78px;text-align:right;padding-top:4px;flex:0 0 auto}
   ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:var(--faint)}
@@ -425,16 +426,7 @@
     <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, and every stop, stay and trailhead opens straight into Google or Apple Maps. The highlights are pinned below — tap one to jump to its day. Each day also carries its own daylight: sunrise where you wake, sunset where you land, computed for those coordinates against a flat sea horizon — Iceland's mountains will take a bigger bite than the minutes suggest.</p>
     <div class="upgrades" id="upgrades"></div>
     <div id="cards"></div>
-    <div class="depart"><span class="dnum">✈</span><div><b style="color:var(--ice)">Tue, Sep 29 — KEF 17:10 → BOS → ATL 00:12.</b> The last night is at Elliðavatn, 45 min from the airport, so the morning drives back out to Reykjanes on purpose — the peninsula's tip is the one corner of Iceland this trip never reaches otherwise. Sunrise 07:33.
-<span class="depsheet"><span class="deprow"><b>08:15</b> leave Kríunes after breakfast — ask the night before whether your partner rate includes it</span>
-<span class="deprow"><b>09:10</b> <b>Bridge Between Continents</b>, the footbridge over the rift between the North American and Eurasian plates — 10 minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam</span>
-<span class="deprow"><b>09:40</b> <b>Gunnuhver</b>, the boiling mud field, on boardwalks</span>
-<span class="deprow"><b>10:10</b> <b>Reykjanesviti and Valahnúkamöl</b> — Iceland's oldest lighthouse on the cliff, and the sea stacks below it</span>
-<span class="deprow"><b>11:00</b> <b>Brimketill</b>, the lava rock pool the surf fills and empties. Watch it from the platform; people have been swept off the rocks here</span>
-<span class="deprow"><b>11:45</b> lunch at <b>Kaffi Duus</b> on Keflavík harbour — fish, and ten minutes from the airport</span>
-<span class="deprow"><b>13:30</b> last fill in Njarðvík, then keys back at <b>14:00</b></span>
-<span class="deprow"><b>14:40</b> terminal. Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each</span></span>
-If day 10 lost <b>Fagradalsfjall</b> to weather, this is its second chance and the only one left — swap it for the four stops above, leave at 08:00 and it fits. <b>Claiming the VAT refund?</b> The desk is in the arrival hall opposite the car rentals, which is exactly where the rental shuttle puts you, and it has to be done <b>before</b> you check the bags — so drop the car at 13:30 instead of 14:00 and give yourself the half hour. Everything on Reykjanes is weather-exposed and free; if it is blowing, the Blue Lagoon is 20 min away and the day 1 ticket proves you like it.</div></div>
+    <div id="depcard"></div>
   </section>
 
   <section class="block" id="bookings">
@@ -825,6 +817,33 @@ const DAYS = [
 ];
 
 
+/* Sep 29 is the flight home, not an eleventh day, and it must stay OUT of DAYS:
+   the hero's km, stop and night counts all reduce over DAYS, the map colors it
+   would want a --d11 that doesn't exist, and the rail would grow a pill for a day
+   with no night in it. It is shaped like a day anyway so buildDeparture() can push
+   it through the same card markup and the same run-sheet — and so its sun times go
+   through dayLight() instead of being typed in. The hand-written "Sunrise 07:33"
+   this replaced was 3 min off the page's own math, which is exactly the drift the
+   computed-daylight block exists to prevent. `prev` is day 10, so sunrise reads at
+   Kríunes, where you wake, and sunset at KEF, where you leave from.
+   Logistics rows deliberately carry no `ll`: Blue Car's counter is not in this
+   file, so the fuel-and-keys row is a time, not a pin. */
+const DEPARTURE = {
+  dow:"Tue", date:"Sep 29", depart:"08:15", keys:"14:00", flight:"KEF 17:10",
+  title:"Reykjanes loop · last fill · fly home",
+  base:"Keflavík", baseLL:KEF,
+  note:"If day 10 lost Fagradalsfjall to weather, this morning is its second chance and the only one left — swap it for the four Reykjanes stops below, leave at 08:00 and it fits. Everything out here is weather-exposed and free, so if it is blowing there is no shame in the other answer: the Blue Lagoon is 20 min away and the day 1 ticket proves you like it. safetravel.is decides the trails.",
+  stops:[
+   {name:"Leave Hotel Kríunes", ll:[64.0886,-21.7938], time:"08:15", note:"Breakfast first, and ask the night before whether the partner rate includes it — the booking never spelled that out. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this trip never reaches otherwise."},
+   {name:"Bridge Between Continents", ll:[63.868,-22.675], time:"09:10", note:"The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam."},
+   {name:"Gunnuhver", ll:[63.8188,-22.6836], time:"09:40", note:"The boiling mud field, walked on boardwalks."},
+   {name:"Reykjanesviti + Valahnúkamöl", ll:[63.8125,-22.7075], time:"10:10", note:"Iceland's oldest lighthouse on the cliff, and the sea stacks below it."},
+   {name:"Brimketill", ll:[63.8331,-22.5122], time:"11:00", note:"The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks."},
+   {name:"Kaffi Duus — lunch", ll:[64.0033,-22.5636], time:"11:45", note:"Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only."},
+   {name:"Last fill in Njarðvík, then keys back", time:"13:30", note:"The Vitara goes back full — Blue Car #Z04F2O, due 14:00, and their shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour."},
+   {name:"KEF terminal", ll:KEF, time:"14:40", note:"Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12."}
+  ]};
+
 const TRIP = {
   desc:"Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — and the rental is cleared for it.",
   days: DAYS,
@@ -1137,6 +1156,50 @@ function sunStrip(s){
     + ` · <b>${hoursMins(s.mins)}</b> of daylight</p>`;
 }
 
+/* Shared by the ten day cards and the departure card so both run-sheets render
+   from one place. `ll` is optional: the departure's logistics rows — the fuel
+   stop, the key handover — are times without anywhere to pin, and every stop in
+   DAYS has coordinates, so day cards are unaffected by the branch. */
+function stopList(stops){
+  return `<ul class="stops">
+          ${stops.map(s=>`
+            ${s.drive?`<li class="hop"><span class="stime"></span><span class="vdash"></span><span class="hoptext">drive ${s.drive}</span></li>`:""}
+            <li class="${s.tag==="opt"?"opt":""}">
+              <span class="stime">${s.time||"flex"}</span>
+              <span class="sdot"></span>
+              <div><div class="sname">${s.name}${s.tag?" "+chip(s.tag):""}${s.ll?` <span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a></span>`:""}</div>
+              <div class="snote">${s.note||""}</div></div>
+            </li>`).join("")}
+        </ul>`;
+}
+
+/* The flight home, pushed through the same card as the other ten so it reads the
+   same way — but it is not one of them: no number, no rail pill, no leg on the
+   map, and --c falls back to the line color because there is no --d11. */
+function buildDeparture(){
+  const host = document.getElementById("depcard");
+  if(!host) return;
+  const s = dayLight(DEPARTURE, DAYS[DAYS.length-1]);
+  const light = (s.rise!=null && s.set!=null) ? ` · light ${hhmm(s.rise)}–${hhmm(s.set)}` : "";
+  host.innerHTML = `
+    <details class="day depday" id="day-out" style="--c:var(--line)">
+      <summary>
+        <span class="dnum">✈</span>
+        <span class="dmeta">
+          <span class="eyebrow">${DEPARTURE.dow} ${DEPARTURE.date} · out ${DEPARTURE.depart}${light} · keys back ${DEPARTURE.keys}</span>
+          <span class="dtitle">${DEPARTURE.title}</span>
+        </span>
+        <span class="dbase">flight <b>${DEPARTURE.flight}</b></span>
+        <span class="chev"></span>
+      </summary>
+      <div class="dbody">
+        ${sunStrip(s)}
+        <p class="daynote">${DEPARTURE.note}</p>
+        ${stopList(DEPARTURE.stops)}
+      </div>
+    </details>`;
+}
+
 function buildCards(){
   cards.innerHTML = DAYS.map((d,i)=>{
     /* Computed once per card: the collapsed summary shows the range, the open
@@ -1159,16 +1222,7 @@ function buildCards(){
       <div class="dbody">
         ${sunStrip(s)}
         ${d.note?`<p class="daynote">${d.note}</p>`:""}
-        <ul class="stops">
-          ${d.stops.map(s=>`
-            ${s.drive?`<li class="hop"><span class="stime"></span><span class="vdash"></span><span class="hoptext">drive ${s.drive}</span></li>`:""}
-            <li class="${s.tag==="opt"?"opt":""}">
-              <span class="stime">${s.time||"flex"}</span>
-              <span class="sdot"></span>
-              <div><div class="sname">${s.name}${s.tag?" "+chip(s.tag):""} <span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a></span></div>
-              <div class="snote">${s.note||""}</div></div>
-            </li>`).join("")}
-        </ul>
+        ${stopList(d.stops)}
         ${foodBox(d)}
         ${stayBox(d)}
       </div>
@@ -1255,7 +1309,7 @@ function render(){
      here would go stale the moment one is confirmed */
   document.getElementById("st-booked").textContent =
     DAYS.filter(d=>d.stay).length + " of " + DAYS.length;
-  buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildReservations();
+  buildMapDynamic(); buildRail(); buildCards(); buildDeparture(); buildUpgrades(); buildReservations();
   selectDay(null,false);
   document.getElementById("day-1").open = true;
 }

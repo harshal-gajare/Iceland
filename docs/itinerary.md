@@ -578,16 +578,24 @@ order:
 Day 10 carries its own wet-weather list in the day card — Víðgelmir, Krauma and
 the rest — for the case where the glacier tour itself is called off.
 
-## Departure day — Tue Sep 29
+## Departure day — Tue, Sep 29 · Reykjanes loop · last fill · fly home
 
-KEF 17:10 → BOS → ATL 00:12. The Vitara is due back at 11:00 but the flight isn't
-until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between
-Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop
-the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend
-drop-off to ~14:00 and keep the morning properly unhurried. If you want one last
-proper coffee, Keflavík's harbour has it — the airport side is chain-only past
-security. Bag drop opens
-~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.
+*out 08:15 · keys back 14:00 · flight KEF 17:10*
+
+*Daylight 07:30 Kópavogur → 19:07 Keflavík · 11 h 36 m*
+
+> If day 10 lost Fagradalsfjall to weather, this morning is its second chance and the only one left — swap it for the four Reykjanes stops below, leave at 08:00 and it fits. Everything out here is weather-exposed and free, so if it is blowing there is no shame in the other answer: the Blue Lagoon is 20 min away and the day 1 ticket proves you like it. safetravel.is decides the trails.
+
+| Time | Plan |
+|---|---|
+| `08:15` | **Leave Hotel Kríunes** — Breakfast first, and ask the night before whether the partner rate includes it — the booking never spelled that out. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this trip never reaches otherwise. |
+| `09:10` | **Bridge Between Continents** — The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam. |
+| `09:40` | **Gunnuhver** — The boiling mud field, walked on boardwalks. |
+| `10:10` | **Reykjanesviti + Valahnúkamöl** — Iceland's oldest lighthouse on the cliff, and the sea stacks below it. |
+| `11:00` | **Brimketill** — The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks. |
+| `11:45` | **Kaffi Duus — lunch** — Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only. |
+| `13:30` | **Last fill in Njarðvík, then keys back** — The Vitara goes back full — Blue Car #Z04F2O, due 14:00, and their shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour. |
+| `14:40` | **KEF terminal** — Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12. |
 
 ---
 
