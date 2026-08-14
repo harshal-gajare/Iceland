@@ -104,6 +104,7 @@ function dayTables(p) {
     if (d.food) {
       const rows = [["Lunch", d.food.lunch], ["Dinner", d.food.dinner],
                     ["Coffee", d.food.coffee], ["Sweet", d.food.sweet],
+                    ["Fuel", d.food.fuel], ["Shop", d.food.shop],
                     ["Detour", d.food.extra]].filter(([, v]) => v);
       if (rows.length) {
         out.push("| Eating | |", "|---|---|");
@@ -272,8 +273,11 @@ dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never tur
 your back on the sea, stay off the wet sand — and brief the 11-year-old hard:
 sneaker waves outrun sprinting adults.
 
-**Food, fuel & phones.** N1/Orkan stations all along the route — bring a credit
-card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
+**Food, fuel & phones.** N1/Orkan stations all along the route, and the rural ones are
+unmanned but open 24/7 — they need a card with a **PIN**, not a tap, and an N1
+Prepaid Card sidesteps the question entirely. Every day section names that day's
+fuel and grocery stop; Bónus is the cheap chain, but its hours vary by branch and
+the rural ones shut earlier than you expect. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
 costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn
 (Pakkhús or Otto). Every day section carries a lunch and a dinner pick; late
 September thins the rural kitchens, so ring the same morning for anything that
