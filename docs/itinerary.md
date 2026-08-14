@@ -55,7 +55,7 @@ three checked bags, and bag drop shuts 45–60 min out.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-**~2,380 km · 51 stops · 3 soak options · 5 anchor tours**
+**~2,310 km · 51 stops · 4 soak options · 5 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
@@ -348,29 +348,30 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Buy** | **Stykkishólmur**'s old harbour houses hold a handful of craft and design shops, open by the time you arrive at 08:30 — the last proper browse before the airport run. |
 | **Detour** | The **Settlement Centre** in Borgarnes — mashed fish, lamb, mussels and langoustine tails in a 19th-century warehouse — sits right on the road in at about 17:15. Earlier than you would choose, but it beats waiting for the hotel to open at 18:00 if everyone is hungry. |
 
-### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · the lake
+### Day 10 — Mon, Sep 28 · Into the Glacier · lava falls · hot spring
 
-*~320 km · out 08:45 · in 19:30 · overnight Kópavogur*
+*~250 km · out 08:45 · in 18:15 · overnight Kópavogur*
 
 *Daylight 07:26 Reykholt → 19:07 Kópavogur · 11 h 41 m*
 
-> Read this before the day starts. Road 550 up to Klaki is an F-road — 4x4 only, and the operator's own page has it closed October to June. Blue Car have cleared the Vitara for it, so you drive yourself and there is no shuttle to book; what is left is the road itself, which is rough gravel and wants gravel speed rather than confidence. If the tour falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
+> Read this before the day starts. Road 550 up to Klaki is an F-road — 4x4 only, and the operator's own page has it closed October to June. Blue Car have cleared the Vitara for it, so you drive yourself and there is no shuttle to book; what is left is the road itself, which is rough gravel and wants gravel speed rather than confidence. Before you go, Snorralaug — the medieval stone bathing pool Snorri Sturluson used — sits beside the church in Reykholt, a short walk from the hotel and free to look at. Snorrastofa's museum doesn't open until 10:00, so the pool is the ten minutes you can actually take. If the tour falls to weather or road conditions the valley still holds a full day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Hraunfossar and Krauma are on the run-sheet below and both work in rain; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this trip gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall you were counting on and the trails are shut, Krauma is the swap and the departure morning is the second chance. safetravel.is decides the trails, vedur.is the wind.
 
 | Time | Plan |
 |---|---|
 | | *↓ drive 55 min* |
 | `10:30–13:30` | **Into the Glacier — Klaki Base Camp** **✔ booked** — Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is. |
-| | *↓ drive 45 min* |
-| `flex · swap for the hike` | **Hraunfossar + Barnafoss** _optional_ — The alternative to Fagradalsfjall rather than an addition to it. Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream — fifteen minutes past Húsafell on 518, so it sits directly on the way out and costs no extra driving, only time. Take it when the hike is off, whether that is closed trails, too much wind or nobody having any legs left: 14:15–14:45 here, then a relaxed 2 hrs 15 to Keflavík, in by about 17:15 and still in daylight. Take the hike instead and you drive past — stopping here first would put the trailhead at 17:15 with under 2 hrs of light, which buys the viewpoint and not the craters. |
-| | *↓ drive 3 hr* |
-| `16:30–18:45` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest. |
-| `flex · Sep 29 morning` | **Bridge Between Continents · Gunnuhver** _optional_ — No light left for these tonight, and the last night is at Elliðavatn rather than the airport — so they belong to tomorrow morning, which drives back out to the peninsula on purpose. The departure block below has the run-sheet. |
+| | *↓ drive 40 min* |
+| `14:10–14:40` | **Hraunfossar + Barnafoss** — Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream. Fifteen minutes past Húsafell on 518, so it costs no detour at all coming off the glacier — and after three hours on ice, thirty minutes of walking is about right. |
+| | *↓ drive 30 min* |
+| `15:10–16:40` | **Krauma · Deildartunguhver** _soak_ — Deildartunguhver is Europe's highest-flow hot spring — 180 litres a second at 100°C — and <b>Krauma</b> is the bath house built over it, mixing that water with glacier melt to something you can sit in. Open 11:00–21:00 daily; capacity is deliberately small, so book ahead rather than turning up on spec. This is the right shape for the day: you come off a glacier cold, and the last thing before a two-and-a-half hour drive south is ninety minutes in hot water. Towels can be hired; the day bag has yours. |
+| | *↓ drive 2 hr 30* |
+| `flex · swap for Krauma` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with roughly two hours of light before the 19:07 sunset — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light. |
 
 | Eating | |
 |---|---|
 | **Lunch** | **Húsafell Bistró**, open 11:00–17:00 daily, sits fifteen minutes down from the glacier road and lands exactly when you come off the ice — buffet, burgers, waffles. |
 | **Dinner** | You reach the lake about 19:30, so the easy answer is **Kríunes's own restaurant** — home cooking, and you do not get back in the car. Otherwise Reykjavík is 15 min northwest and everything from day 1 is still there. Ring +354 567 2245 during the day so the kitchen expects you. |
-| **Coffee** | **Krauma** at Deildartunguhver — a café built over Europe's highest-flow hot spring, ten minutes from where you slept and directly on the drive back out. The natural first stop on the long run south. |
+| **Coffee** | **Húsafell Bistró** pours with lunch, and Krauma has a café alongside the baths if you would rather sit and watch the spring than get in it. Before you leave Reykholt, the hotel does its own. |
 | **Sweet** | Húsafell's bistro does waffles, which is the correct thing to eat coming off a glacier. |
 | **Fuel** | You are already inland, so fill at **Húsafell** on the way up — Road 550 is not where you want to be watching the gauge, and Reykholt has no pump. Then remember the car goes back **full** at 11:00 tomorrow — refuel in Keflavík or Njarðvík tonight, not in the morning. |
 | **Shop** | **Borgarnes** on the way south, about an hour after the glacier. After that you are into the capital area, where every chain is open late — the last easy shop of the trip. |
