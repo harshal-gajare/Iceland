@@ -217,8 +217,8 @@ ${reservationTable(C)}
 - **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
   (28th). Refundable rates.
 - **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
-  volcano watch. The only meal needing a reservation is Höfn on the 22nd;
-  Efstidalur takes bookings only for parties of ten or more.
+  volcano watch. No meal on the trip needs reserving: Efstidalur books only for
+  parties of ten or more, and Pakkhús in Höfn takes no reservations at all.
 - **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir to pack breakfast** for the morning of the 25th. Service is
   08:00–10:00 and day 7 leaves at 07:55, so the buffet is unusable — but it is
@@ -351,8 +351,8 @@ unmanned but open 24/7 — they need a card with a **PIN**, not a tap, and an N1
 Prepaid Card sidesteps the question entirely. Every day section names that day's
 fuel and grocery stop; Bónus is the cheap chain, but its hours vary by branch and
 the rural ones shut earlier than you expect. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
-costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn
-(Pakkhús or Otto). Every day section carries a lunch and a dinner pick; late
+costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn, at
+Pakkhús — which takes no reservations, so arrive rather than plan. Every day section carries a lunch and a dinner pick; late
 September thins the rural kitchens, so ring the same morning for anything that
 matters and book Pakkhús, Bjargarsteinn and Strikið ahead. eSIM from Nova or
 Síminn, or carrier roaming — Ring Road coverage is excellent.

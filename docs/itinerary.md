@@ -187,7 +187,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Eating | |
 |---|---|
 | **Lunch** | The café at the **Skaftafell visitor centre**, quick, straight off the Svartifoss hike — the Zodiac check-in is the day's hard edge, so this is a refuel, not a meal. |
-| **Dinner** | Langoustine night, and Höfn is the town for it: **Pakkhús** in the old harbour warehouse, **Humarhöfnin** a street away, or **Otto Matur &amp; Drykkur**. Book — this is the one splurge dinner of the trip. |
+| **Dinner** | Langoustine night, and it is **Pakkhús** — Krosseyjarvegi 3, in the old harbour warehouse, open 12:00–21:30 daily, +354 478 2280. **They take no reservations**, it says so on their own site, so you turn up: you reach Höfn 18:20, which is peak, so go straight there and check into the guesthouse afterwards. The town has thinned out — Humarhöfnin and Otto Matur &amp; Drykkur both appear to have closed, so treat this as the one kitchen rather than the pick of three, and have the Hafnarbúðin window below as the fallback if there is a wait you cannot face. |
 | **Coffee** | A thin stretch. Skaftafell's visitor centre is the only real stop between Kirkjubæjarklaustur and the lagoon, and the café at the **Jökulsárlón** ticket office pours while you wait for the Zodiac. |
 | **Sweet** | Höfn is a langoustine town rather than a cake town, so take dessert at Pakkhús. The Icelandic road alternative is the soft-serve counter inside the N1 — petrol-station ice cream is a genuine national habit, not a joke. |
 | **Fuel** | The disciplined day. **Kirkjubæjarklaustur**, then the N1 at **Freysnes** beside Skaftafell, then not much until **Höfn** — roughly 130 km legs. Top up at Klaustur even if the gauge still looks comfortable. |
@@ -398,8 +398,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 - **Three nights unbooked** — Grundarfjörður (26th), Borgarnes (27th), Keflavík
   (28th). Refundable rates.
 - **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
-  volcano watch. The only meal needing a reservation is Höfn on the 22nd;
-  Efstidalur takes bookings only for parties of ten or more.
+  volcano watch. No meal on the trip needs reserving: Efstidalur books only for
+  parties of ten or more, and Pakkhús in Höfn takes no reservations at all.
 - **Lock the drop-off at 14:00** on the 29th — Blue Car will go later than 11:00.
 - **Ask Dimmuborgir to pack breakfast** for the morning of the 25th. Service is
   08:00–10:00 and day 7 leaves at 07:55, so the buffet is unusable — but it is
@@ -532,8 +532,8 @@ unmanned but open 24/7 — they need a card with a **PIN**, not a tap, and an N1
 Prepaid Card sidesteps the question entirely. Every day section names that day's
 fuel and grocery stop; Bónus is the cheap chain, but its hours vary by branch and
 the rural ones shut earlier than you expect. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep
-costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn
-(Pakkhús or Otto). Every day section carries a lunch and a dinner pick; late
+costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn, at
+Pakkhús — which takes no reservations, so arrive rather than plan. Every day section carries a lunch and a dinner pick; late
 September thins the rural kitchens, so ring the same morning for anything that
 matters and book Pakkhús, Bjargarsteinn and Strikið ahead. eSIM from Nova or
 Síminn, or carrier roaming — Ring Road coverage is excellent.
