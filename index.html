@@ -205,8 +205,15 @@
   li.opt .sdot{background:transparent;border:1.5px solid var(--fog);box-shadow:none}
   .sname{font-weight:600;font-size:15px}
   .snote{color:var(--fog);font-size:13.5px;margin-top:1px}
+  /* Chips and the G/A map links sit directly against the stop name with no
+     whitespace between them, so double-clicking the last word of a name used to
+     drag the badge in with it ("Katla ice cave" + "Booked"). Making them
+     unselectable restores the word boundary and also keeps a dragged copy of the
+     line clean — they are badges and icon links, not prose. Selecting text is the
+     only thing suppressed; clicking, find-in-page and print are unaffected. */
   .chip{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-    border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:2px}
+    border-radius:5px;padding:2px 7px;margin-left:4px;vertical-align:2px;
+    -webkit-user-select:none;user-select:none}
   .chip.book{color:#1c1206;background:var(--ember)}
   .chip.soak{color:#062026;background:#59d7e8}
   .chip.opt{color:var(--fog);border:1px solid var(--line)}
@@ -236,11 +243,13 @@
   .sunline b{color:var(--fog);font-weight:600}
 
   .stay.booked{border-color:rgba(69,224,162,.45);background:rgba(69,224,162,.06)}
-  .chip.bkd{color:#03160c;background:var(--d1);margin-left:0;margin-right:6px;vertical-align:1px}
+  /* bkd leads the name on the stay card and the visa line, but FOLLOWS it in a
+     stop name — so the leading contexts zero the margin, not the variant. */
+  .chip.bkd{color:#03160c;background:var(--d1);margin-right:6px;vertical-align:1px}
   .addr{margin-top:7px;font-size:13.5px}
   .addr>a{color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
   .cxl{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:5px;letter-spacing:.05em}
-  .mlinks{display:inline-flex;gap:5px;margin-left:8px;vertical-align:1px}
+  .mlinks{display:inline-flex;gap:5px;margin-left:4px;vertical-align:1px;-webkit-user-select:none;user-select:none}
   .mlinks a{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--fog);text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
   .mlinks a:hover{color:var(--ice);border-color:var(--fog)}
   a.hotel{text-decoration:none;cursor:pointer}
@@ -290,6 +299,7 @@
   .lmeta{display:block;font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:2px;letter-spacing:.04em}
   .lbags,.lvisa{margin-top:12px;font-size:13px;color:var(--fog)}
   .lvisa .chip{margin-left:0;margin-right:8px;vertical-align:1px}
+  .stay .chip{margin-left:0}
   .ins{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
   .inschip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid rgba(69,224,162,.4);border-radius:999px;padding:3px 10px;color:var(--ice)}
   .lnote{margin-top:12px;font-size:13px;color:var(--fog);line-height:1.55}
@@ -1150,7 +1160,7 @@ function buildCards(){
             <li class="${s.tag==="opt"?"opt":""}">
               <span class="stime">${s.time||"flex"}</span>
               <span class="sdot"></span>
-              <div><div class="sname">${s.name}${chip(s.tag)}<span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a></span></div>
+              <div><div class="sname">${s.name}${s.tag?" "+chip(s.tag):""} <span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a></span></div>
               <div class="snote">${s.note||""}</div></div>
             </li>`).join("")}
         </ul>
