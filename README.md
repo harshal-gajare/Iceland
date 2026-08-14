@@ -1,6 +1,6 @@
 # Iceland Trip Planner · Sep 19–29, 2026
 
-Interactive planner for a 10-night family Ring Road + Snæfellsnes loop — **two switchable itineraries** (Plan A classic coast, 51 stops; Plan B highland edition, 53 stops) over a stylized SVG map with a day-colored route ribbon, timed run-sheets with drive legs, confirmed-booking cards, a per-plan booking tracker, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
+Interactive planner for a 10-night family Ring Road + Snæfellsnes loop — 51 timed stops over a stylized SVG map with a day-colored route ribbon, run-sheets with drive legs, confirmed-booking cards, a booking tracker, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
 
 **Live:** [harshalgajare.com/Iceland](https://harshalgajare.com/Iceland/)
 
@@ -19,8 +19,8 @@ index.html                    the entire app (markup + CSS + JS inline)
 sw.js                         service worker — offline caching for the Ring Road
 manifest.json                 PWA manifest (installable, standalone)
 icons/                        app icon (SVG source + rasterized PNGs)
-docs/itinerary.md             prose itinerary for both plans — generated
-tools/build-itinerary.mjs     regenerates that doc from PLANS (no deps)
+docs/itinerary.md             prose itinerary — generated
+tools/build-itinerary.mjs     regenerates that doc from TRIP (no deps)
 CLAUDE.md                     project context for Claude Code
 ```
 
@@ -34,14 +34,13 @@ node tools/build-itinerary.mjs --check   # exit 1 if it's stale
 
 ## Features
 
-- **Two plans behind tabs** — Plan A runs the classic coast (Katla ice cave, Höfn night 4, any automatic SUV); Plan B folds in the highlands (Gjáin + Háifoss, a full Landmannalaugar day with a weather-gated fallback, Aldeyjarfoss) and needs an F-road-legal 4x4. Same flights, same car, same first three nights. Switching re-renders the map, cards, upgrade chips, booking list and hero stats.
 - **Map** — hand-projected Iceland coastline, per-day route segments in an aurora color spectrum, tooltips on every stop, tap-to-jump into the matching day card. Amber = timed booking, teal = walk-in soak, hollow = optional, numbered rings = overnight bases.
 - **Day rail** — sticky selector that dims the map to a single day's leg.
 - **Day cards** — timed run-sheets in driving order with drive legs between stops and **Google + Apple Maps links on every stop**.
 - **Daylight per day** — sunrise, sunset and the length of the light window, computed from each day's own coordinates (sunrise where you wake, sunset where you land) rather than one number for the whole country: the bases span ~9° of longitude, which is 35 minutes of solar time. Flat sea horizon, so Iceland's mountains take a bigger bite.
 - **Booked stays** — every confirmed night renders as a card with its address, terms and map links; unbooked nights show budget picks that open a Maps search.
-- **Booking tracker** — the priority reservations per plan with a progress bar; state **persists in `localStorage`, separately for each plan**.
-- **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that unlocks Plan B.
+- **Booking tracker** — the priority reservations with a progress bar; state **persists in `localStorage`**.
+- **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that day 10's glacier tour depends on.
 - **Dark & light themes** — toggle in the top bar, follows system preference by default, remembered per browser.
 - **Live aurora data** — current Kp and the next-24h peak from NOAA SWPC, with a link to vedur.is for cloud cover (vedur.is itself blocks CORS). Vanishes gracefully offline.
 - **The daily watch** — the morning weather/roads stack and evening aurora stack locals actually use, plus the full-moon caveat.
@@ -58,6 +57,6 @@ When shell files change, bump the `CACHE` version in `sw.js` so clients pick up 
 
 ## Editing the trip
 
-All trip data lives in the `PLANS` object in `index.html`; days 1, 6, 8, 9 and 10 are shared *by reference* between the two plans, so editing one edits both — and nothing may mutate a day object at runtime. Coordinates are `[lat, lon]` and the map is stylized — close is good enough, though `baseLL` also drives each day's sunrise/sunset, which are real to the minute. Map links and daylight are both generated from the same data.
+All trip data lives in the `TRIP` object in `index.html` — one flat `DAYS` array, days 1 to 10. Coordinates are `[lat, lon]` and the map is stylized — close is good enough, though `baseLL` also drives each day's sunrise/sunset, which are real to the minute. Map links and daylight are both generated from the same data.
 
-`docs/itinerary.md` is generated from `PLANS` — run `node tools/build-itinerary.mjs` after an itinerary change rather than editing the doc by hand. Its prose sections are transcribed inside the generator, so page copy and doc copy need editing together.
+`docs/itinerary.md` is generated from `TRIP` — run `node tools/build-itinerary.mjs` after an itinerary change rather than editing the doc by hand. Its prose sections are transcribed inside the generator, so page copy and doc copy need editing together.

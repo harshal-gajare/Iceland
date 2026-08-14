@@ -1,11 +1,11 @@
 # Iceland Ring Road + Snæfellsnes — September 19–29, 2026
 
 Family of three (one 11-year-old), ten nights, counterclockwise Ring Road plus
-Snæfellsnes. **Two plans, same bones and the same booked beds:** Plan A runs the
-classic coast, Plan B folds in the highlands. Pick one on the page; both work
-against the same flights, car and first three nights.
+Snæfellsnes.
 
-> Generated from the `PLANS` object in `index.html` — that file is the source of
+Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — which the rental has to be cleared for.
+
+> Generated from the `TRIP` object in `index.html` — that file is the source of
 > truth. After changing a stop, a time or a base there, run
 > `node tools/build-itinerary.mjs` rather than editing this file by hand.
 
@@ -34,10 +34,12 @@ Insurance on the contract: CDW · SCDW super-collision · TP theft · GP gravel 
 SAAP sand & ash · Roadside · Road tax. GP + SAAP is exactly the cover this route
 wants — gravel chips and south-coast ash storms are the two classic claims.
 
-> **One email to send.** Confirm the Vitara is the AllGrip 4x4 and that F-roads
-> (name **F208 North**) are permitted. That single yes is what unlocks Plan B.
-> River fords are never insured on any Icelandic contract; the Landmannalaugar
-> plan parks before the ford regardless.
+> **One email to send, and a paid tour rides on it.** Confirm the Vitara is the
+> AllGrip 4x4 and that **Road 550 to Klaki** is permitted. Day 10's Into the
+> Glacier tour meets at the top of that F-road and is already paid for; a no
+> there means booking the operator's shuttle from Húsafell, and driving it
+> regardless would void the CDW and SCDW. River fords are never insured on any
+> Icelandic contract, and nothing on this route asks you to cross one.
 
 **Return-day math:** car back 11:00, flight 17:10. Either run a Reykjanes
 morning and drop at 11:00 with a slow airport lunch, or ask Blue Car to extend
@@ -47,27 +49,13 @@ drop-off to ~14:00 and keep the last morning properly free.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-## Booked stays — nights 1–3
-
-| Night | Date | Property | Address | Terms |
-|---|---|---|---|---|
-| 1 | Sat Sep 19 | Nordic Apartments | Snorrabraut 56, 105 Reykjavík | Booked · Booking.com · free cancellation until Sep 4 |
-| 2 | Sun Sep 20 | Paradise Cave Hostel & Guesthouse | Seljalandsskóli, 861 — at Seljalandsfoss | Booked · **non-refundable** · check-in 16:00–22:00 · breakfast included |
-| 3 | Mon Sep 21 | Farmhouse Lodge (Airbnb) | Skeiðflöt, 871 Mýrdalur | Booked · Airbnb · free cancellation until Sep 7 |
-
-Nights 4–10 are open on both plans — book refundable rates.
-
----
-
-# Plan A — Classic coast
-
-Plan A — every south-coast icon including the Katla ice cave. No F-roads; a regular automatic SUV does the whole loop. Night 4 in Höfn.
-
 **~2,440 km · 51 stops · 3 soak options · 5 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
-## Bases — Plan A
+---
+
+## Bases
 
 | Night | Date | Base | Bed |
 |---|---|---|---|
@@ -82,7 +70,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | 9 | Sun Sep 27 | Borgarnes (or Fossatún) | _not booked_ — Borgarnes HI Hostel · Bjarg guesthouse & cabins · Fossatún pods (20 min east) |
 | 10 | Mon Sep 28 | Keflavík | _not booked_ — Base Hotel · Guesthouse 1x6 · Njarðvík Airbnb apartments |
 
-## Day by day — Plan A
+## Day by day
 
 ### Day 1 — Sat, Sep 19 · Arrival · Blue Lagoon · Reykjavík
 
@@ -263,7 +251,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 *Daylight 07:28 Borgarnes → 19:10 Keflavík · 11 h 42 m*
 
-> Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for, not just on Plan B. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
+> Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
 
 | Time | Plan |
 |---|---|
@@ -277,244 +265,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ---
 
-# Plan B — Highland edition
-
-Plan B — the same loop with the best of the highlands folded in: Gjáin + Háifoss on day two, a full Landmannalaugar day with the natural hot-spring soak, Aldeyjarfoss after the whales. Needs a genuine F-road-legal 4x4. Trades away: Katla ice cave, Kvernufoss, Fjallsárlón. Night 4 moves from Höfn to the lagoon.
-
-**~2,700 km · 54 stops · 5 soak options · 1 highland weather-gated day**
-
-Headline stops: Landmannalaugar (day 3) · Gjáin + Háifoss (day 2) · Aldeyjarfoss (day 7) · Dyrhólaey (day 4) · Svartifoss (day 4) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8).
-
-**What Plan B trades away:** the Katla ice cave, Kvernufoss and Fjallsárlón.
-Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
-genuine F-road-legal 4x4 — see the Blue Car email above.
-
-## Bases — Plan B
-
-| Night | Date | Base | Bed |
-|---|---|---|---|
-| 1 | Sat Sep 19 | Reykjavík | **Nordic Apartments** — Snorrabraut 56, 105 Reykjavík<br>Booked · Booking.com · free cancellation until Sep 4 |
-| 2 | Sun Sep 20 | Seljalandsfoss | **Paradise Cave Hostel & Guesthouse** — Seljalandsskóli, 861 — at Seljalandsfoss<br>Booked · non-refundable · check-in 16:00–22:00 · breakfast included |
-| 3 | Mon Sep 21 | Mýrdalur (near Dyrhólaey) | **Farmhouse Lodge (Airbnb)** — Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík<br>Booked · Airbnb · free cancellation until Sep 7 |
-| 4 | Tue Sep 22 | Jökulsárlón / Hali area | _not booked_ — Vagnsstaðir HI Hostel · Skyrhúsið Guesthouse · Gerði Guesthouse · Hali Country Hotel · Mid: Fosshotel Glacier Lagoon |
-| 5 | Wed Sep 23 | Egilsstaðir | **Eyjólfsstaðir Guesthouse** — Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town<br>Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171 |
-| 6 | Thu Sep 24 | Mývatn | **Dimmuborgir Guesthouse** — Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field<br>Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is |
-| 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free. |
-| 8 | Sat Sep 26 | Grundarfjörður (or Stykkishólmur) | _not booked_ — Grundarfjörður HI Hostel · Old Post Office Guesthouse · Harbour Hostel Stykkishólmur |
-| 9 | Sun Sep 27 | Borgarnes (or Fossatún) | _not booked_ — Borgarnes HI Hostel · Bjarg guesthouse & cabins · Fossatún pods (20 min east) |
-| 10 | Mon Sep 28 | Keflavík | _not booked_ — Base Hotel · Guesthouse 1x6 · Njarðvík Airbnb apartments |
-
-## Day by day — Plan B
-
-### Day 1 — Sat, Sep 19 · Arrival · Blue Lagoon · Reykjavík
-
-*~100 km · in 15:00 · overnight Reykjavík*
-
-*Daylight 07:02 → 19:39 · 12 h 37 m*
-
-| Time | Plan |
-|---|---|
-| `08:55–11:00` | **Keflavík Airport → Blue Car** — Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early. |
-| | *↓ drive 20 min* |
-| `11:30–14:00` | **Blue Lagoon** **book** — Book the ~11:30 slot — the 08:55 landing makes it comfortable, and under-14s swim free, so the 11-year-old costs nothing. Paid luggage storage; light lunch at the café. Backup if closed: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+). |
-| | *↓ drive 50 min* |
-| `15:45–18:15` | **Hallgrímskirkja · Sun Voyager · Harpa** — Check in ~15:00 (drop bags if the room isn't ready) — the apartment is a 15-min walk from the church — then tower elevator first, waterfront after. |
-| | *↓ drive 5 min* |
-| `19:00–21:00` | **Perlan or FlyOver Iceland** _optional_ — Only if everyone's still upright — FlyOver Iceland is peak 11-year-old. |
-
-### Day 2 — Sun, Sep 20 · Golden Circle → Þjórsárdalur highlands edge
-
-*~270 km · out 08:15 · in 19:15 · overnight Seljalandsfoss*
-
-*Daylight 07:05 Reykjavík → 19:28 Seljalandsfoss · 12 h 23 m*
-
-> Hardcore alternative: from Gullfoss, run the washboard Kjölur track to Kerlingarfjöll's Hveradalir geothermal valley instead of Þjórsárdalur (1:45 each way + a 1.5 hr walk). Adds ~2 hrs — only with an early start and a patient kid.
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 45 min* |
-| `09:00–10:45` | **Þingvellir National Park** — Almannagjá rift walk, Öxarárfoss — the compressed version; the afternoon is spent in the hills. |
-| | *↓ drive 45 min* |
-| `11:30–12:35` | **Efstidalur II — early lunch** **book** — Book the 11:30 table. Dairy-farm lunch, ice-cream barn with cows behind the glass. |
-| | *↓ drive 20 min* |
-| `12:55–13:35` | **Geysir** — Strokkur erupts every 5–10 minutes. |
-| | *↓ drive 10 min* |
-| `13:45–14:25` | **Gullfoss** — Two-tier torrent — and the mouth of the Kjölur highland track. |
-| | *↓ drive 45 min* |
-| `15:10–15:30` | **Hjálparfoss** — Twin falls braided through a lava bowl, two minutes from the car. |
-| | *↓ drive 20 min* |
-| `15:50–16:45` | **Gjáin (+ Stöng)** — A hidden green rift of springs, mini-falls and basalt — the kid's favorite 45 minutes of the trip. The Stöng Viking longhouse ruin is next door. Last stretch rough — the 4x4's warm-up. |
-| | *↓ drive 25 min* |
-| `17:10–17:55` | **Háifoss** — 122 m of freefall into a canyon, Iceland's #4 waterfall. Rough 7 km track (Rd 332) — skip if the day has run long. Then 1:25 down to the hostel; dinner at the hostel bar or Gallery Pizza, Hvolsvöllur. |
-
-### Day 3 — Mon, Sep 21 · Landmannalaugar — the highland day
-
-*~255 km · 90 on gravel · out 07:40 · in 18:45 · overnight Mýrdalur (near Dyrhólaey)*
-
-*Daylight 07:00 Seljalandsfoss → 19:21 Mýrdalur · 12 h 21 m*
-
-> Weather gate — F-road day. Over breakfast check umferdin.is (F208 North status) and vedur.is wind. Closed road or 15+ m/s gusts → run the classic coast day instead: Skógafoss + Kvernufoss, Dyrhólaey, Reynisfjara, and a walk-up Katla ice-cave slot if one exists. Tonight's farmhouse works either way.
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 2 min* |
-| `07:40–08:25` | **Seljalandsfoss at dawn** — Sunrise ~07:05, nobody there. Walk behind the curtain, then roll. |
-| | *↓ drive 15 min* |
-| `08:45–09:05` | **Fuel + provisions, Hvolsvöllur** — Last fuel and a picnic run — there is nothing to buy in the highlands. Towels and suits in the day bag. |
-| | *↓ drive 1 hr 15* |
-| `10:20–10:35` | **Sigöldugljúfur** _optional_ — Five-minute walk to a canyon of braided blue water — the highlands' opening argument. |
-| | *↓ drive 40 min* |
-| `11:00–14:45` | **Landmannalaugar** _soak_ — Park at the footbridge lot before the ford — never drive the river. Laugahraun–Grænagil loop (~4 km, 2 hrs, rhyolite in orange, red and green), picnic, then the natural hot-spring soak. Rustic changing; mind the kid near the hot inlets. |
-| | *↓ drive 2 hr 20* |
-| `17:45–18:15` | **Skógafoss — on the way home** — Five minutes off the road as you come off the mountain. Dinner: Vík (15 min past the farmhouse) or the farmhouse kitchen. |
-
-### Day 4 — Tue, Sep 22 · Dyrhólaey · Reynisfjara · Svartifoss · the lagoon
-
-*~260 km · out 07:25 · in 17:30 · overnight Jökulsárlón / Hali area*
-
-*Daylight 07:00 Mýrdalur → 19:05 Jökulsárlón · 12 h 05 m*
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 10 min* |
-| `07:35–08:20` | **Dyrhólaey** — Ten minutes from the farmhouse — the arch and the panorama in first light, long before the buses. Sunrise is 07:00, so this is as early as it is worth being here. |
-| | *↓ drive 10 min* |
-| `08:30–09:20` | **Reynisfjara** — Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does. |
-| | *↓ drive 45 min* |
-| `10:05–10:55` | **Fjaðrárgljúfur** — Canyon rim walk; last 3 km gravel — trivial in the 4x4. |
-| | *↓ drive 50 min* |
-| `11:45–13:30` | **Skaftafell — Svartifoss hike** — Straight onto the ~4 km round trip to the basalt-column falls — the full 1 hr 45 is kept, but the visitor-centre café is out today. Lunch is at the lagoon café once you have checked in for the boat. |
-| | *↓ drive 55 min* |
-| `15:10–16:25` | **Jökulsárlón — Zodiac boat tour** **✔ booked** — Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. You reach the car park about 14:25: check in at the ticket office by 14:40 (the Zodiac wants 30 min, not the amphibian's 20), exchange the voucher for tickets — printed or on a phone — then eat at the lagoon café until boarding. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222. |
-| | *↓ drive 2 min* |
-| `16:35–17:15` | **Diamond Beach** — Ice on black sand, and better light than the old midday slot gave it — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow. |
-
-### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
-
-*~270 km · out 08:15 · in 18:15 · overnight Egilsstaðir*
-
-*Daylight 06:50 Jökulsárlón → 18:55 Egilsstaðir · 12 h 05 m*
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 1 hr* |
-| `09:15–10:15` | **Stokksnes / Vestrahorn** — Morning light on the black dunes; small access fee at the Viking Café. |
-| | *↓ drive 20 min* |
-| `10:35–11:00` | **Höfn — fuel + Hafnarbúðin** — Fuel up, plus the famous langoustine baguette window — early lunch or takeaway. |
-| | *↓ drive 1 hr* |
-| `12:05–12:40` | **Djúpivogur** — Eggin í Gleðivík egg sculptures + coffee. |
-| | *↓ drive 55 min* |
-| `13:35–14:20` | **Petra's Stone Collection** _optional_ — Quirky, kid-friendly, right on the coastal route. |
-| | *↓ drive 1 hr 20* |
-| `16:00–18:00` | **Seyðisfjörður or Vök Baths** _optional_ — Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. |
-
-### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
-
-*~250 km · out 08:15 · in 16:10 · overnight Mývatn*
-
-*Daylight 06:46 Egilsstaðir → 19:02 Mývatn · 12 h 15 m*
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 55 min* |
-| `09:10–11:10` | **Stuðlagil Canyon** — East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow. |
-| | *↓ drive 30 min* |
-| `11:45–12:05` | **Möðrudalur** _optional_ — Coffee at Iceland's highest farm, mid-desert. |
-| | *↓ drive 50 min* |
-| `12:55–14:10` | **Dettifoss West + Selfoss** — Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here. |
-| | *↓ drive 45 min* |
-| `14:55–15:40` | **Hverir / Námaskarð** — Boiling mud pots and fumaroles. |
-| | *↓ drive 5 min* |
-| `15:45–16:00` | **Grjótagjá** — Photo stop; viewing only, no bathing. |
-| | *↓ drive 15 min* |
-| `16:30–17:30` | **Dimmuborgir** _optional_ — Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty. |
-| | *↓ drive 10 min* |
-| `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
-
-### Day 7 — Fri, Sep 25 · Húsavík whales · Saltvík horses · Aldeyjarfoss
-
-*~250 km · out 07:55 · in 19:00 · overnight Akureyri*
-
-*Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
-
-> With the horses now running 14:00–15:30, this plan's Aldeyjarfoss detour lands in the last of the light and pushes Akureyri past 19:00. It stays worth doing — but it is the stop to drop if anything upstream slips, and the gravel run back off Rd 842 will be in the dark either way.
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 45 min* |
-| `09:30–11:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Back on the 09:30 sailing, so check in by 08:50 — 40 min before departure, and a missed check-in is charged in full. Gentle Giants Ticket Center, Hafnarstétt 7, 640 Húsavík; look for the blue flags, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Lunch at Naustið after, 11:45–12:45, then ten minutes out to the horses. |
-| | *↓ drive 10 min* |
-| `14:00–15:30` | **Saltvík horse ride — The Seaside tour** **✔ booked** — Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. Now the 14:00 departure and an hour in the saddle rather than ninety minutes, plus about half an hour getting on and off, which is why this reads 14:00–15:30. Along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sailed this morning. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, ten minutes down from the harbour, so there is room to eat properly before you come out. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund. |
-| | *↓ drive 45 min* |
-| `16:15–16:55` | **Goðafoss** — The waterfall of the gods, right off the route south. |
-| | *↓ drive 40 min* |
-| `17:35–18:15` | **Aldeyjarfoss** _optional_ — A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls. It sits in the last of the light now — sunset is 19:03 — and the gravel run back out is in the dark, so it's the first thing to cut on a day that has already slipped. |
-| | *↓ drive 50 min* |
-| `19:05–20:20` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
-
-### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
-
-*~430 km · out 08:00 · in 18:40 · overnight Grundarfjörður (or Stykkishólmur)*
-
-*Daylight 07:07 Akureyri → 19:19 Grundarfjörður · 12 h 12 m*
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 1 hr 15* |
-| `09:15–10:30` | **Siglufjörður** — Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before. |
-| | *↓ drive 45 min* |
-| `11:15–12:15` | **Hofsós pool** _soak_ — Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45. |
-| | *↓ drive 35 min* |
-| `13:20–14:05` | **Glaumbær turf farm** — Exterior is the show if the museum's on short hours. |
-| | *↓ drive 1 hr 15* |
-| `15:20–15:40` | **Kolugljúfur** _optional_ — 15-min leg stretch off Rte 1, then ~3 hrs west — fuel + snack in Borgarnes ~17:20. Running late? Sleep Borgarnes, start Day 9 an hour earlier. |
-
-### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
-
-*~230 km loop · out 08:30 · in 17:45 · overnight Borgarnes (or Fossatún)*
-
-*Daylight 07:31 Grundarfjörður → 19:11 Borgarnes · 11 h 40 m*
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 5 min* |
-| `08:30–09:15` | **Kirkjufell + Kirkjufellsfoss** — Morning light, five minutes from town. |
-| | *↓ drive 35 min* |
-| `09:50–11:00` | **Stykkishólmur** — Harbor, Súgandisey lighthouse hill, Danish-era houses. |
-| | *↓ drive 75 min + Ólafsvík lunch* |
-| `12:30–13:15` | **Djúpalónssandur** — Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara. |
-| | *↓ drive 5 min* |
-| `13:20–14:05` | **Vatnshellir lava cave** _optional_ — 45-min guided cave, tours on the hour, kid-friendly. |
-| | *↓ drive 10 min* |
-| `14:15–15:10` | **Arnarstapi · Gatklettur** — Stone arch plus a stretch of the clifftop walk toward Hellnar. |
-| | *↓ drive 10 min* |
-| `15:20–15:45` | **Búðakirkja** — The black church in the lava field. |
-| | *↓ drive 15 min* |
-| `16:00–16:40` | **Ytri-Tunga seal beach** — Seals haul out most days; then 1:05 to Borgarnes. |
-
-### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · airport night
-
-*~360 km · out 08:10 · in 19:20 · overnight Keflavík*
-
-*Daylight 07:28 Borgarnes → 19:10 Keflavík · 11 h 42 m*
-
-> Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for, not just on Plan B. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
-
-| Time | Plan |
-|---|---|
-| | *↓ drive 1 hr 40* |
-| `10:30–13:30` | **Into the Glacier — Klaki Base Camp** **✔ booked** — Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is. |
-| | *↓ drive 45 min* |
-| `flex · swap for the hike` | **Hraunfossar + Barnafoss** _optional_ — The alternative to Fagradalsfjall rather than an addition to it. Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream — fifteen minutes past Húsafell on 518, so it sits directly on the way out and costs no extra driving, only time. Take it when the hike is off, whether that is closed trails, too much wind or nobody having any legs left: 14:15–14:45 here, then a relaxed 2 hrs 15 to Keflavík, in by about 17:15 and still in daylight. Take the hike instead and you drive past — stopping here first would put the trailhead at 17:15 with under 2 hrs of light, which buys the viewpoint and not the craters. |
-| | *↓ drive 3 hr* |
-| `16:30–18:45` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest. |
-| `flex · Sep 29 morning` | **Bridge Between Continents · Gunnuhver** _optional_ — There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop. |
-
----
-
-# Shared
-
-## Booking checklist — Plan A (12 items)
+## Booking checklist (12 items)
 
 1. **Lodging — 3 nights left (Sep 26–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22). Still open: Grundarfjörður, Borgarnes, Keflavík — refundable rates. To settle: Akureyri Backpackers' house rules say children must be over 12 to stay in the rooms, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before the free window shuts on Sep 22.
 2. **Rental car — ✔ booked** — Blue Car #Z04F2O · Suzuki Vitara automatic · CDW/SCDW/TP/GP/SAAP included. Pickup Sep 19 11:00, drop Sep 29 11:00, KEF.
@@ -528,19 +279,6 @@ genuine F-road-legal 4x4 — see the Blue Car email above.
 10. **Lava Show, Vík** — Optional · Mon Sep 21 from ~20:00 · same-day booking is usually fine.
 11. **Saltvík horse ride — ✔ booked** — The Seaside tour · Fri Sep 25, 14:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1-hr ride plus about half an hour getting on and off, so block 14:00–15:30 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print.
 12. **Into the Glacier — ✔ booked, one dependency** — Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is.
-
-## Booking checklist — Plan B (10 items)
-
-1. **Lodging — 4 nights left (Sep 22, 26–28)** — Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22) — those last three work under either plan. Still open: Jökulsárlón/Hali, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn. Also to settle: Akureyri Backpackers' house rules say children must be over 12, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22.
-2. **Rental car — ✔ booked, one confirm** — Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford.
-3. **Húsavík whale watching — ✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30–11:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm · check in by 08:50 at the Ticket Center, Hafnarstétt 7 — day 7 leaves Mývatn at 07:55. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled.
-4. **Blue Lagoon** — Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch.
-5. **Golden Circle lunch** — Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur).
-6. **Earth Lagoon Mývatn — ✔ booked** — Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs.
-7. **Raufarhólshellir — dropped, not booked** — Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors.
-8. **Jökulsárlón Zodiac — ✔ booked** — Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full.
-9. **Saltvík horse ride — ✔ booked** — The Seaside tour · Fri Sep 25, 14:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1-hr ride plus about half an hour getting on and off, so block 14:00–15:30 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print.
-10. **Into the Glacier — ✔ booked, one dependency** — Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is.
 
 ## The aurora game plan
 
@@ -607,14 +345,15 @@ you fly.
 
 **Weather & packing.** 4–12 °C, wind always, rain somewhere on the loop.
 Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
-and quick-dry towels ride in the **day bag** — three soak options on Plan A (Blue
-Lagoon, Earth Lagoon at Mývatn, Hofsós), and Plan B adds the Landmannalaugar hot
-spring. They also cover Akureyri Backpackers, which charges for towels. Raincoats for everyone at the walk-behind waterfalls.
+and quick-dry towels ride in the **day bag** — three soak options (Blue Lagoon,
+Earth Lagoon at Mývatn, Hofsós). They also cover Akureyri Backpackers, which
+charges for towels. Raincoats for everyone at the walk-behind waterfalls.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
 way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI.
-Check road.is each morning. Plan A needs no 4x4; Plan B does.
+Check road.is each morning. The only road that needs the 4x4 is 550 up to Klaki
+on day 10 — see the Blue Car email above.
 
 **Ocean safety — Reynisfjara & Djúpalónssandur.** Both beaches have genuinely
 dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn
@@ -633,16 +372,17 @@ waterslides. Blue Lagoon itself is free under 14; Mývatn Nature Baths free unde
 
 ## If a day goes sideways, trim these first
 
-Weather will steal at least half a day somewhere. On Plan B the highland day
-carries its own built-in fallback (the classic coast day). Beyond that, protect
-the booked tours — Katla on Plan A, the horses, the whale watch and Into the
-Glacier on both — and cut in this order:
+Weather will steal at least half a day somewhere. Protect the booked tours first
+— Katla, the horses, the whale watch and Into the Glacier — then cut in this
+order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
 2. Stykkishólmur's backtrack (day 9).
-3. Aldeyjarfoss (day 7, Plan B) — with the horses in, it now lands at dusk.
-4. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
-5. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
+3. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
+4. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
+
+Day 10 carries its own wet-weather list in the day card — Víðgelmir, Krauma and
+the rest — for the case where the glacier tour itself is called off.
 
 ## Departure day — Tue Sep 29
 

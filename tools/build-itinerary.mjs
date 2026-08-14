@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Regenerates docs/itinerary.md from the PLANS object in index.html.
+/* Regenerates docs/itinerary.md from the TRIP object in index.html.
  *
  *   node tools/build-itinerary.mjs            # write docs/itinerary.md
  *   node tools/build-itinerary.mjs --check    # exit 1 if the file is stale
@@ -38,16 +38,16 @@ function loadPlans() {
       `If they were renamed, update START/END in this script.`
     );
   }
-  const ctx = { PLANS: null };
+  const ctx = { TRIP: null };
   vm.createContext(ctx);
   /* Daylight is computed by the page, not transcribed here — pull the same
      functions out of the sandbox so the doc cannot drift from the app. */
   new vm.Script(html.slice(a, b) +
-    "\nthis.PLANS = PLANS; this.dayLight = dayLight;" +
+    "\nthis.TRIP = TRIP; this.DAYS = DAYS; this.dayLight = dayLight;" +
     "\nthis.hhmm = hhmm; this.hoursMins = hoursMins; this.shortBase = shortBase;"
   ).runInContext(ctx);
-  if (!ctx.PLANS?.classic?.days?.length || !ctx.PLANS?.highland?.days?.length) {
-    throw new Error("Evaluated the DATA section but PLANS looks empty.");
+  if (!ctx.TRIP?.days?.length) {
+    throw new Error("Evaluated the DATA section but TRIP looks empty.");
   }
   if (typeof ctx.dayLight !== "function") {
     throw new Error("Evaluated the DATA section but dayLight is missing.");
@@ -108,16 +108,15 @@ const checklist = (p) =>
 const statLine = (p) =>
   `${p.stats.km} km · ${p.stats.stops} stops · ${p.stats.soaks} soak options · ${plain(p.stats.flex)}`;
 
-function render(PLANS) {
-  const C = PLANS.classic, H = PLANS.highland;
+function render(C) {
   return `# Iceland Ring Road + Snæfellsnes — September 19–29, 2026
 
 Family of three (one 11-year-old), ten nights, counterclockwise Ring Road plus
-Snæfellsnes. **Two plans, same bones and the same booked beds:** Plan A runs the
-classic coast, Plan B folds in the highlands. Pick one on the page; both work
-against the same flights, car and first three nights.
+Snæfellsnes.
 
-> Generated from the \`PLANS\` object in \`index.html\` — that file is the source of
+${esc(C.desc)}
+
+> Generated from the \`TRIP\` object in \`index.html\` — that file is the source of
 > truth. After changing a stop, a time or a base there, run
 > \`node tools/build-itinerary.mjs\` rather than editing this file by hand.
 
@@ -146,10 +145,12 @@ Insurance on the contract: CDW · SCDW super-collision · TP theft · GP gravel 
 SAAP sand & ash · Roadside · Road tax. GP + SAAP is exactly the cover this route
 wants — gravel chips and south-coast ash storms are the two classic claims.
 
-> **One email to send.** Confirm the Vitara is the AllGrip 4x4 and that F-roads
-> (name **F208 North**) are permitted. That single yes is what unlocks Plan B.
-> River fords are never insured on any Icelandic contract; the Landmannalaugar
-> plan parks before the ford regardless.
+> **One email to send, and a paid tour rides on it.** Confirm the Vitara is the
+> AllGrip 4x4 and that **Road 550 to Klaki** is permitted. Day 10's Into the
+> Glacier tour meets at the top of that F-road and is already paid for; a no
+> there means booking the operator's shuttle from Húsafell, and driving it
+> regardless would void the CDW and SCDW. River fords are never insured on any
+> Icelandic contract, and nothing on this route asks you to cross one.
 
 **Return-day math:** car back 11:00, flight 17:10. Either run a Reykjanes
 morning and drop at 11:00 with a slow airport lunch, or ask Blue Car to extend
@@ -159,65 +160,24 @@ drop-off to ~14:00 and keep the last morning properly free.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-## Booked stays — nights 1–3
-
-| Night | Date | Property | Address | Terms |
-|---|---|---|---|---|
-| 1 | Sat Sep 19 | Nordic Apartments | Snorrabraut 56, 105 Reykjavík | Booked · Booking.com · free cancellation until Sep 4 |
-| 2 | Sun Sep 20 | Paradise Cave Hostel & Guesthouse | Seljalandsskóli, 861 — at Seljalandsfoss | Booked · **non-refundable** · check-in 16:00–22:00 · breakfast included |
-| 3 | Mon Sep 21 | Farmhouse Lodge (Airbnb) | Skeiðflöt, 871 Mýrdalur | Booked · Airbnb · free cancellation until Sep 7 |
-
-Nights 4–10 are open on both plans — book refundable rates.
-
----
-
-# Plan A — Classic coast
-
-${esc(C.desc)}
-
 **${statLine(C)}**
 
 Headline stops: ${C.upgrades.map((u) => `${esc(u[0])} (day ${u[1]})`).join(" · ")}.
 
-## Bases — Plan A
+---
+
+## Bases
 
 ${baseTable(C)}
 
-## Day by day — Plan A
+## Day by day
 
 ${dayTables(C)}
 ---
 
-# Plan B — Highland edition
-
-${esc(H.desc)}
-
-**${statLine(H)}**
-
-Headline stops: ${H.upgrades.map((u) => `${esc(u[0])} (day ${u[1]})`).join(" · ")}.
-
-**What Plan B trades away:** the Katla ice cave, Kvernufoss and Fjallsárlón.
-Night 4 moves from Höfn to the Jökulsárlón / Hali area. It needs a
-genuine F-road-legal 4x4 — see the Blue Car email above.
-
-## Bases — Plan B
-
-${baseTable(H)}
-
-## Day by day — Plan B
-
-${dayTables(H)}
----
-
-# Shared
-
-## Booking checklist — Plan A (${C.bookings.length} items)
+## Booking checklist (${C.bookings.length} items)
 
 ${checklist(C)}
-
-## Booking checklist — Plan B (${H.bookings.length} items)
-
-${checklist(H)}
 
 ## The aurora game plan
 
@@ -284,14 +244,15 @@ you fly.
 
 **Weather & packing.** 4–12 °C, wind always, rain somewhere on the loop.
 Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
-and quick-dry towels ride in the **day bag** — three soak options on Plan A (Blue
-Lagoon, Earth Lagoon at Mývatn, Hofsós), and Plan B adds the Landmannalaugar hot
-spring. They also cover Akureyri Backpackers, which charges for towels. Raincoats for everyone at the walk-behind waterfalls.
+and quick-dry towels ride in the **day bag** — three soak options (Blue Lagoon,
+Earth Lagoon at Mývatn, Hofsós). They also cover Akureyri Backpackers, which
+charges for towels. Raincoats for everyone at the walk-behind waterfalls.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
 way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI.
-Check road.is each morning. Plan A needs no 4x4; Plan B does.
+Check road.is each morning. The only road that needs the 4x4 is 550 up to Klaki
+on day 10 — see the Blue Car email above.
 
 **Ocean safety — Reynisfjara & Djúpalónssandur.** Both beaches have genuinely
 dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn
@@ -310,16 +271,17 @@ waterslides. Blue Lagoon itself is free under 14; Mývatn Nature Baths free unde
 
 ## If a day goes sideways, trim these first
 
-Weather will steal at least half a day somewhere. On Plan B the highland day
-carries its own built-in fallback (the classic coast day). Beyond that, protect
-the booked tours — Katla on Plan A, the horses, the whale watch and Into the
-Glacier on both — and cut in this order:
+Weather will steal at least half a day somewhere. Protect the booked tours first
+— Katla, the horses, the whale watch and Into the Glacier — then cut in this
+order:
 
 1. The Siglufjörður loop (day 8): straight down Route 1 instead — saves ~2.5 hrs.
 2. Stykkishólmur's backtrack (day 9).
-3. Aldeyjarfoss (day 7, Plan B) — with the horses in, it now lands at dusk.
-4. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
-5. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
+3. The Fagradalsfjall hike (day 10) — the flex block; the glacier tour above it is not.
+4. The 15-minute stops — Grjótagjá, Petra's Stones, Fontana.
+
+Day 10 carries its own wet-weather list in the day card — Víðgelmir, Krauma and
+the rest — for the case where the glacier tour itself is called off.
 
 ## Departure day — Tue Sep 29
 
@@ -337,8 +299,8 @@ the night before, every time.*
 `;
 }
 
-const SB = loadPlans();          // { PLANS, dayLight, hhmm, hoursMins, shortBase }
-const doc = render(SB.PLANS);
+const SB = loadPlans();          // { TRIP, DAYS, dayLight, hhmm, hoursMins, shortBase }
+const doc = render(SB.TRIP);
 
 if (process.argv.includes("--check")) {
   let current = "";

@@ -112,12 +112,7 @@
   .count i{width:7px;height:7px;border-radius:50%;background:var(--ember);display:inline-block;box-shadow:0 0 10px var(--ember)}
 
   /* ---------- plan switch ---------- */
-  .planswitch{display:flex;margin-top:36px;border:1px solid var(--line);border-radius:12px;overflow:hidden;width:fit-content}
-  .ptab{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:11px 18px;background:transparent;border:0;color:var(--fog);cursor:pointer}
-  .ptab+.ptab{border-left:1px solid var(--line)}
-  .ptab.on{background:var(--ice);color:var(--night);font-weight:700}
-  .plandesc{margin-top:12px;color:var(--fog);font-size:13.5px;max-width:72ch}
-  @media(max-width:560px){.ptab{padding:10px 12px;font-size:10.5px}}
+  .plandesc{margin-top:36px;color:var(--fog);font-size:13.5px;max-width:72ch}
 
   /* ---------- map ---------- */
   .mapwrap{margin-top:38px}
@@ -326,7 +321,7 @@
        light palette leaks into print */
     :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
     .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.maphint,.top nav,
-    .planswitch,.mlinks,.kpline{display:none!important}
+    .mlinks,.kpline{display:none!important}
     details.day{break-inside:avoid}
   }
   @media (max-width:720px){
@@ -352,7 +347,7 @@
   <section class="hero">
     <p class="eyebrow">Family field plan · Sep 19 – 29, 2026</p>
     <h1>Ten nights around the <em>whole island.</em></h1>
-    <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — in two builds: Plan A runs the classic coast, Plan B climbs into the highlands. Same bones, same booked beds, one switch. Built for a 10:00 landing and a 10:00 departure.</p>
+    <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes — the classic coast, every south-coast icon, and a glacier on the last full day. Built for a 10:00 landing and a 10:00 departure.</p>
     <div class="statline">
       <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
       <span id="st-flex"><b>3</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, sleeps 3</span><span><b id="st-booked">3 of 10</b> nights booked</span>
@@ -360,14 +355,7 @@
     <div class="count"><i></i><span id="countdown">Counting down…</span></div>
   </section>
 
-  <!-- Not role="tablist": these buttons re-render the whole page (map, cards,
-       bookings, stats), not one tabpanel, so tab semantics would promise an
-       associated panel that doesn't exist. Pressed-state buttons are honest. -->
-  <div class="planswitch" role="group" aria-label="Itinerary plan">
-    <button class="ptab on" data-plan="classic" aria-pressed="true">Plan A · Classic coast</button>
-    <button class="ptab" data-plan="highland" aria-pressed="false">Plan B · Highland edition</button>
-  </div>
-  <p class="plandesc" id="plandesc" aria-live="polite"></p>
+  <p class="plandesc" id="plandesc"></p>
 
   <section class="mapwrap" id="map">
     <div class="maphead">
@@ -394,7 +382,7 @@
 <main class="wrap">
   <section class="block" id="days">
     <div class="sechead"><h2>Day by day</h2><span class="eyebrow">counterclockwise</span></div>
-    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, every stop and stay opens in Google or Apple Maps, and every booked night so far works under either plan except one — night 4 is where the two diverge, so the Höfn room belongs to Plan A alone. Headline upgrades are pinned below — tap one to jump to its day. Each day also carries its own daylight: sunrise where you wake, sunset where you land, computed for those coordinates against a flat sea horizon — Iceland's mountains will take a bigger bite than the minutes suggest.</p>
+    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's budget base — family-of-3 rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, every stop and stay opens in Google or Apple Maps, and seven of the ten nights are confirmed. Headline upgrades are pinned below — tap one to jump to its day. Each day also carries its own daylight: sunrise where you wake, sunset where you land, computed for those coordinates against a flat sea horizon — Iceland's mountains will take a bigger bite than the minutes suggest.</p>
     <div class="upgrades" id="upgrades"></div>
     <div id="cards"></div>
     <div class="depart"><span class="dnum">✈</span><div><b style="color:var(--ice)">Tue, Sep 29 — KEF 17:10 → BOS → ATL 00:12.</b> The Vitara is due back at 11:00 but the flight isn't until 17:10, so the morning is yours: a last Reykjanes loop (Bridge Between Continents, Gunnuhver, Reykjanesviti) or the backup Blue Lagoon soak, fuel, drop the car, shuttle to the terminal, slow lunch. Or email Blue Car to extend drop-off to ~14:00 and keep the morning properly unhurried. Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each.</div></div>
@@ -404,8 +392,7 @@
     <div class="sechead"><h2>Booking tracker</h2><span class="eyebrow">in priority order</span></div>
     <p class="seclede">Six weeks out, hotels move first — Vík, Höfn, Egilsstaðir and Grundarfjörður run out of family rooms early. Tick things off as they're confirmed.</p>
     <div class="progressbar"><i id="pbar"></i></div>
-    <!-- filled by updateProgress() on init; left empty so a restored Plan B
-         (8 items) never flashes classic's count -->
+    <!-- filled by updateProgress() on init, so the count is never hardcoded -->
     <p class="progresslabel" id="plabel"></p>
     <ul class="checks" id="checks"></ul>
     <p class="memnote">Progress saves in this browser, tracked separately for each plan — it survives reloads and works offline.</p>
@@ -435,7 +422,7 @@
         <div class="ins">
           <span class="inschip">CDW</span><span class="inschip">SCDW super-collision</span><span class="inschip">TP theft</span><span class="inschip">GP gravel</span><span class="inschip">SAAP sand &amp; ash</span><span class="inschip">Roadside</span><span class="inschip">Road tax</span>
         </div>
-        <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>One email to send, and it matters on both plans now:</b> confirm the Vitara is the AllGrip 4x4 and that F-roads (name F208 North and 550 to Klaki) are permitted. That single yes unlocks Plan B — and it also gates day 10's Into the Glacier tour, which is paid for and sits at the top of an F-road on either plan. A no there means booking the operator's shuttle from Húsafell; driving it regardless would void the CDW and SCDW. River fords are never insured on any Icelandic contract; the Landmannalaugar plan parks before the ford regardless.</p>
+        <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>One email to send, and a paid tour rides on it:</b> confirm the Vitara is the AllGrip 4x4 and that Road 550 to Klaki is permitted. Day 10's Into the Glacier tour meets at the top of that F-road and is already paid for. A no there means booking the operator's shuttle from Húsafell; driving it regardless would void the CDW and SCDW. River fords are never insured on any Icelandic contract, and nothing on this route asks you to cross one.</p>
         <p class="lnote"><b>Return-day math:</b> car back 11:00, flight 17:10. Either run a Reykjanes morning and drop at 11:00 with a slow airport lunch — or ask Blue Car to extend drop-off to ~14:00 and keep the last morning properly free.</p>
         <p class="lnote"><b>Booster check:</b> Icelandic law requires a booster seat below 135 cm. Most 11-year-olds clear that — if yours doesn't yet, add one to the Blue Car booking or bring your own.</p>
       </div>
@@ -493,7 +480,7 @@
       <div class="nbody">The eruption series is between episodes: the last one ended August 2025, magma is re-accumulating, and another eruption is considered likely at some point. <b>Blue Lagoon and Grindavík are open.</b> Past eruptions haven't touched KEF flights, Reykjavík, or the Ring Road — only a small zone near Grindavík. Book the lagoon flexible and check safetravel.is the week you fly.</div>
     </details>
     <details class="note"><summary>Weather &amp; packing<span class="chev"></span></summary>
-      <div class="nbody">4–12 °C, wind always, rain somewhere on the loop. Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits and quick-dry towels ride in the <b>day bag</b> — three possible soaks on Plan A (Blue Lagoon, Earth Lagoon at Mývatn, Hofsós), and Plan B adds the Landmannalaugar hot spring. The towels double for Akureyri Backpackers, which charges for theirs. Raincoats for everyone at the walk-behind waterfalls.</div>
+      <div class="nbody">4–12 °C, wind always, rain somewhere on the loop. Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits and quick-dry towels ride in the <b>day bag</b> — three possible soaks (Blue Lagoon, Earth Lagoon at Mývatn, Hofsós). The towels double for Akureyri Backpackers, which charges for theirs. Raincoats for everyone at the walk-behind waterfalls.</div>
     </details>
     <details class="note"><summary>Driving<span class="chev"></span></summary>
       <div class="nbody"><b>Hold car doors against the wind</b> — the number-one rental damage claim in Iceland. Single-lane bridges in the southeast: first to arrive has right of way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI. Check road.is each morning; no 4x4 needed on this route, but take gravel <b>and</b> sand/ash protection on the rental.</div>
@@ -502,7 +489,7 @@
       <div class="nbody">Both beaches have genuinely dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn your back on the sea, stay off the wet sand — and brief the 11-year-old hard: sneaker waves outrun sprinting adults.</div>
     </details>
     <details class="note"><summary>If a day goes sideways, trim these first<span class="chev"></span></summary>
-      <div class="nbody">Weather will steal at least half a day somewhere. On Plan B, the highland day carries its own built-in fallback (the classic coast day). Beyond that, protect the booked tours — Katla on Plan A, the horses, the whale watch and Into the Glacier on both — and cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, Aldeyjarfoss on Plan B, the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, Fontana.</div>
+      <div class="nbody">Weather will steal at least half a day somewhere. Protect the booked tours first — Katla, the horses, the whale watch and Into the Glacier — then cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), Stykkishólmur's backtrack, the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, Fontana. Day 10 carries its own wet-weather list in the day card.</div>
     </details>
     <details class="note"><summary>Food, fuel &amp; phones<span class="chev"></span></summary>
       <div class="nbody">N1/Orkan stations all along the route — bring a credit card with a PIN. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn (Pakkhús or Otto). eSIM from Nova or Síminn, or carrier roaming — Ring Road coverage is excellent.</div>
@@ -530,15 +517,11 @@ const STAY2 = {name:"Paradise Cave Hostel & Guesthouse", addr:"Seljalandsskóli,
 const STAY3 = {name:"Farmhouse Lodge (Airbnb)", addr:"Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík",
   ll:[63.4374645,-19.1899663], q:null,
   status:"Booked · Airbnb · free cancellation until Sep 7"};
-/* Night 4 on PLAN A ONLY. Plan B deliberately sleeps beside the lagoon that
-   night — it is in highland's own desc — so this room does not apply there.
-   ll is the confirmation's own GPS (N 064° 15.559, W 15° 12.440) converted. */
+/* ll is the confirmation's own GPS (N 064° 15.559, W 15° 12.440) converted. */
 const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 20 min from Stokksnes",
   ll:[64.2593,-15.2073], q:"Höfn Inn Guesthouse, Vesturbraut 3, 780 Höfn, Iceland",
   status:"Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544"};
-/* Night 5 in BOTH plans: day 5 is a plan-specific literal in each, but both base
-   on Egilsstaðir, so the same object hangs off both — do not mutate it.
-   The guesthouse is ~10 km southwest of Egilsstaðir town, not in it, so ll is the
+/* The guesthouse is ~10 km southwest of Egilsstaðir town, not in it, so ll is the
    confirmation's own GPS (N 065° 11.332, W 14° 30.153) and the map links land on
    the farm rather than the town centre. baseLL stays the town coordinate: the
    difference is 26 seconds of sunset, well under the minute the strip prints.
@@ -548,18 +531,14 @@ const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 2
 const STAY5 = {name:"Eyjólfsstaðir Guesthouse", addr:"Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town",
   ll:[65.1889,-14.5026], q:"Eyjólfsstaðir Guesthouse, 701 Egilsstaðir, Iceland",
   status:"Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
-/* Night 6 in BOTH plans — day 6 is a shared object, so this one stay covers both.
-   Booked direct with the guesthouse rather than through Booking.com, so the
+/* Booked direct with the guesthouse rather than through Booking.com, so the
    confirmation carries no GPS: `q` holds the address and drives both map links,
    and ll falls back to the Dimmuborgir lava-field coordinate the guesthouse sits
    beside. Don't upgrade that to a precise pin without a real source. */
 const STAY6 = {name:"Dimmuborgir Guesthouse", addr:"Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field",
   ll:[65.5911,-16.9119], q:"Dimmuborgir Guesthouse, Geiteyjarströnd 1, 660 Mývatn, Iceland",
   status:"Booked direct · ref WTB1B08F50 · one-bedroom cottage, triple use, double bed requested · breakfast buffet included — ask what time it opens, because day 7 rolls out at 07:55 for the whale check-in · €364 incl. VAT · free cancellation until Sep 22 · check-in from 16:00, out by 11:00 — the booking says you arrive 20:00, but this plan has you here at 16:10, so warn them or just turn up · +354 464 4210 · info@dimmuborgir.is"};
-/* Night 7 in BOTH plans: day 7 is a plan-specific literal in each — they diverge
-   after Goðafoss — but both base on Akureyri, so the same object hangs off both.
-   Do not mutate it.
-   ll is the confirmation's own GPS (N 065° 40.888, W 18° 5.393) converted, which
+/* ll is the confirmation's own GPS (N 065° 40.888, W 18° 5.393) converted, which
    lands on Hafnarstræti a couple of minutes' walk from day 7's own old-town stop.
    baseLL stays the town coordinate: the 0.04° of longitude between them is 9
    seconds of sunset, far under the minute the daylight strip prints.
@@ -570,7 +549,15 @@ const STAY7 = {name:"Akureyri Backpackers", addr:"Hafnarstræti 98, 600 Akureyri
   ll:[65.6815,-18.0899], q:"Akureyri Backpackers, Hafnarstræti 98, 600 Akureyri, Iceland",
   status:"Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · One thing to settle first: their house rules say children must be over 12 to stay in the rooms, yet they sold this family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22, while cancelling is still free."};
 
-const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
+
+
+
+
+/* One itinerary, days in order. These used to be split across DAY1 /
+   D5TO10 / CLASSIC_DAYS so the shared days could hang off both plans by
+   reference; with Plan B gone nothing is shared, so nothing is fragile. */
+const DAYS = [
+ {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
   title:"Arrival · Blue Lagoon · Reykjavík",
   base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:00",
   stops:[
@@ -578,66 +565,7 @@ const DAY1 = {n:1, dow:"Sat", date:"Sep 19", km:"~100 km", depart:null,
    {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"11:30–14:00", tag:"book", note:"Book the ~11:30 slot — the 08:55 landing makes it comfortable, and under-14s swim free, so the 11-year-old costs nothing. Paid luggage storage; light lunch at the café. Backup if closed: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+)."},
    {name:"Hallgrímskirkja · Sun Voyager · Harpa", ll:[64.1417,-21.9266], drive:"50 min", time:"15:45–18:15", note:"Check in ~15:00 (drop bags if the room isn't ready) — the apartment is a 15-min walk from the church — then tower elevator first, waterfront after."},
    {name:"Perlan or FlyOver Iceland", ll:[64.129,-21.919], drive:"5 min", time:"19:00–21:00", tag:"opt", note:"Only if everyone's still upright — FlyOver Iceland is peak 11-year-old."}
-  ]};
-
-const D5TO10 = [
- {n:6, dow:"Thu", date:"Sep 24", km:"~250 km", depart:"08:15", arrive:"16:10",
-  title:"Stuðlagil · Dettifoss · Hverir · the baths",
-  base:"Mývatn", baseLL:[65.6465,-16.9127], stay:STAY6,
-  stops:[
-   {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], drive:"55 min", time:"09:10–11:10", note:"East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow."},
-   {name:"Möðrudalur", ll:[65.3606,-15.8867], drive:"30 min", time:"11:45–12:05", tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert."},
-   {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], drive:"50 min", time:"12:55–14:10", note:"Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here."},
-   {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], drive:"45 min", time:"14:55–15:40", note:"Boiling mud pots and fumaroles."},
-   {name:"Grjótagjá", ll:[65.6262,-16.8827], drive:"5 min", time:"15:45–16:00", note:"Photo stop; viewing only, no bathing."},
-   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty."},
-   {name:"Earth Lagoon Mývatn", ll:[65.6304,-16.848], drive:"10 min", time:"18:00–20:00", tag:"booked", note:"Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount."}
   ]},
- {n:8, dow:"Sat", date:"Sep 26", km:"~430 km", depart:"08:00", arrive:"18:40",
-  title:"Tröllaskagi · Hofsós pool · the long haul west",
-  base:"Grundarfjörður (or Stykkishólmur)", baseLL:[64.9226,-23.2585],
-  hotels:["Grundarfjörður HI Hostel","Old Post Office Guesthouse","Harbour Hostel Stykkishólmur"],
-  stops:[
-   {name:"Siglufjörður", ll:[66.1512,-18.9054], drive:"1 hr 15", time:"09:15–10:30", note:"Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before."},
-   {name:"Hofsós pool", ll:[65.8965,-19.4108], drive:"45 min", time:"11:15–12:15", tag:"soak", note:"Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45."},
-   {name:"Glaumbær turf farm", ll:[65.6099,-19.5058], drive:"35 min", time:"13:20–14:05", note:"Exterior is the show if the museum's on short hours."},
-   {name:"Kolugljúfur", ll:[65.3293,-20.5732], drive:"1 hr 15", time:"15:20–15:40", tag:"opt", note:"15-min leg stretch off Rte 1, then ~3 hrs west — fuel + snack in Borgarnes ~17:20. Running late? Sleep Borgarnes, start Day 9 an hour earlier."}
-  ]},
- {n:9, dow:"Sun", date:"Sep 27", km:"~230 km loop", depart:"08:30", arrive:"17:45",
-  title:"Snæfellsnes, tip to toe",
-  base:"Borgarnes (or Fossatún)", baseLL:[64.539,-21.921],
-  hotels:["Borgarnes HI Hostel","Bjarg guesthouse & cabins","Fossatún pods (20 min east)"],
-  stops:[
-   {name:"Kirkjufell + Kirkjufellsfoss", ll:[64.942,-23.3068], drive:"5 min", time:"08:30–09:15", note:"Morning light, five minutes from town."},
-   {name:"Stykkishólmur", ll:[65.0757,-22.7297], drive:"35 min", time:"09:50–11:00", note:"Harbor, Súgandisey lighthouse hill, Danish-era houses."},
-   {name:"Djúpalónssandur", ll:[64.7527,-23.9033], drive:"75 min + Ólafsvík lunch", time:"12:30–13:15", note:"Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara."},
-   {name:"Vatnshellir lava cave", ll:[64.748,-23.818], drive:"5 min", time:"13:20–14:05", tag:"opt", note:"45-min guided cave, tours on the hour, kid-friendly."},
-   {name:"Arnarstapi · Gatklettur", ll:[64.7686,-23.6216], drive:"10 min", time:"14:15–15:10", note:"Stone arch plus a stretch of the clifftop walk toward Hellnar."},
-   {name:"Búðakirkja", ll:[64.8221,-23.3843], drive:"10 min", time:"15:20–15:45", note:"The black church in the lava field."},
-   {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], drive:"15 min", time:"16:00–16:40", note:"Seals haul out most days; then 1:05 to Borgarnes."}
-  ]},
- /* depart is load-bearing, like day 7's: a 10:30 tour sits 1 hr 40 away up a
-    mountain road — 1 hr 10 to Húsafell, then ~30 min on 518/550 — so 08:10 puts
-    you at Klaki with 40 min spare. From Fossatún, 18 km closer, 08:30 does it. */
- {n:10, dow:"Mon", date:"Sep 28", km:"~360 km", depart:"08:10", arrive:"19:20",
-  title:"Into the Glacier · Reykjanes · airport night",
-  base:"Keflavík", baseLL:[64.0049,-22.5624],
-  hotels:["Base Hotel","Guesthouse 1x6","Njarðvík Airbnb apartments"],
-  note:"Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for, not just on Plan B. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.",
-  stops:[
-   {name:"Into the Glacier — Klaki Base Camp", ll:[64.6502,-20.5827], drive:"1 hr 40", time:"10:30–13:30", tag:"booked", note:"Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is."},
-   /* Hraunfossar carries no clock on purpose: it is the ALTERNATIVE to
-      Fagradalsfjall, not a stop before it, so the run-sheet must not chain
-      through it. Fagradalsfjall's 3 hr drive is measured from the glacier —
-      the branch point — which is why 13:30 + 3 hr lands exactly on 16:30. */
-   {name:"Hraunfossar + Barnafoss", ll:[64.7028,-20.975], drive:"45 min", time:"flex · swap for the hike", tag:"opt", note:"The alternative to Fagradalsfjall rather than an addition to it. Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream — fifteen minutes past Húsafell on 518, so it sits directly on the way out and costs no extra driving, only time. Take it when the hike is off, whether that is closed trails, too much wind or nobody having any legs left: 14:15–14:45 here, then a relaxed 2 hrs 15 to Keflavík, in by about 17:15 and still in daylight. Take the hike instead and you drive past — stopping here first would put the trailhead at 17:15 with under 2 hrs of light, which buys the viewpoint and not the craters."},
-   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"3 hr", time:"16:30–18:45", tag:"opt", note:"The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest."},
-   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], time:"flex · Sep 29 morning", tag:"opt", note:"There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop."}
-  ]}
-];
-
-const CLASSIC_DAYS = [
- DAY1,
  {n:2, dow:"Sun", date:"Sep 20", km:"~200 km", depart:"08:30", arrive:"17:45",
   title:"Golden Circle", base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
   stops:[
@@ -681,7 +609,19 @@ const CLASSIC_DAYS = [
    {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"1 hr", time:"12:45–13:45", tag:"opt", note:"Quirky, kid-friendly, right on the coastal route — packed lunch here."},
    {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"15:30–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
   ]},
- D5TO10[0],
+
+ {n:6, dow:"Thu", date:"Sep 24", km:"~250 km", depart:"08:15", arrive:"16:10",
+  title:"Stuðlagil · Dettifoss · Hverir · the baths",
+  base:"Mývatn", baseLL:[65.6465,-16.9127], stay:STAY6,
+  stops:[
+   {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], drive:"55 min", time:"09:10–11:10", note:"East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow."},
+   {name:"Möðrudalur", ll:[65.3606,-15.8867], drive:"30 min", time:"11:45–12:05", tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert."},
+   {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], drive:"50 min", time:"12:55–14:10", note:"Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here."},
+   {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], drive:"45 min", time:"14:55–15:40", note:"Boiling mud pots and fumaroles."},
+   {name:"Grjótagjá", ll:[65.6262,-16.8827], drive:"5 min", time:"15:45–16:00", note:"Photo stop; viewing only, no bathing."},
+   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty."},
+   {name:"Earth Lagoon Mývatn", ll:[65.6304,-16.848], drive:"10 min", time:"18:00–20:00", tag:"booked", note:"Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount."}
+  ]},
  /* depart is set by the whale check-in, not by taste: the 09:30 sailing closes
     check-in at 08:50, that minus the 45-min drive from Mývatn, minus 10 min of
     margin. The two bookings used to collide here — a 10:00 ride in front of a
@@ -696,83 +636,53 @@ const CLASSIC_DAYS = [
    {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"45 min", time:"16:15–16:55", note:"The waterfall of the gods, right off the route south."},
    {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"45 min", time:"17:40–19:10", note:"Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot."}
   ]},
- D5TO10[1], D5TO10[2], D5TO10[3]
+ {n:8, dow:"Sat", date:"Sep 26", km:"~430 km", depart:"08:00", arrive:"18:40",
+  title:"Tröllaskagi · Hofsós pool · the long haul west",
+  base:"Grundarfjörður (or Stykkishólmur)", baseLL:[64.9226,-23.2585],
+  hotels:["Grundarfjörður HI Hostel","Old Post Office Guesthouse","Harbour Hostel Stykkishólmur"],
+  stops:[
+   {name:"Siglufjörður", ll:[66.1512,-18.9054], drive:"1 hr 15", time:"09:15–10:30", note:"Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before."},
+   {name:"Hofsós pool", ll:[65.8965,-19.4108], drive:"45 min", time:"11:15–12:15", tag:"soak", note:"Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45."},
+   {name:"Glaumbær turf farm", ll:[65.6099,-19.5058], drive:"35 min", time:"13:20–14:05", note:"Exterior is the show if the museum's on short hours."},
+   {name:"Kolugljúfur", ll:[65.3293,-20.5732], drive:"1 hr 15", time:"15:20–15:40", tag:"opt", note:"15-min leg stretch off Rte 1, then ~3 hrs west — fuel + snack in Borgarnes ~17:20. Running late? Sleep Borgarnes, start Day 9 an hour earlier."}
+  ]},
+ {n:9, dow:"Sun", date:"Sep 27", km:"~230 km loop", depart:"08:30", arrive:"17:45",
+  title:"Snæfellsnes, tip to toe",
+  base:"Borgarnes (or Fossatún)", baseLL:[64.539,-21.921],
+  hotels:["Borgarnes HI Hostel","Bjarg guesthouse & cabins","Fossatún pods (20 min east)"],
+  stops:[
+   {name:"Kirkjufell + Kirkjufellsfoss", ll:[64.942,-23.3068], drive:"5 min", time:"08:30–09:15", note:"Morning light, five minutes from town."},
+   {name:"Stykkishólmur", ll:[65.0757,-22.7297], drive:"35 min", time:"09:50–11:00", note:"Harbor, Súgandisey lighthouse hill, Danish-era houses."},
+   {name:"Djúpalónssandur", ll:[64.7527,-23.9033], drive:"75 min + Ólafsvík lunch", time:"12:30–13:15", note:"Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara."},
+   {name:"Vatnshellir lava cave", ll:[64.748,-23.818], drive:"5 min", time:"13:20–14:05", tag:"opt", note:"45-min guided cave, tours on the hour, kid-friendly."},
+   {name:"Arnarstapi · Gatklettur", ll:[64.7686,-23.6216], drive:"10 min", time:"14:15–15:10", note:"Stone arch plus a stretch of the clifftop walk toward Hellnar."},
+   {name:"Búðakirkja", ll:[64.8221,-23.3843], drive:"10 min", time:"15:20–15:45", note:"The black church in the lava field."},
+   {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], drive:"15 min", time:"16:00–16:40", note:"Seals haul out most days; then 1:05 to Borgarnes."}
+  ]},
+ /* depart is load-bearing, like day 7's: a 10:30 tour sits 1 hr 40 away up a
+    mountain road — 1 hr 10 to Húsafell, then ~30 min on 518/550 — so 08:10 puts
+    you at Klaki with 40 min spare. From Fossatún, 18 km closer, 08:30 does it. */
+ {n:10, dow:"Mon", date:"Sep 28", km:"~360 km", depart:"08:10", arrive:"19:20",
+  title:"Into the Glacier · Reykjanes · airport night",
+  base:"Keflavík", baseLL:[64.0049,-22.5624],
+  hotels:["Base Hotel","Guesthouse 1x6","Njarðvík Airbnb apartments"],
+  note:"Read this before the day starts. Road 550 up to Klaki is an F-road: 4x4 only, and the operator's own page has it closed October to June. That makes the unanswered Blue Car email — is the Vitara the AllGrip, are F-roads permitted — a gate on a tour you have already paid for. No for an answer means booking their shuttle from Húsafell instead, and driving it anyway would void the CDW and SCDW. If the tour itself falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.",
+  stops:[
+   {name:"Into the Glacier — Klaki Base Camp", ll:[64.6502,-20.5827], drive:"1 hr 40", time:"10:30–13:30", tag:"booked", note:"Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is."},
+   /* Hraunfossar carries no clock on purpose: it is the ALTERNATIVE to
+      Fagradalsfjall, not a stop before it, so the run-sheet must not chain
+      through it. Fagradalsfjall's 3 hr drive is measured from the glacier —
+      the branch point — which is why 13:30 + 3 hr lands exactly on 16:30. */
+   {name:"Hraunfossar + Barnafoss", ll:[64.7028,-20.975], drive:"45 min", time:"flex · swap for the hike", tag:"opt", note:"The alternative to Fagradalsfjall rather than an addition to it. Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream — fifteen minutes past Húsafell on 518, so it sits directly on the way out and costs no extra driving, only time. Take it when the hike is off, whether that is closed trails, too much wind or nobody having any legs left: 14:15–14:45 here, then a relaxed 2 hrs 15 to Keflavík, in by about 17:15 and still in daylight. Take the hike instead and you drive past — stopping here first would put the trailhead at 17:15 with under 2 hrs of light, which buys the viewpoint and not the craters."},
+   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"3 hr", time:"16:30–18:45", tag:"opt", note:"The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest."},
+   {name:"Bridge Between Continents · Gunnuhver", ll:[63.868,-22.675], time:"flex · Sep 29 morning", tag:"opt", note:"There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop."}
+  ]}
 ];
 
-const HIGHLAND_DAYS = [
- DAY1,
- {n:2, dow:"Sun", date:"Sep 20", km:"~270 km", depart:"08:15", arrive:"19:15",
-  title:"Golden Circle → Þjórsárdalur highlands edge",
-  base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
-  note:"Hardcore alternative: from Gullfoss, run the washboard Kjölur track to Kerlingarfjöll's Hveradalir geothermal valley instead of Þjórsárdalur (1:45 each way + a 1.5 hr walk). Adds ~2 hrs — only with an early start and a patient kid.",
-  stops:[
-   {name:"Þingvellir National Park", ll:[64.2559,-21.1295], drive:"45 min", time:"09:00–10:45", note:"Almannagjá rift walk, Öxarárfoss — the compressed version; the afternoon is spent in the hills."},
-   {name:"Efstidalur II — early lunch", ll:[64.246,-20.633], drive:"45 min", time:"11:30–12:35", tag:"book", note:"Book the 11:30 table. Dairy-farm lunch, ice-cream barn with cows behind the glass."},
-   {name:"Geysir", ll:[64.3104,-20.3024], drive:"20 min", time:"12:55–13:35", note:"Strokkur erupts every 5–10 minutes."},
-   {name:"Gullfoss", ll:[64.3271,-20.1199], drive:"10 min", time:"13:45–14:25", note:"Two-tier torrent — and the mouth of the Kjölur highland track."},
-   {name:"Hjálparfoss", ll:[64.11,-19.87], drive:"45 min", time:"15:10–15:30", note:"Twin falls braided through a lava bowl, two minutes from the car."},
-   {name:"Gjáin (+ Stöng)", ll:[64.147,-19.735], drive:"20 min", time:"15:50–16:45", note:"A hidden green rift of springs, mini-falls and basalt — the kid's favorite 45 minutes of the trip. The Stöng Viking longhouse ruin is next door. Last stretch rough — the 4x4's warm-up."},
-   {name:"Háifoss", ll:[64.2065,-19.6868], drive:"25 min", time:"17:10–17:55", note:"122 m of freefall into a canyon, Iceland's #4 waterfall. Rough 7 km track (Rd 332) — skip if the day has run long. Then 1:25 down to the hostel; dinner at the hostel bar or Gallery Pizza, Hvolsvöllur."}
-  ]},
- {n:3, dow:"Mon", date:"Sep 21", km:"~255 km · 90 on gravel", depart:"07:40", arrive:"18:45",
-  title:"Landmannalaugar — the highland day",
-  base:"Mýrdalur (near Dyrhólaey)", baseLL:[63.4375,-19.19], stay:STAY3,
-  note:"Weather gate — F-road day. Over breakfast check umferdin.is (F208 North status) and vedur.is wind. Closed road or 15+ m/s gusts → run the classic coast day instead: Skógafoss + Kvernufoss, Dyrhólaey, Reynisfjara, and a walk-up Katla ice-cave slot if one exists. Tonight's farmhouse works either way.",
-  stops:[
-   {name:"Seljalandsfoss at dawn", ll:[63.6156,-19.9886], drive:"2 min", time:"07:40–08:25", note:"Sunrise ~07:05, nobody there. Walk behind the curtain, then roll."},
-   {name:"Fuel + provisions, Hvolsvöllur", ll:[63.752,-20.224], drive:"15 min", time:"08:45–09:05", note:"Last fuel and a picnic run — there is nothing to buy in the highlands. Towels and suits in the day bag."},
-   {name:"Sigöldugljúfur", ll:[64.17,-19.24], drive:"1 hr 15", time:"10:20–10:35", tag:"opt", note:"Five-minute walk to a canyon of braided blue water — the highlands' opening argument."},
-   {name:"Landmannalaugar", ll:[63.9832,-19.0605], drive:"40 min", time:"11:00–14:45", tag:"soak", note:"Park at the footbridge lot before the ford — never drive the river. Laugahraun–Grænagil loop (~4 km, 2 hrs, rhyolite in orange, red and green), picnic, then the natural hot-spring soak. Rustic changing; mind the kid near the hot inlets."},
-   {name:"Skógafoss — on the way home", ll:[63.5321,-19.5114], drive:"2 hr 20", time:"17:45–18:15", note:"Five minutes off the road as you come off the mountain. Dinner: Vík (15 min past the farmhouse) or the farmhouse kitchen."}
-  ]},
- /* depart is set by the Zodiac check-in, not by taste: 14:40 at the ticket office,
-    minus the 55 min from Skaftafell, minus a 1 hr 45 Svartifoss hike, walks the
-    whole morning back to 07:25 — 25 min after sunrise, so Dyrhólaey still gets
-    light. Lunch moves off Skaftafell's café to the lagoon café while you wait to
-    board. A no-show is charged in full, so this one does not flex. */
- {n:4, dow:"Tue", date:"Sep 22", km:"~260 km", depart:"07:25", arrive:"17:30",
-  title:"Dyrhólaey · Reynisfjara · Svartifoss · the lagoon",
-  base:"Jökulsárlón / Hali area", baseLL:[64.07,-16.02],
-  hotels:["Vagnsstaðir HI Hostel","Skyrhúsið Guesthouse","Gerði Guesthouse","Hali Country Hotel","Mid: Fosshotel Glacier Lagoon"],
-  stops:[
-   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"10 min", time:"07:35–08:20", note:"Ten minutes from the farmhouse — the arch and the panorama in first light, long before the buses. Sunrise is 07:00, so this is as early as it is worth being here."},
-   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"08:30–09:20", note:"Basalt columns and sea stacks. Sneaker waves: obey the warning lights, stay off the wet sand — an 11-year-old will want to dare the waves; the rule is nobody does."},
-   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"45 min", time:"10:05–10:55", note:"Canyon rim walk; last 3 km gravel — trivial in the 4x4."},
-   {name:"Skaftafell — Svartifoss hike", ll:[64.0163,-16.9666], drive:"50 min", time:"11:45–13:30", note:"Straight onto the ~4 km round trip to the basalt-column falls — the full 1 hr 45 is kept, but the visitor-centre café is out today. Lunch is at the lagoon café once you have checked in for the boat."},
-   {name:"Jökulsárlón — Zodiac boat tour", ll:[64.0478,-16.1809], drive:"55 min", time:"15:10–16:25", tag:"booked", note:"Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. You reach the car park about 14:25: check in at the ticket office by 14:40 (the Zodiac wants 30 min, not the amphibian's 20), exchange the voucher for tickets — printed or on a phone — then eat at the lagoon café until boarding. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222."},
-   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:35–17:15", note:"Ice on black sand, and better light than the old midday slot gave it — then ten minutes to tonight's bed beside the lagoon. Langoustine moves to a Höfn stop tomorrow."}
-  ]},
- {n:5, dow:"Wed", date:"Sep 23", km:"~270 km", depart:"08:15", arrive:"18:15",
-  title:"Stokksnes · the East Fjords",
-  base:"Egilsstaðir", baseLL:[65.2637,-14.3945], stay:STAY5,
-  stops:[
-   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"1 hr", time:"09:15–10:15", note:"Morning light on the black dunes; small access fee at the Viking Café."},
-   {name:"Höfn — fuel + Hafnarbúðin", ll:[64.2539,-15.2082], drive:"20 min", time:"10:35–11:00", note:"Fuel up, plus the famous langoustine baguette window — early lunch or takeaway."},
-   {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr", time:"12:05–12:40", note:"Eggin í Gleðivík egg sculptures + coffee."},
-   {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"55 min", time:"13:35–14:20", tag:"opt", note:"Quirky, kid-friendly, right on the coastal route."},
-   {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"16:00–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir."}
-  ]},
- D5TO10[0],
- /* same check-in constraint as Plan A's day 7 — see the comment there */
- {n:7, dow:"Fri", date:"Sep 25", km:"~250 km", depart:"07:55", arrive:"19:00",
-  title:"Húsavík whales · Saltvík horses · Aldeyjarfoss",
-  base:"Akureyri", baseLL:[65.6885,-18.1262], stay:STAY7,
-  note:"With the horses now running 14:00–15:30, this plan's Aldeyjarfoss detour lands in the last of the light and pushes Akureyri past 19:00. It stays worth doing — but it is the stop to drop if anything upstream slips, and the gravel run back off Rd 842 will be in the dark either way.",
-  stops:[
-   {name:"Húsavík whale watching", ll:[66.0464,-17.3459], drive:"45 min", time:"09:30–11:30", tag:"booked", note:"Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Back on the 09:30 sailing, so check in by 08:50 — 40 min before departure, and a missed check-in is charged in full. Gentle Giants Ticket Center, Hafnarstétt 7, 640 Húsavík; look for the blue flags, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Lunch at Naustið after, 11:45–12:45, then ten minutes out to the horses."},
-   {name:"Saltvík horse ride — The Seaside tour", ll:[65.999,-17.3631], drive:"10 min", time:"14:00–15:30", tag:"booked", note:"Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. Now the 14:00 departure and an hour in the saddle rather than ninety minutes, plus about half an hour getting on and off, which is why this reads 14:00–15:30. Along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sailed this morning. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, ten minutes down from the harbour, so there is room to eat properly before you come out. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund."},
-   {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"45 min", time:"16:15–16:55", note:"The waterfall of the gods, right off the route south."},
-   {name:"Aldeyjarfoss", ll:[65.366,-17.342], drive:"40 min", time:"17:35–18:15", tag:"opt", note:"A basalt-column amphitheater at the gate of the Sprengisandur highland track — Rd 842 gravel, easy in the 4x4, and nearly empty. One of the country's best falls. It sits in the last of the light now — sunset is 19:03 — and the gravel run back out is in the dark, so it's the first thing to cut on a day that has already slipped."},
-   {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"50 min", time:"19:05–20:20", note:"Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot."}
-  ]},
- D5TO10[1], D5TO10[2], D5TO10[3]
-];
 
-const PLANS = {
- classic: {
-  label:"Plan A · Classic coast",
-  desc:"Plan A — every south-coast icon including the Katla ice cave. No F-roads; a regular automatic SUV does the whole loop. Night 4 in Höfn.",
-  days: CLASSIC_DAYS,
+const TRIP = {
+  desc:"Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — which the rental has to be cleared for.",
+  days: DAYS,
   upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Saltvík horses",7],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
   bookings: [
    ["Lodging — 3 nights left (Sep 26–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Höfn Inn (22nd, free until Sep 19) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22). Still open: Grundarfjörður, Borgarnes, Keflavík — refundable rates. To settle: Akureyri Backpackers' house rules say children must be over 12 to stay in the rooms, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before the free window shuts on Sep 22."],
@@ -797,34 +707,11 @@ const PLANS = {
      options, two of which are tagged `book` because they need reserving. Earth
      Lagoon is counted as a soak, not a tour, so it isn't double-counted. GeoSea
      was the fourth soak until the horse ride displaced it. km is the sum of the
-     day km and classic's is exact — keep it that way; highland's day 3 prints a
-     gravel subset rather than a second leg, so its total is rounded instead.
+     day km and it is exact — keep it that way.
      Keep the two vocabularies disjoint. */
   stats:{km:"~2,440", stops:0, soaks:3, flex:"<b>5</b> anchor tours"}
- },
- highland: {
-  label:"Plan B · Highland edition",
-  desc:"Plan B — the same loop with the best of the highlands folded in: Gjáin + Háifoss on day two, a full Landmannalaugar day with the natural hot-spring soak, Aldeyjarfoss after the whales. Needs a genuine F-road-legal 4x4. Trades away: Katla ice cave, Kvernufoss, Fjallsárlón. Night 4 moves from Höfn to the lagoon.",
-  days: HIGHLAND_DAYS,
-  upgrades: [["Landmannalaugar",3],["Gjáin + Háifoss",2],["Aldeyjarfoss",7],["Dyrhólaey",4],["Svartifoss",4],["Saltvík horses",7],["Húsavík whales",7],["Hofsós pool",8]],
-  bookings: [
-   ["Lodging — 4 nights left (Sep 22, 26–28)","Done: Nordic Apartments (19th) · Paradise Cave (20th, non-ref) · Farmhouse Lodge, Mýrdalur (21st) · Eyjólfsstaðir (23rd, free until Sep 20) · Dimmuborgir Guesthouse (24th, free until Sep 22) · Akureyri Backpackers (25th, free until Sep 22) — those last three work under either plan. Still open: Jökulsárlón/Hali, Grundarfjörður, Borgarnes, Keflavík — refundable rates. Heads-up: the Höfn Inn room booked for the 22nd is Plan A's night 4 — this plan sleeps at the lagoon instead, so either cancel it (free until Sep 19) or move night 4 back to Höfn. Also to settle: Akureyri Backpackers' house rules say children must be over 12, yet they sold a family room for 2 adults + 1 child aged 10 — get a written yes before Sep 22."],
-   ["Rental car — ✔ booked, one confirm","Blue Car #Z04F2O · Suzuki Vitara AT with GP+SAAP already on it. Email Blue Car: confirm this is the AllGrip 4x4 and F-roads (F208 North) are permitted — that yes unlocks Plan B. River fords are never insured; the plan parks before the ford."],
-   ["Húsavík whale watching — ✔ booked","Gentle Giants GG2 Big Whale Safari & Puffins · Fri Sep 25, 09:30–11:30 · ref GGHI-100464358 · 2 adults + 1 youth · ISK 53,973, pay on arrival · RIB speedboat, ~2 hrs, minimum height 130 cm · check in by 08:50 at the Ticket Center, Hafnarstétt 7 — day 7 leaves Mývatn at 07:55. Free to move or cancel until 24 hrs before. The GG1 sailing this replaced (GGHI-100410953) is cancelled."],
-   ["Blue Lagoon","Sat Sep 19, ~11:30 slot (you land 08:55) — flexible/refundable ticket, given the volcano watch."],
-   ["Golden Circle lunch","Efstidalur II, Sun Sep 20 — book the 11:30 table (the afternoon belongs to Þjórsárdalur)."],
-   ["Earth Lagoon Mývatn — ✔ booked","Booking ABK00150634 · Thu Sep 24, 18:00 (doors 18:00–18:30) · Kvika/Signature, 2 adults + 1 child, paid in full (Visa ref 30457456) · towel, one drink and an Earth Bistro discount included · show the emailed ticket. Published cancellation terms: free until 72 hrs before (~Sep 21 18:00), 50% between 24 and 72 hrs, 10% inside 24 hrs."],
-   ["Raufarhólshellir — dropped, not booked","Into the Glacier took Sep 28: Klaki is 2 hrs northeast of the lava tube and the day can't hold both. Nothing was reserved, so nothing is owed. It stays on the list because it's the best wet-weather substitute if the glacier tour is cancelled — same-day booking, and it's indoors."],
-   ["Jökulsárlón Zodiac — ✔ booked","Jökulsárlón Boat Tours · Tue Sep 22, 15:10–16:25 · booking JOK-00049937 · check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk on the spot. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."],
-   /* appended, not inserted — see the note on Plan A's list */
-   ["Saltvík horse ride — ✔ booked","The Seaside tour · Fri Sep 25, 14:00 · ref SAL-100467323 · 2 adults + 1 teenager · ISK 41,500, paid in full · 1-hr ride plus about half an hour getting on and off, so block 14:00–15:30 · minimum age 10, 110 kg per rider · Hestamiðstöðin Saltvík, 4 km south of Húsavík · +354 847 9515, info@saltvik.is. Two things to ask when you ring: what they provide beyond the horses, and the cancellation terms the confirmation links but doesn't print."],
-   ["Into the Glacier — ✔ booked, one dependency","Klaki Base Camp · Mon Sep 28, 10:30 · ticket ARC-T141867953, order ARC-100468563 · 2 adults + 1 teenager, paid in full · snowmobile up Langjökull plus an hour in the ice tunnel, ~3 hrs · drivers 17+ with a licence, passengers 8+, and the unlicensed can't outnumber the licensed. Free to cancel until 24 hrs out, then the full fare is gone. The dependency: Road 550 to Klaki is an F-road, 4x4 only — so this needs the Blue Car AllGrip answer, or their shuttle from Húsafell booked instead. +354 578 2550, info@intotheglacier.is."]
-  ],
-  stats:{km:"~2,700", stops:0, soaks:5, flex:"<b>1</b> highland weather-gated day"}
- }
 };
-PLANS.classic.stats.stops = PLANS.classic.days.reduce((a,d)=>a+d.stops.length,0);
-PLANS.highland.stats.stops = PLANS.highland.days.reduce((a,d)=>a+d.stops.length,0);
+TRIP.stats.stops = DAYS.reduce((a,d)=>a+d.stops.length,0);
 
 /* ---------------- DAYLIGHT ----------------
    Sunrise/sunset are computed, never typed in — the bases move ~9° of longitude
@@ -906,16 +793,6 @@ function dayLight(d, prev){
     moved: !!prev && shortBase((prev||d).base) !== shortBase(d.base),
     mins: (rise!=null && set!=null) ? set - rise : null};
 }
-
-/* Restore the plan BEFORE the DAYS binding below — DAYS is evaluated once at
-   top level, so restoring later would leave every builder on classic data. */
-const PKEY = "iceland26.plan";
-let planKey = "classic";
-try{
-  const saved = localStorage.getItem(PKEY);
-  if(saved && Object.prototype.hasOwnProperty.call(PLANS, saved)) planKey = saved;
-}catch(e){}
-let DAYS = PLANS[planKey].days;
 
 /* Simplified clockwise coastline (lat, lon) */
 const COAST = [
@@ -1141,7 +1018,7 @@ function buildRail(){
 
 function buildUpgrades(){
   document.getElementById("upgrades").innerHTML =
-    PLANS[planKey].upgrades.map(u=>`<button class="upg" data-day="${u[1]}">${u[0]}<b>· Day ${u[1]}</b></button>`).join("");
+    TRIP.upgrades.map(u=>`<button class="upg" data-day="${u[1]}">${u[0]}<b>· Day ${u[1]}</b></button>`).join("");
   document.querySelectorAll(".upg").forEach(b=>b.addEventListener("click",()=>selectDay(Number(b.dataset.day),true)));
 }
 
@@ -1163,35 +1040,37 @@ function selectDay(n, scroll){
 
 /* ================= BOOKING TRACKER ================= */
 const checks = document.getElementById("checks");
-/* Ticks are stored per plan as a JSON array of indices. NOTE: the payload is
-   positional, so reordering a plan's `bookings` array mis-restores old ticks. */
-const bkKey = k => "iceland26.bk." + k;
-function loadBk(k){
+/* Ticks are a JSON array of indices. NOTE: the payload is positional, so
+   reordering the `bookings` array mis-restores old ticks — append, never insert.
+   Reads fall back to the old per-plan key so ticks saved while Plan B still
+   existed still restore; the next save migrates them forward. */
+const BKEY = "iceland26.bk", BKEY_OLD = "iceland26.bk.classic";
+function loadBk(){
   try{
-    const n = PLANS[k].bookings.length;   // clamp per plan — classic 9, highland 8
-    const a = JSON.parse(localStorage.getItem(bkKey(k)) || "[]");
+    const n = TRIP.bookings.length;
+    const raw = localStorage.getItem(BKEY) ?? localStorage.getItem(BKEY_OLD);
+    const a = JSON.parse(raw || "[]");
     return new Set(Array.isArray(a) ? a.filter(i=>Number.isInteger(i) && i>=0 && i<n) : []);
   }catch(e){ return new Set(); }
 }
-function saveBk(k){
-  try{ localStorage.setItem(bkKey(k), JSON.stringify([...bkState[k]].sort((a,b)=>a-b))); }catch(e){}
+function saveBk(){
+  try{ localStorage.setItem(BKEY, JSON.stringify([...bkState].sort((a,b)=>a-b))); }catch(e){}
 }
-const bkState = { classic:loadBk("classic"), highland:loadBk("highland") };
+const bkState = loadBk();
 function buildChecks(){
-  const items = PLANS[planKey].bookings;
+  const items = TRIP.bookings;
   checks.innerHTML = items.map((b,i)=>`
     <li id="bk-${i}">
-      <input type="checkbox" id="c-${i}" aria-label="Mark booked: ${b[0]}" ${bkState[planKey].has(i)?"checked":""}>
+      <input type="checkbox" id="c-${i}" aria-label="Mark booked: ${b[0]}" ${bkState.has(i)?"checked":""}>
       <label for="c-${i}"><span class="bidx">${String(i+1).padStart(2,"0")}</span><b>${b[0]}</b>
       <span class="bmeta">${b[1]}</span></label>
     </li>`).join("");
-  /* Save only from this user-initiated handler. Saving inside updateProgress()
-     would fire during switchPlan(), when planKey is already the new plan but
-     #checks still holds the old plan's DOM — writing A's ticks into B's key. */
+  /* Save only from this user-initiated handler — updateProgress() also runs on
+     the initial render, where writing back would be pointless churn. */
   checks.querySelectorAll("input").forEach((inp,i)=>inp.addEventListener("change",()=>{
-    if(inp.checked) bkState[planKey].add(i); else bkState[planKey].delete(i);
+    if(inp.checked) bkState.add(i); else bkState.delete(i);
     updateProgress();
-    saveBk(planKey);
+    saveBk();
   }));
   updateProgress();
 }
@@ -1206,30 +1085,21 @@ function updateProgress(){
     `${done} of ${inputs.length} booked`;
 }
 
-/* ================= PLAN SWITCH ================= */
-function switchPlan(key, userAction){
-  planKey = key;
-  DAYS = PLANS[key].days;
-  document.querySelectorAll(".ptab").forEach(t=>{
-    const on = t.dataset.plan===key;
-    t.classList.toggle("on", on);
-    t.setAttribute("aria-pressed", on?"true":"false");
-  });
-  document.getElementById("plandesc").textContent = PLANS[key].desc;
-  const s = PLANS[key].stats;
+/* ================= RENDER ================= */
+function render(){
+  document.getElementById("plandesc").textContent = TRIP.desc;
+  const s = TRIP.stats;
   document.getElementById("st-km").textContent = s.km;
   document.getElementById("st-stops").textContent = s.stops;
   document.getElementById("st-soak").textContent = s.soaks;
   document.getElementById("st-flex").innerHTML = s.flex;
-  /* derived, not hardcoded — nights 4-10 are actively being booked, so a
-     literal here would go stale the moment one is confirmed */
-  const days = PLANS[key].days;
+  /* derived, not hardcoded — nights 8-10 are still being booked, so a literal
+     here would go stale the moment one is confirmed */
   document.getElementById("st-booked").textContent =
-    days.filter(d=>d.stay).length + " of " + days.length;
+    DAYS.filter(d=>d.stay).length + " of " + DAYS.length;
   buildMapDynamic(); buildRail(); buildCards(); buildUpgrades(); buildChecks();
   selectDay(null,false);
-  if(!userAction) document.getElementById("day-1").open = true;
-  if(userAction){ try{ localStorage.setItem(PKEY, key); }catch(e){} }
+  document.getElementById("day-1").open = true;
 }
 
 /* ================= COUNTDOWN ================= */
@@ -1296,9 +1166,8 @@ if("serviceWorker" in navigator && (location.protocol==="https:" || ["localhost"
 
 /* ================= INIT ================= */
 buildMapStatic();
-document.querySelectorAll(".ptab").forEach(t=>t.addEventListener("click",()=>switchPlan(t.dataset.plan,true)));
 document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
-switchPlan(planKey, false);   // planKey was restored from localStorage above
+render();
 countdown(); loadKp();
 </script>
 </body>
