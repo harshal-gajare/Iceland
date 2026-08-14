@@ -55,7 +55,7 @@ three checked bags, and bag drop shuts 45–60 min out.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-**~2,370 km · 51 stops · 3 soak options · 5 anchor tours**
+**~2,380 km · 51 stops · 3 soak options · 5 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
@@ -74,7 +74,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | 7 | Fri Sep 25 | Akureyri | **Akureyri Backpackers** — Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks<br>Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk. |
 | 8 | Sat Sep 26 | Stykkishólmur | **Hotel Stundarfriður** — Snæfellsnesvegur, 340 Stykkishólmur — on Route 54, ~8 km south of town<br>Booked · Booking.com 5098.326.826, PIN 8077 · triple room, private bathroom, whole unit on the ground floor · 2 twin beds + sofa bed · no meal included · free private parking, free WiFi · ~$329 incl. VAT and city tax · free cancellation until 23:59 on Sep 20 — after midnight on the 21st nothing comes back · check-in 16:00–21:00 — a hard 21:00, on the back of the trip's longest drive, so ring +354 864 2463 the moment the day looks like slipping · out 08:00–11:30 |
 | 9 | Sun Sep 27 | Reykholt | **Fosshotel Reykholt** — Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell<br>Booked · Booking.com 5909.613.873, PIN 1732 · superior double, private bathroom · listed as 1 single bed + 1 sofa bed, which is thin for three — extra beds are not in the price, so ring and check before you arrive · no meal included · free parking on site, free WiFi · ~$344 incl. VAT and city tax, charged in EUR at the day's rate · free cancellation until Sep 25, the full amount after that · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260 |
-| 10 | Mon Sep 28 | Keflavík | _not booked_ — Base Hotel · Guesthouse 1x6 · Njarðvík Airbnb apartments |
+| 10 | Mon Sep 28 | Kópavogur | **Hotel Kríunes** — Kríunesi Vatnsenda, Kópavogur, 203 Reykjavík — on the shore of Elliðavatn<br>Booked · Booking.com 6890806146116606165, PIN 735194 · <b>check-in number 689607847</b>, and they want photo ID matching the guest name · superior triple room · $203.78, already paid · breakfast is served and there is a restaurant on site, but the partner booking does not spell out whether your rate includes it — ask when you arrive · free cancellation has already expired: from 03:31 GMT on Aug 14 a cancellation costs the full $204, so this one is effectively locked · 45 min from KEF · +354 567 2245 |
 
 ## Day by day
 
@@ -102,6 +102,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | **Brauð &amp; Co** on Frakkastígur — the graffiti-covered bakery that reset the city's standard, and the cinnamon buns are the thing. **Valdís** does ice cream in flavours like rye bread and salted liquorice: either a dare or a discovery. |
 | **Fuel** | Confirm the fuel policy at pickup — full-to-full is the Icelandic norm, and it is the only fuel rule that matters all trip. Nothing needed today: Reykjavík has Orkan and N1 everywhere, and city fuel is the cheapest you will see. |
 | **Shop** | **Bónus** is the cheap chain and there are branches minutes from Snorrabraut. Worth a first run tonight for breakfast things, water bottles and snacks — everything outside the capital costs more. |
+| **Buy** | **Rammagerðin** and the Laugavegur shops are a ten-minute walk from the apartment — the one-stop for wool, design and the good souvenirs rather than the puffin-keyring kind. **Omnom** chocolate, made in Reykjavík and packaged like a design object, is the easiest thing to take back and the cheapest to love; supermarkets stock it too. |
 | **Detour** | **Grillmarkaðurinn** is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye. |
 
 ### Day 2 — Sun, Sep 20 · Golden Circle
@@ -132,6 +133,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The **Laugarvatn Fontana** rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after. |
 | **Fuel** | Fill in Reykjavík before you leave. **Selfoss** is the big service town on the way out; the Golden Circle's own pumps at Laugarvatn and Reykholt are small ones. |
 | **Shop** | **Selfoss** is the last full-size supermarket before the south coast — Bónus, Krónan and Nettó all sit there. Load the cool bag here for the next three days. |
+| **Buy** | **Álafoss** in Mosfellsbær, 15 min out of Reykjavík and directly on the road to Þingvellir — the 1896 mill that started the Icelandic wool trade, now the factory shop. Hand-knitted lopapeysur here carry the knitter's name on the label, which is the difference between the real thing and a machine-made import. Stop on the way out, not the way back. |
 | **Detour** | **Friðheimar**, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan — and Efstidalur needs no reservation at all, so the swap costs nothing if a cancellation ever turns up. |
 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
@@ -163,6 +165,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | Skool Beans bakes as well as roasts. Beyond that the south coast runs on supermarket skyr: Ísey, with the berry lids, is the national pudding and costs a couple of hundred krónur at the Vík Krónan. |
 | **Fuel** | **Vík**'s N1 is the one that matters: after it there is nothing until Kirkjubæjarklaustur, about 70 km east. |
 | **Shop** | **Krónan in Vík**, already in the run-sheet, is the only real supermarket between Hvolsvöllur and Höfn. Whatever tomorrow needs, buy it tonight. |
+| **Buy** | **Icewear / Víkurprjón** in Vík — a working knitting factory with the shop attached, and the biggest wool selection you will see outside Reykjavík. You are in Vík twice today, so this is the no-detour version of the sweater. |
 | **Detour** | **Black Crust Pizzeria** in Vík colours its dough with activated charcoal. A jet-black pizza is an easy sell to an 11-year-old on a day that has already run long. |
 
 ### Day 4 — Tue, Sep 22 · Canyon · Svartifoss · glacier lagoon
@@ -219,6 +222,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | Djúpivogur and Egilsstaðir both have a bakery on the main street and that is the honest extent of it — this is the day to raid a bakery counter at opening rather than hunt for dessert at night. |
 | **Fuel** | Leave Höfn full. **Höfn to Djúpivogur is the longest gap on the entire Ring Road** — about 100 km with nothing between them. |
 | **Shop** | **Bónus in Egilsstaðir** at the end of the day: the biggest shop in the east and the last serious one before Mývatn. |
+| **Buy** | **Petra's Stone Collection** has a shop, and it is the one souvenir stop an 11-year-old will actually choose: Icelandic spar, jasper, zeolites, all local. Djúpivogur's harbour has the Eggin sculptures but nothing to buy. |
 | **Detour** | **Norð Austur** in Seyðisfjörður is an acclaimed sushi room working the fjord's own catch — but it is over the pass and its season is short, so only if you pick Seyðisfjörður over Vök and it is still open. |
 
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
@@ -252,6 +256,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | Vogafjós makes ice cream and skyr from the herd you are sitting beside. Möðrudalur's kleinur — twisted Icelandic doughnuts, fried — are the mid-desert version, and the better story. |
 | **Fuel** | Fill at **Egilsstaðir** before you climb — the Route 1 stretch over the highland is empty. Möðrudalur has a pump at the 11:45 stop, then Reykjahlíð at the lake. |
 | **Shop** | Do it in **Egilsstaðir** in the morning. Reykjahlíð's shop is small, expensive and shuts early, and dinner is at Vogafjós anyway. |
+| **Buy** | **Vogafjós** sells the geothermal rye bread it bakes in the ground, which travels better than you would think, and **Earth Lagoon**'s skincare uses the lake's own silica. |
 | **Detour** | **Daddi's Pizza** in Reykjahlíð is the cheap night and easier than Vogafjós if the lagoon runs long. |
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Saltvík horses · Akureyri
@@ -279,6 +284,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | **Brynja** is already a stop and is the whole point: Akureyri's ice-cream institution, thick soft-serve that people drive in from the countryside for. |
 | **Fuel** | Easy day for pumps — Reykjahlíð, Húsavík and Akureyri all have them. Fill in **Akureyri** tonight rather than tomorrow morning: day 8 is 430 km and rolls at 08:00. |
 | **Shop** | **Akureyri** is the biggest supermarket town in the north, with Bónus, Nettó and Krónan. This is the provisioning stop for tomorrow — the Lunch row above explains why it is not optional. |
+| **Buy** | **Hafnarstræti** in Akureyri is the north's shopping street and you are already walking it — small Icelandic labels rather than tourist tat. The **Húsavík Whale Museum** shop, next to where the boat lands, is the good version of a gift-shop stop. |
 | **Detour** | **Rub23** is the best sushi and fish in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse. |
 
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
@@ -339,13 +345,14 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Sweet** | **Geirabakarí** on the main road through Borgarnes catches you at about 17:10 on the way inland — the last bakery before Reykholt, which has none. |
 | **Fuel** | Fill in **Stykkishólmur** before you set off, or **Ólafsvík** at lunch: the peninsula's south side, from Arnarstapi round to Búðir, has no pumps at all. |
 | **Shop** | **Borgarnes** on the way inland — Bónus and Nettó, and the last big shop before the airport run. Reykholt itself has nothing. |
+| **Buy** | **Stykkishólmur**'s old harbour houses hold a handful of craft and design shops, open by the time you arrive at 08:30 — the last proper browse before the airport run. |
 | **Detour** | The **Settlement Centre** in Borgarnes — mashed fish, lamb, mussels and langoustine tails in a 19th-century warehouse — sits right on the road in at about 17:15. Earlier than you would choose, but it beats waiting for the hotel to open at 18:00 if everyone is hungry. |
 
-### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · airport night
+### Day 10 — Mon, Sep 28 · Into the Glacier · Reykjanes · the lake
 
-*~310 km · out 08:45 · in 19:20 · overnight Keflavík*
+*~320 km · out 08:45 · in 19:30 · overnight Kópavogur*
 
-*Daylight 07:26 Reykholt → 19:10 Keflavík · 11 h 44 m*
+*Daylight 07:26 Reykholt → 19:07 Kópavogur · 11 h 41 m*
 
 > Read this before the day starts. Road 550 up to Klaki is an F-road — 4x4 only, and the operator's own page has it closed October to June. Blue Car have cleared the Vitara for it, so you drive yourself and there is no shuttle to book; what is left is the road itself, which is rough gravel and wants gravel speed rather than confidence. If the tour falls to weather or road conditions, the same valley holds a wet-weather day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Krauma's baths sit beside Deildartunguhver 25 min back down the road; Hraunfossar and Barnafoss are already on the run-sheet below and work in any weather; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this day gave up — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall that is off, trails closed or wind too high, the Reykjanes roadside set is minutes apart: Bridge Between Continents, Gunnuhver, Reykjanesviti, Brimketill, or the Blue Lagoon this trip already keeps as a backup. safetravel.is decides the trails, vedur.is the wind.
 
@@ -357,16 +364,16 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `flex · swap for the hike` | **Hraunfossar + Barnafoss** _optional_ — The alternative to Fagradalsfjall rather than an addition to it. Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream — fifteen minutes past Húsafell on 518, so it sits directly on the way out and costs no extra driving, only time. Take it when the hike is off, whether that is closed trails, too much wind or nobody having any legs left: 14:15–14:45 here, then a relaxed 2 hrs 15 to Keflavík, in by about 17:15 and still in daylight. Take the hike instead and you drive past — stopping here first would put the trailhead at 17:15 with under 2 hrs of light, which buys the viewpoint and not the craters. |
 | | *↓ drive 3 hr* |
 | `16:30–18:45` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the reason the day drives straight past Hraunfossar: rolling out of Húsafell by 14:00 gets you to the trailhead with about 2 hrs 40 of light, which is the full Trail A round trip rather than a look from the viewpoint. Sunset is 19:10, so headlamps travel and nobody starts up at 17:30. Only if the trails are open and legs vote yes — check safetravel.is that morning. If it is off, the falls above are the swap, and the day note has the rest. |
-| `flex · Sep 29 morning` | **Bridge Between Continents · Gunnuhver** _optional_ — There is no light left for these tonight, and with a 17:10 departure they fit tomorrow's free morning far better anyway. Refuel tonight or before the 11:00 drop. |
+| `flex · Sep 29 morning` | **Bridge Between Continents · Gunnuhver** _optional_ — No light left for these tonight, and the last night is at Elliðavatn rather than the airport — so they belong to tomorrow morning, which drives back out to the peninsula on purpose. The departure block below has the run-sheet. |
 
 | Eating | |
 |---|---|
 | **Lunch** | **Húsafell Bistró**, open 11:00–17:00 daily, sits fifteen minutes down from the glacier road and lands exactly when you come off the ice — buffet, burgers, waffles. |
-| **Dinner** | **Kaffi Duus** on Keflavík's harbour, fish its speciality and long used to people arriving late off the airport road. You get in about 19:20, so ring ahead. |
+| **Dinner** | You reach the lake about 19:30, so the easy answer is **Kríunes's own restaurant** — home cooking, and you do not get back in the car. Otherwise Reykjavík is 15 min northwest and everything from day 1 is still there. Ring +354 567 2245 during the day so the kitchen expects you. |
 | **Coffee** | **Krauma** at Deildartunguhver — a café built over Europe's highest-flow hot spring, ten minutes from where you slept and directly on the drive back out. The natural first stop on the long run south. |
 | **Sweet** | Húsafell's bistro does waffles, which is the correct thing to eat coming off a glacier. |
 | **Fuel** | You are already inland, so fill at **Húsafell** on the way up — Road 550 is not where you want to be watching the gauge, and Reykholt has no pump. Then remember the car goes back **full** at 11:00 tomorrow — refuel in Keflavík or Njarðvík tonight, not in the morning. |
-| **Shop** | **Borgarnes** on the way south, about an hour after the glacier. Keflavík has a Bónus and a Nettó if you want breakfast in the room before an afternoon flight. |
+| **Shop** | **Borgarnes** on the way south, about an hour after the glacier. After that you are into the capital area, where every chain is open late — the last easy shop of the trip. |
 | **Detour** | If the glacier tour is weathered off, Krauma stops being a coffee stop and becomes the afternoon — the baths are right there. See the day note. |
 
 ---
@@ -384,7 +391,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Night 7 · Fri Sep 25 | **Akureyri Backpackers**<br>Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks | Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk. |
 | Night 8 · Sat Sep 26 | **Hotel Stundarfriður**<br>Snæfellsnesvegur, 340 Stykkishólmur — on Route 54, ~8 km south of town | Booked · Booking.com 5098.326.826, PIN 8077 · triple room, private bathroom, whole unit on the ground floor · 2 twin beds + sofa bed · no meal included · free private parking, free WiFi · ~$329 incl. VAT and city tax · free cancellation until 23:59 on Sep 20 — after midnight on the 21st nothing comes back · check-in 16:00–21:00 — a hard 21:00, on the back of the trip's longest drive, so ring +354 864 2463 the moment the day looks like slipping · out 08:00–11:30 |
 | Night 9 · Sun Sep 27 | **Fosshotel Reykholt**<br>Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell | Booked · Booking.com 5909.613.873, PIN 1732 · superior double, private bathroom · listed as 1 single bed + 1 sofa bed, which is thin for three — extra beds are not in the price, so ring and check before you arrive · no meal included · free parking on site, free WiFi · ~$344 incl. VAT and city tax, charged in EUR at the day's rate · free cancellation until Sep 25, the full amount after that · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260 |
-| Night 10 · Mon Sep 28 | Keflavík | *not booked* — budget picks are on the day |
+| Night 10 · Mon Sep 28 | **Hotel Kríunes**<br>Kríunesi Vatnsenda, Kópavogur, 203 Reykjavík — on the shore of Elliðavatn | Booked · Booking.com 6890806146116606165, PIN 735194 · <b>check-in number 689607847</b>, and they want photo ID matching the guest name · superior triple room · $203.78, already paid · breakfast is served and there is a restaurant on site, but the partner booking does not spell out whether your rate includes it — ask when you arrive · free cancellation has already expired: from 03:31 GMT on Aug 14 a cancellation costs the full $204, so this one is effectively locked · 45 min from KEF · +354 567 2245 |
 | Sep 19, 11:00 | **Blue Car Rental — Suzuki Vitara, automatic** | ref **#Z04F2O**<br>Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions. |
 | Sep 19, 12:00 | **Blue Lagoon — Premium** | ref **WBL05868696**<br>2 adults + 1 child, entry 12:00. Premium covers three in-water mask-bar masks, one drink, a bathrobe and towel on loan, and a skincare gift. Voucher downloads from the booking page — put it on a phone before you fly. The page keeps Edit and Cancel live; check the voucher for the cancellation window. |
 | Sep 21, 14:00 | **Katla ice cave — Troll Expeditions** | ref **TRO-T141847549**<br>Order TRO-100452964 · 3 adult tickets, $720 paid in full. Meet in the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before. |
@@ -394,10 +401,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | Sep 25, 14:00 | **Saltvík horse ride — The Seaside tour** | ref **SAL-100467323** · +354 847 9515<br>14:00–15:30, 2 adults + 1 teenager · ISK 41,500 paid in full. Hestamiðstöðin Saltvík, 4 km south of Húsavík — start is inside the riding hall. Min age 10, 110 kg per rider. info@saltvik.is |
 | Sep 28, 10:30 | **Into the Glacier — Klaki Base Camp** | ref **ARC-T141867953** · +354 578 2550<br>Order ARC-100468563 · 2 adults + 1 teenager, paid in full — bring the ticket, printed or on a phone. Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road and the Vitara is cleared for it — no shuttle needed. Free to cancel until 24 hrs out. info@intotheglacier.is |
 
-### Before you fly — still open
+### Before you fly — all beds and tickets are booked
 
-- **One night unbooked** — Keflavík (28th), the airport night. A refundable rate
-  is enough; it is the easiest bed on the trip to find.
 - **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
   volcano watch. No meal on the trip needs reserving: Efstidalur books only for
   parties of ten or more, and Pakkhús in Höfn takes no reservations at all.
@@ -516,6 +521,22 @@ Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
 and quick-dry towels ride in the **day bag** — three soak options (Blue Lagoon,
 Earth Lagoon at Mývatn, Hofsós). They also cover Akureyri Backpackers, which
 charges for towels. Raincoats for everyone at the walk-behind waterfalls.
+
+**Taking it home.** Each day section names the shop worth stopping at. Worth
+carrying: a **lopapeysa** — hand-knitted ones carry the knitter's name on the
+label and machine-made imports don't, which is the whole test — Icelandic wool by
+the skein, **Omnom** chocolate and **Nói Síríus** liquorice, **Saltverk** sea salt
+boiled with geothermal heat, **harðfiskur**, **brennivín**, and skincare from
+either lagoon. Skip the puffin keyrings; much of the cheap souvenir stock is
+imported.
+
+**Tax free.** ISK 12,000 or more on one receipt in one shop and you can reclaim
+the VAT. Ask for the form at the till. At Keflavík the refund desk is in the
+arrival hall opposite the car rentals — where the rental shuttle drops you — and
+it must be done **before** you check the bags. Over ISK 100,000 needs a customs
+stamp first. Duty free on the way out is the cheapest alcohol and chocolate in
+the country; elsewhere alcohol is **Vínbúðin** only, closed Sundays, and never in
+supermarkets.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of

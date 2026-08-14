@@ -104,7 +104,7 @@ function dayTables(p) {
     if (d.food) {
       const rows = [["Lunch", d.food.lunch], ["Dinner", d.food.dinner],
                     ["Coffee", d.food.coffee], ["Sweet", d.food.sweet],
-                    ["Fuel", d.food.fuel], ["Shop", d.food.shop],
+                    ["Fuel", d.food.fuel], ["Shop", d.food.shop], ["Buy", d.food.buy],
                     ["Detour", d.food.extra]].filter(([, v]) => v);
       if (rows.length) {
         out.push("| Eating | |", "|---|---|");
@@ -212,10 +212,8 @@ ${dayTables(C)}
 
 ${reservationTable(C)}
 
-### Before you fly — still open
+### Before you fly — all beds and tickets are booked
 
-- **One night unbooked** — Keflavík (28th), the airport night. A refundable rate
-  is enough; it is the easiest bed on the trip to find.
 - **Blue Lagoon** — the ~11:30 slot on the 19th, flexible ticket given the
   volcano watch. No meal on the trip needs reserving: Efstidalur books only for
   parties of ten or more, and Pakkhús in Höfn takes no reservations at all.
@@ -334,6 +332,22 @@ Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits
 and quick-dry towels ride in the **day bag** — three soak options (Blue Lagoon,
 Earth Lagoon at Mývatn, Hofsós). They also cover Akureyri Backpackers, which
 charges for towels. Raincoats for everyone at the walk-behind waterfalls.
+
+**Taking it home.** Each day section names the shop worth stopping at. Worth
+carrying: a **lopapeysa** — hand-knitted ones carry the knitter's name on the
+label and machine-made imports don't, which is the whole test — Icelandic wool by
+the skein, **Omnom** chocolate and **Nói Síríus** liquorice, **Saltverk** sea salt
+boiled with geothermal heat, **harðfiskur**, **brennivín**, and skincare from
+either lagoon. Skip the puffin keyrings; much of the cheap souvenir stock is
+imported.
+
+**Tax free.** ISK 12,000 or more on one receipt in one shop and you can reclaim
+the VAT. Ask for the form at the till. At Keflavík the refund desk is in the
+arrival hall opposite the car rentals — where the rental shuttle drops you — and
+it must be done **before** you check the bags. Over ISK 100,000 needs a customs
+stamp first. Duty free on the way out is the cheapest alcohol and chocolate in
+the country; elsewhere alcohol is **Vínbúðin** only, closed Sundays, and never in
+supermarkets.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
