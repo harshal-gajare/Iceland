@@ -190,8 +190,13 @@
   details.day summary{display:flex;align-items:center;gap:16px;padding:16px 18px;cursor:pointer;list-style:none}
   details.day summary::-webkit-details-marker{display:none}
   .dnum{font-family:var(--serif);font-size:30px;color:var(--c);min-width:44px;text-align:center;line-height:1;font-style:italic}
+  /* Two stacked lines, always: the mono meta strip, then the title. Both were
+     inline spans, so short days ran them together on one row and only the long
+     ones wrapped — the stack has to be declared, not left to the line box.
+     .eyebrow is scoped here because elsewhere it sits inline beside an h2. */
   .dmeta{flex:1;min-width:0}
-  .dtitle{font-family:var(--serif);font-size:19px;margin-top:3px}
+  .dmeta .eyebrow{display:block}
+  .dtitle{display:block;font-family:var(--serif);font-size:19px;margin-top:3px}
   .dbase{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--fog);white-space:nowrap}
   .dbase b{color:var(--ice)}
   .chev{width:9px;height:9px;border-right:1.5px solid var(--fog);border-bottom:1.5px solid var(--fog);
