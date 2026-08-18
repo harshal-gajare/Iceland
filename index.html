@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a1422">
-<meta name="description" content="Ten nights around the whole island by road, Sep 19–29 2026 — two switchable itineraries, timed run-sheets, every stop mapped, and an aurora plan.">
+<meta name="description" content="Ten nights around the whole island by road, Sep 19–29 2026 — timed run-sheets, every stop mapped, and an aurora plan.">
 <!-- noindex, deliberately: the reservations block carries live booking
      references and door PINs, so this page must not land in a search index.
      robots.txt has to keep *allowing* the crawl — a crawler blocked there
@@ -15,7 +15,7 @@
      every other asset path in this file stays relative. -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Iceland · Sep 19–29, 2026 — Ring Road Field Plan">
-<meta property="og:description" content="Ten nights around the whole island by road — two switchable itineraries, timed run-sheets, every stop mapped, and an aurora plan.">
+<meta property="og:description" content="Ten nights around the whole island by road — timed run-sheets, every stop mapped, and an aurora plan.">
 <meta property="og:url" content="https://harshalgajare.com/Iceland/">
 <meta property="og:image" content="https://harshalgajare.com/Iceland/icons/icon-512.png">
 <meta name="twitter:card" content="summary">
@@ -524,7 +524,7 @@
     <div class="sechead"><h2>Locked in</h2><span class="eyebrow">flights · visa · wheels</span></div>
     <div class="lockgrid">
       <div class="lockcard">
-        <h3 class="ltitle">Flights<span class="lref">Icelandair PNR CVYKHM · Saga Club 4996508872</span></h3>
+        <h3 class="ltitle">Flights<span class="lref">Icelandair · Saga Club 4996508872</span></h3>
         <div class="leg"><span class="lday">Fri Sep 18 — outbound</span>
           <div class="lroute">ATL <b>18:45</b> → JFK <b>21:02</b><span class="lmeta">2h 08m layover at JFK</span></div>
           <div class="lroute">JFK <b>23:10</b> → KEF <b>08:55</b><span class="lmeta">overnight — lands Sat Sep 19 morning; sleep on the plane, Day 1 starts rested-ish</span></div>
@@ -537,7 +537,7 @@
         <div class="lvisa"><span class="chip bkd">Visa approved</span> Schengen — carry passports + printed confirmations in the day bag anyway</div>
       </div>
       <div class="lockcard">
-        <h3 class="ltitle">Rental<span class="lref">Blue Car Rental · booking #Z04F2O</span></h3>
+        <h3 class="ltitle">Rental<span class="lref">Blue Car Rental</span></h3>
         <div class="leg"><span class="lday">Suzuki Vitara · automatic</span>
           <div class="lroute">Pick up <b>Sep 19, 11:00</b> · drop <b>Sep 29, 11:00</b><span class="lmeta">Keflavík Airport — short shuttle between terminal and lot, both directions</span></div>
         </div>
@@ -658,7 +658,7 @@ const STAY3 = {name:"Farmhouse Lodge (Airbnb)", addr:"Skeiðflöt, 871 Mýrdalur
 /* ll is the confirmation's own GPS (N 064° 15.559, W 15° 12.440) converted. */
 const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 20 min from Stokksnes",
   ll:[64.2593,-15.2073], q:"Höfn Inn Guesthouse, Vesturbraut 3, 780 Höfn, Iceland",
-  status:"Booked · Booking.com 6447.009.362, PIN 9919 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544"};
+  status:"Booked · Booking.com 6447.009.362 · standard double/twin, private bathroom, ground floor · 2 twin beds + sofa bed, sleeps 3 · no meal included · free parking on site, free WiFi · free cancellation until Sep 19, the full amount after that · check-in 15:00–23:00, out by 11:00 · +354 478 1544"};
 /* The guesthouse is ~10 km southwest of Egilsstaðir town, not in it, so ll is the
    confirmation's own GPS (N 065° 11.332, W 14° 30.153) and the map links land on
    the farm rather than the town centre. baseLL stays the town coordinate: the
@@ -668,7 +668,7 @@ const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 2
    what identifies the booking, so nothing factual moves. */
 const STAY5 = {name:"Eyjólfsstaðir Guesthouse", addr:"Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town",
   ll:[65.1889,-14.5026], q:"Eyjólfsstaðir Guesthouse, 701 Egilsstaðir, Iceland",
-  status:"Booked · Booking.com 6874.015.804, PIN 9017 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
+  status:"Booked · Booking.com 6874.015.804 · triple room, shared bathroom, ground floor · 3 single beds · breakfast included · free parking on site, free WiFi · free cancellation until Sep 20, the full amount after that · check-in 15:00–21:00 — closes earlier than the others, ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
 /* Booked direct with the guesthouse rather than through Booking.com, so the
    confirmation carries no GPS: `q` holds the address and drives both map links,
    and ll falls back to the Dimmuborgir lava-field coordinate the guesthouse sits
@@ -686,7 +686,7 @@ const STAY6 = {name:"Dimmuborgir Guesthouse", addr:"Geiteyjarströnd 1, 660 Mýv
    deleting it — if anyone queries it at the desk, you want to know it was asked. */
 const STAY7 = {name:"Akureyri Backpackers", addr:"Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks",
   ll:[65.6815,-18.0899], q:"Akureyri Backpackers, Hafnarstræti 98, 600 Akureyri, Iceland",
-  status:"Booked · Booking.com 6008.543.743, PIN 4353 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk."};
+  status:"Booked · Booking.com 6008.543.743 · family room, shared bathroom · 1 large double bed + 1 bunk · ~$165 for the night incl. VAT and city tax · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring the quick-dry ones from the day bag · no parking on site: public parking nearby, no reservation, may charge · free WiFi · free cancellation until Sep 22, the full amount after that · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against a family room sold for 2 adults + 1 child aged 10 — that was raised with the property and settled, so the room stands as booked. Worth knowing it was asked, in case it comes up at the desk."};
 
 
 
@@ -702,13 +702,13 @@ const STAY7 = {name:"Akureyri Backpackers", addr:"Hafnarstræti 98, 600 Akureyri
    the harbour is a ten-minute drive, not a walk. baseLL stays the town. */
 const STAY8 = {name:"Hotel Stundarfriður", addr:"Snæfellsnesvegur, 340 Stykkishólmur — on Route 54, ~8 km south of town",
   ll:[65.0035,-22.7122], q:"Hotel Stundarfridur, Snaefellsnesvegur, 340 Stykkisholmur, Iceland",
-  status:"Booked · Booking.com 5098.326.826, PIN 8077 · triple room, private bathroom, whole unit on the ground floor · 2 twin beds + sofa bed · no meal included · free private parking, free WiFi · ~$329 incl. VAT and city tax · free cancellation until 23:59 on Sep 20 — after midnight on the 21st nothing comes back · check-in 16:00–21:00 — a hard 21:00, on the back of the trip's longest drive, so ring +354 864 2463 the moment the day looks like slipping · out 08:00–11:30"};
+  status:"Booked · Booking.com 5098.326.826 · triple room, private bathroom, whole unit on the ground floor · 2 twin beds + sofa bed · no meal included · free private parking, free WiFi · ~$329 incl. VAT and city tax · free cancellation until 23:59 on Sep 20 — after midnight on the 21st nothing comes back · check-in 16:00–21:00 — a hard 21:00, on the back of the trip's longest drive, so ring +354 864 2463 the moment the day looks like slipping · out 08:00–11:30"};
 /* Night 9. Reykholt is inland on Route 518 — NOT Borgarnes — which is why day 10
    departs 08:45 rather than 08:10: Húsafell is 25 min away instead of 70. ll is
    the confirmation's GPS (N 064° 39.911, W 21° 17.457). */
 const STAY9 = {name:"Fosshotel Reykholt", addr:"Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell",
   ll:[64.6652,-21.291], q:"Fosshotel Reykholt, 320 Reykholt, Iceland",
-  status:"Booked · Booking.com 5909.613.873, PIN 1732 · superior double, private bathroom · listed as 1 single bed + 1 sofa bed, which is thin for three — extra beds are not in the price, so ring and check before you arrive · no meal included · free parking on site, free WiFi · ~$344 incl. VAT and city tax, charged in EUR at the day's rate · free cancellation until Sep 25, the full amount after that · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260"};
+  status:"Booked · Booking.com 5909.613.873 · superior double, private bathroom · listed as 1 single bed + 1 sofa bed, which is thin for three — extra beds are not in the price, so ring and check before you arrive · no meal included · free parking on site, free WiFi · ~$344 incl. VAT and city tax, charged in EUR at the day's rate · free cancellation until Sep 25, the full amount after that · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260"};
 
 /* Night 10. NOT Keflavík — Kríunes sits on Elliðavatn at Vatnsendi, southeast of
    Reykjavík, so the last night is a lake hotel 45 min from the airport rather than
@@ -718,7 +718,7 @@ const STAY9 = {name:"Fosshotel Reykholt", addr:"Reykholt, 320 Reykholt — inlan
    changes have to go through the property. */
 const STAY10 = {name:"Hotel Kríunes", addr:"Kríunesi Vatnsenda, Kópavogur, 203 Reykjavík — on the shore of Elliðavatn",
   ll:[64.0886,-21.7938], q:"Hotel Kriunes, Vatnsenda, Kopavogur, Iceland",
-  status:"Booked · Booking.com 6890806146116606165, PIN 735194 · <b>check-in number 689607847</b>, and they want photo ID matching the guest name · superior triple room · $203.78, already paid · breakfast is served and there is a restaurant on site, but the partner booking does not spell out whether your rate includes it — ask when you arrive · free cancellation has already expired: from 03:31 GMT on Aug 14 a cancellation costs the full $204, so this one is effectively locked · 45 min from KEF · +354 567 2245"};
+  status:"Booked · Booking.com 6890806146116606165 · <b>they want photo ID matching the guest name, and the check-in number off the confirmation</b> · superior triple room · $203.78, already paid · breakfast is served and there is a restaurant on site, but the partner booking does not spell out whether your rate includes it — ask when you arrive · free cancellation has already expired: from 03:31 GMT on Aug 14 a cancellation costs the full $204, so this one is effectively locked · 45 min from KEF · +354 567 2245"};
 
 const DAYS = [
  {n:1, dow:"Sat", date:"Sep 19", km:"~70 km", depart:null,
@@ -726,7 +726,7 @@ const DAYS = [
   base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:20",
   food:{lunch:"The <b>Blue Café</b> inside the lagoon does soup and sandwiches without leaving your robe; <b>Lava Restaurant</b> is the sit-down one built into the lava wall, and it wants a booking.", dinner:"<b>Messinn</b> on Lækjargata for the pan-fried fish pans that made its name — book, it fills. For sushi, <b>Sushi Social</b> runs Icelandic fish through a Japanese-Peruvian lens, and <b>Osushi</b> is a conveyor belt, which is its own kind of entertainment at eleven. If Perlan or FlyOver runs to 21:00, <b>Bæjarins Beztu Pylsur</b> by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds.", coffee:"<b>Reykjavík Roasters</b> on Kárastígur, two minutes downhill from Hallgrímskirkja and the city's benchmark. <b>Mokka Kaffi</b> has poured since 1958 and its waffles with jam and whipped cream run on a family-secret recipe.", sweet:"<b>Brauð &amp; Co</b> on Frakkastígur — the graffiti-covered bakery that reset the city's standard, and the cinnamon buns are the thing. <b>Valdís</b> does ice cream in flavours like rye bread and salted liquorice: either a dare or a discovery.", buy:"<b>Rammagerðin</b> and the Laugavegur shops are a ten-minute walk from the apartment — the one-stop for wool, design and the good souvenirs rather than the puffin-keyring kind. <b>Omnom</b> chocolate, made in Reykjavík and packaged like a design object, is the easiest thing to take back and the cheapest to love; supermarkets stock it too.", fuel:"Confirm the fuel policy at pickup — full-to-full is the Icelandic norm, and it is the only fuel rule that matters all trip. Nothing needed today: Reykjavík has Orkan and N1 everywhere, and city fuel is the cheapest you will see.", shop:"<b>Bónus</b> is the cheap chain and there are branches minutes from Snorrabraut. Worth a first run tonight for breakfast things, water bottles and snacks — everything outside the capital costs more.", extra:"<b>Grillmarkaðurinn</b> is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye."},
   stops:[
-   {name:"Keflavík Airport → Blue Car", ll:KEF, time:"08:55–11:00", note:"Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early."},
+   {name:"Keflavík Airport → Blue Car", ll:KEF, time:"08:55–11:00", note:"Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00; ask nicely whether the Vitara can release early."},
    {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"12:00–14:30", tag:"booked", note:"Booking WBL05868696 — <b>Premium</b>, 2 adults + 1 child, entry at 12:00. That is 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+).", shot:"Steam is the subject, not the water — at <b>26° in the south-south-east</b> it back-lights beautifully if you shoot across the pool toward the sun. Phone in a waterproof pouch and nothing else: silica and steam get into everything, and the good camera belongs in the locker."},
    /* Reordered, not just extended. The old run went church, Sun Voyager, Harpa,
       which finished 1.7 km from the apartment and walked the waterfront east then
@@ -890,7 +890,7 @@ const DEPARTURE = {
    {name:"Reykjanesviti + Valahnúkamöl", ll:[63.8125,-22.7075], time:"10:10", note:"Iceland's oldest lighthouse on the cliff, and the sea stacks below it.", shot:"Two frames — the lighthouse alone on its mound, and <b>Karl</b>, the sea stack, from the shore below with the surf breaking round it."},
    {name:"Brimketill", ll:[63.8331,-22.5122], time:"11:00", note:"The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks.", shot:"Wait for a set. The picture is the instant the surf pours over the lip and fills the pool; between waves it is just a rock. From the platform — people have been swept off trying for better."},
    {name:"Kaffi Duus — lunch", ll:[64.0033,-22.5636], time:"11:45", note:"Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only."},
-   {name:"Last fill in Njarðvík, then keys back", time:"13:30", note:"The Vitara goes back full — Blue Car #Z04F2O, due 14:00, and their shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour."},
+   {name:"Last fill in Njarðvík, then keys back", time:"13:30", note:"The Vitara goes back full — Blue Car, due 14:00, and their shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour."},
    {name:"KEF terminal", ll:KEF, time:"14:40", note:"Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12."}
   ]};
 
@@ -901,9 +901,11 @@ const TRIP = {
   /* Lodging is NOT listed here — buildReservations() derives it from DAYS[].stay,
      so an address or a cancellation term can only ever be written once. This list
      is the car and the timed tours, whose refs live in prose inside stop notes.
+     Door PINs, the check-in number, the PNR and the car reference are withheld
+     on purpose — this page is public. See CLAUDE.md; don't reintroduce them.
      Date order, because that is the order you need them on the road. */
   reservations: [
-   {when:"Sep 19, 11:00", what:"Blue Car Rental — Suzuki Vitara, automatic", ref:"#Z04F2O", tel:null,
+   {when:"Sep 19, 11:00", what:"Blue Car Rental — Suzuki Vitara, automatic", ref:null, tel:null,
     meta:"Pick up KEF 11:00 Sep 19, drop KEF 11:00 Sep 29, back full. CDW · SCDW · TP · GP gravel · SAAP sand &amp; ash · Roadside · Road tax. Short shuttle between terminal and lot, both directions."},
    {when:"Sep 19, 12:00", what:"Blue Lagoon — Premium", ref:"WBL05868696", tel:null,
     meta:"2 adults + 1 child, entry 12:00. Premium covers three in-water mask-bar masks, one drink, a bathrobe and towel on loan, and a skincare gift. Voucher downloads from the booking page — put it on a phone before you fly. The page keeps Edit and Cancel live; check the voucher for the cancellation window."},

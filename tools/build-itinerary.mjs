@@ -187,7 +187,7 @@ Daylight is computed for each day's own coordinates — sunrise where you wake,
 sunset where you land — against a flat sea horizon. Iceland's mountains take a
 bigger bite than the minutes suggest, so treat these as the outer bound.
 
-## Flights — Icelandair, PNR CVYKHM · Saga Club 4996508872
+## Flights — Icelandair · Saga Club 4996508872
 
 | When | Leg | Notes |
 |---|---|---|
@@ -199,7 +199,7 @@ bigger bite than the minutes suggest, so treat these as the outer bound.
 Per person: 1 carry-on (22 lbs) + 1 checked (50 lbs) included. Visa approved
 (Schengen) — carry passports and printed confirmations in the day bag anyway.
 
-## Rental — Blue Car Rental, booking #Z04F2O
+## Rental — Blue Car Rental
 
 Suzuki Vitara, automatic. Pick up **Sep 19, 11:00**; drop **Sep 29, 11:00**,
 Keflavík Airport (short shuttle between terminal and lot, both directions).

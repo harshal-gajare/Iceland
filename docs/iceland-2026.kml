@@ -137,7 +137,7 @@
     </Placemark>
     <Placemark>
       <name>Keflavík Airport → Blue Car</name>
-      <description><![CDATA[<b>08:55–11:00</b><br><br>Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early.]]></description>
+      <description><![CDATA[<b>08:55–11:00</b><br><br>Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00; ask nicely whether the Vitara can release early.]]></description>
       <styleUrl>#stop1</styleUrl>
       <Point><coordinates>-22.605,63.985</coordinates></Point>
     </Placemark>
