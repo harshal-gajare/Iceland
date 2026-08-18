@@ -55,7 +55,7 @@ three checked bags, and bag drop shuts 45–60 min out.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-**~2,310 km · 52 stops · 4 soak options · 5 anchor tours**
+**~2,250 km · 52 stops · 4 soak options · 5 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
@@ -80,7 +80,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 1 — Sat, Sep 19 · Arrival · Blue Lagoon · Reykjavík
 
-*~100 km · in 15:20 · overnight Reykjavík*
+*~70 km · in 15:20 · overnight Reykjavík*
 
 *Daylight 07:02 → 19:39 · 12 h 37 m*
 
@@ -110,7 +110,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 2 — Sun, Sep 20 · Golden Circle
 
-*~200 km · out 08:30 · in 17:45 · overnight Seljalandsfoss*
+*~250 km · out 08:30 · in 17:45 · overnight Seljalandsfoss*
 
 *Daylight 07:05 Reykjavík → 19:28 Seljalandsfoss · 12 h 23 m*
 
@@ -149,7 +149,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 3 — Mon, Sep 21 · Waterfalls · Katla ice cave · Reynisfjara
 
-*~120 km + tour · out 08:25 · in 19:15 · overnight Mýrdalur (near Dyrhólaey)*
+*~100 km + tour · out 08:25 · in 19:15 · overnight Mýrdalur (near Dyrhólaey)*
 
 *Daylight 07:00 Seljalandsfoss → 19:21 Mýrdalur · 12 h 21 m*
 
@@ -221,7 +221,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 5 — Wed, Sep 23 · Stokksnes · the East Fjords
 
-*~270 km · out 08:30 · in 18:30 · overnight Egilsstaðir*
+*~200 km · out 08:30 · in 18:30 · overnight Egilsstaðir*
 
 *Daylight 06:47 Höfn → 18:55 Egilsstaðir · 12 h 09 m*
 
@@ -234,10 +234,10 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `11:05–11:45` | **Djúpivogur** — Eggin í Gleðivík egg sculptures + coffee. |
 | | ◈ *photo* — The row of granite eggs receding along the harbour rail — shoot down the line, never across it. |
 | | *↓ drive 1 hr* |
-| `12:45–13:45` | **Petra's Stone Collection** _optional_ — Quirky, kid-friendly, right on the coastal route — packed lunch here. |
+| `12:45–13:45` | **Petra's Stone Collection** _optional_ — Quirky, kid-friendly and genuinely on the coastal road — which is the catch. Route 1 cuts inland to Egilsstaðir, so taking Petra's commits you to the full fjord coast: <b>+68 km</b>, the biggest optional detour on the trip and more than Seyðisfjörður costs. Packed lunch here. |
 | | ◈ *photo* — Close-ups, not wide shots: spar, jasper and zeolites by the thousand. Let the kid pick the subject. |
 | | *↓ drive 1 hr 20* |
-| `15:30–18:00` | **Seyðisfjörður or Vök Baths** _optional_ — Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. |
+| `15:30–18:00` | **Seyðisfjörður or Vök Baths** _optional_ — Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. Seyðisfjörður is <b>+53 km</b> round trip over Fjarðarheiði; Vök is on the doorstep of tonight's base, so it costs nothing. |
 | | ◈ *photo* — If it is Seyðisfjörður, the **rainbow path** leading up to the blue church — the sister shot to day 1's street. If it is Vök, the pools cut into the lake surface with the swim-up bar in frame. |
 
 | Eating | |
@@ -253,7 +253,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 6 — Thu, Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths
 
-*~250 km · out 08:15 · in 16:10 · overnight Mývatn*
+*~280 km · out 08:15 · in 16:10 · overnight Mývatn*
 
 *Daylight 06:46 Egilsstaðir → 19:02 Mývatn · 12 h 15 m*
 
@@ -294,7 +294,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 7 — Fri, Sep 25 · Húsavík whales · Saltvík horses · Akureyri
 
-*~200 km · out 07:55 · in 17:35 · overnight Akureyri*
+*~140 km · out 07:55 · in 17:35 · overnight Akureyri*
 
 *Daylight 06:59 Mývatn → 19:03 Akureyri · 12 h 03 m*
 
@@ -319,14 +319,14 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | **Dinner** | Akureyri, after the old-town walk: **Strikið** on the top floor for the fjord view — book — or **Bautinn**, the town's dependable family standby. |
 | **Coffee** | **Bláa Kannan** — the deep-blue timber house with the red roof on Hafnarstræti, standing directly on the old-town walk, serving homemade cake all day. |
 | **Sweet** | **Brynja** is already a stop and is the whole point: Akureyri's ice-cream institution, thick soft-serve that people drive in from the countryside for. |
-| **Fuel** | Easy day for pumps — Reykjahlíð, Húsavík and Akureyri all have them. Fill in **Akureyri** tonight rather than tomorrow morning: day 8 is 430 km and rolls at 08:00. |
+| **Fuel** | Easy day for pumps — Reykjahlíð, Húsavík and Akureyri all have them. Fill in **Akureyri** tonight rather than tomorrow morning: day 8 is 450 km and rolls at 08:00. |
 | **Shop** | **Akureyri** is the biggest supermarket town in the north, with Bónus, Nettó and Krónan. This is the provisioning stop for tomorrow — the Lunch row above explains why it is not optional. |
 | **Buy** | **Hafnarstræti** in Akureyri is the north's shopping street and you are already walking it — small Icelandic labels rather than tourist tat. The **Húsavík Whale Museum** shop, next to where the boat lands, is the good version of a gift-shop stop. |
 | **Detour** | **Rub23** is the best sushi and fish in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse. |
 
 ### Day 8 — Sat, Sep 26 · Tröllaskagi · Hofsós pool · the long haul west
 
-*~390 km · out 08:00 · in 18:10 · overnight Stykkishólmur*
+*~450 km · out 08:00 · in 18:10 · overnight Stykkishólmur*
 
 *Daylight 07:07 Akureyri → 19:17 Stykkishólmur · 12 h 10 m*
 
@@ -347,17 +347,17 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 | Eating | |
 |---|---|
-| **Lunch** | The thin day — 430 km and almost nothing open between them. **Kaffi Rauðka**, the red house on Siglufjörður's marina, is open year-round, but you are there at 09:15, which is coffee rather than lunch. Provision in Akureyri before you leave and eat at Hofsós. |
+| **Lunch** | The thin day — 450 km and almost nothing open between them. **Kaffi Rauðka**, the red house on Siglufjörður's marina, is open year-round, but you are there at 09:15, which is coffee rather than lunch. Provision in Akureyri before you leave and eat at Hofsós. |
 | **Dinner** | Stykkishólmur, ten minutes north of the hotel: **Narfeyrarstofa**, the oldest restaurant in town and open year-round, doing scallops and the local catch — or **Sjávarpakkhúsið** on the harbour, known for Breiðafjörður blue mussels. Either is a short drive back out to the room. |
 | **Coffee** | Kaffi Rauðka at 09:15 is exactly right for this, and it is the last good cup for a long time — after Siglufjörður it is petrol-station coffee for most of 400 km. |
 | **Sweet** | **Geirabakarí**, the bakery and café on the main road through Borgarnes, catches the 17:20 fuel stop — a proper bakery at the hour of the day when morale needs one. |
 | **Fuel** | Two fills. **Staðarskáli** on Route 1 is the classic mid-route service stop, and **Borgarnes** is the last one before the peninsula. |
 | **Shop** | **Borgarnes** at the 17:10 fuel stop has Bónus and Nettó — the last proper supermarket of the day. Stykkishólmur has a Bónus too, but you arrive at 18:10 and its hours are shorter. |
-| **Detour** | **Bjargarsteinn Mathús** in Grundarfjörður is the best food on Snæfellsnes — a wooden house moved 140 km to sit on the harbour with Kirkjufell out of the window. It was the reason to sleep in Grundarfjörður, and you no longer do: it is 40 min west of the hotel, so it costs an 80-minute round trip after a 390 km day. Book ahead if you want it anyway. |
+| **Detour** | **Bjargarsteinn Mathús** in Grundarfjörður is the best food on Snæfellsnes — a wooden house moved 140 km to sit on the harbour with Kirkjufell out of the window. It was the reason to sleep in Grundarfjörður, and you no longer do: it is 40 min west of the hotel, so it costs an 80-minute round trip after a 450 km day. Book ahead if you want it anyway. |
 
 ### Day 9 — Sun, Sep 27 · Snæfellsnes, tip to toe
 
-*~250 km · out 08:15 · in 18:15 · overnight Reykholt*
+*~280 km · out 08:15 · in 18:15 · overnight Reykholt*
 
 *Daylight 07:29 Stykkishólmur → 19:08 Reykholt · 11 h 40 m*
 
@@ -398,7 +398,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 
 ### Day 10 — Mon, Sep 28 · Into the Glacier · lava falls · hot spring
 
-*~250 km · out 08:45 · in 18:15 · overnight Kópavogur*
+*~200 km · out 08:45 · in 18:15 · overnight Kópavogur*
 
 *Daylight 07:26 Reykholt → 19:07 Kópavogur · 11 h 41 m*
 
@@ -416,7 +416,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `15:10–16:40` | **Krauma · Deildartunguhver** _soak_ — Deildartunguhver is Europe's highest-flow hot spring — 180 litres a second at 100°C — and <b>Krauma</b> is the bath house built over it, mixing that water with glacier melt to something you can sit in. Open 11:00–21:00 daily; capacity is deliberately small, so book ahead rather than turning up on spec. This is the right shape for the day: you come off a glacier cold, and the last thing before a two-and-a-half hour drive south is ninety minutes in hot water. Towels can be hired; the day bag has yours. |
 | | ◈ *photo* — The spring, not the baths. Water leaving the ground at 100°C and 180 litres a second makes a wall of steam you can shoot straight into with the low sun behind it. |
 | | *↓ drive 2 hr 30* |
-| `flex · swap for Krauma` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with roughly two hours of light before the 19:07 sunset — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light. |
+| `flex · swap for Krauma` | **Fagradalsfjall / Geldingadalir** _optional_ — This is the swap for Krauma rather than an addition, and it is the longer day: <b>+85 km</b> against the Krauma version, which is why it needs the light it gets. The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with roughly two hours of light before the 19:07 sunset — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light. |
 | | ◈ *photo* — Black on black — new lava reads as texture, so it needs raking light and something for scale. A person on the ridge does both. |
 
 | Eating | |
