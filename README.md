@@ -21,7 +21,6 @@ manifest.json                 PWA manifest (installable, standalone)
 icons/                        app icon (SVG source + rasterized PNGs)
 docs/itinerary.md             prose itinerary — generated
 docs/iceland-2026.kml         Google My Maps / Earth import — generated
-docs/iceland-2026-departure.kml   Sep 29 alone, for topping up an existing map
 tools/build-itinerary.mjs     regenerates that doc from TRIP (no deps)
 tools/build-kml.mjs           regenerates the KML from TRIP (no deps)
 tools/route-cache.json        road geometry per leg — committed, so builds stay offline

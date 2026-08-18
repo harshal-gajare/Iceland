@@ -19,8 +19,6 @@
  * layers; an eleven-folder import silently drops the last one, which is exactly
  * what happened on the first real import — Sep 29 went missing. So the departure
  * day rides in the day 10 folder rather than claiming a layer it cannot have.
- * docs/iceland-2026-departure.kml carries the same placemarks on their own, for
- * adding Sep 29 to an already-imported map without redoing the other ten.
  *
  * Legs follow REAL ROADS. The first version drew straight lines between stops,
  * which on a fjord coast is not a route, it is a chord across a bay. Geometry
@@ -40,7 +38,6 @@ import vm from "node:vm";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "index.html");
 const OUT = join(ROOT, "docs/iceland-2026.kml");
-const OUT_DEP = join(ROOT, "docs/iceland-2026-departure.kml");
 const CACHE = join(ROOT, "tools/route-cache.json");
 
 const START = "/* ================= DATA ================= */";
@@ -281,31 +278,6 @@ function departureFeatures(DAYS, DEPARTURE) {
   return { lines, stops, legs: 1 };
 }
 
-/* The departure day on its own, so Sep 29 can be added to a map whose other ten
-   layers are already imported — My Maps is at its layer cap, so this goes into an
-   existing layer rather than a new one. */
-function renderDeparture({ DAYS, DEPARTURE, colors }) {
-  const dep = departureFeatures(DAYS, DEPARTURE);
-  const out = [
-    `<?xml version="1.0" encoding="UTF-8"?>`,
-    `<kml xmlns="http://www.opengis.net/kml/2.2">`,
-    `<Document>`,
-    `  <name>Day 11 · ${xml(DEPARTURE.dow)} ${xml(DEPARTURE.date)} · ${xml(DEPARTURE.title)}</name>`,
-    `  <description>${cdata(`out ${DEPARTURE.depart} · keys back ${DEPARTURE.keys} · flight ${xml(DEPARTURE.flight)}`)}</description>`,
-    `  <Style id="leg11">`,
-    `    <LineStyle><color>${kmlColor(colors[11])}</color><width>4</width></LineStyle>`,
-    `  </Style>`,
-    `  <Style id="stop11">`,
-    `    <IconStyle><color>${kmlColor(colors[11])}</color><scale>1</scale>`,
-    `      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>`,
-    `  </Style>`,
-    ...dep.lines,
-    `</Document>`,
-    `</kml>`
-  ];
-  return { doc: out.join("\n") + "\n", stops: dep.stops };
-}
-
 function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
   const out = [];
   let stops = 0, bases = 0, legs = 0;
@@ -375,7 +347,6 @@ if (process.argv.includes("--route")) {
 }
 
 const { doc, stops, bases, legs } = render(SB);
-const dep = renderDeparture(SB);
 const folders = doc.match(/^  <Folder>$/gm)?.length ?? 0;
 
 /* Ten is the ceiling, so a regression past it is a bug, not a note. */
@@ -388,25 +359,18 @@ if (folders > 10) {
 }
 
 if (process.argv.includes("--check")) {
-  const stale = [];
-  for (const [path, want, label] of [[OUT, doc, "docs/iceland-2026.kml"],
-                                     [OUT_DEP, dep.doc, "docs/iceland-2026-departure.kml"]]) {
-    let current = "";
-    try { current = readFileSync(path, "utf8"); } catch {}
-    if (current !== want) stale.push(label);
-  }
-  if (!stale.length) {
-    console.log("docs/iceland-2026.kml and docs/iceland-2026-departure.kml are up to date.");
+  let current = "";
+  try { current = readFileSync(OUT, "utf8"); } catch {}
+  if (current === doc) {
+    console.log("docs/iceland-2026.kml is up to date.");
   } else {
-    console.error(`STALE: ${stale.join(", ")} — run: node tools/build-kml.mjs`);
+    console.error("docs/iceland-2026.kml is STALE — run: node tools/build-kml.mjs");
     process.exit(1);
   }
 } else {
   writeFileSync(OUT, doc);
-  writeFileSync(OUT_DEP, dep.doc);
   console.log(
-    `Wrote docs/iceland-2026.kml — ${folders} folders, ${stops} stops, ${bases} bases, ${legs} legs.\n` +
-    `Wrote docs/iceland-2026-departure.kml — Sep 29 alone, ${dep.stops} stops + 1 leg.`
+    `Wrote docs/iceland-2026.kml — ${folders} folders, ${stops} stops, ${bases} bases, ${legs} legs.`
   );
   if (missing.length) {
     console.error(
