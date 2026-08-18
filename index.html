@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a1422">
 <meta name="description" content="Ten nights around the whole island by road, Sep 19–29 2026 — two switchable itineraries, timed run-sheets, every stop mapped, and an aurora plan.">
+<!-- noindex, deliberately: the reservations block carries live booking
+     references and door PINs, so this page must not land in a search index.
+     robots.txt has to keep *allowing* the crawl — a crawler blocked there
+     never sees this tag, and the bare URL can be indexed without it. -->
+<meta name="robots" content="noindex">
 <!-- Social-preview tags are the one place absolute URLs are required (scrapers
      don't resolve relative paths). Update these two if the deploy host moves;
      every other asset path in this file stays relative. -->
