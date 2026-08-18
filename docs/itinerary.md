@@ -229,7 +229,7 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 20 min* |
 | `08:50–10:00` | **Stokksnes / Vestrahorn** — Morning light on the black dunes; small access fee at the Viking Café. |
-| | ◈ *photo* — The iconic Iceland frame: **Vestrahorn**'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide; that is the one number this page cannot give you yet, so check it on the day. |
+| | ◈ *photo* — The iconic Iceland frame: **Vestrahorn**'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide. The strip below fills in the day's low water once the marine forecast reaches this date, about two weeks out — it is a model rather than the Icelandic harbour table, so trust the timing and not the heights, and the reference station if you want to check is Hornafjörður. |
 | | *↓ drive 1 hr 05* |
 | `11:05–11:45` | **Djúpivogur** — Eggin í Gleðivík egg sculptures + coffee. |
 | | ◈ *photo* — The row of granite eggs receding along the harbour rail — shoot down the line, never across it. |

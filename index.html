@@ -259,6 +259,10 @@
   .arr{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-left:8px}
   .sunline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);margin-top:12px}
   .sunline b{color:var(--fog);font-weight:600}
+  /* Same rule as .kpline: never give this a display property, or [hidden] stops
+     working and an empty strip renders every time the fetch fails. */
+  .tideline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--fog);margin-top:5px}
+  .tideline b{color:var(--ice);font-weight:600}
 
   .stay.booked{border-color:rgba(69,224,162,.45);background:rgba(69,224,162,.06)}
   /* bkd leads the name on the stay card and the visa line, but FOLLOWS it in a
@@ -376,7 +380,7 @@
     /* .mapwrap goes wholesale: hiding #mapbox alone left the heading and its
        "Tap a stop for details" hint on a page with no map to tap. */
     .rail,.ghostbtn,.count,.mapwrap,.maphint,.top nav,
-    .mlinks,.kpline{display:none!important}
+    .mlinks,.kpline,.tideline{display:none!important}
     details.day{break-inside:avoid}
   }
   @media (max-width:720px){
@@ -774,7 +778,7 @@ const DAYS = [
   base:"Egilsstaðir", baseLL:[65.2637,-14.3945], stay:STAY5,
   food:{lunch:"<b>Við Voginn</b> at Djúpivogur, right where the 11:05 stop already is — a harbour shack with a local reputation for fish and chips and burgers. Otherwise it's the packed lunch at Petra's, where there is nothing.", dinner:"<b>Nielsen Restaurant</b> in Egilsstaðir, in the oldest house in town with a garden behind it, or <b>Salt Bistro</b> for something simpler and later.", coffee:"The <b>Viking Café</b> at Stokksnes, where you are paying the access fee anyway — coffee with the best view of the morning. If the afternoon goes to <b>Vök Baths</b> instead of Seyðisfjörður, its swim-up bar is the one place you can order without leaving the water.", sweet:"Djúpivogur and Egilsstaðir both have a bakery on the main street and that is the honest extent of it — this is the day to raid a bakery counter at opening rather than hunt for dessert at night.", buy:"<b>Petra's Stone Collection</b> has a shop, and it is the one souvenir stop an 11-year-old will actually choose: Icelandic spar, jasper, zeolites, all local. Djúpivogur's harbour has the Eggin sculptures but nothing to buy.", fuel:"Leave Höfn full. <b>Höfn to Djúpivogur is the longest gap on the entire Ring Road</b> — about 100 km with nothing between them.", shop:"<b>Bónus in Egilsstaðir</b> at the end of the day: the biggest shop in the east and the last serious one before Mývatn.", extra:"<b>Norð Austur</b> in Seyðisfjörður is an acclaimed sushi room working the fjord's own catch — but it is over the pass and its season is short, so only if you pick Seyðisfjörður over Vök and it is still open."},
   stops:[
-   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"20 min", time:"08:50–10:00", note:"Morning light on the black dunes; small access fee at the Viking Café.", shot:"The iconic Iceland frame: <b>Vestrahorn</b>'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide; that is the one number this page cannot give you yet, so check it on the day."},
+   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], tide:true, drive:"20 min", time:"08:50–10:00", note:"Morning light on the black dunes; small access fee at the Viking Café.", shot:"The iconic Iceland frame: <b>Vestrahorn</b>'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide. The strip below fills in the day's low water once the marine forecast reaches this date, about two weeks out — it is a model rather than the Icelandic harbour table, so trust the timing and not the heights, and the reference station if you want to check is Hornafjörður."},
    {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr 05", time:"11:05–11:45", note:"Eggin í Gleðivík egg sculptures + coffee.", shot:"The row of granite eggs receding along the harbour rail — shoot down the line, never across it."},
    {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"1 hr", time:"12:45–13:45", tag:"opt", note:"Quirky, kid-friendly, right on the coastal route — packed lunch here.", shot:"Close-ups, not wide shots: spar, jasper and zeolites by the thousand. Let the kid pick the subject."},
    {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"15:30–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir.", shot:"If it is Seyðisfjörður, the <b>rainbow path</b> leading up to the blue church — the sister shot to day 1's street. If it is Vök, the pools cut into the lake surface with the swim-up bar in frame."}
@@ -1226,6 +1230,9 @@ const rail = document.getElementById("rail");
 
 const gURL = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
 const aURL = q => "https://maps.apple.com/?q=" + encodeURIComponent(q);
+/* The marine API wants an ISO date; days carry "Sep 23". dayUTC() already parses
+   that, so reuse it rather than re-deriving a second date format. */
+const isoDate = d => new Date(dayUTC(d)).toISOString().slice(0,10);
 const gLL = ll => "https://www.google.com/maps/search/?api=1&query=" + ll[0] + "," + ll[1];
 const aLL = (ll,name) => "https://maps.apple.com/?ll=" + ll[0] + "," + ll[1] + "&q=" + encodeURIComponent(name);
 /* Reference images, not embedded ones. Photographs of these places belong to the
@@ -1302,7 +1309,7 @@ function sunStrip(s){
    from one place. `ll` is optional: the departure's logistics rows — the fuel
    stop, the key handover — are times without anywhere to pin, and every stop in
    DAYS has coordinates, so day cards are unaffected by the branch. */
-function stopList(stops){
+function stopList(stops, day){
   return `<ul class="stops">
           ${stops.map(s=>`
             ${s.drive?`<li class="hop"><span class="stime"></span><span class="vdash"></span><span class="hoptext">drive ${s.drive}</span></li>`:""}
@@ -1311,7 +1318,8 @@ function stopList(stops){
               <span class="sdot"></span>
               <div><div class="sname">${s.name}${s.tag?" "+chip(s.tag):""}${s.ll?` <span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a>${s.shot?`<a href="${pIMG(s)}" target="_blank" rel="noopener" title="Reference photos of ${photoQ(s)}">◈</a>`:""}</span>`:""}</div>
               <div class="snote">${s.note||""}</div>
-              ${s.shot?`<div class="sshot">${s.shot}</div>`:""}</div>
+              ${s.shot?`<div class="sshot">${s.shot}</div>`:""}
+              ${s.tide&&day?`<div class="tideline" hidden data-lat="${s.ll[0]}" data-lon="${s.ll[1]}" data-date="${isoDate(day)}" data-slot="${s.time||""}"></div>`:""}</div>
             </li>`).join("")}
         </ul>`;
 }
@@ -1338,7 +1346,7 @@ function buildDeparture(){
       <div class="dbody">
         ${sunStrip(s)}
         <p class="daynote">${DEPARTURE.note}</p>
-        ${stopList(DEPARTURE.stops)}
+        ${stopList(DEPARTURE.stops, DEPARTURE)}
       </div>
     </details>`;
 }
@@ -1365,7 +1373,7 @@ function buildCards(){
       <div class="dbody">
         ${sunStrip(s)}
         ${d.note?`<p class="daynote">${d.note}</p>`:""}
-        ${stopList(d.stops)}
+        ${stopList(d.stops, d)}
         ${foodBox(d)}
         ${stayBox(d)}
       </div>
@@ -1534,7 +1542,73 @@ let savedView = null;
 try{ savedView = localStorage.getItem("iceland26.mapview"); }catch(e){}
 setMapView(savedView === "real" && MYMAP_MID && navigator.onLine ? "real" : "svg", false);
 render();
-countdown(); loadKp();
+/* ================= LIVE TIDE (Stokksnes) ================= */
+/* The Vestrahorn reflection lives in wet sand, so it wants low water — and unlike
+   sunrise, tide cannot be computed here: harmonic prediction needs published
+   constants for a specific station, which this file does not have. So it is
+   fetched rather than derived, and never typed in.
+   Open-Meteo's marine model: free, no key, and it answers with
+   access-control-allow-origin:* even to a null origin, so it works from file://
+   exactly like the NOAA Kp call. Iceland is UTC+0 year round, so timezone=UTC
+   means the times come back already local — no conversion.
+   Two honest limits. The horizon is 16 days, so a date further out returns HTTP
+   400 and the strip simply stays hidden; day 5 comes into range around Sep 7.
+   And it is a model, not the Icelandic harbour table — trust the turning-point
+   times, not the absolute heights, which sit on the model's own datum. */
+async function loadTide(){
+  for(const el of document.querySelectorAll(".tideline")){
+    const {lat, lon, date, slot} = el.dataset;
+    /* Don't fire a request that is certain to 400. The marine horizon is 16 days,
+       so before then the browser would log a failed resource on every load for no
+       benefit — same reasoning as gating the map iframe on navigator.onLine
+       instead of letting it fail. Day 5 comes into range about Sep 7. */
+    const out = (Date.parse(date + "T12:00:00Z") - Date.now()) / 86400000;
+    if(!(out < 16 && out > -1.5)) continue;
+    try{
+      const opts = typeof AbortSignal!=="undefined" && AbortSignal.timeout ? {signal:AbortSignal.timeout(8000)} : {};
+      const r = await fetch("https://marine-api.open-meteo.com/v1/marine?latitude="+lat+"&longitude="+lon
+        + "&hourly=sea_level_height_msl&timezone=UTC&start_date="+date+"&end_date="+date, opts);
+      if(!r.ok) throw 0;                                  // 400 = beyond the horizon
+      const j = await r.json();
+      const t = j.hourly?.time, v = j.hourly?.sea_level_height_msl;
+      if(!t?.length || !v?.length) throw 0;
+
+      /* Samples are hourly, so the raw minimum is only good to the hour. Fit a
+         parabola through it and its neighbours and take the vertex — that pulls
+         the turning point back to a few minutes. */
+      const turn = (i) => {
+        const y0=v[i-1], y1=v[i], y2=v[i+1], den=y0-2*y1+y2;
+        const off = (i>0 && i<v.length-1 && Math.abs(den)>1e-9) ? 0.5*(y0-y2)/den : 0;
+        return i*60 + Math.max(-30, Math.min(30, off*60));
+      };
+      const lows=[], highs=[];
+      for(let i=1;i<v.length-1;i++){
+        if(v[i]<=v[i-1] && v[i]<v[i+1]) lows.push(turn(i));
+        if(v[i]>=v[i-1] && v[i]>v[i+1]) highs.push(turn(i));
+      }
+      if(!lows.length) throw 0;
+
+      const slotMin = (String(slot).match(/(\d{1,2}):(\d{2})/)||[])
+        .slice(1).reduce((a,b,i)=> i===0 ? +b*60 : a + +b, 0) || null;
+      /* Which low matters is the one your slot is nearest, not the first of the day. */
+      const low = slotMin==null ? lows[0]
+        : lows.reduce((a,b)=> Math.abs(b-slotMin)<Math.abs(a-slotMin) ? b : a);
+
+      let line = "tide · low water <b>"+hhmm(Math.round(low))+"</b>";
+      if(highs.length) line += " · high " + highs.map(h=>hhmm(Math.round(h))).join(" and ");
+      if(slotMin!=null){
+        const d = Math.round(low - slotMin);
+        line += " · you arrive " + (Math.abs(d)<10 ? "on the turn"
+          : hoursMins(Math.abs(d)) + (d>0 ? " before it, water still falling" : " after it, water rising again"));
+      }
+      line += " · swing " + (Math.max(...v)-Math.min(...v)).toFixed(1) + " m";
+      el.innerHTML = line;
+      el.hidden = false;
+    }catch(e){ /* out of range, offline or blocked — the note above still stands */ }
+  }
+}
+
+countdown(); loadKp(); loadTide();
 </script>
 </body>
 </html>

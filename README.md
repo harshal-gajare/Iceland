@@ -50,6 +50,7 @@ node tools/build-kml.mjs --check         # exit 1 if it's stale
 - **Emergency** — 112 and the 112 app, health line, after-hours doctor, poison centre, ICE-SAR, road and weather authorities, embassy.
 - **Locked in** — flights, baggage, visa, the rental with its insurance chips, return-day math, and the one F-road email that day 10's glacier tour depends on.
 - **Dark & light themes** — toggle in the top bar, follows system preference by default, remembered per browser.
+- **Live tide at Stokksnes** — the Vestrahorn reflection needs wet sand, so the stop carries the day's low water, fetched from Open-Meteo's marine model and refined off the hourly samples to a few minutes. Unlike sunrise it cannot be computed here, so it is fetched rather than guessed; beyond the 16-day forecast horizon the strip simply stays hidden.
 - **Live aurora data** — current Kp and the next-24h peak from NOAA SWPC, with a link to vedur.is for cloud cover (vedur.is itself blocks CORS). Vanishes gracefully offline.
 - **The daily watch** — the morning weather/roads stack and evening aurora stack locals actually use, plus the full-moon caveat.
 - **Offline / PWA** — service worker caches the app shell; installable to a phone home screen for the road.
