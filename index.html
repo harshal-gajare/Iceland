@@ -39,6 +39,7 @@
     --ember-ink:#ffd9a3;
     --d1:#45e0a2; --d2:#2fd4c0; --d3:#3cc9e8; --d4:#57aef5; --d5:#7b96f7;
     --d6:#9b85f5; --d7:#b877ef; --d8:#d26bdd; --d9:#e967bc; --d10:#f26e93;
+    --d11:#f2825c;   /* the flight home — one more hue step past day 10's rose */
     --map-1:#0c1a2e; --map-2:#0a1523;
     --coast-fill:#12233a; --coast-stroke:#2c4664;
     --glacier:#dcecf7; --glacier-o:.16;
@@ -66,6 +67,7 @@
     --ember-ink:#8a5a12;
     --d1:#0e9c67; --d2:#0b9186; --d3:#0d86ad; --d4:#1e6cc0; --d5:#4a5fd3;
     --d6:#6e4fcd; --d7:#8a41ba; --d8:#a833a0; --d9:#bf2a84; --d10:#cc3a62;
+    --d11:#c45a34;
     --map-1:#e8f1f8; --map-2:#dfeaf4;
     --coast-fill:#cfdfec; --coast-stroke:#93aec6;
     --glacier:#ffffff; --glacier-o:.75;
@@ -232,12 +234,6 @@
   .stay b{font-family:var(--serif);font-size:16px;font-weight:500}
   .hotels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .hotel{font-size:12px;color:var(--fog);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-  /* The departure card is a day card with the day taken out: a glyph instead of a
-     numbered spectrum color, and a dashed edge to say it is not one of the ten. */
-  /* border-left keeps the 3px of the numbered cards — at 1px the whole content
-     column shifted 2px out of line with the ten above it. */
-  details.day.depday{border:1px dashed var(--line);border-left:3px dashed var(--line)}
-  .depday .dnum{font-size:22px;font-style:normal;color:var(--fog)}
 
   .stime{font-family:var(--mono);font-size:10.5px;color:var(--fog);min-width:78px;text-align:right;padding-top:4px;flex:0 0 auto}
   ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:var(--faint)}
@@ -817,12 +813,14 @@ const DAYS = [
 ];
 
 
-/* Sep 29 is the flight home, not an eleventh day, and it must stay OUT of DAYS:
-   the hero's km, stop and night counts all reduce over DAYS, the map colors it
-   would want a --d11 that doesn't exist, and the rail would grow a pill for a day
-   with no night in it. It is shaped like a day anyway so buildDeparture() can push
-   it through the same card markup and the same run-sheet — and so its sun times go
-   through dayLight() instead of being typed in. The hand-written "Sunrise 07:33"
+/* Sep 29 shows as card 11 but it is the flight home, not an eleventh day, and it
+   must stay OUT of DAYS: the hero's km, stop and night counts all reduce over DAYS,
+   the map has no route or base ring to draw for a day with no leg and no night, and
+   the rail would grow a pill that dims the whole map to nothing. The number and
+   --d11 are presentation; membership in DAYS is not.
+   It is shaped like a day anyway so buildDeparture() can push it through the same
+   card markup and the same run-sheet — and so its sun times go through dayLight()
+   instead of being typed in. The hand-written "Sunrise 07:33"
    this replaced was 3 min off the page's own math, which is exactly the drift the
    computed-daylight block exists to prevent. `prev` is day 10, so sunrise reads at
    Kríunes, where you wake, and sunset at KEF, where you leave from.
@@ -1182,9 +1180,9 @@ function buildDeparture(){
   const s = dayLight(DEPARTURE, DAYS[DAYS.length-1]);
   const light = (s.rise!=null && s.set!=null) ? ` · light ${hhmm(s.rise)}–${hhmm(s.set)}` : "";
   host.innerHTML = `
-    <details class="day depday" id="day-out" style="--c:var(--line)">
+    <details class="day" id="day-11" style="--c:var(--d11)">
       <summary>
-        <span class="dnum">✈</span>
+        <span class="dnum">11</span>
         <span class="dmeta">
           <span class="eyebrow">${DEPARTURE.dow} ${DEPARTURE.date} · out ${DEPARTURE.depart}${light} · keys back ${DEPARTURE.keys}</span>
           <span class="dtitle">${DEPARTURE.title}</span>
