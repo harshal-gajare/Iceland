@@ -13,6 +13,13 @@
  * Sibling of build-itinerary.mjs and deliberately built the same way: same
  * node:vm sandbox, same DATA-section markers, same --check semantics. No
  * dependencies, and not a build step — index.html still ships as-is.
+ *
+ * TEN folders, not eleven, and that is the point. My Maps caps a map at 10
+ * layers; an eleven-folder import silently drops the last one, which is exactly
+ * what happened on the first real import — Sep 29 went missing. So the departure
+ * day rides in the day 10 folder rather than claiming a layer it cannot have.
+ * docs/iceland-2026-departure.kml carries the same placemarks on their own, for
+ * adding Sep 29 to an already-imported map without redoing the other ten.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -22,6 +29,7 @@ import vm from "node:vm";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "index.html");
 const OUT = join(ROOT, "docs/iceland-2026.kml");
+const OUT_DEP = join(ROOT, "docs/iceland-2026-departure.kml");
 
 const START = "/* ================= DATA ================= */";
 const END = "/* ================= MAP ================= */";
@@ -153,6 +161,51 @@ function legMark(d, from, n, label) {
   ].join("\n");
 }
 
+/* Sep 29's placemarks, built once and used twice: inlined into the day 10 folder
+   of the main file, and alone in the departure-only file. It keeps --d11 either
+   way, so it still reads as its own day even when it shares a layer. */
+function departureFeatures(DAYS, DEPARTURE) {
+  const lines = [];
+  const pts = [DAYS[DAYS.length - 1].baseLL, ...DEPARTURE.stops.filter(s => s.ll).map(s => s.ll)];
+  lines.push(
+    `    <Placemark>`,
+    `      <name>Day 11 leg · ${xml(DEPARTURE.date)}</name>`,
+    `      <styleUrl>#leg11</styleUrl>`,
+    `      <LineString><tessellate>1</tessellate>`,
+    `        <coordinates>${pts.map(coord).join(" ")}</coordinates>`,
+    `      </LineString>`,
+    `    </Placemark>`
+  );
+  let stops = 0;
+  for (const s of DEPARTURE.stops) { if (s.ll) { lines.push(stopMark(s, 11)); stops++; } }
+  return { lines, stops, legs: 1 };
+}
+
+/* The departure day on its own, so Sep 29 can be added to a map whose other ten
+   layers are already imported — My Maps is at its layer cap, so this goes into an
+   existing layer rather than a new one. */
+function renderDeparture({ DAYS, DEPARTURE, colors }) {
+  const dep = departureFeatures(DAYS, DEPARTURE);
+  const out = [
+    `<?xml version="1.0" encoding="UTF-8"?>`,
+    `<kml xmlns="http://www.opengis.net/kml/2.2">`,
+    `<Document>`,
+    `  <name>Day 11 · ${xml(DEPARTURE.dow)} ${xml(DEPARTURE.date)} · ${xml(DEPARTURE.title)}</name>`,
+    `  <description>${cdata(`out ${DEPARTURE.depart} · keys back ${DEPARTURE.keys} · flight ${xml(DEPARTURE.flight)}`)}</description>`,
+    `  <Style id="leg11">`,
+    `    <LineStyle><color>${kmlColor(colors[11])}</color><width>4</width></LineStyle>`,
+    `  </Style>`,
+    `  <Style id="stop11">`,
+    `    <IconStyle><color>${kmlColor(colors[11])}</color><scale>1</scale>`,
+    `      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>`,
+    `  </Style>`,
+    ...dep.lines,
+    `</Document>`,
+    `</kml>`
+  ];
+  return { doc: out.join("\n") + "\n", stops: dep.stops };
+}
+
 function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
   const out = [];
   let stops = 0, bases = 0, legs = 0;
@@ -167,7 +220,8 @@ function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
   DAYS.forEach((d, i) => {
     const from = i === 0 ? KEF : DAYS[i - 1].baseLL;
     out.push(`  <Folder>`);
-    out.push(`    <name>Day ${d.n} · ${xml(d.dow)} ${xml(d.date)} · ${xml(d.title)}</name>`);
+    const last = i === DAYS.length - 1;
+    out.push(`    <name>${last ? `Day ${d.n}–11 · ${xml(d.date)}–${xml(DEPARTURE.date.split(" ")[1])}` : `Day ${d.n} · ${xml(d.dow)} ${xml(d.date)}`} · ${xml(d.title)}${last ? ", then home" : ""}</name>`);
     out.push(`    <description>${cdata(
       [xml(d.km), d.depart ? `out ${d.depart}` : null, d.arrive ? `in ${d.arrive}` : null]
         .filter(Boolean).join(" · ")
@@ -175,24 +229,13 @@ function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
     out.push(legMark(d, from, d.n, `Day ${d.n} leg`)); legs++;
     for (const s of d.stops) { if (s.ll) { out.push(stopMark(s, d.n)); stops++; } }
     out.push(baseMark(d)); bases++;
+    if (i === DAYS.length - 1) {
+      const dep = departureFeatures(DAYS, DEPARTURE);
+      out.push(...dep.lines);
+      stops += dep.stops; legs += dep.legs;
+    }
     out.push(`  </Folder>`);
   });
-
-  /* Card 11 on the page, and a folder here for the same reason: it is the flight
-     home, so it has a run-sheet but no night and no leg of its own. */
-  out.push(`  <Folder>`);
-  out.push(`    <name>Day 11 · ${xml(DEPARTURE.dow)} ${xml(DEPARTURE.date)} · ${xml(DEPARTURE.title)}</name>`);
-  out.push(`    <description>${cdata(`out ${DEPARTURE.depart} · keys back ${DEPARTURE.keys} · flight ${xml(DEPARTURE.flight)}`)}</description>`);
-  const dpts = [DAYS[DAYS.length - 1].baseLL, ...DEPARTURE.stops.filter(s => s.ll).map(s => s.ll)];
-  out.push(`    <Placemark>`);
-  out.push(`      <name>Day 11 leg</name>`);
-  out.push(`      <styleUrl>#leg11</styleUrl>`);
-  out.push(`      <LineString><tessellate>1</tessellate>`);
-  out.push(`        <coordinates>${dpts.map(coord).join(" ")}</coordinates>`);
-  out.push(`      </LineString>`);
-  out.push(`    </Placemark>`); legs++;
-  for (const s of DEPARTURE.stops) { if (s.ll) { out.push(stopMark(s, 11)); stops++; } }
-  out.push(`  </Folder>`);
 
   out.push(`</Document>`);
   out.push(`</kml>`);
@@ -201,26 +244,37 @@ function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
 
 const SB = loadData();
 const { doc, stops, bases, legs } = render(SB);
+const dep = renderDeparture(SB);
+const folders = doc.match(/^  <Folder>$/gm)?.length ?? 0;
+
+/* Ten is the ceiling, so a regression past it is a bug, not a note. */
+if (folders > 10) {
+  throw new Error(
+    `Generated ${folders} folders, but Google My Maps caps a map at 10 layers and\n` +
+    `silently drops the overflow. The departure day is meant to ride in the day 10\n` +
+    `folder — see departureFeatures().`
+  );
+}
 
 if (process.argv.includes("--check")) {
-  let current = "";
-  try { current = readFileSync(OUT, "utf8"); } catch {}
-  if (current === doc) {
-    console.log("docs/iceland-2026.kml is up to date.");
+  const stale = [];
+  for (const [path, want, label] of [[OUT, doc, "docs/iceland-2026.kml"],
+                                     [OUT_DEP, dep.doc, "docs/iceland-2026-departure.kml"]]) {
+    let current = "";
+    try { current = readFileSync(path, "utf8"); } catch {}
+    if (current !== want) stale.push(label);
+  }
+  if (!stale.length) {
+    console.log("docs/iceland-2026.kml and docs/iceland-2026-departure.kml are up to date.");
   } else {
-    console.error("docs/iceland-2026.kml is STALE — run: node tools/build-kml.mjs");
+    console.error(`STALE: ${stale.join(", ")} — run: node tools/build-kml.mjs`);
     process.exit(1);
   }
 } else {
   writeFileSync(OUT, doc);
-  const folders = doc.match(/^  <Folder>$/gm)?.length ?? 0;
+  writeFileSync(OUT_DEP, dep.doc);
   console.log(
-    `Wrote docs/iceland-2026.kml — ${folders} folders, ${stops} stops, ${bases} bases, ${legs} legs.`
+    `Wrote docs/iceland-2026.kml — ${folders} folders, ${stops} stops, ${bases} bases, ${legs} legs.\n` +
+    `Wrote docs/iceland-2026-departure.kml — Sep 29 alone, ${dep.stops} stops + 1 leg.`
   );
-  if (folders > 10) {
-    console.log(
-      `Note: Google My Maps caps a map at 10 layers. This file has ${folders} folders, so check\n` +
-      `how the import lands — if it overflows, merge the last two days into one layer.`
-    );
-  }
 }

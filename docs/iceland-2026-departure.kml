@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Day 11 · Tue Sep 29 · Reykjanes loop · last fill · fly home</name>
+  <description><![CDATA[out 08:15 · keys back 14:00 · flight KEF 17:10]]></description>
+  <Style id="leg11">
+    <LineStyle><color>ff5c82f2</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop11">
+    <IconStyle><color>ff5c82f2</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+    <Placemark>
+      <name>Day 11 leg · Sep 29</name>
+      <styleUrl>#leg11</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-21.7938,64.0886 -21.7938,64.0886 -22.675,63.868 -22.6836,63.8188 -22.7075,63.8125 -22.5122,63.8331 -22.5636,64.0033 -22.605,63.985</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Leave Hotel Kríunes</name>
+      <description><![CDATA[<b>08:15</b><br><br>Breakfast first, and ask the night before whether the partner rate includes it — the booking never spelled that out. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this trip never reaches otherwise.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-21.7938,64.0886</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Bridge Between Continents</name>
+      <description><![CDATA[<b>09:10</b><br><br>The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam.<br><br>◈ Stand in the rift and shoot along it with the bridge overhead. At 09:10 the sun is 9° up and throws a long shadow down the sand, which is the only thing that makes a shallow trench look like a plate boundary.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.675,63.868</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gunnuhver</name>
+      <description><![CDATA[<b>09:40</b><br><br>The boiling mud field, walked on boardwalks.<br><br>◈ The big vent throws a plume worth shooting into, with the low east-south-east sun behind it. Boardwalks only: the crust is thin and the ground is actually boiling.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.6836,63.8188</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Reykjanesviti + Valahnúkamöl</name>
+      <description><![CDATA[<b>10:10</b><br><br>Iceland's oldest lighthouse on the cliff, and the sea stacks below it.<br><br>◈ Two frames — the lighthouse alone on its mound, and <b>Karl</b>, the sea stack, from the shore below with the surf breaking round it.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.7075,63.8125</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Brimketill</name>
+      <description><![CDATA[<b>11:00</b><br><br>The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks.<br><br>◈ Wait for a set. The picture is the instant the surf pours over the lip and fills the pool; between waves it is just a rock. From the platform — people have been swept off trying for better.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.5122,63.8331</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kaffi Duus — lunch</name>
+      <description><![CDATA[<b>11:45</b><br><br>Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.5636,64.0033</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>KEF terminal</name>
+      <description><![CDATA[<b>14:40</b><br><br>Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.605,63.985</coordinates></Point>
+    </Placemark>
+</Document>
+</kml>

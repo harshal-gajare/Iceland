@@ -560,7 +560,7 @@
     </Placemark>
   </Folder>
   <Folder>
-    <name>Day 10 · Mon Sep 28 · Into the Glacier · lava falls · hot spring</name>
+    <name>Day 10–11 · Sep 28–29 · Into the Glacier · lava falls · hot spring, then home</name>
     <description><![CDATA[~250 km · out 08:45 · in 18:15]]></description>
     <Placemark>
       <name>Day 10 leg</name>
@@ -599,12 +599,8 @@
       <styleUrl>#base10</styleUrl>
       <Point><coordinates>-21.7938,64.0886</coordinates></Point>
     </Placemark>
-  </Folder>
-  <Folder>
-    <name>Day 11 · Tue Sep 29 · Reykjanes loop · last fill · fly home</name>
-    <description><![CDATA[out 08:15 · keys back 14:00 · flight KEF 17:10]]></description>
     <Placemark>
-      <name>Day 11 leg</name>
+      <name>Day 11 leg · Sep 29</name>
       <styleUrl>#leg11</styleUrl>
       <LineString><tessellate>1</tessellate>
         <coordinates>-21.7938,64.0886 -21.7938,64.0886 -22.675,63.868 -22.6836,63.8188 -22.7075,63.8125 -22.5122,63.8331 -22.5636,64.0033 -22.605,63.985</coordinates>
