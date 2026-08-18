@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /* Generates docs/iceland-2026.kml from the TRIP object in index.html.
  *
- *   node tools/build-kml.mjs            # write docs/iceland-2026.kml
+ *   node tools/build-kml.mjs            # write the KML from the cached routes
+ *   node tools/build-kml.mjs --route    # re-fetch road geometry, then write
  *   node tools/build-kml.mjs --check    # exit 1 if the file is stale
  *
  * This is what the page's "real map" view points at. Import it once into Google
@@ -20,6 +21,16 @@
  * day rides in the day 10 folder rather than claiming a layer it cannot have.
  * docs/iceland-2026-departure.kml carries the same placemarks on their own, for
  * adding Sep 29 to an already-imported map without redoing the other ten.
+ *
+ * Legs follow REAL ROADS. The first version drew straight lines between stops,
+ * which on a fjord coast is not a route, it is a chord across a bay. Geometry
+ * comes from OSRM's public router (OpenStreetMap data, ODbL) and is cached in
+ * tools/route-cache.json, keyed by the leg's waypoint string. That cache is
+ * committed on purpose: the default build and --check never touch the network, so
+ * they stay deterministic and work offline, and OSM changing under us cannot
+ * silently rewrite a committed map. Change the itinerary and the key changes, the
+ * cache misses, and the build says loudly which days need `--route` rather than
+ * quietly falling back to chords again.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -30,6 +41,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "index.html");
 const OUT = join(ROOT, "docs/iceland-2026.kml");
 const OUT_DEP = join(ROOT, "docs/iceland-2026-departure.kml");
+const CACHE = join(ROOT, "tools/route-cache.json");
 
 const START = "/* ================= DATA ================= */";
 const END = "/* ================= MAP ================= */";
@@ -144,18 +156,106 @@ function baseMark(d) {
   ].join("\n");
 }
 
+/* ---- road geometry ------------------------------------------------------ */
+
+/* The cache is committed, so a missing key is a real signal, not a warm-up. */
+let routeCache = {};
+try { routeCache = JSON.parse(readFileSync(CACHE, "utf8")); } catch { routeCache = {}; }
+const missing = [];
+
+/* The driving line follows the through-route, which is NOT every pin.
+   `opt` stops are excluded because an optional is a branch: including
+   Fagradalsfjall sent day 10's line to Reykjanes and back, 40 km of detour for a
+   stop that is explicitly the alternative to Krauma, and including Seyðisfjörður
+   sent day 5 over a mountain pass it may never cross. Roadside optionals lose
+   nothing by being dropped — the road still passes them.
+   `offroute` stops are excluded because the car cannot reach them at all: the
+   Katla ice cave pin is the cave itself, up on Mýrdalsjökull, and you get there in
+   the operator's super jeep from Vík. Routing a hire car onto a glacier produced a
+   55 km overshoot and a line across an icecap.
+   They all stay PINNED either way — this only decides what bends the line. */
+const drivePts = (from, stops, base) => [
+  from,
+  ...stops.filter(s => s.ll && s.tag !== "opt" && !s.offroute).map(s => s.ll),
+  ...(base ? [base] : [])
+];
+
+/* One key per leg: the exact waypoint list. Move a stop and the key moves with
+   it, so stale geometry cannot survive an itinerary edit unnoticed. */
+const legKey = (pts) => pts.map(coord).join(";");
+
+/* OSRM returns a point every few metres, which is 68 KB of KML per leg and far
+   more detail than a country-scale map can show. Douglas-Peucker at ~40 m keeps
+   every bend you can actually see and drops the rest. Distances here are in
+   degrees weighted by cos(lat) so the tolerance means metres in both axes. */
+function simplify(pts, tolM = 40) {
+  if (pts.length < 3) return pts;
+  const K = 111320, kx = Math.cos(65 * Math.PI / 180);
+  const tol = tolM / K;
+  const seg = (a, b, p) => {
+    const ax = a[0] * kx, ay = a[1], bx = b[0] * kx, by = b[1], px = p[0] * kx, py = p[1];
+    const dx = bx - ax, dy = by - ay, d2 = dx * dx + dy * dy;
+    if (d2 === 0) return Math.hypot(px - ax, py - ay);
+    let t = ((px - ax) * dx + (py - ay) * dy) / d2;
+    t = Math.max(0, Math.min(1, t));
+    return Math.hypot(px - (ax + t * dx), py - (ay + t * dy));
+  };
+  const keep = new Uint8Array(pts.length);
+  keep[0] = keep[pts.length - 1] = 1;
+  const stack = [[0, pts.length - 1]];
+  while (stack.length) {
+    const [lo, hi] = stack.pop();
+    let far = -1, best = tol;
+    for (let i = lo + 1; i < hi; i++) {
+      const d = seg(pts[lo], pts[hi], pts[i]);
+      if (d > best) { best = d; far = i; }
+    }
+    if (far > 0) { keep[far] = 1; stack.push([lo, far], [far, hi]); }
+  }
+  return pts.filter((_, i) => keep[i]);
+}
+
+/* Only ever called by --route. The build path must not touch the network. */
+async function fetchRoute(pts) {
+  const wp = pts.map(coord).join(";");
+  const url = `https://router.project-osrm.org/route/v1/driving/${wp}` +
+    `?overview=full&geometries=geojson`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`OSRM HTTP ${r.status}`);
+  const j = await r.json();
+  if (j.code !== "Ok" || !j.routes?.length) throw new Error(`OSRM said ${j.code}`);
+  const route = j.routes[0];
+  const line = simplify(route.geometry.coordinates);
+  return {
+    km: +(route.distance / 1000).toFixed(1),
+    min: Math.round(route.duration / 60),
+    coords: line.map(([lon, lat]) => `${lon.toFixed(5)},${lat.toFixed(5)}`).join(" ")
+  };
+}
+
+/* Road geometry if we have it, straight chords if we do not — and in that case
+   record the day so the run can complain about it at the end. */
+function legCoords(pts, label) {
+  const hit = routeCache[legKey(pts)];
+  if (hit) return hit.coords;
+  missing.push(label);
+  return pts.map(coord).join(" ");
+}
+
 /* The leg is drawn previous-base → stops → that day's base, which is the order
    you actually drive it. Day 1 starts at the airport because that is where the
    car is picked up. Stops without coordinates drop out. */
 function legMark(d, from, n, label) {
-  const pts = [from, ...d.stops.filter(s => s.ll).map(s => s.ll)];
-  if (d.baseLL) pts.push(d.baseLL);
+  const pts = drivePts(from, d.stops, d.baseLL);
+  const cached = routeCache[legKey(pts)];
+  const dist = cached ? ` · ${cached.km} km by road, about ${Math.round(cached.min / 60 * 10) / 10} hrs driving` : "";
   return [
     `    <Placemark>`,
     `      <name>${xml(label)}</name>`,
+    `      <description>${cdata(xml(d.km) + dist)}</description>`,
     `      <styleUrl>#leg${n}</styleUrl>`,
     `      <LineString><tessellate>1</tessellate>`,
-    `        <coordinates>${pts.map(coord).join(" ")}</coordinates>`,
+    `        <coordinates>${legCoords(pts, label)}</coordinates>`,
     `      </LineString>`,
     `    </Placemark>`
   ].join("\n");
@@ -166,13 +266,13 @@ function legMark(d, from, n, label) {
    way, so it still reads as its own day even when it shares a layer. */
 function departureFeatures(DAYS, DEPARTURE) {
   const lines = [];
-  const pts = [DAYS[DAYS.length - 1].baseLL, ...DEPARTURE.stops.filter(s => s.ll).map(s => s.ll)];
+  const pts = drivePts(DAYS[DAYS.length - 1].baseLL, DEPARTURE.stops, null);
   lines.push(
     `    <Placemark>`,
     `      <name>Day 11 leg · ${xml(DEPARTURE.date)}</name>`,
     `      <styleUrl>#leg11</styleUrl>`,
     `      <LineString><tessellate>1</tessellate>`,
-    `        <coordinates>${pts.map(coord).join(" ")}</coordinates>`,
+    `        <coordinates>${legCoords(pts, "Day 11")}</coordinates>`,
     `      </LineString>`,
     `    </Placemark>`
   );
@@ -214,7 +314,7 @@ function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
   out.push(`<kml xmlns="http://www.opengis.net/kml/2.2">`);
   out.push(`<Document>`);
   out.push(`  <name>Iceland · Sep 19–29, 2026</name>`);
-  out.push(`  <description>${cdata(TRIP.desc)}</description>`);
+  out.push(`  <description>${cdata(TRIP.desc + "<br><br>Route lines follow roads, generated with OSRM from OpenStreetMap data, © OpenStreetMap contributors, ODbL.")}</description>`);
   out.push(styles(colors));
 
   DAYS.forEach((d, i) => {
@@ -243,6 +343,37 @@ function render({ TRIP, DAYS, DEPARTURE, KEF, colors }) {
 }
 
 const SB = loadData();
+
+/* --route is the only path that touches the network. It walks the same legs the
+   renderer will, so the keys it writes are exactly the keys the build looks up. */
+if (process.argv.includes("--route")) {
+  const legs = [];
+  SB.DAYS.forEach((d, i) => {
+    const from = i === 0 ? SB.KEF : SB.DAYS[i - 1].baseLL;
+    legs.push([`Day ${d.n}`, drivePts(from, d.stops, d.baseLL), d.km]);
+  });
+  legs.push(["Day 11", drivePts(SB.DAYS[SB.DAYS.length - 1].baseLL, SB.DEPARTURE.stops, null), null]);
+
+  const fresh = {};
+  for (const [label, pts, declared] of legs) {
+    try {
+      const got = await fetchRoute(pts);
+      fresh[legKey(pts)] = got;
+      const note = declared ? `  (page says ${declared})` : "";
+      console.log(`  ${label.padEnd(7)} ${String(got.km).padStart(6)} km · ${String(got.min).padStart(3)} min` +
+        `  ${got.coords.split(" ").length} pts${note}`);
+    } catch (e) {
+      console.error(`  ${label.padEnd(7)} FAILED — ${e.message}`);
+      const keep = routeCache[legKey(pts)];
+      if (keep) { fresh[legKey(pts)] = keep; console.error(`          kept the cached geometry`); }
+    }
+    await new Promise(r => setTimeout(r, 400));   // the public router is a courtesy
+  }
+  writeFileSync(CACHE, JSON.stringify(fresh, null, 1) + "\n");
+  routeCache = fresh;
+  console.log(`Wrote tools/route-cache.json — ${Object.keys(fresh).length} legs.`);
+}
+
 const { doc, stops, bases, legs } = render(SB);
 const dep = renderDeparture(SB);
 const folders = doc.match(/^  <Folder>$/gm)?.length ?? 0;
@@ -277,4 +408,11 @@ if (process.argv.includes("--check")) {
     `Wrote docs/iceland-2026.kml — ${folders} folders, ${stops} stops, ${bases} bases, ${legs} legs.\n` +
     `Wrote docs/iceland-2026-departure.kml — Sep 29 alone, ${dep.stops} stops + 1 leg.`
   );
+  if (missing.length) {
+    console.error(
+      `\nWARNING: no cached road geometry for ${[...new Set(missing)].join(", ")}.\n` +
+      `Those legs fell back to straight lines between stops, which is not a route.\n` +
+      `Run: node tools/build-kml.mjs --route`
+    );
+  }
 }

@@ -24,6 +24,7 @@ docs/iceland-2026.kml         Google My Maps / Earth import — generated
 docs/iceland-2026-departure.kml   Sep 29 alone, for topping up an existing map
 tools/build-itinerary.mjs     regenerates that doc from TRIP (no deps)
 tools/build-kml.mjs           regenerates the KML from TRIP (no deps)
+tools/route-cache.json        road geometry per leg — committed, so builds stay offline
 CLAUDE.md                     project context for Claude Code
 ```
 
@@ -33,7 +34,8 @@ one tool is the docs generator:
 ```bash
 node tools/build-itinerary.mjs           # rewrite docs/itinerary.md
 node tools/build-itinerary.mjs --check   # exit 1 if it's stale
-node tools/build-kml.mjs                 # rewrite docs/iceland-2026.kml
+node tools/build-kml.mjs                 # rewrite the KML from cached routes
+node tools/build-kml.mjs --route         # re-fetch road geometry, then rewrite
 node tools/build-kml.mjs --check         # exit 1 if it's stale
 ```
 
