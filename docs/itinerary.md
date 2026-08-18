@@ -47,7 +47,7 @@ wants — gravel chips and south-coast ash storms are the two classic claims.
 opens 2.5 hrs before, so be in the terminal by **14:40**. Back off 30 min for the
 handover and the lot shuttle → keys back **14:10**; 15 more for the last fill in
 Njarðvík → pump by **13:55**; so the morning's last activity ends about **13:40**.
-Sunrise is 07:33, leaving just over six hours of daylight. Later is not worth it:
+Sunrise is 07:30, leaving just over six hours of daylight. Later is not worth it:
 a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with
 three checked bags, and bag drop shuts 45–60 min out.
 

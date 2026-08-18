@@ -123,6 +123,10 @@ function dayTables(p) {
   return out.join("\n");
 }
 
+/* Quoted by the return-day math below as well as by the departure section, and it
+   was a typed-in literal in both places — 3 min behind the page's solar math. */
+const depSunrise = (p) => SB.hhmm(SB.dayLight(SB.DEPARTURE, p.days[p.days.length - 1]).rise);
+
 /* Mirrors buildDeparture() on the page — same object, same run-sheet, so the
    flight-home morning cannot say one thing here and another there. `prev` is the
    last real day, which is what puts sunrise at Kríunes and sunset at KEF. */
@@ -209,7 +213,7 @@ wants — gravel chips and south-coast ash storms are the two classic claims.
 opens 2.5 hrs before, so be in the terminal by **14:40**. Back off 30 min for the
 handover and the lot shuttle → keys back **14:10**; 15 more for the last fill in
 Njarðvík → pump by **13:55**; so the morning's last activity ends about **13:40**.
-Sunrise is 07:33, leaving just over six hours of daylight. Later is not worth it:
+Sunrise is ${depSunrise(C)}, leaving just over six hours of daylight. Later is not worth it:
 a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with
 three checked bags, and bag drop shuts 45–60 min out.
 

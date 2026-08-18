@@ -518,7 +518,7 @@
           <span class="inschip">CDW</span><span class="inschip">SCDW super-collision</span><span class="inschip">TP theft</span><span class="inschip">GP gravel</span><span class="inschip">SAAP sand &amp; ash</span><span class="inschip">Roadside</span><span class="inschip">Road tax</span>
         </div>
         <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims, and both are handled. <b>Road 550 is cleared.</b> Blue Car have confirmed the Vitara for the Klaki road, which was the one open question on the whole trip — day 10's Into the Glacier tour meets at the top of it and is paid for. You drive yourself; no Húsafell shuttle to book. It is still a rough gravel mountain road, so take it at gravel speed and keep the tyre pressure honest. River fords are never insured on any Icelandic contract, and nothing on this route asks you to cross one.</p>
-        <p class="lnote"><b>Return-day math — drop at 14:00.</b> The flight is 17:10 and Icelandair check-in opens 2.5 hrs before it, so aim to be in the terminal by <b>14:40</b>. Back off 30 min for the handover and the lot shuttle and you are giving the keys back at <b>14:10</b>; another 15 for the last fill in Njarðvík puts you at the pump by <b>13:55</b>; so the morning's last activity has to end by about <b>13:40</b>. Sunrise is 07:33, which leaves just over six hours of daylight to spend. Later than 14:00 is not worth it — a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with three checked bags, and bag drop shuts 45–60 min out.</p>
+        <p class="lnote"><b>Return-day math — drop at 14:00.</b> The flight is 17:10 and Icelandair check-in opens 2.5 hrs before it, so aim to be in the terminal by <b>14:40</b>. Back off 30 min for the handover and the lot shuttle and you are giving the keys back at <b>14:10</b>; another 15 for the last fill in Njarðvík puts you at the pump by <b>13:55</b>; so the morning's last activity has to end by about <b>13:40</b>. Sunrise is <span id="lk-sunrise">07:30</span>, which leaves just over six hours of daylight to spend. Later than 14:00 is not worth it — a 15:00 drop puts you in the terminal 1 hr 45 before an international flight with three checked bags, and bag drop shuts 45–60 min out.</p>
         <p class="lnote"><b>Booster check:</b> Icelandic law requires a booster seat below 135 cm. Most 11-year-olds clear that — if yours doesn't yet, add one to the Blue Car booking or bring your own.</p>
       </div>
     </div>
@@ -1309,6 +1309,12 @@ function render(){
      here would go stale the moment one is confirmed */
   document.getElementById("st-booked").textContent =
     DAYS.filter(d=>d.stay).length + " of " + DAYS.length;
+  /* The return-day math quotes the departure sunrise. It was typed in, and it was
+     the same 07:33 the old Sep 29 block carried — so the two literals drifted
+     together, 3 min behind the page's own solar math. Derived from the one
+     source now, so the paragraph and the departure card cannot disagree. */
+  document.getElementById("lk-sunrise").textContent =
+    hhmm(dayLight(DEPARTURE, DAYS[DAYS.length-1]).rise);
   buildMapDynamic(); buildRail(); buildCards(); buildDeparture(); buildUpgrades(); buildReservations();
   selectDay(null,false);
   document.getElementById("day-1").open = true;
