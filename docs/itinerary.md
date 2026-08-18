@@ -55,7 +55,7 @@ three checked bags, and bag drop shuts 45–60 min out.
 11-year-olds clear that — if yours doesn't yet, add one to the booking or bring
 your own.
 
-**~2,310 km · 51 stops · 4 soak options · 5 anchor tours**
+**~2,310 km · 52 stops · 4 soak options · 5 anchor tours**
 
 Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 4) · Mývatn baths (day 6) · Saltvík horses (day 7) · Húsavík whales (day 7) · Hofsós pool (day 8) · Ytri-Tunga seals (day 9).
 
@@ -119,6 +119,8 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | | *↓ drive 45 min* |
 | `09:15–11:15` | **Þingvellir National Park** — Almannagjá rift walk, Öxarárfoss, the plate boundary. |
 | | ◈ *photo* — The wide one is from **Hakið**, looking north-east down the rift with Þingvallavatn behind. Inside **Almannagjá** the low east-south-east sun rakes one wall and leaves the other dark, which is the whole reason the corridor reads as a corridor. |
+| `09:00–11:30 · alongside Þingvellir` | **Silfra fissure snorkelling** _optional_ — Drysuit snorkelling in the rift itself — 2–4°C water, visibility past 100 m — meeting at the Silfra car park inside the park, so it costs no detour. What it costs is a start time: check in 08:45, which means leaving Reykjavík at 08:00 rather than 08:30. It runs in parallel with the rift walk above, so the other two do Almannagjá and Öxarárfoss meanwhile, you rejoin about 11:30, and Efstidalur slips to 12:15 — nothing on this day is reserved, so that absorbs. Roughly €110–150 a head, booked separately. Read the limits before anyone gets attached: minimum age 12, minimum height 150 cm, minimum weight 45 kg. The last two are drysuit seal requirements rather than policy and are not waived, so this one is closed to the 11-year-old. Under-18s must be accompanied, so it is one adult going while the other stays — not both. |
+| | ◈ *photo* — They hand you GoPro shots because your own camera cannot come down. Above water the frame is the fissure walls dropping into clear water. Worth knowing the trade built into the slot: at 09:00 the sun is only **12°** and a narrow flooded rift is dim, where a midday start puts it at 27° almost straight down the crack — but a midday start is what breaks the rest of the day. |
 | | *↓ drive 45 min* |
 | `12:00–13:15` | **Efstidalur II — lunch** — Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar remains the fancier alternative if a cancellation ever appears. |
 | | ◈ *photo* — Not a landscape: the cows through the glass from the ice-cream barn, with an eleven-year-old's face in the same frame. |

@@ -1,6 +1,6 @@
 # Iceland Trip Planner · Sep 19–29, 2026
 
-On-the-road reference for a 10-night family Ring Road + Snæfellsnes loop — 51 timed stops over a stylized SVG map with a day-colored route ribbon, run-sheets with drive legs, a meal/fuel/grocery card per day, a reservations reference, emergency numbers, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
+On-the-road reference for a 10-night family Ring Road + Snæfellsnes loop — 52 timed stops over a stylized SVG map with a day-colored route ribbon, run-sheets with drive legs, a meal/fuel/grocery card per day, a reservations reference, emergency numbers, an aurora game plan with live Kp, and a daily-watch source list. No build step, no dependencies; the page works straight from disk, and served over http(s) it installs as an offline-capable PWA.
 
 **Live:** [harshalgajare.com/Iceland](https://harshalgajare.com/Iceland/)
 

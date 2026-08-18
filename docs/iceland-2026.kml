@@ -172,7 +172,7 @@
       <name>Day 2 leg</name>
       <styleUrl>#leg2</styleUrl>
       <LineString><tessellate>1</tessellate>
-        <coordinates>-21.916,64.137 -21.1295,64.2559 -20.633,64.246 -20.7307,64.2151 -20.3024,64.3104 -20.1199,64.3271 -20.885,64.0413 -19.965,63.599</coordinates>
+        <coordinates>-21.916,64.137 -21.1295,64.2559 -21.1197,64.2558 -20.633,64.246 -20.7307,64.2151 -20.3024,64.3104 -20.1199,64.3271 -20.885,64.0413 -19.965,63.599</coordinates>
       </LineString>
     </Placemark>
     <Placemark>
@@ -180,6 +180,12 @@
       <description><![CDATA[<b>09:15–11:15</b><br><br>Almannagjá rift walk, Öxarárfoss, the plate boundary.<br><br>◈ The wide one is from <b>Hakið</b>, looking north-east down the rift with Þingvallavatn behind. Inside <b>Almannagjá</b> the low east-south-east sun rakes one wall and leaves the other dark, which is the whole reason the corridor reads as a corridor.]]></description>
       <styleUrl>#stop2</styleUrl>
       <Point><coordinates>-21.1295,64.2559</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Silfra fissure snorkelling</name>
+      <description><![CDATA[<b>09:00–11:30 · alongside Þingvellir</b> · <i>optional</i><br><br>Drysuit snorkelling in the rift itself — 2–4°C water, visibility past 100 m — meeting at the Silfra car park inside the park, so it costs no detour. What it costs is a start time: check in 08:45, which means leaving Reykjavík at 08:00 rather than 08:30. It runs in parallel with the rift walk above, so the other two do Almannagjá and Öxarárfoss meanwhile, you rejoin about 11:30, and Efstidalur slips to 12:15 — nothing on this day is reserved, so that absorbs. Roughly €110–150 a head, booked separately. Read the limits before anyone gets attached: minimum age 12, minimum height 150 cm, minimum weight 45 kg. The last two are drysuit seal requirements rather than policy and are not waived, so this one is closed to the 11-year-old. Under-18s must be accompanied, so it is one adult going while the other stays — not both.<br><br>◈ They hand you GoPro shots because your own camera cannot come down. Above water the frame is the fissure walls dropping into clear water. Worth knowing the trade built into the slot: at 09:00 the sun is only <b>12°</b> and a narrow flooded rift is dim, where a midday start puts it at 27° almost straight down the crack — but a midday start is what breaks the rest of the day.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-21.1197,64.2558</coordinates></Point>
     </Placemark>
     <Placemark>
       <name>Efstidalur II — lunch</name>
