@@ -20,7 +20,9 @@ sw.js                         service worker — offline caching for the Ring Ro
 manifest.json                 PWA manifest (installable, standalone)
 icons/                        app icon (SVG source + rasterized PNGs)
 docs/itinerary.md             prose itinerary — generated
+docs/iceland-2026.kml         Google My Maps / Earth import — generated
 tools/build-itinerary.mjs     regenerates that doc from TRIP (no deps)
+tools/build-kml.mjs           regenerates the KML from TRIP (no deps)
 CLAUDE.md                     project context for Claude Code
 ```
 
@@ -30,10 +32,13 @@ one tool is the docs generator:
 ```bash
 node tools/build-itinerary.mjs           # rewrite docs/itinerary.md
 node tools/build-itinerary.mjs --check   # exit 1 if it's stale
+node tools/build-kml.mjs                 # rewrite docs/iceland-2026.kml
+node tools/build-kml.mjs --check         # exit 1 if it's stale
 ```
 
 ## Features
 
+- **Two map views** — a `Real map` toggle swaps the stylized map for a Google My Maps embed carrying every stop, base and day leg. It loads lazily and only when there is a network, because a Google map cannot be cached for offline use and a cross-origin frame that fails cannot be detected from the page; with no signal you keep the stylized map and get told why. Point it at your own map by running `node tools/build-kml.mjs`, importing `docs/iceland-2026.kml` into My Maps, and pasting the `mid=` into `MYMAP_MID`.
 - **Map** — hand-projected Iceland coastline, per-day route segments in an aurora color spectrum, tooltips on every stop, tap-to-jump into the matching day card. Amber = timed booking, teal = walk-in soak, hollow = optional, numbered rings = overnight bases.
 - **Day rail** — sticky selector that dims the map to a single day's leg.
 - **Day cards** — timed run-sheets in driving order with drive legs between stops and **Google + Apple Maps links on every stop**.

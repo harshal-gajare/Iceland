@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Iceland · Sep 19–29, 2026</name>
+  <description><![CDATA[Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — and the rental is cleared for it.]]></description>
+  <Style id="leg1">
+    <LineStyle><color>ffa2e045</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop1">
+    <IconStyle><color>ffa2e045</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base1">
+    <IconStyle><color>ffa2e045</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg2">
+    <LineStyle><color>ffc0d42f</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop2">
+    <IconStyle><color>ffc0d42f</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base2">
+    <IconStyle><color>ffc0d42f</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg3">
+    <LineStyle><color>ffe8c93c</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop3">
+    <IconStyle><color>ffe8c93c</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base3">
+    <IconStyle><color>ffe8c93c</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg4">
+    <LineStyle><color>fff5ae57</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop4">
+    <IconStyle><color>fff5ae57</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base4">
+    <IconStyle><color>fff5ae57</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg5">
+    <LineStyle><color>fff7967b</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop5">
+    <IconStyle><color>fff7967b</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base5">
+    <IconStyle><color>fff7967b</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg6">
+    <LineStyle><color>fff5859b</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop6">
+    <IconStyle><color>fff5859b</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base6">
+    <IconStyle><color>fff5859b</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg7">
+    <LineStyle><color>ffef77b8</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop7">
+    <IconStyle><color>ffef77b8</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base7">
+    <IconStyle><color>ffef77b8</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg8">
+    <LineStyle><color>ffdd6bd2</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop8">
+    <IconStyle><color>ffdd6bd2</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base8">
+    <IconStyle><color>ffdd6bd2</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg9">
+    <LineStyle><color>ffbc67e9</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop9">
+    <IconStyle><color>ffbc67e9</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base9">
+    <IconStyle><color>ffbc67e9</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg10">
+    <LineStyle><color>ff936ef2</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop10">
+    <IconStyle><color>ff936ef2</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base10">
+    <IconStyle><color>ff936ef2</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="leg11">
+    <LineStyle><color>ff5c82f2</color><width>4</width></LineStyle>
+  </Style>
+  <Style id="stop11">
+    <IconStyle><color>ff5c82f2</color><scale>1</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle>
+  </Style>
+  <Style id="base11">
+    <IconStyle><color>ff5c82f2</color><scale>1.3</scale>
+      <Icon><href>https://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle>
+  </Style>
+  <Folder>
+    <name>Day 1 · Sat Sep 19 · Arrival · Blue Lagoon · Reykjavík</name>
+    <description><![CDATA[~100 km · in 15:20]]></description>
+    <Placemark>
+      <name>Day 1 leg</name>
+      <styleUrl>#leg1</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-22.605,63.985 -22.605,63.985 -22.449,63.88 -21.9266,64.1417 -21.919,64.129 -21.916,64.137</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Keflavík Airport → Blue Car</name>
+      <description><![CDATA[<b>08:55–11:00</b><br><br>Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early.]]></description>
+      <styleUrl>#stop1</styleUrl>
+      <Point><coordinates>-22.605,63.985</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Blue Lagoon</name>
+      <description><![CDATA[<b>12:00–14:30</b> · <i>booked</i><br><br>Booking WBL05868696 — <b>Premium</b>, 2 adults + 1 child, entry at 12:00. That is 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+).<br><br>◈ Steam is the subject, not the water — at <b>26° in the south-south-east</b> it back-lights beautifully if you shoot across the pool toward the sun. Phone in a waterproof pouch and nothing else: silica and steam get into everything, and the good camera belongs in the locker.]]></description>
+      <styleUrl>#stop1</styleUrl>
+      <Point><coordinates>-22.449,63.88</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hallgrímskirkja · Rainbow Street · Harpa · Sun Voyager</name>
+      <description><![CDATA[<b>15:45–18:15</b><br><br>Check in ~15:00 (drop bags if the room isn't ready), then park the car and do all four on foot — the apartment is 15 min from the church and this is one loop with no doubling back. Tower elevator first while the light is still high. Then straight down Skólavörðustígur, the rainbow-painted street that runs from the church's foot to Bankastræti; the photograph everyone wants is taken from partway down, looking back up at the tower. Bear north for Harpa's glass honeycomb, then east along the Sæbraut path to the Sun Voyager, which points at Esja across the open bay — the right place to be standing at about 18:00 with sunset at 19:39. About 3.6 km of walking, and it finishes nearer the apartment than any other order.<br><br>◈ Three pictures on one walk. <b>Skólavörðustígur</b> from partway down, looking back up the rainbow at the tower — the afternoon sun sits behind you in the south-west and lights the church's front. <b>Harpa</b> from inside, shooting out through the glass honeycomb rather than at it. Then the <b>Sun Voyager</b> at about 18:00, pointing north at Esja with the sun down to a few degrees in the west: the one silhouette on this trip that needs no work.]]></description>
+      <styleUrl>#stop1</styleUrl>
+      <Point><coordinates>-21.9266,64.1417</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Perlan or FlyOver Iceland</name>
+      <description><![CDATA[<b>19:00–21:00</b> · <i>optional</i><br><br>Only if everyone's still upright — FlyOver Iceland is peak 11-year-old.<br><br>◈ Perlan's deck is a real sunset spot — the whole city, the bay and Esja, with the sun going down at 19:39.]]></description>
+      <styleUrl>#stop1</styleUrl>
+      <Point><coordinates>-21.919,64.129</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 1 · Reykjavík</name>
+      <description><![CDATA[<b>Nordic Apartments</b><br>Snorrabraut 56, 105 Reykjavík]]></description>
+      <styleUrl>#base1</styleUrl>
+      <Point><coordinates>-21.916,64.137</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 2 · Sun Sep 20 · Golden Circle</name>
+    <description><![CDATA[~200 km · out 08:30 · in 17:45]]></description>
+    <Placemark>
+      <name>Day 2 leg</name>
+      <styleUrl>#leg2</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-21.916,64.137 -21.1295,64.2559 -20.633,64.246 -20.7307,64.2151 -20.3024,64.3104 -20.1199,64.3271 -20.885,64.0413 -19.965,63.599</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Þingvellir National Park</name>
+      <description><![CDATA[<b>09:15–11:15</b><br><br>Almannagjá rift walk, Öxarárfoss, the plate boundary.<br><br>◈ The wide one is from <b>Hakið</b>, looking north-east down the rift with Þingvallavatn behind. Inside <b>Almannagjá</b> the low east-south-east sun rakes one wall and leaves the other dark, which is the whole reason the corridor reads as a corridor.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-21.1295,64.2559</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Efstidalur II — lunch</name>
+      <description><![CDATA[<b>12:00–13:15</b><br><br>Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar remains the fancier alternative if a cancellation ever appears.<br><br>◈ Not a landscape: the cows through the glass from the ice-cream barn, with an eleven-year-old's face in the same frame.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-20.633,64.246</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Laugarvatn Fontana bakery</name>
+      <description><![CDATA[<b>flex</b> · <i>optional</i><br><br>Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth.<br><br>◈ A process shot rather than a landscape: the loaf lifted steaming out of the black sand with the lake behind it. The twenty seconds when the lid comes off are the whole picture.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-20.7307,64.2151</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Geysir</name>
+      <description><![CDATA[<b>13:35–14:20</b><br><br>Strokkur erupts every 5–10 minutes.<br><br>◈ The moment before, not the plume — the water bulges into a blue dome about a second before it goes. Burst mode, stand upwind, and keep the sun behind you in the south so the spray lights up instead of greying out.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-20.3024,64.3104</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gullfoss</name>
+      <description><![CDATA[<b>14:30–15:15</b><br><br>Two-tier torrent into the canyon.<br><br>◈ Afternoon is when the rainbow appears in the spray, and it only shows with the sun behind you — so shoot from the lower platform with the light over your shoulder. The upper viewpoint is the one that shows both tiers turning into the canyon.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-20.1199,64.3271</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kerið · Secret Lagoon · Brúarfoss</name>
+      <description><![CDATA[<b>15:45–16:45</b> · <i>optional</i><br><br>Pick one on the way south, then ~1:15 to the hostel — you sleep next door to tomorrow's first stop. Aurora watch from 21:30; Drífandi falls in the backyard.<br><br>◈ At Kerið the frame is the whole bowl from the rim: red scoria walls against the green water, half the crater lit and half in shadow at this hour, which is what gives it any depth at all.]]></description>
+      <styleUrl>#stop2</styleUrl>
+      <Point><coordinates>-20.885,64.0413</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 2 · Seljalandsfoss</name>
+      <description><![CDATA[<b>Paradise Cave Hostel &amp; Guesthouse</b><br>Seljalandsskóli, 861 — at Seljalandsfoss]]></description>
+      <styleUrl>#base2</styleUrl>
+      <Point><coordinates>-19.965,63.599</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 3 · Mon Sep 21 · Waterfalls · Katla ice cave · Reynisfjara</name>
+    <description><![CDATA[~120 km + tour · out 08:25 · in 19:15]]></description>
+    <Placemark>
+      <name>Day 3 leg</name>
+      <styleUrl>#leg3</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-19.965,63.599 -19.9886,63.6156 -19.5114,63.5321 -18.88,63.6 -19.1306,63.4022 -19.0446,63.4043 -19.006,63.4187 -19.19,63.4375</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Seljalandsfoss + Gljúfrabúi</name>
+      <description><![CDATA[<b>08:30–09:45</b><br><br>You wake up next to it — beat the tour buses. Walk behind the falls (raincoats); Gljúfrabúi is 600 m up the path.<br><br>◈ The famous one — behind the curtain looking out through the water — is a sunset picture, and you are here at 08:30. Take the empty path instead; no light beats having nobody else in the frame. The sun is low behind the falls from the front, so expect a rainbow in the spray. At <b>Gljúfrabúi</b> the picture is the shaft of daylight down the cleft.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-19.9886,63.6156</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Skógafoss + Kvernufoss</name>
+      <description><![CDATA[<b>10:15–11:45</b><br><br>The banked half-hour means Kvernufoss fits — 20-min walk from the museum lot, most people miss it.<br><br>◈ Skógafoss faces <b>south</b> and you are here with the sun in the south-east — front-lit, which is precisely when its rainbow shows. Take it low from the river stones first, then climb the 527 steps for the one looking back down the escarpment.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-19.5114,63.5321</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Katla ice cave</name>
+      <description><![CDATA[<b>14:00–17:00</b> · <i>booked</i><br><br>Troll Expeditions, ticket TRO-T141847549 (order TRO-100452964) — 3 adult tickets, paid in full. Lunch in Vík 12:15 (Smiðjan Brugghús), then meet in the Víkinn Hotel lobby in Vík — check in by 13:40, 20 min before the 14:00 departure, and look for the super jeeps marked Troll Expeditions. Complimentary coffee and cookies in the lobby if you're early. Super-jeep up onto Mýrdalsjökull to blue glacier ice; 17:00 is an estimate — the ticket states no duration. Jeans are not allowed on the glacier: waterproof shell, thermal base layer, hat and gloves. Boots and waterproofs rent on site, all sizes — tell the guide if you pre-booked extras. Free to cancel until 24 hrs before, nothing back inside that. Check road.is and your email (inbox and spam) before setting off; weather cancellations go out by email.<br><br>◈ Put a person in the frame or nothing shows the scale. Phones handle blue ice better than you would expect; keep your headlamp out of other people's shots.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-18.88,63.6</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Dyrhólaey</name>
+      <description><![CDATA[<b>17:15–18:00</b><br><br>The rock arch and the best coastal panorama in the south.<br><br>◈ From the top, looking east along the whole black curve to the Reynisdrangar stacks. Sun at 13° in the west-south-west, so the sand is lit warm and the arch reads as a silhouette.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-19.1306,63.4022</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Reynisfjara</name>
+      <description><![CDATA[<b>18:10–19:00</b><br><br>Golden-hour basalt. Sneaker waves: obey the warning lights, stay off the wet sand. Farmhouse is 15 min back west — dinner in Vík first, or groceries at Krónan.<br><br>◈ The best forty minutes of light on the trip. Sun at <b>7° in the west-south-west</b> rakes along the basalt columns and makes the hexagons glow, and the stacks to the east are front-lit. Eyes on the water the whole time — no photograph here is worth standing on wet sand.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-19.0446,63.4043</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Lava Show, Vík</name>
+      <description><![CDATA[<b>~20:00</b> · <i>optional</i><br><br>Real molten lava indoors — if there's gas left in the tank.<br><br>◈ Real molten lava a few feet away in a dark room. Flash off — the glow is the picture.]]></description>
+      <styleUrl>#stop3</styleUrl>
+      <Point><coordinates>-19.006,63.4187</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 3 · Mýrdalur (near Dyrhólaey)</name>
+      <description><![CDATA[<b>Farmhouse Lodge (Airbnb)</b><br>Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík]]></description>
+      <styleUrl>#base3</styleUrl>
+      <Point><coordinates>-19.19,63.4375</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 4 · Tue Sep 22 · Canyon · Svartifoss · glacier lagoon</name>
+    <description><![CDATA[~280 km · out 08:00 · in 18:20]]></description>
+    <Placemark>
+      <name>Day 4 leg</name>
+      <styleUrl>#leg4</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-19.19,63.4375 -18.1719,63.7712 -16.9666,64.0163 -16.3771,64.0152 -16.1809,64.0478 -16.1755,64.0427 -15.2082,64.2539</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Fjaðrárgljúfur</name>
+      <description><![CDATA[<b>09:00–10:00</b><br><br>Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits.<br><br>◈ From the rim path looking down the serpentine. The low east-south-east sun lights one wall and leaves the other black, and morning mist in the canyon is common enough to hope for.]]></description>
+      <styleUrl>#stop4</styleUrl>
+      <Point><coordinates>-18.1719,63.7712</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Skaftafell — Svartifoss hike</name>
+      <description><![CDATA[<b>10:50–13:00</b><br><br>~4 km round trip, kid-doable (10:50–12:35), then a quick café lunch at the visitor centre — be rolling by 13:00, the boat check-in is the day's hard edge.<br><br>◈ Get low and centred so the fan of black hexagonal columns opens out behind the water. The bowl is narrow and mostly shaded, which is a gift: nothing blows out.]]></description>
+      <styleUrl>#stop4</styleUrl>
+      <Point><coordinates>-16.9666,64.0163</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Fjallsárlón</name>
+      <description><![CDATA[<b>13:45–14:10</b> · <i>optional</i><br><br>The smaller, quieter iceberg lagoon — 25 minutes is enough for the view, and it stays the first thing to cut if the morning has slipped.<br><br>◈ Quieter than Jökulsárlón, and the glacier tongue sits directly behind the bergs — one frame holds both, which is the thing the bigger lagoon cannot do.]]></description>
+      <styleUrl>#stop4</styleUrl>
+      <Point><coordinates>-16.3771,64.0152</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Jökulsárlón — Zodiac boat tour</name>
+      <description><![CDATA[<b>15:10–16:25</b> · <i>booked</i><br><br>Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. Check in at the ticket office by 14:40: the Zodiac wants 30 min, not the amphibian's 20. Exchange the voucher for tickets before boarding — printed or on a phone. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222.<br><br>◈ From the boat, close enough that the ice fills the frame. Sun at 22° in the south-west is what makes the blue read as blue. Spray gets everywhere: wipe the lens between shots and keep the strap round your wrist.]]></description>
+      <styleUrl>#stop4</styleUrl>
+      <Point><coordinates>-16.1809,64.0478</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Diamond Beach</name>
+      <description><![CDATA[<b>16:35–17:15</b><br><br>Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner.<br><br>◈ The one everybody wants. Crouch low with the sun to your right in the west-south-west so it passes through the ice and lights it from behind — black sand below, white surf behind. Same sneaker-wave rule as the beach yesterday.]]></description>
+      <styleUrl>#stop4</styleUrl>
+      <Point><coordinates>-16.1755,64.0427</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 4 · Höfn</name>
+      <description><![CDATA[<b>Höfn Inn Guesthouse</b><br>Vesturbraut 3, 780 Höfn — 20 min from Stokksnes]]></description>
+      <styleUrl>#base4</styleUrl>
+      <Point><coordinates>-15.2082,64.2539</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 5 · Wed Sep 23 · Stokksnes · the East Fjords</name>
+    <description><![CDATA[~270 km · out 08:30 · in 18:30]]></description>
+    <Placemark>
+      <name>Day 5 leg</name>
+      <styleUrl>#leg5</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-15.2082,64.2539 -14.98,64.2434 -14.2846,64.6562 -13.877,64.836 -14.01,65.261 -14.3945,65.2637</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Stokksnes / Vestrahorn</name>
+      <description><![CDATA[<b>08:50–10:00</b><br><br>Morning light on the black dunes; small access fee at the Viking Café.<br><br>◈ The iconic Iceland frame: <b>Vestrahorn</b>'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide; that is the one number this page cannot give you yet, so check it on the day.]]></description>
+      <styleUrl>#stop5</styleUrl>
+      <Point><coordinates>-14.98,64.2434</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Djúpivogur</name>
+      <description><![CDATA[<b>11:05–11:45</b><br><br>Eggin í Gleðivík egg sculptures + coffee.<br><br>◈ The row of granite eggs receding along the harbour rail — shoot down the line, never across it.]]></description>
+      <styleUrl>#stop5</styleUrl>
+      <Point><coordinates>-14.2846,64.6562</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Petra&apos;s Stone Collection</name>
+      <description><![CDATA[<b>12:45–13:45</b> · <i>optional</i><br><br>Quirky, kid-friendly, right on the coastal route — packed lunch here.<br><br>◈ Close-ups, not wide shots: spar, jasper and zeolites by the thousand. Let the kid pick the subject.]]></description>
+      <styleUrl>#stop5</styleUrl>
+      <Point><coordinates>-13.877,64.836</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Seyðisfjörður or Vök Baths</name>
+      <description><![CDATA[<b>15:30–18:00</b> · <i>optional</i><br><br>Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir.<br><br>◈ If it is Seyðisfjörður, the <b>rainbow path</b> leading up to the blue church — the sister shot to day 1's street. If it is Vök, the pools cut into the lake surface with the swim-up bar in frame.]]></description>
+      <styleUrl>#stop5</styleUrl>
+      <Point><coordinates>-14.01,65.261</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 5 · Egilsstaðir</name>
+      <description><![CDATA[<b>Eyjólfsstaðir Guesthouse</b><br>Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town]]></description>
+      <styleUrl>#base5</styleUrl>
+      <Point><coordinates>-14.3945,65.2637</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 6 · Thu Sep 24 · Stuðlagil · Dettifoss · Hverir · the baths</name>
+    <description><![CDATA[~250 km · out 08:15 · in 16:10]]></description>
+    <Placemark>
+      <name>Day 6 leg</name>
+      <styleUrl>#leg6</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-14.3945,65.2637 -15.3068,65.1571 -15.8867,65.3606 -16.3846,65.8141 -16.8087,65.6412 -16.8827,65.6262 -16.9119,65.5911 -16.848,65.6304 -16.9127,65.6465</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Stuðlagil Canyon</name>
+      <description><![CDATA[<b>09:10–11:10</b><br><br>East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow.<br><br>◈ From the east-side path down at river level, looking along the columned wall with the glacial blue below. The low east-south-east sun lights the far wall. Whether the water is turquoise or grey is dam overflow, not your fault.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-15.3068,65.1571</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Möðrudalur</name>
+      <description><![CDATA[<b>11:45–12:05</b> · <i>optional</i><br><br>Coffee at Iceland's highest farm, mid-desert.<br><br>◈ The little turf-roofed church with the desert behind it, and Herðubreið on the skyline if the air is clear.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-15.8867,65.3606</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Dettifoss West + Selfoss</name>
+      <description><![CDATA[<b>12:55–14:10</b><br><br>Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here.<br><br>◈ Dettifoss is about volume, not shape, so put a person on the rim or it could be any waterfall. Sun due south at midday means a rainbow in the spray if you keep it behind you. <b>Selfoss</b> upstream is the wider, quieter, better-composed one.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-16.3846,65.8141</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hverir / Námaskarð</name>
+      <description><![CDATA[<b>14:55–15:40</b><br><br>Boiling mud pots and fumaroles.<br><br>◈ Ochre ground, blue steam, and the boardwalk as a line drawn through it. Sun at 21° in the south-south-west back-lights the plumes if you shoot into them. Mind the wind: sulphur on a lens is one thing, on you is another.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-16.8087,65.6412</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Grjótagjá</name>
+      <description><![CDATA[<b>15:45–16:00</b><br><br>Photo stop; viewing only, no bathing.<br><br>◈ The shaft of daylight through the fissure onto the blue water. It is a small dark hole — a phone braced against the rock beats a hand-held camera.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-16.8827,65.6262</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Dimmuborgir</name>
+      <description><![CDATA[<b>16:30–17:30</b> · <i>optional</i><br><br>Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty.<br><br>◈ Shoot the lava pillars against the sky, not against the ground: the whole point is that they read as ruined towers.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-16.9119,65.5911</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Earth Lagoon Mývatn</name>
+      <description><![CDATA[<b>18:00–20:00</b> · <i>booked</i><br><br>Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount.<br><br>◈ Steam over the lake with sunset at <b>19:02</b>, right in the middle of your slot. Phone in a pouch only — silica water and electronics do not mix, and the other bathers did not agree to be in it.]]></description>
+      <styleUrl>#stop6</styleUrl>
+      <Point><coordinates>-16.848,65.6304</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 6 · Mývatn</name>
+      <description><![CDATA[<b>Dimmuborgir Guesthouse</b><br>Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field]]></description>
+      <styleUrl>#base6</styleUrl>
+      <Point><coordinates>-16.9127,65.6465</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 7 · Fri Sep 25 · Húsavík whales · Saltvík horses · Akureyri</name>
+    <description><![CDATA[~200 km · out 07:55 · in 17:35]]></description>
+    <Placemark>
+      <name>Day 7 leg</name>
+      <styleUrl>#leg7</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-16.9127,65.6465 -17.3459,66.0464 -17.3631,65.999 -17.5502,65.6828 -18.0907,65.6826 -18.1262,65.6885</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Húsavík whale watching</name>
+      <description><![CDATA[<b>09:30–11:30</b> · <i>booked</i><br><br>Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Back on the 09:30 sailing, so check in by 08:50 — 40 min before departure, and a missed check-in is charged in full. Gentle Giants Ticket Center, Hafnarstétt 7, 640 Húsavík; look for the blue flags, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Lunch at Naustið after, 11:45–12:45, then ten minutes out to the horses.<br><br>◈ From a twelve-seat RIB at speed, a phone on a lanyard beats a long lens you cannot brace. Shoot the blow and the back — if you can see the fluke it has already gone. The other picture is the harbour coming back in, wooden church above it.]]></description>
+      <styleUrl>#stop7</styleUrl>
+      <Point><coordinates>-17.3459,66.0464</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Saltvík horse ride — The Seaside tour</name>
+      <description><![CDATA[<b>14:00–15:30</b> · <i>booked</i><br><br>Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. Now the 14:00 departure and an hour in the saddle rather than ninety minutes, plus about half an hour getting on and off, which is why this reads 14:00–15:30. Along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sailed this morning. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, ten minutes down from the harbour, so there is room to eat properly before you come out. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund.<br><br>◈ Mane and shoreline. You cannot really shoot from the saddle at a tölt, so ask the guide for a halt; they are used to being asked.]]></description>
+      <styleUrl>#stop7</styleUrl>
+      <Point><coordinates>-17.3631,65.999</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Goðafoss</name>
+      <description><![CDATA[<b>16:15–16:55</b><br><br>The waterfall of the gods, right off the route south.<br><br>◈ The horseshoe from the west bank, sun at 15° in the south-west skimming across it. Go wide enough to hold the whole curve or it is just water.]]></description>
+      <styleUrl>#stop7</styleUrl>
+      <Point><coordinates>-17.5502,65.6828</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Akureyri old town + Brynja</name>
+      <description><![CDATA[<b>17:40–19:10</b><br><br>Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot.<br><br>◈ Down the church steps to the fjord, and the <b>red heart-shaped traffic lights</b> — the town's own joke and nobody else's postcard. Sunset is 19:03, so the steps are golden and the ice cream is the last frame of the day.]]></description>
+      <styleUrl>#stop7</styleUrl>
+      <Point><coordinates>-18.0907,65.6826</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 7 · Akureyri</name>
+      <description><![CDATA[<b>Akureyri Backpackers</b><br>Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks]]></description>
+      <styleUrl>#base7</styleUrl>
+      <Point><coordinates>-18.1262,65.6885</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 8 · Sat Sep 26 · Tröllaskagi · Hofsós pool · the long haul west</name>
+    <description><![CDATA[~390 km · out 08:00 · in 18:10]]></description>
+    <Placemark>
+      <name>Day 8 leg</name>
+      <styleUrl>#leg8</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-18.1262,65.6885 -18.9054,66.1512 -19.4108,65.8965 -19.5058,65.6099 -20.5732,65.3293 -22.7297,65.0757</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Siglufjörður</name>
+      <description><![CDATA[<b>09:15–10:30</b><br><br>Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before.<br><br>◈ The marina with coloured houses stacked under the fjord wall. At 09:15 the sun is only 11° up and half the fjord is still in shadow, which is exactly what makes the lit half worth the frame.]]></description>
+      <styleUrl>#stop8</styleUrl>
+      <Point><coordinates>-18.9054,66.1512</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hofsós pool</name>
+      <description><![CDATA[<b>11:15–12:15</b> · <i>soak</i><br><br>Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45.<br><br>◈ The picture is the infinity edge — the pool's lip dissolving into Skagafjörður with <b>Drangey</b> out on the water beyond. Shoot north with the sun behind you. Phone only, and be quick: people are swimming.]]></description>
+      <styleUrl>#stop8</styleUrl>
+      <Point><coordinates>-19.4108,65.8965</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Glaumbær turf farm</name>
+      <description><![CDATA[<b>13:20–14:05</b><br><br>Exterior is the show if the museum's on short hours.<br><br>◈ The row of grass-roofed gables end-on, so the turf reads as one wall of green. Better from outside than in.]]></description>
+      <styleUrl>#stop8</styleUrl>
+      <Point><coordinates>-19.5058,65.6099</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kolugljúfur</name>
+      <description><![CDATA[<b>15:20–15:40</b> · <i>optional</i><br><br>15-min leg stretch off Rte 1, then ~2.5 hrs west — fuel + snack in Borgarnes ~17:10, and the hotel is on Route 54 south of Stykkishólmur, so you pass the turn rather than doubling back.<br><br>◈ Twenty minutes, one frame: the falls stepping through the gorge, taken from the bridge.]]></description>
+      <styleUrl>#stop8</styleUrl>
+      <Point><coordinates>-20.5732,65.3293</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 8 · Stykkishólmur</name>
+      <description><![CDATA[<b>Hotel Stundarfriður</b><br>Snæfellsnesvegur, 340 Stykkishólmur — on Route 54, ~8 km south of town]]></description>
+      <styleUrl>#base8</styleUrl>
+      <Point><coordinates>-22.7297,65.0757</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 9 · Sun Sep 27 · Snæfellsnes, tip to toe</name>
+    <description><![CDATA[~250 km · out 08:15 · in 18:15]]></description>
+    <Placemark>
+      <name>Day 9 leg</name>
+      <styleUrl>#leg9</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-22.7297,65.0757 -22.7297,65.0757 -23.3068,64.942 -23.9033,64.7527 -23.818,64.748 -23.6216,64.7686 -23.3843,64.8221 -23.0784,64.8037 -21.291,64.6652</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Stykkishólmur</name>
+      <description><![CDATA[<b>08:30–09:30</b><br><br>Harbor, Súgandisey lighthouse hill, Danish-era houses — ten minutes north of the hotel, and first because you slept beside it. The old plan drove out to Kirkjufell and came back for this; sleeping here deletes that backtrack.<br><br>◈ Up on Súgandisey, the orange lighthouse against the fjord — and at 08:30 the sun is at <b>6°</b>, which is as good as light gets anywhere on this trip. The harbour and the Danish-era houses come free on the way back down.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-22.7297,65.0757</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kirkjufell + Kirkjufellsfoss</name>
+      <description><![CDATA[<b>10:10–10:55</b><br><br>The mountain everyone photographs, and the falls in front of it.<br><br>◈ The most photographed frame in Iceland, and genuinely worth it: <b>Kirkjufellsfoss</b> in the foreground, the mountain behind. Stand north-east of the falls looking north-west — the sun at 15° in the south-east is behind you, so the peak is lit rather than a shape.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.3068,64.942</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Djúpalónssandur</name>
+      <description><![CDATA[<b>12:30–13:15</b><br><br>Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara.<br><br>◈ The rusted ribs of the trawler on black pebbles, taken low and close so the iron is huge and the beach is only backdrop. The lifting stones are the second frame, with a hand on one for scale.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.9033,64.7527</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Vatnshellir lava cave</name>
+      <description><![CDATA[<b>13:20–14:05</b> · <i>optional</i><br><br>45-min guided cave, tours on the hour, kid-friendly.<br><br>◈ Almost nothing works down there — pitch dark, and the guide's lamp is the only light. Shoot the spiral staircase looking back up at the entrance hole instead; that one frame is the cave.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.818,64.748</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Arnarstapi · Gatklettur</name>
+      <description><![CDATA[<b>14:15–15:10</b><br><br>Stone arch plus a stretch of the clifftop walk toward Hellnar.<br><br>◈ Gatklettur becomes a near-perfect circle when you find the angle — keep walking until the sea fills the hole. The kittiwake cliffs and the basalt columns are on the same short walk.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.6216,64.7686</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Búðakirkja</name>
+      <description><![CDATA[<b>15:20–15:45</b><br><br>The black church in the lava field.<br><br>◈ The black church wants a low, wide frame with lava in front and mountains behind; it is small, and head-on makes it look smaller. Sun at 20° in the south-south-west lights the door side.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.3843,64.8221</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Ytri-Tunga seal beach</name>
+      <description><![CDATA[<b>16:00–16:40</b><br><br>Seals haul out most days; then ~1 hr 30 inland to Reykholt, passing Borgarnes on the way.<br><br>◈ Longest lens you have, from where you already are. The picture is seals ignoring you — walking closer ends the scene, and is not allowed anyway.]]></description>
+      <styleUrl>#stop9</styleUrl>
+      <Point><coordinates>-23.0784,64.8037</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 9 · Reykholt</name>
+      <description><![CDATA[<b>Fosshotel Reykholt</b><br>Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell]]></description>
+      <styleUrl>#base9</styleUrl>
+      <Point><coordinates>-21.291,64.6652</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 10 · Mon Sep 28 · Into the Glacier · lava falls · hot spring</name>
+    <description><![CDATA[~250 km · out 08:45 · in 18:15]]></description>
+    <Placemark>
+      <name>Day 10 leg</name>
+      <styleUrl>#leg10</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-21.291,64.6652 -20.5827,64.6502 -20.975,64.7028 -21.4053,64.6636 -22.238,63.889 -21.7938,64.0886</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Into the Glacier — Klaki Base Camp</name>
+      <description><![CDATA[<b>10:30–13:30</b> · <i>booked</i><br><br>Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is.<br><br>◈ Two different problems. Outside on Langjökull the light is flat white: expose for the snow or the whole frame greys out, and the line of snowmobiles across the cap is the shot. Inside, the tunnel is LED-lit blue ice — brace against the wall, and the chapel is the one room worth stopping in.]]></description>
+      <styleUrl>#stop10</styleUrl>
+      <Point><coordinates>-20.5827,64.6502</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Hraunfossar + Barnafoss</name>
+      <description><![CDATA[<b>14:10–14:40</b><br><br>Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream. Fifteen minutes past Húsafell on 518, so it costs no detour at all coming off the glacier — and after three hours on ice, thirty minutes of walking is about right.<br><br>◈ A kilometre of water coming straight out of a lava wall: shoot along the bank so the springs repeat into the distance, not across it. Late September is peak <b>autumn colour</b> in Borgarfjörður, and the birch on that bank is why this stop photographs better now than in summer.]]></description>
+      <styleUrl>#stop10</styleUrl>
+      <Point><coordinates>-20.975,64.7028</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Krauma · Deildartunguhver</name>
+      <description><![CDATA[<b>15:10–16:40</b> · <i>soak</i><br><br>Deildartunguhver is Europe's highest-flow hot spring — 180 litres a second at 100°C — and <b>Krauma</b> is the bath house built over it, mixing that water with glacier melt to something you can sit in. Open 11:00–21:00 daily; capacity is deliberately small, so book ahead rather than turning up on spec. This is the right shape for the day: you come off a glacier cold, and the last thing before a two-and-a-half hour drive south is ninety minutes in hot water. Towels can be hired; the day bag has yours.<br><br>◈ The spring, not the baths. Water leaving the ground at 100°C and 180 litres a second makes a wall of steam you can shoot straight into with the low sun behind it.]]></description>
+      <styleUrl>#stop10</styleUrl>
+      <Point><coordinates>-21.4053,64.6636</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Fagradalsfjall / Geldingadalir</name>
+      <description><![CDATA[<b>flex · swap for Krauma</b> · <i>optional</i><br><br>The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with roughly two hours of light before the 19:07 sunset — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light.<br><br>◈ Black on black — new lava reads as texture, so it needs raking light and something for scale. A person on the ridge does both.]]></description>
+      <styleUrl>#stop10</styleUrl>
+      <Point><coordinates>-22.238,63.889</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Night 10 · Kópavogur</name>
+      <description><![CDATA[<b>Hotel Kríunes</b><br>Kríunesi Vatnsenda, Kópavogur, 203 Reykjavík — on the shore of Elliðavatn]]></description>
+      <styleUrl>#base10</styleUrl>
+      <Point><coordinates>-21.7938,64.0886</coordinates></Point>
+    </Placemark>
+  </Folder>
+  <Folder>
+    <name>Day 11 · Tue Sep 29 · Reykjanes loop · last fill · fly home</name>
+    <description><![CDATA[out 08:15 · keys back 14:00 · flight KEF 17:10]]></description>
+    <Placemark>
+      <name>Day 11 leg</name>
+      <styleUrl>#leg11</styleUrl>
+      <LineString><tessellate>1</tessellate>
+        <coordinates>-21.7938,64.0886 -21.7938,64.0886 -22.675,63.868 -22.6836,63.8188 -22.7075,63.8125 -22.5122,63.8331 -22.5636,64.0033 -22.605,63.985</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Leave Hotel Kríunes</name>
+      <description><![CDATA[<b>08:15</b><br><br>Breakfast first, and ask the night before whether the partner rate includes it — the booking never spelled that out. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this trip never reaches otherwise.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-21.7938,64.0886</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Bridge Between Continents</name>
+      <description><![CDATA[<b>09:10</b><br><br>The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam.<br><br>◈ Stand in the rift and shoot along it with the bridge overhead. At 09:10 the sun is 9° up and throws a long shadow down the sand, which is the only thing that makes a shallow trench look like a plate boundary.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.675,63.868</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Gunnuhver</name>
+      <description><![CDATA[<b>09:40</b><br><br>The boiling mud field, walked on boardwalks.<br><br>◈ The big vent throws a plume worth shooting into, with the low east-south-east sun behind it. Boardwalks only: the crust is thin and the ground is actually boiling.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.6836,63.8188</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Reykjanesviti + Valahnúkamöl</name>
+      <description><![CDATA[<b>10:10</b><br><br>Iceland's oldest lighthouse on the cliff, and the sea stacks below it.<br><br>◈ Two frames — the lighthouse alone on its mound, and <b>Karl</b>, the sea stack, from the shore below with the surf breaking round it.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.7075,63.8125</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Brimketill</name>
+      <description><![CDATA[<b>11:00</b><br><br>The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks.<br><br>◈ Wait for a set. The picture is the instant the surf pours over the lip and fills the pool; between waves it is just a rock. From the platform — people have been swept off trying for better.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.5122,63.8331</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Kaffi Duus — lunch</name>
+      <description><![CDATA[<b>11:45</b><br><br>Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.5636,64.0033</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>KEF terminal</name>
+      <description><![CDATA[<b>14:40</b><br><br>Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12.]]></description>
+      <styleUrl>#stop11</styleUrl>
+      <Point><coordinates>-22.605,63.985</coordinates></Point>
+    </Placemark>
+  </Folder>
+</Document>
+</kml>

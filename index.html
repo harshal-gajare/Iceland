@@ -137,6 +137,15 @@
   .lk{width:9px;height:9px;border-radius:50%;display:inline-block}
   .lk.ring{background:transparent;border:2px solid var(--fog)}
   .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
+  .mapctl{display:inline-flex;gap:8px}
+  /* Deliberately NO display property on #realmap, so [hidden] keeps working —
+     the same trap .kpline documents. .legend DOES set display:flex, so it needs
+     an explicit [hidden] rule or it stays visible over the real map. */
+  #realmap{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel-2)}
+  #realmap iframe{display:block;width:100%;aspect-ratio:1000/728;max-height:70vh;border:0}
+  .legend[hidden]{display:none}
+  .rmnote{padding:22px 18px;color:var(--fog);font-size:14px;line-height:1.6;max-width:68ch}
+  .rmnote b{color:var(--ice)}
 
   /* svg pieces */
   #icemap .coast{fill:var(--coast-fill);stroke:var(--coast-stroke);stroke-width:1.4}
@@ -364,7 +373,7 @@
     /* all three selectors, or [data-theme] out-specifies the bare :root and the
        light palette leaks into print */
     :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
-    .rail,.ghostbtn,.count,#mapbox,.legend,.mapnote,.maphint,.top nav,
+    .rail,.ghostbtn,.count,#mapbox,#realmap,.legend,.mapnote,.maphint,.top nav,
     .mlinks,.kpline{display:none!important}
     details.day{break-inside:avoid}
   }
@@ -405,12 +414,16 @@
     <div class="maphead">
       <h2>The loop</h2>
       <p class="hint">Tap a stop for details, or pick a day below to light up that leg.</p>
-      <button class="ghostbtn" id="resetDay">Show all days</button>
+      <span class="mapctl">
+        <button class="ghostbtn" id="mapview" aria-pressed="false">Real map</button>
+        <button class="ghostbtn" id="resetDay">Show all days</button>
+      </span>
     </div>
     <div id="mapbox">
       <svg id="icemap" viewBox="0 0 1000 728" role="img" aria-label="Stylized map of Iceland with the ten-day route and all stops"></svg>
       <div id="tip"></div>
     </div>
+    <div id="realmap" hidden></div>
     <div class="legend">
       <span><i class="lk" style="background:var(--ember)"></i> timed booking</span>
       <span><i class="lk" style="background:#59d7e8"></i> walk-in soak</span>
@@ -1113,6 +1126,81 @@ function moveTip(e){
 }
 function hideTip(){ tip.style.opacity=0; }
 
+/* ================= MAP VIEW ================= */
+/* Two views of the same trip. The stylized SVG is the default because it is the
+   one that works with no signal, dims to a single day when you tap the rail, and
+   follows the theme. The real map is a Google My Maps iframe — no API key, no
+   billing — and it is inserted LAZILY and only when navigator.onLine reports a
+   network.
+
+   That gate is not belt-and-braces, it is the only option: sw.js returns without
+   respondWith() for cross-origin, so an iframe that cannot load renders the
+   browser's own error document inside the box, and that failure is undetectable
+   from here — onerror does not fire for a cross-origin frame and onload may fire
+   for the error page. Google's terms also forbid caching tiles, so it cannot be
+   added to SHELL. Insert only when we already know there is a network; never
+   insert and hope to catch the failure.
+
+   To enable it: run `node tools/build-kml.mjs`, import docs/iceland-2026.kml
+   into Google My Maps, share the map, and paste its mid= below. */
+const MYMAP_MID = "";
+
+const realmap = document.getElementById("realmap");
+const mapviewBtn = document.getElementById("mapview");
+const legendEl = document.querySelector(".mapwrap .legend");
+const mapnoteEl = document.querySelector(".mapwrap .mapnote");
+
+function realmapNote(html){ realmap.innerHTML = `<p class="rmnote">${html}</p>`; }
+
+/* Builds the frame at most once. Returns false when it could not, so the caller
+   can decide whether that is worth switching views for. */
+function mountRealmap(){
+  if(realmap.querySelector("iframe")) return true;
+  if(!MYMAP_MID){
+    realmapNote("The custom map isn't linked yet. Run <b>node tools/build-kml.mjs</b>, "
+      + "import <b>docs/iceland-2026.kml</b> into Google My Maps, share the map, and paste its "
+      + "<b>mid=</b> into <b>MYMAP_MID</b>. Every stop, base and day leg is already in that file.");
+    return false;
+  }
+  if(!navigator.onLine){
+    realmapNote("No network, so the real map can't load — and a Google map cannot be cached for "
+      + "offline use. The stylized map works without signal, which is exactly what it is for.");
+    return false;
+  }
+  const f = document.createElement("iframe");
+  f.src = "https://www.google.com/maps/d/embed?mid=" + encodeURIComponent(MYMAP_MID);
+  f.title = "Iceland trip — every stop, base and day leg on a Google map";
+  f.loading = "lazy";
+  f.referrerPolicy = "no-referrer-when-downgrade";
+  realmap.innerHTML = "";
+  realmap.appendChild(f);
+  return true;
+}
+
+let mapview = "svg";
+function setMapView(v, save){
+  const wants = v === "real";
+  const real = wants && mountRealmap();      // false when it could not be built
+  mapview = real ? "real" : "svg";
+  mapbox.hidden = real;
+  /* The legend describes SVG marker rules and the mapnote describes the SVG's
+     projection — neither is true of the Google map, so they go with it. */
+  if(legendEl) legendEl.hidden = real;
+  if(mapnoteEl) mapnoteEl.hidden = real;
+  /* Note the asymmetry: the container shows whenever the real map was ASKED for,
+     but the stylized map only hides when it actually mounted. A failed mount puts
+     the explanation beside a working map instead of replacing it — giving up the
+     map that works in order to read why the other one won't load is the wrong
+     trade, and it leaves the button offering "Real map" so moving into signal and
+     tapping again just works. */
+  realmap.hidden = !wants;
+  mapviewBtn.textContent = real ? "Stylized map" : "Real map";
+  mapviewBtn.setAttribute("aria-pressed", String(real));
+  if(save){ try{ localStorage.setItem("iceland26.mapview", mapview); }catch(e){} }
+}
+
+mapviewBtn.addEventListener("click",()=>setMapView(mapview === "real" ? "svg" : "real", true));
+
 /* ================= CARDS + RAIL ================= */
 const cards = document.getElementById("cards");
 const rail = document.getElementById("rail");
@@ -1421,6 +1509,13 @@ if("serviceWorker" in navigator && (location.protocol==="https:" || ["localhost"
 /* ================= INIT ================= */
 buildMapStatic();
 document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
+/* A saved "real" choice is only honoured if it can actually be honoured — with no
+   network, or with no map linked yet, restoring it would hand you a message where
+   you expected a map. Fall back to the stylized view and don't overwrite the
+   preference, so it comes back when the signal does. */
+let savedView = null;
+try{ savedView = localStorage.getItem("iceland26.mapview"); }catch(e){}
+setMapView(savedView === "real" && MYMAP_MID && navigator.onLine ? "real" : "svg", false);
 render();
 countdown(); loadKp();
 </script>
