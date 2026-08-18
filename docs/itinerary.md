@@ -89,10 +89,13 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 | `08:55–11:00` | **Keflavík Airport → Blue Car** — Land 08:55 (overnight from JFK), passport, bags, then the Blue Car shuttle — pickup slot is 11:00 (booking #Z04F2O); ask nicely whether the Vitara can release early. |
 | | *↓ drive 20 min* |
 | `12:00–14:30` | **Blue Lagoon** **✔ booked** — Booking WBL05868696 — <b>Premium</b>, 2 adults + 1 child, entry at 12:00. That is 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides — Sky Lagoon won't work (strict 12+). |
+| | ◈ *photo* — Steam is the subject, not the water — at **26° in the south-south-east** it back-lights beautifully if you shoot across the pool toward the sun. Phone in a waterproof pouch and nothing else: silica and steam get into everything, and the good camera belongs in the locker. |
 | | *↓ drive 50 min* |
 | `15:45–18:15` | **Hallgrímskirkja · Rainbow Street · Harpa · Sun Voyager** — Check in ~15:00 (drop bags if the room isn't ready), then park the car and do all four on foot — the apartment is 15 min from the church and this is one loop with no doubling back. Tower elevator first while the light is still high. Then straight down Skólavörðustígur, the rainbow-painted street that runs from the church's foot to Bankastræti; the photograph everyone wants is taken from partway down, looking back up at the tower. Bear north for Harpa's glass honeycomb, then east along the Sæbraut path to the Sun Voyager, which points at Esja across the open bay — the right place to be standing at about 18:00 with sunset at 19:39. About 3.6 km of walking, and it finishes nearer the apartment than any other order. |
+| | ◈ *photo* — Three pictures on one walk. **Skólavörðustígur** from partway down, looking back up the rainbow at the tower — the afternoon sun sits behind you in the south-west and lights the church's front. **Harpa** from inside, shooting out through the glass honeycomb rather than at it. Then the **Sun Voyager** at about 18:00, pointing north at Esja with the sun down to a few degrees in the west: the one silhouette on this trip that needs no work. |
 | | *↓ drive 5 min* |
 | `19:00–21:00` | **Perlan or FlyOver Iceland** _optional_ — Only if everyone's still upright — FlyOver Iceland is peak 11-year-old. |
+| | ◈ *photo* — Perlan's deck is a real sunset spot — the whole city, the bay and Esja, with the sun going down at 19:39. |
 
 | Eating | |
 |---|---|
@@ -115,15 +118,21 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 45 min* |
 | `09:15–11:15` | **Þingvellir National Park** — Almannagjá rift walk, Öxarárfoss, the plate boundary. |
+| | ◈ *photo* — The wide one is from **Hakið**, looking north-east down the rift with Þingvallavatn behind. Inside **Almannagjá** the low east-south-east sun rakes one wall and leaves the other dark, which is the whole reason the corridor reads as a corridor. |
 | | *↓ drive 45 min* |
 | `12:00–13:15` | **Efstidalur II — lunch** — Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar remains the fancier alternative if a cancellation ever appears. |
+| | ◈ *photo* — Not a landscape: the cows through the glass from the ice-cream barn, with an eleven-year-old's face in the same frame. |
 | `flex` | **Laugarvatn Fontana bakery** _optional_ — Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth. |
+| | ◈ *photo* — A process shot rather than a landscape: the loaf lifted steaming out of the black sand with the lake behind it. The twenty seconds when the lid comes off are the whole picture. |
 | | *↓ drive 20 min* |
 | `13:35–14:20` | **Geysir** — Strokkur erupts every 5–10 minutes. |
+| | ◈ *photo* — The moment before, not the plume — the water bulges into a blue dome about a second before it goes. Burst mode, stand upwind, and keep the sun behind you in the south so the spray lights up instead of greying out. |
 | | *↓ drive 10 min* |
 | `14:30–15:15` | **Gullfoss** — Two-tier torrent into the canyon. |
+| | ◈ *photo* — Afternoon is when the rainbow appears in the spray, and it only shows with the sun behind you — so shoot from the lower platform with the light over your shoulder. The upper viewpoint is the one that shows both tiers turning into the canyon. |
 | | *↓ drive 30 min* |
 | `15:45–16:45` | **Kerið · Secret Lagoon · Brúarfoss** _optional_ — Pick one on the way south, then ~1:15 to the hostel — you sleep next door to tomorrow's first stop. Aurora watch from 21:30; Drífandi falls in the backyard. |
+| | ◈ *photo* — At Kerið the frame is the whole bowl from the rim: red scoria walls against the green water, half the crater lit and half in shadow at this hour, which is what gives it any depth at all. |
 
 | Eating | |
 |---|---|
@@ -146,16 +155,22 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 2 min* |
 | `08:30–09:45` | **Seljalandsfoss + Gljúfrabúi** — You wake up next to it — beat the tour buses. Walk behind the falls (raincoats); Gljúfrabúi is 600 m up the path. |
+| | ◈ *photo* — The famous one — behind the curtain looking out through the water — is a sunset picture, and you are here at 08:30. Take the empty path instead; no light beats having nobody else in the frame. The sun is low behind the falls from the front, so expect a rainbow in the spray. At **Gljúfrabúi** the picture is the shaft of daylight down the cleft. |
 | | *↓ drive 30 min* |
 | `10:15–11:45` | **Skógafoss + Kvernufoss** — The banked half-hour means Kvernufoss fits — 20-min walk from the museum lot, most people miss it. |
+| | ◈ *photo* — Skógafoss faces **south** and you are here with the sun in the south-east — front-lit, which is precisely when its rainbow shows. Take it low from the river stones first, then climb the 527 steps for the one looking back down the escarpment. |
 | | *↓ drive 30 min* |
 | `14:00–17:00` | **Katla ice cave** **✔ booked** — Troll Expeditions, ticket TRO-T141847549 (order TRO-100452964) — 3 adult tickets, paid in full. Lunch in Vík 12:15 (Smiðjan Brugghús), then meet in the Víkinn Hotel lobby in Vík — check in by 13:40, 20 min before the 14:00 departure, and look for the super jeeps marked Troll Expeditions. Complimentary coffee and cookies in the lobby if you're early. Super-jeep up onto Mýrdalsjökull to blue glacier ice; 17:00 is an estimate — the ticket states no duration. Jeans are not allowed on the glacier: waterproof shell, thermal base layer, hat and gloves. Boots and waterproofs rent on site, all sizes — tell the guide if you pre-booked extras. Free to cancel until 24 hrs before, nothing back inside that. Check road.is and your email (inbox and spam) before setting off; weather cancellations go out by email. |
+| | ◈ *photo* — Put a person in the frame or nothing shows the scale. Phones handle blue ice better than you would expect; keep your headlamp out of other people's shots. |
 | | *↓ drive 15 min* |
 | `17:15–18:00` | **Dyrhólaey** — The rock arch and the best coastal panorama in the south. |
+| | ◈ *photo* — From the top, looking east along the whole black curve to the Reynisdrangar stacks. Sun at 13° in the west-south-west, so the sand is lit warm and the arch reads as a silhouette. |
 | | *↓ drive 10 min* |
 | `18:10–19:00` | **Reynisfjara** — Golden-hour basalt. Sneaker waves: obey the warning lights, stay off the wet sand. Farmhouse is 15 min back west — dinner in Vík first, or groceries at Krónan. |
+| | ◈ *photo* — The best forty minutes of light on the trip. Sun at **7° in the west-south-west** rakes along the basalt columns and makes the hexagons glow, and the stacks to the east are front-lit. Eyes on the water the whole time — no photograph here is worth standing on wet sand. |
 | | *↓ drive 10 min* |
 | `~20:00` | **Lava Show, Vík** _optional_ — Real molten lava indoors — if there's gas left in the tank. |
+| | ◈ *photo* — Real molten lava a few feet away in a dark room. Flash off — the glow is the picture. |
 
 | Eating | |
 |---|---|
@@ -178,14 +193,19 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 1 hr* |
 | `09:00–10:00` | **Fjaðrárgljúfur** — Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits. |
+| | ◈ *photo* — From the rim path looking down the serpentine. The low east-south-east sun lights one wall and leaves the other black, and morning mist in the canyon is common enough to hope for. |
 | | *↓ drive 50 min* |
 | `10:50–13:00` | **Skaftafell — Svartifoss hike** — ~4 km round trip, kid-doable (10:50–12:35), then a quick café lunch at the visitor centre — be rolling by 13:00, the boat check-in is the day's hard edge. |
+| | ◈ *photo* — Get low and centred so the fan of black hexagonal columns opens out behind the water. The bowl is narrow and mostly shaded, which is a gift: nothing blows out. |
 | | *↓ drive 45 min* |
 | `13:45–14:10` | **Fjallsárlón** _optional_ — The smaller, quieter iceberg lagoon — 25 minutes is enough for the view, and it stays the first thing to cut if the morning has slipped. |
+| | ◈ *photo* — Quieter than Jökulsárlón, and the glacier tongue sits directly behind the bergs — one frame holds both, which is the thing the bigger lagoon cannot do. |
 | | *↓ drive 10 min* |
 | `15:10–16:25` | **Jökulsárlón — Zodiac boat tour** **✔ booked** — Jökulsárlón Boat Tours, booking JOK-00049937 — 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. Check in at the ticket office by 14:40: the Zodiac wants 30 min, not the amphibian's 20. Exchange the voucher for tickets before boarding — printed or on a phone. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222. |
+| | ◈ *photo* — From the boat, close enough that the ice fills the frame. Sun at 22° in the south-west is what makes the blue read as blue. Spray gets everywhere: wipe the lens between shots and keep the strap round your wrist. |
 | | *↓ drive 2 min* |
 | `16:35–17:15` | **Diamond Beach** — Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner. |
+| | ◈ *photo* — The one everybody wants. Crouch low with the sun to your right in the west-south-west so it passes through the ice and lights it from behind — black sand below, white surf behind. Same sneaker-wave rule as the beach yesterday. |
 
 | Eating | |
 |---|---|
@@ -207,12 +227,16 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 20 min* |
 | `08:50–10:00` | **Stokksnes / Vestrahorn** — Morning light on the black dunes; small access fee at the Viking Café. |
+| | ◈ *photo* — The iconic Iceland frame: **Vestrahorn**'s teeth reflected in wet black sand with dune grass in front. The mountain is north-west of you and the sun is at 12° in the east-south-east over your shoulder, so the peak is fully lit — morning is the only time this works. It needs wet flats, so it wants a low or falling tide; that is the one number this page cannot give you yet, so check it on the day. |
 | | *↓ drive 1 hr 05* |
 | `11:05–11:45` | **Djúpivogur** — Eggin í Gleðivík egg sculptures + coffee. |
+| | ◈ *photo* — The row of granite eggs receding along the harbour rail — shoot down the line, never across it. |
 | | *↓ drive 1 hr* |
 | `12:45–13:45` | **Petra's Stone Collection** _optional_ — Quirky, kid-friendly, right on the coastal route — packed lunch here. |
+| | ◈ *photo* — Close-ups, not wide shots: spar, jasper and zeolites by the thousand. Let the kid pick the subject. |
 | | *↓ drive 1 hr 20* |
 | `15:30–18:00` | **Seyðisfjörður or Vök Baths** _optional_ — Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. |
+| | ◈ *photo* — If it is Seyðisfjörður, the **rainbow path** leading up to the blue church — the sister shot to day 1's street. If it is Vök, the pools cut into the lake surface with the swim-up bar in frame. |
 
 | Eating | |
 |---|---|
@@ -235,18 +259,25 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 55 min* |
 | `09:10–11:10` | **Stuðlagil Canyon** — East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow. |
+| | ◈ *photo* — From the east-side path down at river level, looking along the columned wall with the glacial blue below. The low east-south-east sun lights the far wall. Whether the water is turquoise or grey is dam overflow, not your fault. |
 | | *↓ drive 30 min* |
 | `11:45–12:05` | **Möðrudalur** _optional_ — Coffee at Iceland's highest farm, mid-desert. |
+| | ◈ *photo* — The little turf-roofed church with the desert behind it, and Herðubreið on the skyline if the air is clear. |
 | | *↓ drive 50 min* |
 | `12:55–14:10` | **Dettifoss West + Selfoss** — Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here. |
+| | ◈ *photo* — Dettifoss is about volume, not shape, so put a person on the rim or it could be any waterfall. Sun due south at midday means a rainbow in the spray if you keep it behind you. **Selfoss** upstream is the wider, quieter, better-composed one. |
 | | *↓ drive 45 min* |
 | `14:55–15:40` | **Hverir / Námaskarð** — Boiling mud pots and fumaroles. |
+| | ◈ *photo* — Ochre ground, blue steam, and the boardwalk as a line drawn through it. Sun at 21° in the south-south-west back-lights the plumes if you shoot into them. Mind the wind: sulphur on a lens is one thing, on you is another. |
 | | *↓ drive 5 min* |
 | `15:45–16:00` | **Grjótagjá** — Photo stop; viewing only, no bathing. |
+| | ◈ *photo* — The shaft of daylight through the fissure onto the blue water. It is a small dark hole — a phone braced against the rock beats a hand-held camera. |
 | | *↓ drive 15 min* |
 | `16:30–17:30` | **Dimmuborgir** _optional_ — Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty. |
+| | ◈ *photo* — Shoot the lava pillars against the sky, not against the ground: the whole point is that they read as ruined towers. |
 | | *↓ drive 10 min* |
 | `18:00–20:00` | **Earth Lagoon Mývatn** **✔ booked** — Booking ABK00150634 — Kvika/Signature for 2 adults + 1 child (6–12), paid in full. Show the emailed ticket at the door; that ticket, not the booking number, is what gets you in. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. The 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms rather than the confirmation: 100% back until 72 hrs out (about 18:00 on Sep 21), 50% between 24 and 72 hrs, only 10% inside 24 hrs — worth confirming against the ticket email. Sunset steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount. |
+| | ◈ *photo* — Steam over the lake with sunset at **19:02**, right in the middle of your slot. Phone in a pouch only — silica water and electronics do not mix, and the other bathers did not agree to be in it. |
 
 | Eating | |
 |---|---|
@@ -269,12 +300,16 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 45 min* |
 | `09:30–11:30` | **Húsavík whale watching** **✔ booked** — Gentle Giants GG2 Big Whale Safari & Puffins, ref GGHI-100464358 — 2 adults + 1 youth, ISK 53,973 after the 10% online discount, and nothing is paid yet: it settles on arrival, so bring a card. Back on the 09:30 sailing, so check in by 08:50 — 40 min before departure, and a missed check-in is charged in full. Gentle Giants Ticket Center, Hafnarstétt 7, 640 Húsavík; look for the blue flags, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure the 11-year-old first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Lunch at Naustið after, 11:45–12:45, then ten minutes out to the horses. |
+| | ◈ *photo* — From a twelve-seat RIB at speed, a phone on a lanyard beats a long lens you cannot brace. Shoot the blow and the back — if you can see the fluke it has already gone. The other picture is the harbour coming back in, wooden church above it. |
 | | *↓ drive 10 min* |
 | `14:00–15:30` | **Saltvík horse ride — The Seaside tour** **✔ booked** — Saltvík, ref SAL-100467323 — 2 adults + 1 teenager, ISK 41,500, and this one is already paid in full. Now the 14:00 departure and an hour in the saddle rather than ninety minutes, plus about half an hour getting on and off, which is why this reads 14:00–15:30. Along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sailed this morning. Beginners welcome; minimum age 10, so the 11-year-old is in, and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, ten minutes down from the harbour, so there is room to eat properly before you come out. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. The confirmation links a cancellation policy it doesn't print, and this one is paid rather than pay-on-arrival, so read those terms before counting on a refund. |
+| | ◈ *photo* — Mane and shoreline. You cannot really shoot from the saddle at a tölt, so ask the guide for a halt; they are used to being asked. |
 | | *↓ drive 45 min* |
 | `16:15–16:55` | **Goðafoss** — The waterfall of the gods, right off the route south. |
+| | ◈ *photo* — The horseshoe from the west bank, sun at 15° in the south-west skimming across it. Go wide enough to hold the whole curve or it is just water. |
 | | *↓ drive 45 min* |
 | `17:40–19:10` | **Akureyri old town + Brynja** — Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot. |
+| | ◈ *photo* — Down the church steps to the fjord, and the **red heart-shaped traffic lights** — the town's own joke and nobody else's postcard. Sunset is 19:03, so the steps are golden and the ice cream is the last frame of the day. |
 
 | Eating | |
 |---|---|
@@ -297,12 +332,16 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 1 hr 15* |
 | `09:15–10:30` | **Siglufjörður** — Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before. |
+| | ◈ *photo* — The marina with coloured houses stacked under the fjord wall. At 09:15 the sun is only 11° up and half the fjord is still in shadow, which is exactly what makes the lit half worth the frame. |
 | | *↓ drive 45 min* |
 | `11:15–12:15` | **Hofsós pool** _soak_ — Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45. |
+| | ◈ *photo* — The picture is the infinity edge — the pool's lip dissolving into Skagafjörður with **Drangey** out on the water beyond. Shoot north with the sun behind you. Phone only, and be quick: people are swimming. |
 | | *↓ drive 35 min* |
 | `13:20–14:05` | **Glaumbær turf farm** — Exterior is the show if the museum's on short hours. |
+| | ◈ *photo* — The row of grass-roofed gables end-on, so the turf reads as one wall of green. Better from outside than in. |
 | | *↓ drive 1 hr 15* |
 | `15:20–15:40` | **Kolugljúfur** _optional_ — 15-min leg stretch off Rte 1, then ~2.5 hrs west — fuel + snack in Borgarnes ~17:10, and the hotel is on Route 54 south of Stykkishólmur, so you pass the turn rather than doubling back. |
+| | ◈ *photo* — Twenty minutes, one frame: the falls stepping through the gorge, taken from the bridge. |
 
 | Eating | |
 |---|---|
@@ -324,18 +363,25 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 10 min* |
 | `08:30–09:30` | **Stykkishólmur** — Harbor, Súgandisey lighthouse hill, Danish-era houses — ten minutes north of the hotel, and first because you slept beside it. The old plan drove out to Kirkjufell and came back for this; sleeping here deletes that backtrack. |
+| | ◈ *photo* — Up on Súgandisey, the orange lighthouse against the fjord — and at 08:30 the sun is at **6°**, which is as good as light gets anywhere on this trip. The harbour and the Danish-era houses come free on the way back down. |
 | | *↓ drive 40 min* |
 | `10:10–10:55` | **Kirkjufell + Kirkjufellsfoss** — The mountain everyone photographs, and the falls in front of it. |
+| | ◈ *photo* — The most photographed frame in Iceland, and genuinely worth it: **Kirkjufellsfoss** in the foreground, the mountain behind. Stand north-east of the falls looking north-west — the sun at 15° in the south-east is behind you, so the peak is lit rather than a shape. |
 | | *↓ drive 50 min + Ólafsvík lunch* |
 | `12:30–13:15` | **Djúpalónssandur** — Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara. |
+| | ◈ *photo* — The rusted ribs of the trawler on black pebbles, taken low and close so the iron is huge and the beach is only backdrop. The lifting stones are the second frame, with a hand on one for scale. |
 | | *↓ drive 5 min* |
 | `13:20–14:05` | **Vatnshellir lava cave** _optional_ — 45-min guided cave, tours on the hour, kid-friendly. |
+| | ◈ *photo* — Almost nothing works down there — pitch dark, and the guide's lamp is the only light. Shoot the spiral staircase looking back up at the entrance hole instead; that one frame is the cave. |
 | | *↓ drive 10 min* |
 | `14:15–15:10` | **Arnarstapi · Gatklettur** — Stone arch plus a stretch of the clifftop walk toward Hellnar. |
+| | ◈ *photo* — Gatklettur becomes a near-perfect circle when you find the angle — keep walking until the sea fills the hole. The kittiwake cliffs and the basalt columns are on the same short walk. |
 | | *↓ drive 10 min* |
 | `15:20–15:45` | **Búðakirkja** — The black church in the lava field. |
+| | ◈ *photo* — The black church wants a low, wide frame with lava in front and mountains behind; it is small, and head-on makes it look smaller. Sun at 20° in the south-south-west lights the door side. |
 | | *↓ drive 15 min* |
 | `16:00–16:40` | **Ytri-Tunga seal beach** — Seals haul out most days; then ~1 hr 30 inland to Reykholt, passing Borgarnes on the way. |
+| | ◈ *photo* — Longest lens you have, from where you already are. The picture is seals ignoring you — walking closer ends the scene, and is not allowed anyway. |
 
 | Eating | |
 |---|---|
@@ -360,12 +406,16 @@ Headline stops: Dyrhólaey (day 3) · Katla ice cave (day 3) · Svartifoss (day 
 |---|---|
 | | *↓ drive 55 min* |
 | `10:30–13:30` | **Into the Glacier — Klaki Base Camp** **✔ booked** — Ticket ARC-T141867953, order ARC-100468563 — 2 adults + 1 teenager, paid in full, and the ticket travels with you, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — two adults and one 11-year-old works exactly one way, with the kid riding pillion. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is only the meeting point until Oct 15 — after that it moves down to the Húsafell Activity Center, and you are 17 days inside that window, so an early snow is worth a phone call. +354 578 2550, info@intotheglacier.is. |
+| | ◈ *photo* — Two different problems. Outside on Langjökull the light is flat white: expose for the snow or the whole frame greys out, and the line of snowmobiles across the cap is the shot. Inside, the tunnel is LED-lit blue ice — brace against the wall, and the chapel is the one room worth stopping in. |
 | | *↓ drive 40 min* |
 | `14:10–14:40` | **Hraunfossar + Barnafoss** — Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream. Fifteen minutes past Húsafell on 518, so it costs no detour at all coming off the glacier — and after three hours on ice, thirty minutes of walking is about right. |
+| | ◈ *photo* — A kilometre of water coming straight out of a lava wall: shoot along the bank so the springs repeat into the distance, not across it. Late September is peak **autumn colour** in Borgarfjörður, and the birch on that bank is why this stop photographs better now than in summer. |
 | | *↓ drive 30 min* |
 | `15:10–16:40` | **Krauma · Deildartunguhver** _soak_ — Deildartunguhver is Europe's highest-flow hot spring — 180 litres a second at 100°C — and <b>Krauma</b> is the bath house built over it, mixing that water with glacier melt to something you can sit in. Open 11:00–21:00 daily; capacity is deliberately small, so book ahead rather than turning up on spec. This is the right shape for the day: you come off a glacier cold, and the last thing before a two-and-a-half hour drive south is ninety minutes in hot water. Towels can be hired; the day bag has yours. |
+| | ◈ *photo* — The spring, not the baths. Water leaving the ground at 100°C and 180 litres a second makes a wall of steam you can shoot straight into with the low sun behind it. |
 | | *↓ drive 2 hr 30* |
 | `flex · swap for Krauma` | **Fagradalsfjall / Geldingadalir** _optional_ — The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with roughly two hours of light before the 19:07 sunset — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light. |
+| | ◈ *photo* — Black on black — new lava reads as texture, so it needs raking light and something for scale. A person on the ridge does both. |
 
 | Eating | |
 |---|---|
@@ -539,6 +589,32 @@ stamp first. Duty free on the way out is the cheapest alcohol and chocolate in
 the country; elsewhere alcohol is **Vínbúðin** only, closed Sundays, and never in
 supermarkets.
 
+**Photographs.** Two things shape every picture on this trip, and both are unusual.
+**The sun never gets high.** It tops out around **26°** on the first day and about
+**22°** on the last, so there is no harsh overhead light at any hour of any day. It
+rakes in from the east-south-east through the morning, swings due south around 13:00,
+and sits in the south-west all afternoon; shadows stay long from open to close.
+Golden hour is not an hour here, it is most of the day. The useful consequence is
+that you rarely wait for light — but you do have to know which way a thing faces.
+Skógafoss faces south and shows its rainbow in the morning. Vestrahorn only works
+before 10:00. Reynisfjara's columns only glow after 18:00. Those are on the stop rows,
+marked ◈.
+
+**And the window is closing** — about an hour lost between the first morning and the
+last, with each day's own sunrise, sunset and length in the day tables above.
+
+Gear, honestly: one lens you trust beats three you swap in weather, and a microfibre
+cloth matters more than any of them — Skógafoss, Dettifoss and the Jökulsárlón Zodiac
+will coat a front element in seconds. The good camera does not go into **Blue Lagoon,
+Earth Lagoon or Krauma**: silica water and steam finish electronics, phones live in
+pouches, and the other people in the water did not agree to be in your photograph.
+Same restraint at Hofsós.
+
+For the aurora, a phone on night mode genuinely works now. Anything better wants the
+camera braced against something solid — a wall, a fence post, the car roof — at 3 to
+10 seconds, ISO 1600–3200, manual focus set to infinity while you can still see to do
+it, and the flash off.
+
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
 way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI.
@@ -590,9 +666,13 @@ the rest — for the case where the glacier tour itself is called off.
 |---|---|
 | `08:15` | **Leave Hotel Kríunes** — Breakfast first, and ask the night before whether the partner rate includes it — the booking never spelled that out. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this trip never reaches otherwise. |
 | `09:10` | **Bridge Between Continents** — The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for an 11-year-old who has just spent ten days on top of the seam. |
+| | ◈ *photo* — Stand in the rift and shoot along it with the bridge overhead. At 09:10 the sun is 9° up and throws a long shadow down the sand, which is the only thing that makes a shallow trench look like a plate boundary. |
 | `09:40` | **Gunnuhver** — The boiling mud field, walked on boardwalks. |
+| | ◈ *photo* — The big vent throws a plume worth shooting into, with the low east-south-east sun behind it. Boardwalks only: the crust is thin and the ground is actually boiling. |
 | `10:10` | **Reykjanesviti + Valahnúkamöl** — Iceland's oldest lighthouse on the cliff, and the sea stacks below it. |
+| | ◈ *photo* — Two frames — the lighthouse alone on its mound, and **Karl**, the sea stack, from the shore below with the surf breaking round it. |
 | `11:00` | **Brimketill** — The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks. |
+| | ◈ *photo* — Wait for a set. The picture is the instant the surf pours over the lip and fills the pool; between waves it is just a rock. From the platform — people have been swept off trying for better. |
 | `11:45` | **Kaffi Duus — lunch** — Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only. |
 | `13:30` | **Last fill in Njarðvík, then keys back** — The Vitara goes back full — Blue Car #Z04F2O, due 14:00, and their shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour. |
 | `14:40` | **KEF terminal** — Bag drop opens ~14:10; 1 carry-on (22 lbs) + 1 checked (50 lbs) each. KEF 17:10 → BOS → ATL 00:12. |

@@ -106,6 +106,8 @@ function dayTables(p) {
       if (s.drive) out.push(`| | *↓ drive ${esc(s.drive)}* |`);
       const tag = s.tag ? ` ${TAG[s.tag] || ""}` : "";
       out.push(`| \`${esc(s.time || "flex")}\` | **${esc(s.name)}**${tag} — ${esc(s.note)} |`);
+      /* `shot` carries <b> like the food fields do, so bold() rather than esc(). */
+      if (s.shot) out.push(`| | ◈ *photo* — ${bold(s.shot)} |`);
     }
     out.push("");
     if (d.food) {
@@ -140,6 +142,7 @@ function departureSection(p) {
   out.push("| Time | Plan |", "|---|---|");
   for (const s of D.stops) {
     out.push(`| \`${esc(s.time || "flex")}\` | **${esc(s.name)}** — ${esc(s.note)} |`);
+    if (s.shot) out.push(`| | ◈ *photo* — ${bold(s.shot)} |`);
   }
   return out.join("\n");
 }
@@ -376,6 +379,32 @@ it must be done **before** you check the bags. Over ISK 100,000 needs a customs
 stamp first. Duty free on the way out is the cheapest alcohol and chocolate in
 the country; elsewhere alcohol is **Vínbúðin** only, closed Sundays, and never in
 supermarkets.
+
+**Photographs.** Two things shape every picture on this trip, and both are unusual.
+**The sun never gets high.** It tops out around **26°** on the first day and about
+**22°** on the last, so there is no harsh overhead light at any hour of any day. It
+rakes in from the east-south-east through the morning, swings due south around 13:00,
+and sits in the south-west all afternoon; shadows stay long from open to close.
+Golden hour is not an hour here, it is most of the day. The useful consequence is
+that you rarely wait for light — but you do have to know which way a thing faces.
+Skógafoss faces south and shows its rainbow in the morning. Vestrahorn only works
+before 10:00. Reynisfjara's columns only glow after 18:00. Those are on the stop rows,
+marked ◈.
+
+**And the window is closing** — about an hour lost between the first morning and the
+last, with each day's own sunrise, sunset and length in the day tables above.
+
+Gear, honestly: one lens you trust beats three you swap in weather, and a microfibre
+cloth matters more than any of them — Skógafoss, Dettifoss and the Jökulsárlón Zodiac
+will coat a front element in seconds. The good camera does not go into **Blue Lagoon,
+Earth Lagoon or Krauma**: silica water and steam finish electronics, phones live in
+pouches, and the other people in the water did not agree to be in your photograph.
+Same restraint at Hofsós.
+
+For the aurora, a phone on night mode genuinely works now. Anything better wants the
+camera braced against something solid — a wall, a fence post, the car roof — at 3 to
+10 seconds, ISO 1600–3200, manual focus set to infinity while you can still see to do
+it, and the flash off.
 
 **Driving.** Hold car doors against the wind — the number-one rental damage claim
 in Iceland. Single-lane bridges in the southeast: first to arrive has right of
