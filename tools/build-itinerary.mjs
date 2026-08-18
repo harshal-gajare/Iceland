@@ -72,9 +72,12 @@ const TAG = { booked: "**✔ booked**", book: "**book**", soak: "_soak_", opt: "
 function baseTable(p) {
   const out = ["| Night | Date | Base | Bed |", "|---|---|---|---|"];
   for (const d of p.days) {
+    /* All ten nights are booked, so hotels[] no longer exists on any day — this
+       branch is unreachable today and used to read d.hotels.map() straight off
+       undefined. Kept for the case where a booking is removed, but guarded. */
     const bed = d.stay
       ? `**${esc(d.stay.name)}** — ${esc(d.stay.addr)}<br>${esc(d.stay.status)}`
-      : `_not booked_ — ${d.hotels.map(esc).join(" · ")}`;
+      : `_not booked_${d.hotels?.length ? " — " + d.hotels.map(esc).join(" · ") : ""}`;
     out.push(`| ${d.n} | ${d.dow} ${d.date} | ${esc(d.base)} | ${bed} |`);
   }
   return out.join("\n");

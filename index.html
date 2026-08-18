@@ -373,7 +373,9 @@
     /* all three selectors, or [data-theme] out-specifies the bare :root and the
        light palette leaks into print */
     :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
-    .rail,.ghostbtn,.count,#mapbox,#realmap,.legend,.mapnote,.maphint,.top nav,
+    /* .mapwrap goes wholesale: hiding #mapbox alone left the heading and its
+       "Tap a stop for details" hint on a page with no map to tap. */
+    .rail,.ghostbtn,.count,.mapwrap,.maphint,.top nav,
     .mlinks,.kpline{display:none!important}
     details.day{break-inside:avoid}
   }
@@ -1081,7 +1083,7 @@ function buildMapDynamic(){
     const g = el("g",{class:"daylayer","data-day":d.n});
     d.stops.forEach(s=>{
       const c = px(s.ll);
-      const grp = el("g",{class:"stop"+(s.tag==="opt"?" opt":""),tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
+      const grp = el("g",{class:"stop",tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
       grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"}));
       let fill = dayVar(d.n), stroke="none", sw=0;
       // amber = a timed booking, whether or not it's confirmed yet; the card
@@ -1095,6 +1097,10 @@ function buildMapDynamic(){
       grp.addEventListener("pointerenter",e=>showTip(e,s,d));
       grp.addEventListener("pointermove",moveTip);
       grp.addEventListener("pointerleave",hideTip);
+      /* Focus mirrors hover: every stop is a tabbable role="button", and without
+         these a keyboard user could reach all 51 and see none of their notes. */
+      grp.addEventListener("focus",e=>showTip(e,s,d));
+      grp.addEventListener("blur",hideTip);
       grp.addEventListener("click",()=>{selectDay(d.n,true);});
       grp.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectDay(d.n,true);}});
       g.appendChild(grp);
@@ -1119,9 +1125,17 @@ function showTip(e,s,d){
 }
 function moveTip(e){
   const r = mapbox.getBoundingClientRect();
-  let x = e.clientX - r.left + 14, y = e.clientY - r.top + 14;
-  x = Math.min(x, r.width - tip.offsetWidth - 10);
-  y = Math.min(y, r.height - tip.offsetHeight - 10);
+  /* A focus event carries no pointer coordinates, so fall back to the middle of
+     whatever took focus — reading e.clientX off it would give NaN. Check against
+     undefined rather than truthiness: clientX is legitimately 0 at the left edge. */
+  let cx = e.clientX, cy = e.clientY;
+  if(cx === undefined || cy === undefined){
+    const b = (e.currentTarget || e.target).getBoundingClientRect();
+    cx = b.left + b.width/2; cy = b.top + b.height/2;
+  }
+  let x = cx - r.left + 14, y = cy - r.top + 14;
+  x = Math.max(8, Math.min(x, r.width - tip.offsetWidth - 10));
+  y = Math.max(8, Math.min(y, r.height - tip.offsetHeight - 10));
   tip.style.left = x+"px"; tip.style.top = y+"px";
 }
 function hideTip(){ tip.style.opacity=0; }
@@ -1143,7 +1157,7 @@ function hideTip(){ tip.style.opacity=0; }
 
    To enable it: run `node tools/build-kml.mjs`, import docs/iceland-2026.kml
    into Google My Maps, share the map, and paste its mid= below. */
-const MYMAP_MID = "1gUqewUmIbQPRzkh3T8ZaqaA2toUKYa0";
+const MYMAP_MID = "1EX98VMxPUHZg8lrI2_hFMsjH3t57zVI";
 
 const realmap = document.getElementById("realmap");
 const mapviewBtn = document.getElementById("mapview");
@@ -1372,9 +1386,7 @@ function buildUpgrades(){
   document.querySelectorAll(".upg").forEach(b=>b.addEventListener("click",()=>selectDay(Number(b.dataset.day),true)));
 }
 
-let activeDay = null;
 function selectDay(n, scroll){
-  activeDay = n;
   document.querySelectorAll("#icemap .daylayer, #icemap .route path").forEach(g=>{
     const d = Number(g.getAttribute("data-day"));
     g.classList.toggle("dim", n!==null && d!==n);
