@@ -567,7 +567,7 @@
         <span class="night-chip" style="border-color:var(--d2)">N2 · Seljalandsfoss</span>
         <span class="night-chip" style="border-color:var(--d4)">N4 · Höfn / lagoon</span>
         <span class="night-chip" style="border-color:var(--d6)">N6 · Mývatn</span>
-        <span class="night-chip" style="border-color:var(--d8)">N8 · Grundarfjörður — Kirkjufell under the lights is the trip photo</span>
+        <span class="night-chip" style="border-color:var(--d8)">N8 · Stykkishólmur — Kirkjufell is 40 min west, under a full moon</span>
       </div>
     </div>
   </section>
@@ -590,7 +590,11 @@
         <div class="res"><a class="rname" href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast" target="_blank" rel="noopener">NOAA SWPC 30-min forecast</a><p class="rdesc">The US space-weather authority. The OVATION oval shows where the aurora is <i>right now</i>, refreshed every half hour — when the green blob drapes over Iceland, go outside.</p></div>
         <div class="res"><a class="rname" href="https://www.spaceweatherlive.com" target="_blank" rel="noopener">spaceweatherlive.com</a><p class="rdesc">The nerd upgrade: live solar-wind speed and Bz. When <b>Bz swings south (negative)</b>, a display usually follows within the hour.</p></div>
         <div class="res"><a class="rname" href="https://www.gi.alaska.edu/monitors/aurora-forecast" target="_blank" rel="noopener">UAF Geophysical Institute</a><p class="rdesc">University of Alaska's nightly + 27-day outlook — good for watching how your specific dates trend before you fly.</p></div>
-        <p class="moonnote">Moon check: your dates wax toward a full moon ~<b>Sep 25–26</b>. Faint glows wash out; strong displays punch through. So lean on the alerts rather than patient sky-staring — and use the moonlit landscape as foreground.</p>
+        <!-- Moonset is per night at that night's own base (USNO rise/set API, 2026 dates).
+           Unlike the sun times these are NOT computed in-page — there is no lunar
+           ephemeris here — so they are trip facts like the soak count, and if a base
+           moves they need re-fetching rather than recalculating. Full moon Sep 26. -->
+        <p class="moonnote">Moon check: the full moon lands <b>Sep 26</b>, so dark sky is front-loaded and the moon owns the second half. Moonset at each night’s own base — <b>22:05</b> N2 · <b>00:10</b> N3 · <b>01:30</b> N4 · <b>01:20</b> N5 · <b>03:15</b> N6 — and once it drops the sky is properly dark. From <b>N7 it stays up past dawn</b>; N8 is the full moon itself. Faint glows wash out, strong displays punch through — so give N2–N4 real patience, and on the late nights lean on the alerts and use the moonlit landscape as foreground.</p>
       </div>
     </div>
     <p class="routine">The rhythm — 07:45 vedur + umferdin over breakfast · drive · 19:00 cloud map + Kp at dinner · Hello Aurora alert set · host knock requested · 22:30 step outside, look north</p>
@@ -1565,12 +1569,14 @@ render();
 async function loadTide(){
   for(const el of document.querySelectorAll(".tideline")){
     const {lat, lon, date, slot} = el.dataset;
-    /* Don't fire a request that is certain to 400. The marine horizon is 16 days,
-       so before then the browser would log a failed resource on every load for no
-       benefit — same reasoning as gating the map iframe on navigator.onLine
-       instead of letting it fail. Day 5 comes into range about Sep 7. */
+    /* Don't fire a request that cannot answer. The sea-level model runs ~10 days
+       out, not the 16 the rest of the marine API offers, and past that it does not
+       400 — it answers 200 with a full array of nulls, so the failure is silent.
+       Hence two guards, not one: skip the request, and below, reject any series
+       with a hole in it rather than fitting a parabola through nulls and printing
+       a confident wrong time. Same reasoning as gating the iframe on onLine. */
     const out = (Date.parse(date + "T12:00:00Z") - Date.now()) / 86400000;
-    if(!(out < 16 && out > -1.5)) continue;
+    if(!(out < 10 && out > -1.5)) continue;
     try{
       const opts = typeof AbortSignal!=="undefined" && AbortSignal.timeout ? {signal:AbortSignal.timeout(8000)} : {};
       const r = await fetch("https://marine-api.open-meteo.com/v1/marine?latitude="+lat+"&longitude="+lon
@@ -1578,7 +1584,7 @@ async function loadTide(){
       if(!r.ok) throw 0;                                  // 400 = beyond the horizon
       const j = await r.json();
       const t = j.hourly?.time, v = j.hourly?.sea_level_height_msl;
-      if(!t?.length || !v?.length) throw 0;
+      if(!t?.length || !v?.length || v.some(x => typeof x !== "number")) throw 0;
 
       /* Samples are hourly, so the raw minimum is only good to the hour. Fit a
          parabola through it and its neighbours and take the vertex — that pulls

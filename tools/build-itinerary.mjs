@@ -313,11 +313,15 @@ country. The routine:
 4. Push alerts: **Hello Aurora** (Icelandic) or My Aurora Forecast.
 
 Best dark skies: **N2 Seljalandsfoss · N4 Höfn / lagoon · N6 Mývatn · N8
-Grundarfjörður** — Kirkjufell under the lights is the trip photo.
+Stykkishólmur** — Kirkjufell is 40 min west, under a full moon.
 
-> **Moon check.** The dates wax toward a full moon **~Sep 25–26**. Faint glows
-> wash out; strong displays punch through. Lean on the alerts rather than
-> patient sky-staring, and use the moonlit landscape as foreground.
+> **Moon check.** The full moon lands **Sep 26**, so dark sky is front-loaded and
+> the moon owns the second half. Moonset at each night's own base — **22:05** N2 ·
+> **00:10** N3 · **01:30** N4 · **01:20** N5 · **03:15** N6 — and once it drops the
+> sky is properly dark. From **N7 it stays up past dawn**; N8 is the full moon
+> itself. Faint glows wash out, strong displays punch through — so give N2–N4 real
+> patience, and on the late nights lean on the alerts and use the moonlit
+> landscape as foreground.
 
 The page also carries a live Kp strip (NOAA SWPC) in the aurora panel — current
 Kp plus the next-24h peak. vedur.is blocks cross-origin requests, so cloud cover
