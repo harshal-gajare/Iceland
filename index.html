@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1422">
+<meta name="description" content="Ten nights around the whole island by road, Sep 19–29 2026 — timed run-sheets, every stop mapped, and an aurora plan.">
+<!-- noindex: this plan is shared by link rather than by search. Delete this
+     line to let it be indexed. If you keep it, robots.txt has to keep *allowing*
+     the crawl — a crawler blocked there never sees the tag. -->
+<meta name="robots" content="noindex">
+<!-- Social-preview tags are the one place absolute URLs are required (scrapers
+     don't resolve relative paths). Update these two if the deploy host moves;
+     every other asset path in this file stays relative. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iceland · Sep 19–29, 2026 — Ring Road Field Plan">
+<meta property="og:description" content="Ten nights around the whole island by road — timed run-sheets, every stop mapped, and an aurora plan.">
+<meta property="og:url" content="https://harshalgajare.com/Iceland/">
+<meta property="og:image" content="https://harshalgajare.com/Iceland/icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Iceland · Sep 19–29, 2026 — Ring Road Field Plan</title>
+<script>
+/* theme before first paint — stored choice wins, else system preference */
+(function(){
+  let t = null;
+  try{ t = localStorage.getItem("iceland26.theme"); }catch(e){}
+  if(t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+})();
+</script>
+<style>
+  :root{
+    --night:#0a1422;
+    --panel:#101d30;
+    --panel-2:#0d1828;
+    --line:#22344c;
+    --ice:#e9f2f8;
+    --fog:#8ca3b8;
+    --ember:#ffb661;
+    --ember-ink:#ffd9a3;
+    --d1:#45e0a2; --d2:#2fd4c0; --d3:#3cc9e8; --d4:#57aef5; --d5:#7b96f7;
+    --d6:#9b85f5; --d7:#b877ef; --d8:#d26bdd; --d9:#e967bc; --d10:#f26e93;
+    --d11:#f2825c;   /* the flight home — one more hue step past day 10's rose */
+    --map-1:#0c1a2e; --map-2:#0a1523;
+    --coast-fill:#12233a; --coast-stroke:#2c4664;
+    --glacier:#dcecf7; --glacier-o:.16;
+    --tip-bg:#0c1626;
+    --dotline:#1b2c42;
+    --dash:#2a3f5b;
+    --track:#152539;
+    --faint:#5b7186;
+    --veil:rgba(255,255,255,.03);
+    --rail-bg:rgba(10,20,34,.85);
+    --aurora-ink:#c3d4e2;
+    --shadow:rgba(0,0,0,.5);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  :root[data-theme="light"]{
+    --night:#f6f9fc;
+    --panel:#ffffff;
+    --panel-2:#fdfeff;
+    --line:#d3dee9;
+    --ice:#16283a;
+    --fog:#5b7186;
+    --ember:#c07a1a;
+    --ember-ink:#8a5a12;
+    --d1:#0e9c67; --d2:#0b9186; --d3:#0d86ad; --d4:#1e6cc0; --d5:#4a5fd3;
+    --d6:#6e4fcd; --d7:#8a41ba; --d8:#a833a0; --d9:#bf2a84; --d10:#cc3a62;
+    --d11:#c45a34;
+    --map-1:#e8f1f8; --map-2:#dfeaf4;
+    --coast-fill:#cfdfec; --coast-stroke:#93aec6;
+    --glacier:#ffffff; --glacier-o:.75;
+    --tip-bg:#ffffff;
+    --dotline:#dbe5ee;
+    --dash:#b8c9d9;
+    --track:#dde7f0;
+    --faint:#7c93a8;
+    --veil:rgba(22,40,58,.04);
+    --rail-bg:rgba(246,249,252,.85);
+    --aurora-ink:#3c5468;
+    --shadow:rgba(30,60,90,.18);
+  }
+  :root[data-theme="light"] body{background-image:
+    radial-gradient(1200px 500px at 75% -10%, rgba(14,156,103,.06), transparent 60%),
+    radial-gradient(900px 420px at 15% -5%, rgba(74,95,211,.06), transparent 60%)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--night);color:var(--ice);font-family:var(--sans);line-height:1.55;
+    background-image:radial-gradient(1200px 500px at 75% -10%, rgba(69,224,162,.07), transparent 60%),
+                     radial-gradient(900px 420px at 15% -5%, rgba(123,150,247,.07), transparent 60%);}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--fog)}
+  :focus-visible{outline:2px solid var(--ember);outline-offset:2px;border-radius:4px}
+
+  /* ---------- top bar ---------- */
+  .top{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0 0}
+  .wordmark{font-family:var(--serif);font-size:18px;letter-spacing:.02em}
+  .wordmark span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--fog);margin-left:10px}
+  .top nav{display:flex;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .top nav a{color:var(--fog);text-decoration:none;padding:4px 2px}
+  .top nav a:hover{color:var(--ice)}
+  @media (max-width:640px){.top nav{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 26px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.4vw,58px);line-height:1.08;letter-spacing:-.01em;max-width:16ch}
+  .hero h1 em{font-style:italic;color:var(--d1)}
+  .hero .sub{margin-top:16px;max-width:56ch;color:var(--fog);font-size:16px}
+  .statline{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--fog)}
+  .statline b{color:var(--ice);font-weight:600}
+
+  /* ---------- plan switch ---------- */
+  .plandesc{margin-top:36px;color:var(--fog);font-size:13.5px;max-width:72ch}
+
+  /* ---------- map ---------- */
+  .mapwrap{margin-top:38px}
+  .maphead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .maphead h2{font-family:var(--serif);font-weight:500;font-size:26px}
+  .maphead .hint{color:var(--fog);font-size:13px}
+  .ghostbtn{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);
+    background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+  .ghostbtn:hover{color:var(--ice);border-color:var(--fog)}
+  .topright{display:flex;gap:16px;align-items:center}
+  .themebtn{padding:5px 12px}
+  #mapbox{position:relative;background:linear-gradient(180deg,var(--map-1), var(--map-2) 70%);border:1px solid var(--line);border-radius:16px;padding:8px;overflow:hidden}
+  #icemap{width:100%;height:auto;display:block}
+  #tip{position:absolute;pointer-events:none;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;
+    padding:8px 11px;font-size:12.5px;max-width:240px;opacity:0;transform:translateY(4px);transition:opacity .12s;z-index:5;box-shadow:0 10px 30px var(--shadow)}
+  #tip .tday{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+  #tip .tnote{color:var(--fog);font-size:11.5px;margin-top:2px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .lk{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .lk.ring{background:transparent;border:2px solid var(--fog)}
+  .mapnote{margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
+  .mapctl{display:inline-flex;gap:8px}
+  /* Deliberately NO display property on #realmap, so [hidden] keeps working —
+     the same trap .kpline documents. .legend DOES set display:flex, so it needs
+     an explicit [hidden] rule or it stays visible over the real map. */
+  #realmap{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel-2)}
+  #realmap iframe{display:block;width:100%;aspect-ratio:1000/728;max-height:70vh;border:0}
+  .legend[hidden]{display:none}
+  .rmnote{padding:22px 18px;color:var(--fog);font-size:14px;line-height:1.6;max-width:68ch}
+  .rmnote b{color:var(--ice)}
+
+  /* svg pieces */
+  #icemap .coast{fill:var(--coast-fill);stroke:var(--coast-stroke);stroke-width:1.4}
+  #icemap .glacier{fill:var(--glacier);opacity:var(--glacier-o)}
+  #icemap .route path{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:.95;
+    stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s ease forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  #icemap .stop{cursor:pointer;transition:opacity .25s}
+  #icemap .stop circle{transition:r .12s}
+  #icemap .stop:hover circle.core{r:7}
+  #icemap .base circle.ring{fill:var(--night);stroke-width:2.5}
+  #icemap .base text{font-family:var(--mono);font-size:10px;fill:var(--ice);text-anchor:middle;dominant-baseline:central}
+  #icemap g.dim,
+  #icemap .route path.dim{opacity:.1;pointer-events:none}
+  #icemap .startpulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.9);opacity:0}}
+  @media (prefers-reduced-motion:reduce){
+    #icemap .route path{animation:none;stroke-dashoffset:0}
+    .startpulse{animation:none;opacity:0}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- day rail ---------- */
+  .rail{position:sticky;top:0;z-index:20;background:var(--rail-bg);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);margin-top:30px}
+  .rail .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+  .rail .wrap::-webkit-scrollbar{display:none}
+  .pill{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;
+    border:1px solid var(--line);background:transparent;color:var(--fog);font-family:var(--mono);font-size:11.5px;
+    letter-spacing:.06em;cursor:pointer;white-space:nowrap}
+  .pill i{width:8px;height:8px;border-radius:50%;background:var(--c,transparent);display:inline-block}
+  .pill:hover{color:var(--ice);border-color:var(--fog)}
+  .pill.on{color:var(--night);background:var(--c,var(--ice));border-color:transparent;font-weight:700}
+  .pill.all.on{background:var(--ice)}
+
+  /* ---------- sections ---------- */
+  section.block{padding:56px 0 8px}
+  .sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:6px}
+  .sechead h2{font-family:var(--serif);font-weight:500;font-size:30px}
+  .sechead .eyebrow{transform:translateY(-2px)}
+  .seclede{color:var(--fog);max-width:64ch;margin-bottom:22px;font-size:15px}
+
+  .upgrades{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 26px}
+  .upg{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;
+    padding:6px 12px;color:var(--ice);background:rgba(69,224,162,.05);cursor:pointer}
+  .upg b{color:var(--fog);font-weight:500;margin-left:6px}
+  .upg:hover{border-color:var(--fog)}
+
+  /* ---------- day cards ---------- */
+  details.day{border:1px solid var(--line);border-left:3px solid var(--c);border-radius:14px;background:var(--panel);
+    margin-bottom:14px;overflow:hidden}
+  details.day[open]{background:var(--panel-2)}
+  details.day summary{display:flex;align-items:center;gap:16px;padding:16px 18px;cursor:pointer;list-style:none}
+  details.day summary::-webkit-details-marker{display:none}
+  .dnum{font-family:var(--serif);font-size:30px;color:var(--c);min-width:44px;text-align:center;line-height:1;font-style:italic}
+  /* Two stacked lines, always: the mono meta strip, then the title. Both were
+     inline spans, so short days ran them together on one row and only the long
+     ones wrapped — the stack has to be declared, not left to the line box.
+     .eyebrow is scoped here because elsewhere it sits inline beside an h2. */
+  .dmeta{flex:1;min-width:0}
+  .dmeta .eyebrow{display:block}
+  .dtitle{display:block;font-family:var(--serif);font-size:19px;margin-top:3px}
+  .dbase{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--fog);white-space:nowrap}
+  .dbase b{color:var(--ice)}
+  .chev{width:9px;height:9px;border-right:1.5px solid var(--fog);border-bottom:1.5px solid var(--fog);
+    transform:rotate(45deg);transition:transform .2s;flex:0 0 auto}
+  details[open] .chev{transform:rotate(-135deg)}
+  .dbody{padding:4px 18px 20px 18px;border-top:1px dashed var(--line)}
+  ul.stops{list-style:none;margin-top:14px}
+  ul.stops li{display:flex;gap:13px;padding:9px 0;border-bottom:1px dotted var(--dotline)}
+  ul.stops li:last-child{border-bottom:0}
+  .sdot{margin-top:6px;width:9px;height:9px;border-radius:50%;background:var(--c);flex:0 0 auto;box-shadow:0 0 8px color-mix(in srgb, var(--c) 60%, transparent)}
+  li.opt .sdot{background:transparent;border:1.5px solid var(--fog);box-shadow:none}
+  .sname{font-weight:600;font-size:15px}
+  .snote{color:var(--fog);font-size:13.5px;margin-top:1px}
+  /* The picture worth taking, kept visually subordinate to the logistics note
+     above it — set a step smaller than .snote, with the diamond marker in --d3 as
+     the thing that makes it scan without needing a label. It uses --fog rather than
+     --faint on purpose: --faint is 3.35:1 on --panel, which fails at 12.5px. */
+  .sshot{color:var(--fog);font-size:12.5px;margin-top:3px;line-height:1.5}
+  .sshot::before{content:"\25c8";color:var(--d3);margin-right:6px;font-size:9px;vertical-align:1px}
+  .sshot b{color:var(--ice);font-weight:600}
+  /* Chips and the G/A map links sit directly against the stop name with no
+     whitespace between them, so double-clicking the last word of a name used to
+     drag the badge in with it ("Katla ice cave" + "Book ahead"). Making them
+     unselectable restores the word boundary and also keeps a dragged copy of the
+     line clean — they are badges and icon links, not prose. Selecting text is the
+     only thing suppressed; clicking, find-in-page and print are unaffected. */
+  .chip{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    border-radius:5px;padding:2px 7px;margin-left:4px;vertical-align:2px;
+    -webkit-user-select:none;user-select:none}
+  .chip.book{color:#1c1206;background:var(--ember)}
+  .chip.soak{color:#062026;background:#59d7e8}
+  .chip.opt{color:var(--fog);border:1px solid var(--line)}
+  .food{margin-top:16px;padding:12px 15px;border:1px dashed var(--line);border-radius:10px}
+  .food .frow{display:flex;gap:10px;font-size:13.5px;color:var(--fog);line-height:1.55}
+  .food .frow+.frow{margin-top:7px}
+  .food .frow.fsplit{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+  .food .flab{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);min-width:64px;flex:0 0 auto;padding-top:4px}
+  .food .frow b{color:var(--ice);font-weight:600}
+  .stay{margin-top:16px;padding:13px 15px;background:var(--veil);border:1px solid var(--line);border-radius:10px}
+  .stay b{font-family:var(--serif);font-size:16px;font-weight:500}
+  .hotels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .hotel{font-size:12px;color:var(--fog);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+
+  .stime{font-family:var(--mono);font-size:10.5px;color:var(--fog);min-width:78px;text-align:right;padding-top:4px;flex:0 0 auto}
+  ul.stops li.hop{padding:2px 0;border-bottom:0;align-items:center;color:var(--faint)}
+  .vdash{width:9px;display:flex;justify-content:center;flex:0 0 auto}
+  .vdash::before{content:"";border-left:1px dashed var(--dash);height:15px}
+  .hoptext{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase}
+  .arr{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-left:8px}
+  .addr{margin-top:7px;font-size:13.5px}
+  .addr>a{color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
+  .cxl{font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:5px;letter-spacing:.05em}
+  .mlinks{display:inline-flex;gap:5px;margin-left:4px;vertical-align:1px;-webkit-user-select:none;user-select:none}
+  .mlinks a{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--fog);text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+  .mlinks a:hover{color:var(--ice);border-color:var(--fog)}
+  a.hotel{text-decoration:none;cursor:pointer}
+  a.hotel:hover{color:var(--ice);border-color:var(--fog)}
+  .daynote{margin-top:12px;font-size:13px;color:var(--ember-ink);background:rgba(255,182,97,.07);border:1px dashed rgba(255,182,97,.35);border-radius:10px;padding:10px 13px;line-height:1.55}
+  .maphint{font-family:var(--mono);font-size:9px;color:var(--faint);margin-top:8px;letter-spacing:.1em;text-transform:uppercase}
+
+  /* ---------- bookings ---------- */
+  .progressbar{height:8px;background:var(--track);border-radius:99px;overflow:hidden;margin:14px 0 6px}
+  .progressbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--d1),var(--ember));transition:width .3s}
+  ul.resv{list-style:none}
+  ul.resv li{display:flex;gap:16px;align-items:flex-start;padding:14px 4px;border-bottom:1px dotted var(--dotline)}
+  ul.resv li.open{opacity:.72}
+  .rwhen{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--fog);min-width:132px;flex:0 0 auto;padding-top:3px}
+  .rbody{flex:1;min-width:0}
+  .rwhat{font-family:var(--serif);font-size:16px}
+  .rsub{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ember-ink);margin-top:3px}
+  ul.resv li.open .rsub{color:var(--fog)}
+  .rmeta{color:var(--fog);font-size:12.5px;margin-top:5px;line-height:1.55}
+  @media(max-width:620px){ul.resv li{flex-direction:column;gap:5px}.rwhen{min-width:0}}
+
+  .prefly{margin-top:26px;padding:16px 18px;border:1px dashed rgba(255,182,97,.35);background:rgba(255,182,97,.05);border-radius:12px}
+  .prefly ul{list-style:none;margin-top:9px}
+  .prefly li{color:var(--fog);font-size:13.5px;line-height:1.6;padding:5px 0 5px 16px;position:relative}
+  .prefly li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:99px;background:var(--ember)}
+  .prefly b{color:var(--ember-ink)}
+
+  .sosgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:18px}
+  .soscard{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:var(--veil)}
+  .soscard p{color:var(--fog);font-size:13px;line-height:1.7;margin-top:9px}
+  .soscard a{color:var(--ice);text-decoration:none;border-bottom:1px solid var(--line)}
+  .soscard a:hover{border-bottom-color:var(--ice)}
+  .soscard.urgent{border-color:rgba(255,120,120,.4);background:rgba(255,120,120,.06)}
+  .sosnum{display:block;font-family:var(--mono);font-size:44px;letter-spacing:.06em;margin:6px 0 2px;border-bottom:0!important;color:var(--ice)!important}
+  .sosnote{font-size:12px!important;color:var(--faint)!important;margin-top:10px!important}
+
+  /* ---------- logistics ---------- */
+  .lockcard{margin-top:8px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:20px 20px 16px}
+  .ltitle{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:12px}
+  .lref{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--fog);margin-top:5px;text-transform:uppercase}
+  .leg{padding:11px 0;border-top:1px dotted var(--dotline)}
+  .lday{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
+  .lroute{font-size:14.5px;margin-top:6px}
+  .lroute b{font-family:var(--mono);font-size:13.5px}
+  .lmeta{display:block;font-family:var(--mono);font-size:10.5px;color:var(--fog);margin-top:2px;letter-spacing:.04em}
+  .stay .chip{margin-left:0}
+  .ins{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .inschip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid rgba(69,224,162,.4);border-radius:999px;padding:3px 10px;color:var(--ice)}
+  .lnote{margin-top:12px;font-size:13px;color:var(--fog);line-height:1.55}
+  .lnote b{color:var(--ember-ink)}
+
+  /* ---------- aurora ---------- */
+  .aurora{position:relative;border-radius:18px;padding:28px 26px;border:1px solid transparent;
+    background:linear-gradient(var(--panel-2),var(--panel-2)) padding-box,
+      linear-gradient(120deg,#45e0a2,#3cc9e8,#9b85f5,#f26e93) border-box;overflow:hidden}
+  .aurora::before{content:"";position:absolute;inset:-40%;background:
+      radial-gradient(600px 220px at 20% 0%, rgba(69,224,162,.16), transparent 60%),
+      radial-gradient(600px 220px at 80% 10%, rgba(155,133,245,.14), transparent 60%);pointer-events:none}
+  .aurora h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:6px;position:relative}
+  .aurora p, .aurora ol{position:relative;color:var(--aurora-ink);font-size:14.5px;max-width:70ch}
+  .aurora ol{margin:14px 0 0 18px;display:grid;gap:9px}
+  /* no `display` here, ever — [hidden]'s display:none is a UA default that any
+     author display would defeat, leaving an empty strip up when the fetch fails */
+  .kpline{position:relative;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ice);margin-top:14px}
+  .kpline a{color:var(--fog)}
+  .kpline a:hover{color:var(--ice)}
+  .aurora .nights{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
+  .night-chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ice)}
+
+  /* ---------- daily watch ---------- */
+  .watchgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:6px}
+  @media(max-width:760px){.watchgrid{grid-template-columns:1fr}}
+  .wtitle{font-family:var(--serif);font-weight:500;font-size:19px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+  .wwhen{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-left:8px}
+  .res{padding:12px 0;border-bottom:1px dotted var(--dotline)}
+  .res:last-of-type{border-bottom:0}
+  .rname{font-family:var(--mono);font-size:13px;color:var(--ice);text-decoration:underline dotted var(--fog);text-underline-offset:3px}
+  span.rname{text-decoration:none}
+  .ralt{font-family:var(--mono);font-size:10px;color:var(--fog)}
+  .rdesc{color:var(--fog);font-size:13.5px;margin-top:4px;line-height:1.55}
+  .rdesc b,.rdesc i{color:var(--aurora-ink)}
+  .moonnote{margin-top:10px;font-size:12.5px;color:var(--fog);border:1px dashed var(--line);border-radius:10px;padding:10px 13px}
+  .routine{margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;line-height:1.9}
+
+  /* ---------- notes ---------- */
+  details.note{border-bottom:1px solid var(--line)}
+  details.note summary{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;cursor:pointer;list-style:none;font-family:var(--serif);font-size:17px}
+  details.note summary::-webkit-details-marker{display:none}
+  details.note .chev{margin-left:12px}
+  details.note .nbody{padding:0 4px 18px;color:var(--fog);font-size:14.5px;max-width:75ch}
+  details.note .nbody b{color:var(--ice)}
+
+  footer{margin-top:70px;border-top:1px solid var(--line);padding:26px 0 48px;color:var(--fog);font-size:13px}
+  footer .fx{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:var(--faint)}
+
+  /* ---------- print ---------- */
+  @media print{
+    body{background:#fff;color:#111}
+    /* all three selectors, or [data-theme] out-specifies the bare :root and the
+       light palette leaks into print */
+    :root,:root[data-theme="light"],:root[data-theme="dark"]{--ice:#111;--fog:#444;--panel:#fff;--panel-2:#fff;--line:#bbb;--night:#fff;--veil:#fff;--dotline:#ccc;--dash:#ccc;--track:#eee;--faint:#666;--aurora-ink:#333;--ember-ink:#7a4e0a}
+    /* .mapwrap goes wholesale: hiding #mapbox alone left the heading and its
+       "Tap a stop for details" hint on a page with no map to tap. */
+    .rail,.ghostbtn,.mapwrap,.maphint,.top nav,
+    .mlinks,.kpline{display:none!important}
+    details.day{break-inside:avoid}
+  }
+  @media (max-width:720px){
+    .hero{padding-top:40px}
+    details.day summary{gap:12px;padding:14px}
+    .dbase{display:none}
+    .stime{min-width:62px;font-size:9.5px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="wordmark">Iceland, by road <span>KEF ⇄ KEF</span></div>
+    <div class="topright">
+      <nav>
+        <a href="#map">Map</a><a href="#days">Days</a><a href="#bookings">Book ahead</a><a href="#sos">Emergency</a><a href="#logistics">Car hire</a><a href="#aurora">Aurora</a><a href="#watch">Daily watch</a><a href="#notes">Field notes</a>
+      </nav>
+      <button class="ghostbtn themebtn" id="themeToggle" aria-label="Switch to light theme">◐ light</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Family field plan · Sep 19 – 29, 2026</p>
+    <h1>Ten nights around the <em>whole island.</em></h1>
+    <p class="sub">The full Ring Road counterclockwise, plus Snæfellsnes. Every day is a timed run-sheet with its meals, fuel and beds, and every tour worth booking ahead is flagged. Works offline — install it before you fly.</p>
+    <div class="statline">
+      <span><b>10</b> nights</span><span><b id="st-km">~2,300</b> km</span><span><b id="st-stops">51</b> stops</span>
+      <span id="st-flex"><b>3</b> anchor tours</span><span><b id="st-soak">4</b> soak options</span><span><b>$145–255</b> a night, family rooms</span>
+    </div>
+  </section>
+
+  <p class="plandesc" id="plandesc"></p>
+
+  <section class="mapwrap" id="map">
+    <div class="maphead">
+      <h2>The loop</h2>
+      <p class="hint">Tap a stop for details, or pick a day below to light up that leg.</p>
+      <span class="mapctl">
+        <button class="ghostbtn" id="mapview" aria-pressed="false">Real map</button>
+        <button class="ghostbtn" id="resetDay">Show all days</button>
+      </span>
+    </div>
+    <div id="mapbox">
+      <svg id="icemap" viewBox="0 0 1000 728" role="img" aria-label="Stylized map of Iceland with the ten-day route and all stops"></svg>
+      <div id="tip"></div>
+    </div>
+    <div id="realmap" hidden></div>
+    <div class="legend">
+      <span><i class="lk" style="background:var(--ember)"></i> timed booking</span>
+      <span><i class="lk" style="background:#59d7e8"></i> walk-in soak</span>
+      <span><i class="lk ring"></i> optional</span>
+      <span><i class="lk" style="background:var(--fog);border-radius:2px"></i> numbered ring = overnight base</span>
+    </div>
+    <p class="mapnote">Stylized projection · route colors follow the day spectrum · not for navigation</p>
+  </section>
+</div>
+
+<div class="rail" aria-label="Day selector"><div class="wrap" id="rail"></div></div>
+
+<main class="wrap">
+  <section class="block" id="days">
+    <div class="sechead"><h2>Day by day</h2><span class="eyebrow">counterclockwise</span></div>
+    <p class="seclede">Every card is a timed run-sheet: start–stop windows, drive legs, check-in time, and the night's base — family rooms mostly in the $145–255 range. Each day carries 30–60 minutes of slack, and every stop, stay and trailhead opens straight into Google or Apple Maps. The highlights are pinned below — tap one to jump to its day.</p>
+    <div class="upgrades" id="upgrades"></div>
+    <div id="cards"></div>
+    <div id="depcard"></div>
+  </section>
+
+  <section class="block" id="bookings">
+    <div class="sechead"><h2>Book ahead</h2><span class="eyebrow">every bed and timed tour, in date order</span></div>
+    <p class="seclede">One list for planning: where this route sleeps, and the tours that run on timed slots and sell out. Lodging rows are generated from the same stay records the day cards use, so an address here and an address there cannot drift apart.</p>
+    <ul class="resv" id="resv"></ul>
+
+    <div class="prefly">
+      <span class="eyebrow">Before you go</span>
+      <ul>
+        <li><b>Most meals need no booking.</b> Efstidalur takes reservations only for parties of ten or more, and Pakkhús in Höfn takes none at all — but book Krauma, Bjargarsteinn and Strikið ahead.</li>
+        <li><b>Book the car drop for about 14:00</b> on the last day if you fly out late afternoon — the arithmetic is in Car hire.</li>
+        <li><b>Ask Dimmuborgir to pack breakfast</b> for day 7. Service is 08:00–10:00 and day 7 leaves at 07:55 for the whale check-in, so the buffet is unusable — they will bag it if you ask at check-in.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="sos">
+    <div class="sechead"><h2>If something goes wrong</h2><span class="eyebrow">one number covers almost all of it</span></div>
+    <p class="seclede">Iceland runs a single emergency number for police, fire, ambulance, coastguard and mountain rescue. It is free from any phone, works with no credit and no SIM, and the operators speak English.</p>
+
+    <div class="sosgrid">
+      <div class="soscard urgent">
+        <span class="eyebrow">Emergency — police · fire · ambulance · rescue</span>
+        <a class="sosnum" href="tel:112">112</a>
+        <p>Install the <b>112 Iceland</b> app before you fly. Its emergency button sends your GPS position with the call, which is the difference that matters on a gravel road with no landmarks. It also has a check-in button that leaves a trail rescuers can follow.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">Health, not an emergency</span>
+        <p><a href="tel:1700">1700</a> — health line, 24/7 medical advice in English.<br>
+           <a href="tel:1770">1770</a> — Læknavaktin, the after-hours doctor.<br>
+           <a href="tel:+3545432000">+354 543 2000</a> — Landspítali emergency department, Reykjavík.<br>
+           <a href="tel:+3545432222">+354 543 2222</a> — poison information centre.<br>
+           <a href="tel:+3545750505">+354 575 0505</a> — emergency dental.</p>
+        <p class="sosnote">Every town you sleep in has a <i>heilsugæsla</i> — a health centre — and they handle the ordinary things. Pharmacies are <i>apótek</i>.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">Road, weather and rescue</span>
+        <p><a href="tel:+3544441000">+354 444 1000</a> — police, non-emergency.<br>
+           <a href="tel:+3545705900">+354 570 5900</a> — ICE-SAR, search and rescue.<br>
+           <a href="https://safetravel.is" target="_blank" rel="noopener">safetravel.is</a> — alerts, and you can leave a travel plan.<br>
+           <a href="https://umferdin.is" target="_blank" rel="noopener">umferdin.is</a> · <a href="https://vedur.is" target="_blank" rel="noopener">vedur.is</a> — roads and weather.<br>
+           <a href="tel:118">118</a> — directory enquiries.</p>
+        <p class="sosnote">Roadside assistance comes with the rental contract — take the number off the agreement at pickup and keep it with the keys.</p>
+      </div>
+      <div class="soscard">
+        <span class="eyebrow">Your embassy</span>
+        <p>Look up your own country's embassy or consulate before you fly and save the number. Several countries cover Iceland from Oslo or Copenhagen rather than Reykjavík, which matters if a passport goes missing — a lost passport abroad needs an emergency travel document, and that starts with them.</p>
+        <p class="sosnote">Carry a photo of every travel document separately from the documents themselves — travel insurance and card-block numbers belong in the same photo.</p>
+      </div>
+    </div>
+
+    <p class="lnote"><b>The two that actually catch people here:</b> sneaker waves at Reynisfjara and Djúpalónssandur — never turn your back on the sea, obey the warning lights, and brief any kids properly, because those waves outrun sprinting adults. And wind: hold the car doors, and if a gust warning says 20 m/s, believe it and change the day.</p>
+  </section>
+
+  <section class="block" id="logistics">
+    <div class="sechead"><h2>Car hire</h2><span class="eyebrow">what to rent · what cover · when to drop</span></div>
+    <div class="lockcard">
+      <h3 class="ltitle">The car<span class="lref">4x4 SUV · automatic · Keflavík to Keflavík</span></h3>
+      <div class="leg"><span class="lday">Pick up and drop at the airport</span>
+        <div class="lroute">Pick up <b>day 1, ~11:00</b> · drop <b>departure day, ~14:00</b><span class="lmeta">most airport rentals run a short shuttle between terminal and lot, both directions</span></div>
+      </div>
+      <div class="ins">
+        <span class="inschip">CDW</span><span class="inschip">SCDW super-collision</span><span class="inschip">TP theft</span><span class="inschip">GP gravel</span><span class="inschip">SAAP sand &amp; ash</span><span class="inschip">Roadside</span>
+      </div>
+      <p class="lnote">GP + SAAP is exactly the cover this route wants — gravel chips and south-coast ash storms are the two classic claims — so take both on top of collision and theft. <b>Road 550 is the one F-road</b>: day 10's Into the Glacier tour meets at the top of it. Many contracts forbid F-roads even in a 4x4, so get it in writing that yours allows it; if it doesn't, the operator runs a departure from Húsafell instead. It is a rough gravel mountain road, so take it at gravel speed and keep the tyre pressure honest. River fords are never insured on any Icelandic contract, and nothing on this route asks you to cross one.</p>
+      <p class="lnote"><b>Return-day math — drop at 14:00 for a ~17:00 flight.</b> Check-in for international departures opens about 2.5 hrs out, so aim to be in the terminal by <b>14:40</b>. Back off 30 min for the handover and the lot shuttle and you are giving the keys back at <b>14:10</b>; another 15 for the last fill in Njarðvík puts you at the pump by <b>13:55</b>; so the morning's last activity has to end by about <b>13:40</b>. Later than 14:00 is not worth it — a 15:00 drop puts you in the terminal under two hours before an international flight, and bag drop shuts 45–60 min out. If your flight is earlier or later, slide the whole chain with it.</p>
+      <p class="lnote"><b>Booster check:</b> Icelandic law requires a booster seat below 135 cm — add one to the rental or bring your own.</p>
+    </div>
+  </section>
+
+  <section class="block" id="aurora">
+    <div class="aurora">
+      <h3>The aurora game plan</h3>
+      <p>These dates straddle the autumn equinox — statistically one of the best northern-lights windows of the year — and 8 of your 10 nights are in dark-sky country. The routine:</p>
+      <ol>
+        <li>At dinner, check the aurora forecast and <b>cloud-cover map</b> at en.vedur.is. Gaps in cloud matter more than the Kp number — Kp 2–3 is already a show out here.</li>
+        <li>Ask <b>every</b> hotel for a northern-lights wake-up call. Countryside hosts expect the request — make it at every check-in.</li>
+        <li>Phone night mode, 3–10 seconds, propped on the car roof — it catches more color than your eyes do. A mini tripod earns its space in the bag.</li>
+        <li>Push alerts: <b>Hello Aurora</b> (Icelandic) or My Aurora Forecast.</li>
+      </ol>
+      <p class="kpline" id="kpline" hidden></p>
+      <div class="nights">
+        <span class="night-chip">Best dark skies →</span>
+        <span class="night-chip" style="border-color:var(--d2)">N2 · Seljalandsfoss</span>
+        <span class="night-chip" style="border-color:var(--d4)">N4 · Höfn / lagoon</span>
+        <span class="night-chip" style="border-color:var(--d6)">N6 · Mývatn</span>
+        <span class="night-chip" style="border-color:var(--d8)">N8 · Stykkishólmur — Kirkjufell is 40 min west</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="watch">
+    <div class="sechead"><h2>The daily watch</h2><span class="eyebrow">two checks a day, five minutes each</span></div>
+    <p class="seclede">Iceland weather is a wind problem, not a rain problem — and aurora hunting is a cloud problem, not a Kp problem. These are the sources locals actually use; every link opens in a new tab.</p>
+    <div class="watchgrid">
+      <div class="watchcol">
+        <h3 class="wtitle">Morning · weather &amp; roads <span class="wwhen">~07:45 over breakfast</span></h3>
+        <div class="res"><a class="rname" href="https://en.vedur.is" target="_blank" rel="noopener">en.vedur.is</a><p class="rdesc">Icelandic Met Office — the national forecast, and the accurate one. Wind is in m/s: <b>15 m/s</b> = hold the doors and expect a workout; <b>20+ m/s or an orange warning</b> = rebuild the day around indoor stops; <b>red</b> = the car stays parked. Warning banners show right on the map.</p></div>
+        <div class="res"><a class="rname" href="https://umferdin.is/en" target="_blank" rel="noopener">umferdin.is</a> <span class="ralt">(road.is)</span><p class="rdesc">Road Administration live map — closures, surface conditions, and measured gusts on the exact stretches you're driving. On the long days (4, 6, 8), check tomorrow's legs the night before too.</p></div>
+        <div class="res"><a class="rname" href="https://safetravel.is" target="_blank" rel="noopener">safetravel.is</a><p class="rdesc">ICE-SAR's alert feed — storm advisories, area and volcano closures. Register your travel plan once, and install the <b>112 Iceland</b> app: one-tap emergency with your location, works everywhere.</p></div>
+        <div class="res"><a class="rname" href="https://www.windy.com" target="_blank" rel="noopener">windy.com</a><p class="rdesc">Visual gust animation — the supplementary check for timing photo stops and deciding which side of a headland to stand on.</p></div>
+      </div>
+      <div class="watchcol">
+        <h3 class="wtitle">Evening · aurora <span class="wwhen">~19:00 at dinner</span></h3>
+        <div class="res"><a class="rname" href="https://en.vedur.is/weather/forecasts/aurora/" target="_blank" rel="noopener">vedur.is aurora forecast</a><p class="rdesc">The one that matters: the Kp number <i>plus</i> the cloud-cover map. White gaps = clear sky — chase those. A clear-sky Kp 2–3 beats a cloudy Kp 6 every time at this latitude.</p></div>
+        <div class="res"><span class="rname">Hello Aurora</span> <span class="ralt">iOS / Android</span><p class="rdesc">Icelandic-made push alerts plus live sightings from people actually standing outside in Iceland right now. Set the alert, phone by the bed, host knock requested as backup.</p></div>
+        <div class="res"><a class="rname" href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast" target="_blank" rel="noopener">NOAA SWPC 30-min forecast</a><p class="rdesc">The US space-weather authority. The OVATION oval shows where the aurora is <i>right now</i>, refreshed every half hour — when the green blob drapes over Iceland, go outside.</p></div>
+        <div class="res"><a class="rname" href="https://www.spaceweatherlive.com" target="_blank" rel="noopener">spaceweatherlive.com</a><p class="rdesc">The nerd upgrade: live solar-wind speed and Bz. When <b>Bz swings south (negative)</b>, a display usually follows within the hour.</p></div>
+        <div class="res"><a class="rname" href="https://www.gi.alaska.edu/monitors/aurora-forecast" target="_blank" rel="noopener">UAF Geophysical Institute</a><p class="rdesc">University of Alaska's nightly + 27-day outlook — good for watching how your specific dates trend before you fly.</p></div>
+        <p class="moonnote">Moon check: look up the moon phase for your dates before you go. A bright moon washes out faint glows while strong displays punch through — so on moonlit nights lean on the alerts rather than patient sky-staring, and use the moonlit landscape as foreground.</p>
+      </div>
+    </div>
+    <p class="routine">The rhythm — 07:45 vedur + umferdin over breakfast · drive · 19:00 cloud map + Kp at dinner · Hello Aurora alert set · host knock requested · 22:30 step outside, look north</p>
+  </section>
+
+  <section class="block" id="notes">
+    <div class="sechead"><h2>Field notes</h2><span class="eyebrow">the things worth knowing before you need them</span></div>
+    <details class="note"><summary>Volcano status — Reykjanes<span class="chev"></span></summary>
+      <div class="nbody">The peninsula has erupted repeatedly since 2021, and another eruption can come at short notice. Past eruptions haven't touched KEF flights, Reykjavík, or the Ring Road — only a small zone near Grindavík, where the Blue Lagoon sits. Book the lagoon flexible and check safetravel.is the week you fly.</div>
+    </details>
+    <details class="note"><summary>Weather &amp; packing<span class="chev"></span></summary>
+      <div class="nbody">4–12 °C, wind always, rain somewhere on the loop. Waterproof shell + fleece layers, hats and gloves, waterproof shoes. Swimsuits ride in the <b>day bag</b> for three soaks (Blue Lagoon, Earth Lagoon at Mývatn, Hofsós) — but the first two lend you a towel with the ticket, so the quick-dry towels are really for Hofsós and for Akureyri Backpackers, which charges for theirs. Raincoats for everyone at the walk-behind waterfalls.</div>
+    </details>
+    <details class="note"><summary>Photographs<span class="chev"></span></summary>
+      <div class="nbody">Gear, honestly:        Gear, honestly: one lens you trust beats three you swap in weather, and a microfibre cloth matters more than any of them — Skógafoss, Dettifoss and the Jökulsárlón Zodiac will coat a front element in seconds. The good camera does not go into <b>Blue Lagoon, Earth Lagoon or Krauma</b>: silica water and steam finish electronics, phones live in pouches, and the other people in the water did not agree to be in your photograph. Same restraint at Hofsós.<br><br>
+        For the aurora, a phone on night mode genuinely works now. Anything better wants the camera braced against something solid — a wall, a fence post, the car roof — at 3 to 10 seconds, ISO 1600–3200, with manual focus set to infinity while you can still see to do it, and the flash off. The Kp strip and the moon caveat are in the aurora card.<br><br>
+        The <b>◈</b> line under a stop is the picture worth having there.</div>
+    </details>
+    <details class="note"><summary>Driving<span class="chev"></span></summary>
+      <div class="nbody"><b>Hold car doors against the wind</b> — the number-one rental damage claim in Iceland. Single-lane bridges in the southeast: first to arrive has right of way. Sheep own the road. 90 km/h max, headlights always on, zero-tolerance DUI. Check road.is each morning. Only Road 550 on day 10 needs a 4x4 — everything else is fine in a 2WD — and take gravel <b>and</b> sand/ash protection on the rental either way.</div>
+    </details>
+    <details class="note"><summary>Ocean safety — Reynisfjara &amp; Djúpalónssandur<span class="chev"></span></summary>
+      <div class="nbody">Both beaches have genuinely dangerous sneaker waves. Obey the warning-light system at Reynisfjara, never turn your back on the sea, stay off the wet sand — and brief any kids hard: sneaker waves outrun sprinting adults.</div>
+    </details>
+    <details class="note"><summary>If a day goes sideways, trim these first<span class="chev"></span></summary>
+      <div class="nbody">Weather will steal at least half a day somewhere. Protect the timed tours first — Katla, the horses, the whale watch and Into the Glacier — then cut in this order: the Siglufjörður loop (go straight down Route 1 — saves ~2.5 hrs), the Fagradalsfjall hike, then the 15-minute stops — Grjótagjá, Petra's Stones, Fontana. Day 10 carries its own wet-weather list in the day card.</div>
+    </details>
+    <details class="note"><summary>Taking it home<span class="chev"></span></summary>
+      <div class="nbody">Each day card names the shop worth stopping at. What is actually worth carrying: a <b>lopapeysa</b>, the wool sweater — hand-knitted ones carry the knitter's name on the label, machine-made imports don't, and that is the whole test. <b>Icelandic wool</b> by the skein if anyone knits. <b>Omnom</b> chocolate and <b>Nói Síríus</b> liquorice, both made here. <b>Saltverk</b> flaky sea salt, boiled with geothermal heat. <b>Harðfiskur</b>, the dried fish, which is a genuinely Icelandic thing to hand someone and a genuinely divisive one. <b>Brennivín</b>, the caraway schnapps. Skincare from the <b>Blue Lagoon</b> or <b>Earth Lagoon</b>, both of which you will have been in. Skip the puffin keyrings and anything labelled "Nordic" rather than Icelandic — a lot of the cheap souvenir stock is imported.
+      <br><br><b>Tax free.</b> Spend <b>ISK 12,000 or more on one receipt in one shop</b> and you can reclaim the VAT. Ask for the tax-free form at the till, keep the receipt stapled to it, and keep the goods reachable rather than at the bottom of a case. At Keflavík the refund desk is in the <b>arrival hall opposite the car rentals</b> — which is where the rental shuttle drops you — and it has to be done <b>before</b> you check the bags. Over ISK 100,000 needs a customs stamp first, so leave more time.
+      <br><br><b>Duty free on the way out</b> is the cheapest alcohol and chocolate in the country, and Icelanders shop it on arrival rather than departure. Alcohol anywhere else is <b>Vínbúðin</b> only — the state shops, closed Sundays and early on Saturdays, and not sold in supermarkets at all.</div>
+    </details>
+    <details class="note"><summary>Food, fuel &amp; phones<span class="chev"></span></summary>
+      <div class="nbody">N1/Orkan stations all along the route, and the rural ones are unmanned but open 24/7 — they need a card with a <b>PIN</b>, not a tap, and an N1 Prepaid Card sidesteps the question entirely. Every day card names that day's fuel and grocery stop; Bónus is the cheap chain, but its hours vary by branch and the rural ones shut earlier than you expect. Grocery stops (Bónus, Krónan, Nettó) for picnic lunches keep costs sane; restaurant meals run $25–45 a head. Langoustine night is Höfn, at Pakkhús — which takes no reservations, so arrive rather than plan. Every day card carries a lunch and a dinner pick; late September thins the rural kitchens, so ring the same morning for anything that matters and book Pakkhús, Bjargarsteinn and Strikið ahead. eSIM from Nova or Síminn, or carrier roaming — Ring Road coverage is excellent.</div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fx">Small print</p>
+    <p>The full monitoring kit lives in "The daily watch" above. Herring Era Museum, Hofsós pool and Glaumbær keep short September hours — confirm the night before, every time.</p>
+  </div>
+</footer>
+
+<script>
+/* ================= DATA ================= */
+const KEF = [63.985,-22.605];
+
+const STAY1 = {name:"Nordic Apartments", addr:"Snorrabraut 56, 105 Reykjavík",
+  ll:[64.137,-21.916], q:"Nordic Apartments, Snorrabraut 56, 105 Reykjavík, Iceland",
+  status:"Apartments in central Reykjavík — a ten-minute walk to Laugavegur and fifteen to Hallgrímskirkja, with Bónus minutes away"};
+const STAY2 = {name:"Paradise Cave Hostel & Guesthouse", addr:"Seljalandsskóli, 861 — at Seljalandsfoss",
+  ll:[63.599,-19.965], q:"Paradise Cave Hostel & Guesthouse, Seljalandsskóli, Iceland",
+  status:"Check-in 16:00–22:00 · breakfast included · a short walk from Seljalandsfoss, so you are first on the path in the morning"};
+const STAY3 = {name:"Farmhouse Lodge (Airbnb)", addr:"Skeiðflöt, 871 Mýrdalur — 10 min from Dyrhólaey, 15 min west of Vík",
+  ll:[63.4374645,-19.1899663], q:null,
+  status:"An Airbnb farmhouse — 10 min from Dyrhólaey and 15 min west of Vík, so the evening at Reynisfjara ends close to bed"};
+/* ll is the guesthouse's own GPS (N 064° 15.559, W 15° 12.440) converted. */
+const STAY4 = {name:"Höfn Inn Guesthouse", addr:"Vesturbraut 3, 780 Höfn — 20 min from Stokksnes",
+  ll:[64.2593,-15.2073], q:"Höfn Inn Guesthouse, Vesturbraut 3, 780 Höfn, Iceland",
+  status:"Double/twin rooms with private bathroom — twin beds + a sofa bed sleeps three · no meal included · free parking on site, free WiFi · check-in 15:00–23:00, out by 11:00 · +354 478 1544"};
+/* The guesthouse is ~10 km southwest of Egilsstaðir town, not in it, so ll is the
+   farm's own GPS (N 065° 11.332, W 14° 30.153) and the map links land on the
+   farm rather than the town centre. baseLL stays the town coordinate.
+   Booking sites spell it "Eyjólfsstadir"; the eth is restored here to match how
+   every other Icelandic place on the page is written. */
+const STAY5 = {name:"Eyjólfsstaðir Guesthouse", addr:"Eyjólfsstaðir, 701 Egilsstaðir — ~10 km southwest of town",
+  ll:[65.1889,-14.5026], q:"Eyjólfsstaðir Guesthouse, 701 Egilsstaðir, Iceland",
+  status:"Triple rooms with shared bathroom, three single beds · breakfast included · free parking on site, free WiFi · check-in 15:00–21:00 — closes earlier than the others, so ring ahead if the day slips · out 07:30–10:30 · +354 471 2171"};
+/* No published GPS for the cottages: `q` holds the address and drives both map
+   links, and ll falls back to the Dimmuborgir lava-field coordinate the guesthouse
+   sits beside. Don't upgrade that to a precise pin without a real source. */
+const STAY6 = {name:"Dimmuborgir Guesthouse", addr:"Geiteyjarströnd 1, 660 Mývatn — beside the Dimmuborgir lava field",
+  ll:[65.5911,-16.9119], q:"Dimmuborgir Guesthouse, Geiteyjarströnd 1, 660 Mývatn, Iceland",
+  status:"One-bedroom cottages that sleep three — book direct with the guesthouse · breakfast buffet included, served 08:00–10:00 — which day 7 cannot use: it leaves at 07:55 for the whale check-in, and even ten minutes at the buffet puts you five minutes late at the Ticket Center. Ask at check-in to have it packed for the morning; guesthouses here do this routinely · check-in from 16:00, out by 11:00 · +354 464 4210 · info@dimmuborgir.is"};
+/* ll is the hostel's own GPS (N 065° 40.888, W 18° 5.393) converted, which lands
+   on Hafnarstræti a couple of minutes' walk from day 7's own old-town stop.
+   baseLL stays the town coordinate.
+   Their published house rules say children must be over 12 while the family rooms
+   are sold for families — so the status tells a reader with kids to ask first,
+   rather than either hiding the rule or trusting it. */
+const STAY7 = {name:"Akureyri Backpackers", addr:"Hafnarstræti 98, 600 Akureyri — on the old-town street the day already walks",
+  ll:[65.6815,-18.0899], q:"Akureyri Backpackers, Hafnarstræti 98, 600 Akureyri, Iceland",
+  status:"Family rooms with shared bathroom — a large double + a bunk · no meal with the room, and day 8 leaves at 08:00 on the longest drive of the trip — buy breakfast the night before · sheets and pillows included but towels cost extra, so bring quick-dry ones · no parking on site: public parking nearby, may charge · free WiFi · check-in 14:00–00:00, out by 10:00 · +354 571 9050 · Their published house rules say children must be over 12, which sits oddly against the family rooms — if you are travelling with younger kids, confirm with the property before you book."};
+
+
+
+
+
+/* One itinerary, days in order. These used to be split across DAY1 /
+   D5TO10 / CLASSIC_DAYS so the shared days could hang off both plans by
+   reference; with Plan B gone nothing is shared, so nothing is fragile. */
+/* Night 8. Booking sites spell it "Stundarfridur"; the eth is restored to match
+   every other Icelandic name on the page. ll is its own GPS (N 065° 0.209, W 22° 42.733), which
+   sits on Route 54 about 8 km SOUTH of Stykkishólmur rather than in the town, so
+   the harbour is a ten-minute drive, not a walk. baseLL stays the town. */
+const STAY8 = {name:"Hotel Stundarfriður", addr:"Snæfellsnesvegur, 340 Stykkishólmur — on Route 54, ~8 km south of town",
+  ll:[65.0035,-22.7122], q:"Hotel Stundarfridur, Snaefellsnesvegur, 340 Stykkisholmur, Iceland",
+  status:"Triple rooms with private bathroom, whole unit on the ground floor — twin beds + a sofa bed · no meal included · free private parking, free WiFi · check-in 16:00–21:00 — a hard 21:00, on the back of the trip's longest drive, so ring +354 864 2463 the moment the day looks like slipping · out 08:00–11:30"};
+/* Night 9. Reykholt is inland on Route 518 — NOT Borgarnes — which is why day 10
+   departs 08:45 rather than 08:10: Húsafell is 25 min away instead of 70. ll is
+   the hotel's own GPS (N 064° 39.911, W 21° 17.457). */
+const STAY9 = {name:"Fosshotel Reykholt", addr:"Reykholt, 320 Reykholt — inland on Route 518, 25 min short of Húsafell",
+  ll:[64.6652,-21.291], q:"Fosshotel Reykholt, 320 Reykholt, Iceland",
+  status:"Superior doubles with private bathroom — listed as 1 single bed + 1 sofa bed, which is thin for three, and extra beds cost more, so ask before you book · no meal included · free parking on site, free WiFi · check-in 15:00–00:00, out by 12:00 · restaurant on site 18:00–21:30 · +354 435 1260"};
+
+/* Night 10. NOT Keflavík — Kríunes sits on Elliðavatn at Vatnsendi, southeast of
+   Reykjavík, so the last night is a lake hotel 45 min from the airport rather than
+   a bed beside it. That is why day 10 now ends northeast of Reykjanes and the
+   departure morning drives back out to the peninsula. */
+const STAY10 = {name:"Hotel Kríunes", addr:"Kríunesi Vatnsenda, Kópavogur, 203 Reykjavík — on the shore of Elliðavatn",
+  ll:[64.0886,-21.7938], q:"Hotel Kriunes, Vatnsenda, Kopavogur, Iceland",
+  status:"Superior triple rooms on the lake · <b>photo ID matching the booking name at check-in</b> · breakfast and a restaurant on site — check whether your rate includes breakfast · 45 min from KEF · +354 567 2245"};
+
+const DAYS = [
+ {n:1, dow:"Sat", date:"Sep 19", km:"~70 km", depart:null,
+  title:"Arrival · Blue Lagoon · Reykjavík",
+  base:"Reykjavík", baseLL:[64.137,-21.916], stay:STAY1, arrive:"15:20",
+  food:{lunch:"The <b>Blue Café</b> inside the lagoon does soup and sandwiches without leaving your robe; <b>Lava Restaurant</b> is the sit-down one built into the lava wall, and it wants a booking.", dinner:"<b>Messinn</b> on Lækjargata for the pan-fried fish pans that made its name — book, it fills. For sushi, <b>Sushi Social</b> runs Icelandic fish through a Japanese-Peruvian lens, and <b>Osushi</b> is a conveyor belt, which is its own kind of entertainment at eleven. If Perlan or FlyOver runs to 21:00, <b>Bæjarins Beztu Pylsur</b> by the harbour is the hot-dog stand every Icelander has queued at, open late and done in ninety seconds.", coffee:"<b>Reykjavík Roasters</b> on Kárastígur, two minutes downhill from Hallgrímskirkja and the city's benchmark. <b>Mokka Kaffi</b> has poured since 1958 and its waffles with jam and whipped cream run on a family-secret recipe.", sweet:"<b>Brauð &amp; Co</b> on Frakkastígur — the graffiti-covered bakery that reset the city's standard, and the cinnamon buns are the thing. <b>Valdís</b> does ice cream in flavours like rye bread and salted liquorice: either a dare or a discovery.", buy:"<b>Rammagerðin</b> and the Laugavegur shops are a ten-minute walk from the apartment — the one-stop for wool, design and the good souvenirs rather than the puffin-keyring kind. <b>Omnom</b> chocolate, made in Reykjavík and packaged like a design object, is the easiest thing to take back and the cheapest to love; supermarkets stock it too.", fuel:"Confirm the fuel policy at pickup — full-to-full is the Icelandic norm, and it is the only fuel rule that matters all trip. Nothing needed today: Reykjavík has Orkan and N1 everywhere, and city fuel is the cheapest you will see.", shop:"<b>Bónus</b> is the cheap chain and there are branches minutes from Snorrabraut. Worth a first run tonight for breakfast things, water bottles and snacks — everything outside the capital costs more.", extra:"<b>Grillmarkaðurinn</b> is the city's showpiece dinner and deserves an evening — which is exactly what you don't have on the day you land off a red-eye."},
+  stops:[
+   {name:"Keflavík Airport → rental car", ll:KEF, time:"09:00–11:00", note:"Most overnight flights from North America land around breakfast. Passport, bags, then the rental shuttle — book an 11:00 pickup and ask nicely whether the car can release early."},
+   {name:"Blue Lagoon", ll:[63.880,-22.449], drive:"20 min", time:"12:00–14:30", tag:"book", note:"Book a timed entry — <b>Premium</b> at 12:00 is the slot this plan uses, 40 min after the 11:00 car pickup and a 20-min drive, so the morning has real slack even if the bags are slow. Premium covers three masks from the in-water mask bar, a drink, and a <b>bathrobe and towel on loan</b> — so nothing from the day bag is needed here — plus a skincare gift to take home. Paid luggage storage at the entrance; light lunch at the café. Download the voucher to your phone before you fly. Backup if it closes on volcano watch: Laugardalslaug, Reykjavík's big public pool with waterslides. Sky Lagoon is the other famous one, but it is strictly 12+.", shot:"Steam is the subject, not the water — shoot across the pool and let the steam do the work. Phone in a waterproof pouch and nothing else: silica and steam get into everything, and the good camera belongs in the locker."},
+   /* Reordered, not just extended. The old run went church, Sun Voyager, Harpa,
+      which finished 1.7 km from the apartment and walked the waterfront east then
+      back west. Church, rainbow street, Harpa, Sun Voyager is one downhill loop
+      that ends 1.2 km from bed — 3.6 km all in, 100 m shorter than the old order
+      even with the street added, and it ends at the sculpture. */
+   {name:"Hallgrímskirkja · Rainbow Street · Harpa · Sun Voyager", ll:[64.1417,-21.9266], drive:"50 min", time:"15:45–18:15", note:"Check in ~15:00 (drop bags if the room isn't ready), then park the car and do all four on foot — the apartment is 15 min from the church and this is one loop with no doubling back. Tower elevator first while the light is still high. Then straight down Skólavörðustígur, the rainbow-painted street that runs from the church's foot to Bankastræti; the photograph everyone wants is taken from partway down, looking back up at the tower. Bear north for Harpa's glass honeycomb, then east along the Sæbraut path to the Sun Voyager, which points at Esja across the open bay — the right place to end the walk. About 3.6 km of walking, and it finishes nearer the apartment than any other order.", shot:"Three pictures on one walk. <b>Skólavörðustígur</b> from partway down, looking back up the rainbow at the tower. <b>Harpa</b> from inside, shooting out through the glass honeycomb rather than at it. Then the <b>Sun Voyager</b>, pointing north at Esja: the one silhouette on this trip that needs no work."},
+   {name:"Perlan or FlyOver Iceland", pq:"Perlan Reykjavík", ll:[64.129,-21.919], drive:"5 min", time:"19:00–21:00", tag:"opt", note:"Only if everyone's still upright — FlyOver Iceland is a guaranteed hit with kids.", shot:"Perlan's deck is the city's best viewpoint — the whole city, the bay and Esja."}
+  ]},
+ {n:2, dow:"Sun", date:"Sep 20", km:"~250 km", depart:"08:30", arrive:"17:45",
+  title:"Golden Circle", base:"Seljalandsfoss", baseLL:[63.599,-19.965], stay:STAY2,
+  food:{lunch:"<b>Efstidalur II</b> at 12:00, the dairy farm whose ice-cream barn looks straight through glass into the cowshed. No booking — they only reserve for parties of ten or more.", dinner:"<b>Gamla Fjósið</b> — the old cowhouse on Route 1 near Hvolsvöllur, 20 min west of the hostel, known for volcano soup and beef raised on the farm.", coffee:"Thin country once you leave the Golden Circle. Efstidalur pours its own with lunch, and the <b>Geysir</b> centre across the road is the last dependable stop before the coast.", sweet:"Efstidalur's ice cream, made from the milk of the cows you are looking at, is dessert and it is already on the plan. The <b>Laugarvatn Fontana</b> rye bread — baked in the black sand by geothermal heat, served with butter — is the flex stop right after.", buy:"<b>Álafoss</b> in Mosfellsbær, 15 min out of Reykjavík and directly on the road to Þingvellir — the 1896 mill that started the Icelandic wool trade, now the factory shop. Hand-knitted lopapeysur here carry the knitter's name on the label, which is the difference between the real thing and a machine-made import. Stop on the way out, not the way back.", fuel:"Fill in Reykjavík before you leave. <b>Selfoss</b> is the big service town on the way out; the Golden Circle's own pumps at Laugarvatn and Reykholt are small ones.", shop:"<b>Selfoss</b> is the last full-size supermarket before the south coast — Bónus, Krónan and Nettó all sit there. Load the cool bag here for the next three days.", extra:"<b>Friðheimar</b>, the tomato greenhouse near Reykholt, is the Golden Circle's famous lunch — bottomless tomato soup at tables among the vines. It books out months ahead, which is why Efstidalur is the plan — and Efstidalur needs no reservation at all, so the swap costs nothing if a cancellation ever turns up."},
+  stops:[
+   {name:"Þingvellir National Park", ll:[64.2559,-21.1295], drive:"45 min", time:"09:15–11:15", note:"Almannagjá rift walk, Öxarárfoss, the plate boundary.", shot:"The wide one is from <b>Hakið</b>, looking north-east down the rift with Þingvallavatn behind. Inside <b>Almannagjá</b> one wall catches the light and the other stays dark, which is the whole reason the corridor reads as a corridor."},
+   /* Concurrent, not sequential — it overlaps the rift walk above rather than
+      following it, so it carries no `drive` and its time says so. Same reason
+      Fagradalsfjall on day 10 has no clock: the run-sheet must not be "fixed"
+      to chain through a branch. */
+   {name:"Silfra fissure snorkelling", ll:[64.2558,-21.1197], time:"09:00–11:30 · alongside Þingvellir", tag:"opt", note:"Drysuit snorkelling in the rift itself — 2–4°C water, visibility past 100 m — meeting at the Silfra car park inside the park, so it costs no detour. What it costs is a start time: check in 08:45, which means leaving Reykjavík at 08:00 rather than 08:30. It runs in parallel with the rift walk above, so the rest of the group does Almannagjá and Öxarárfoss meanwhile, you rejoin about 11:30, and Efstidalur slips to 12:15 — nothing on this day is reserved, so that absorbs. Roughly €110–150 a head, booked separately. Read the limits before anyone gets attached: minimum age 12, minimum height 150 cm, minimum weight 45 kg. The last two are drysuit seal requirements rather than policy and are not waived. Under-18s must be accompanied by an adult.", shot:"They hand you GoPro shots because your own camera cannot come down. Above water the frame is the fissure walls dropping into clear water."},
+   {name:"Efstidalur II — lunch", ll:[64.246,-20.633], drive:"45 min", time:"12:00–13:15", note:"Dairy-farm lunch with the ice-cream barn looking into the cowshed. No reservation needed — they only take them for groups of ten or more, so just turn up. Friðheimar is the fancier alternative, but it books out months ahead.", shot:"Not a landscape: the cows through the glass from the ice-cream barn, with a kid's face in the same frame."},
+   {name:"Laugarvatn Fontana bakery", ll:[64.2151,-20.7307], time:"flex", tag:"opt", note:"Rye bread dug steaming from black sand — 15 min back toward Laugarvatn if the day runs smooth.", shot:"A process shot rather than a landscape: the loaf lifted steaming out of the black sand with the lake behind it. The twenty seconds when the lid comes off are the whole picture."},
+   {name:"Geysir", ll:[64.3104,-20.3024], drive:"20 min", time:"13:35–14:20", note:"Strokkur erupts every 5–10 minutes.", shot:"The moment before, not the plume — the water bulges into a blue dome about a second before it goes. Burst mode, and stand upwind."},
+   {name:"Gullfoss", ll:[64.3271,-20.1199], drive:"10 min", time:"14:30–15:15", note:"Two-tier torrent into the canyon.", shot:"Look for the rainbow in the spray from the lower platform. The upper viewpoint is the one that shows both tiers turning into the canyon."},
+   {name:"Kerið · Secret Lagoon · Brúarfoss", ll:[64.0413,-20.885], drive:"30 min", time:"15:45–16:45", tag:"opt", note:"Pick one on the way south, then ~1:15 to the hostel — you sleep next door to tomorrow's first stop. Aurora watch from 21:30; Drífandi falls in the backyard.", shot:"At Kerið the frame is the whole bowl from the rim: red scoria walls against the green water."}
+  ]},
+ {n:3, dow:"Mon", date:"Sep 21", km:"~100 km + tour", depart:"08:25", arrive:"19:15",
+  title:"Waterfalls · Katla ice cave · Reynisfjara",
+  base:"Mýrdalur (near Dyrhólaey)", baseLL:[63.4375,-19.19], stay:STAY3,
+  food:{lunch:"<b>Smiðjan Brugghús</b> in Vík at 12:15, already in the run-sheet — brewpub burgers five minutes from the ice-cave check-in.", dinner:"Back in Vík after Reynisfjara: <b>Suður-Vík</b> in the old house up the hill, or <b>Halldórskaffi</b> in the middle of town. The Lava Show is 20:00, so eat first.", coffee:"<b>Skool Beans</b> — a bright yellow school bus in Vík that roasts its own beans, with a log fire and a book exchange inside. The best coffee on the south coast, and a short walk from the ice-cave meeting point.", sweet:"Skool Beans bakes as well as roasts. Beyond that the south coast runs on supermarket skyr: Ísey, with the berry lids, is the national pudding and costs a couple of hundred krónur at the Vík Krónan.", buy:"<b>Icewear / Víkurprjón</b> in Vík — a working knitting factory with the shop attached, and the biggest wool selection you will see outside Reykjavík. You are in Vík twice today, so this is the no-detour version of the sweater.", fuel:"<b>Vík</b>'s N1 is the one that matters: after it there is nothing until Kirkjubæjarklaustur, about 70 km east.", shop:"<b>Krónan in Vík</b>, already in the run-sheet, is the only real supermarket between Hvolsvöllur and Höfn. Whatever tomorrow needs, buy it tonight.", extra:"<b>Black Crust Pizzeria</b> in Vík colours its dough with activated charcoal. A jet-black pizza is an easy sell to kids on a day that has already run long."},
+  stops:[
+   {name:"Seljalandsfoss + Gljúfrabúi", ll:[63.6156,-19.9886], drive:"2 min", time:"08:30–09:45", note:"You wake up next to it — beat the tour buses. Walk behind the falls (raincoats); Gljúfrabúi is 600 m up the path.", shot:"The famous one is from behind the curtain, looking out through the water. First thing, the real prize is the empty path — nothing beats having nobody else in the frame. At <b>Gljúfrabúi</b> the picture is the shaft of daylight down the cleft."},
+   {name:"Skógafoss + Kvernufoss", ll:[63.5321,-19.5114], drive:"30 min", time:"10:15–11:45", note:"The banked half-hour means Kvernufoss fits — 20-min walk from the museum lot, most people miss it.", shot:"Look for the rainbow in the spray. Take it low from the river stones first, then climb the 527 steps for the one looking back down the escarpment."},
+   {name:"Katla ice cave", ll:[63.60,-18.88], offroute:true, drive:"30 min", time:"14:00–17:00", tag:"book", note:"Troll Expeditions runs the super-jeep tour from Vík — book ahead. Lunch in Vík 12:15 (Smiðjan Brugghús), then meet in the Víkinn Hotel lobby in Vík — check in by 13:40, 20 min before the 14:00 departure, and look for the super jeeps marked Troll Expeditions. Complimentary coffee and cookies in the lobby if you're early. Super-jeep up onto Mýrdalsjökull to blue glacier ice; 17:00 is an estimate — the operator states no fixed duration. Jeans are not allowed on the glacier: waterproof shell, thermal base layer, hat and gloves. Boots and waterproofs rent on site, all sizes — tell the guide if you pre-booked extras. Free to cancel until 24 hrs before, nothing back inside that. Check road.is and your email (inbox and spam) before setting off; weather cancellations go out by email.", shot:"Put a person in the frame or nothing shows the scale. Phones handle blue ice better than you would expect; keep your headlamp out of other people's shots."},
+   {name:"Dyrhólaey", ll:[63.4022,-19.1306], drive:"15 min", time:"17:15–18:00", note:"The rock arch and the best coastal panorama in the south.", shot:"From the top, looking east along the whole black curve to the Reynisdrangar stacks. The arch reads as a silhouette."},
+   {name:"Reynisfjara", ll:[63.4043,-19.0446], drive:"10 min", time:"18:10–19:00", note:"Basalt columns and black sand. Sneaker waves: obey the warning lights, stay off the wet sand. Farmhouse is 15 min back west — dinner in Vík first, or groceries at Krónan.", shot:"The basalt columns close up, then the Reynisdrangar stacks offshore. Eyes on the water the whole time — no photograph here is worth standing on wet sand."},
+   {name:"Lava Show, Vík", ll:[63.4187,-19.0060], drive:"10 min", time:"~20:00", tag:"opt", note:"Real molten lava indoors — if there's gas left in the tank.", shot:"Real molten lava a few feet away in a dark room. Flash off — the glow is the picture."}
+  ]},
+ /* Skaftafell's café tail and Fjallsárlón are trimmed 20 min each so the 14:40
+    Zodiac check-in is met with margin — paying for parking and walking to the
+    ticket office eats the rest. Fjallsárlón is still the first thing to drop. */
+ {n:4, dow:"Tue", date:"Sep 22", km:"~280 km", depart:"08:00", arrive:"18:20",
+  title:"Canyon · Svartifoss · glacier lagoon",
+  base:"Höfn", baseLL:[64.2539,-15.2082], stay:STAY4,
+  food:{lunch:"The café at the <b>Skaftafell visitor centre</b>, quick, straight off the Svartifoss hike — the Zodiac check-in is the day's hard edge, so this is a refuel, not a meal.", dinner:"Langoustine night, and it is <b>Pakkhús</b> — Krosseyjarvegi 3, in the old harbour warehouse, open 12:00–21:30 daily, +354 478 2280. <b>They take no reservations</b>, it says so on their own site, so you turn up: you reach Höfn 18:20, which is peak, so go straight there and check into the guesthouse afterwards. The town has thinned out — Humarhöfnin and Otto Matur &amp; Drykkur both appear to have closed, so treat this as the one kitchen rather than the pick of three, and have the Hafnarbúðin window below as the fallback if there is a wait you cannot face.", coffee:"A thin stretch. Skaftafell's visitor centre is the only real stop between Kirkjubæjarklaustur and the lagoon, and the café at the <b>Jökulsárlón</b> ticket office pours while you wait for the Zodiac.", sweet:"Höfn is a langoustine town rather than a cake town, so take dessert at Pakkhús. The Icelandic road alternative is the soft-serve counter inside the N1 — petrol-station ice cream is a genuine national habit, not a joke.", fuel:"The disciplined day. <b>Kirkjubæjarklaustur</b>, then the N1 at <b>Freysnes</b> beside Skaftafell, then not much until <b>Höfn</b> — roughly 130 km legs. Top up at Klaustur even if the gauge still looks comfortable.", shop:"<b>Höfn</b> has a Bónus, and it is the restock before the east fjords. Klaustur's shop is small and priced like it.", extra:"<b>Hafnarbúðin</b> is the roadside window the locals use — the same langoustine in a baguette for a fraction of the price, no booking, eaten standing up."},
+  stops:[
+   {name:"Fjaðrárgljúfur", ll:[63.7712,-18.1719], drive:"1 hr", time:"09:00–10:00", note:"Canyon rim walk; last 3 km gravel. Earliest start of the trip — it's the only way today fits.", shot:"From the rim path looking down the serpentine. Morning mist in the canyon is common enough to hope for."},
+   {name:"Skaftafell — Svartifoss hike", pq:"Svartifoss", ll:[64.0163,-16.9666], drive:"50 min", time:"10:50–13:00", note:"~4 km round trip, kid-doable (10:50–12:35), then a quick café lunch at the visitor centre — be rolling by 13:00, the boat check-in is the day's hard edge.", shot:"Get low and centred so the fan of black hexagonal columns opens out behind the water. The bowl is narrow and mostly shaded, which is a gift: nothing blows out."},
+   {name:"Fjallsárlón", ll:[64.0152,-16.3771], drive:"45 min", time:"13:45–14:10", tag:"opt", note:"The smaller, quieter iceberg lagoon — 25 minutes is enough for the view, and it stays the first thing to cut if the morning has slipped.", shot:"Quieter than Jökulsárlón, and the glacier tongue sits directly behind the bergs — one frame holds both, which is the thing the bigger lagoon cannot do."},
+   {name:"Jökulsárlón — Zodiac boat tour", ll:[64.0478,-16.1809], drive:"10 min", time:"15:10–16:25", tag:"book", note:"Jökulsárlón Boat Tours — book ahead. 1 hr 15 min out among the icebergs, and the Zodiac gets far closer to the ice than the amphibian. Check in at the ticket office by 14:40: the Zodiac wants 30 min, not the amphibian's 20. Exchange the voucher for tickets before boarding — printed or on a phone. Parking is ISK 1000 at the Vatnajökull park kiosks, either side of Route 1; from the ocean side you walk under the bridge, about 5 min to the office. Free to cancel 24 hrs out, 50% back inside that, nothing if you miss it — no-shows are charged in full. If lagoon or weather conditions cancel the sailing it's a 100% refund. booking@jokulsarlon.is · +354 478 2222.", shot:"From the boat, close enough that the ice fills the frame. Spray gets everywhere: wipe the lens between shots and keep the strap round your wrist."},
+   {name:"Diamond Beach", ll:[64.0427,-16.1755], drive:"2 min", time:"16:35–17:15", note:"Ice glittering on black sand. Then ~1:05 to Höfn — langoustine at Pakkhús or Otto, the one splurge dinner.", shot:"The one everybody wants. Crouch low so the ice fills the foreground — black sand below, white surf behind. Same sneaker-wave rule as the beach yesterday."}
+  ]},
+ {n:5, dow:"Wed", date:"Sep 23", km:"~200 km", depart:"08:30", arrive:"18:30",
+  title:"Stokksnes · the East Fjords",
+  base:"Egilsstaðir", baseLL:[65.2637,-14.3945], stay:STAY5,
+  food:{lunch:"<b>Við Voginn</b> at Djúpivogur, right where the 11:05 stop already is — a harbour shack with a local reputation for fish and chips and burgers. Otherwise it's the packed lunch at Petra's, where there is nothing.", dinner:"<b>Nielsen Restaurant</b> in Egilsstaðir, in the oldest house in town with a garden behind it, or <b>Salt Bistro</b> for something simpler and later.", coffee:"The <b>Viking Café</b> at Stokksnes, where you are paying the access fee anyway — coffee with the best view of the morning. If the afternoon goes to <b>Vök Baths</b> instead of Seyðisfjörður, its swim-up bar is the one place you can order without leaving the water.", sweet:"Djúpivogur and Egilsstaðir both have a bakery on the main street and that is the honest extent of it — this is the day to raid a bakery counter at opening rather than hunt for dessert at night.", buy:"<b>Petra's Stone Collection</b> has a shop, and it is the one souvenir stop a kid will actually choose: Icelandic spar, jasper, zeolites, all local. Djúpivogur's harbour has the Eggin sculptures but nothing to buy.", fuel:"Leave Höfn full. <b>Höfn to Djúpivogur is the longest gap on the entire Ring Road</b> — about 100 km with nothing between them.", shop:"<b>Bónus in Egilsstaðir</b> at the end of the day: the biggest shop in the east and the last serious one before Mývatn.", extra:"<b>Norð Austur</b> in Seyðisfjörður is an acclaimed sushi room working the fjord's own catch — but it is over the pass and its season is short, so only if you pick Seyðisfjörður over Vök and it is still open."},
+  stops:[
+   {name:"Stokksnes / Vestrahorn", ll:[64.2434,-14.98], drive:"20 min", time:"08:50–10:00", note:"The black dunes under Vestrahorn; small access fee at the Viking Café.", shot:"The iconic Iceland frame: <b>Vestrahorn</b>'s teeth reflected in wet black sand with dune grass in front. It needs wet flats, so go at a low or falling tide — check a tide table for Hornafjörður, the nearest reference station."},
+   {name:"Djúpivogur", ll:[64.6562,-14.2846], drive:"1 hr 05", time:"11:05–11:45", note:"Eggin í Gleðivík egg sculptures + coffee.", shot:"The row of granite eggs receding along the harbour rail — shoot down the line, never across it."},
+   {name:"Petra's Stone Collection", ll:[64.836,-13.877], drive:"1 hr", time:"12:45–13:45", tag:"opt", note:"Quirky, kid-friendly and genuinely on the coastal road — which is the catch. Route 1 cuts inland to Egilsstaðir, so taking Petra's commits you to the full fjord coast: <b>+68 km</b>, the biggest optional detour on the trip and more than Seyðisfjörður costs. Packed lunch here.", shot:"Close-ups, not wide shots: spar, jasper and zeolites by the thousand. Let the kid pick the subject."},
+   {name:"Seyðisfjörður or Vök Baths", ll:[65.261,-14.01], drive:"1 hr 20", time:"15:30–18:00", tag:"opt", note:"Pick one afternoon: the rainbow-street town over the pass, or floating lake baths near Egilsstaðir. Seyðisfjörður is <b>+53 km</b> round trip over Fjarðarheiði; Vök is on the doorstep of tonight's base, so it costs nothing.", shot:"If it is Seyðisfjörður, the <b>rainbow path</b> leading up to the blue church — the sister shot to day 1's street. If it is Vök, the pools cut into the lake surface with the swim-up bar in frame."}
+  ]},
+
+ {n:6, dow:"Thu", date:"Sep 24", km:"~280 km", depart:"08:15", arrive:"16:10",
+  title:"Stuðlagil · Dettifoss · Hverir · the baths",
+  base:"Mývatn", baseLL:[65.6465,-16.9127], stay:STAY6,
+  food:{lunch:"<b>Fjalladýrð</b> at Möðrudalur, the 11:45 stop — Iceland's highest farm, doing lamb soup and kleinur in the middle of the desert. The alternative is the Dettifoss picnic, where there is no kitchen for 50 km.", dinner:"<b>Vogafjós</b> at 20:15, already the plan: the cowshed restaurant where you eat alongside the herd, with rye bread baked in the geothermal ground and mozzarella from their own milk.", coffee:"Möðrudalur is the coffee stop by design — the 11:45 slot exists for it. At the lake, <b>Kaffi Borgir</b> looks out over the Dimmuborgir lava field a minute from the guesthouse.", sweet:"Vogafjós makes ice cream and skyr from the herd you are sitting beside. Möðrudalur's kleinur — twisted Icelandic doughnuts, fried — are the mid-desert version, and the better story.", buy:"<b>Vogafjós</b> sells the geothermal rye bread it bakes in the ground, which travels better than you would think, and <b>Earth Lagoon</b>'s skincare uses the lake's own silica.", fuel:"Fill at <b>Egilsstaðir</b> before you climb — the Route 1 stretch over the highland is empty. Möðrudalur has a pump at the 11:45 stop, then Reykjahlíð at the lake.", shop:"Do it in <b>Egilsstaðir</b> in the morning. Reykjahlíð's shop is small, expensive and shuts early, and dinner is at Vogafjós anyway.", extra:"<b>Daddi's Pizza</b> in Reykjahlíð is the cheap night and easier than Vogafjós if the lagoon runs long."},
+  stops:[
+   {name:"Stuðlagil Canyon", ll:[65.1571,-15.3068], drive:"55 min", time:"09:10–11:10", note:"East-side walk (~5 km RT) for the river-level basalt view; Rte 923 gravel. Color varies with dam overflow.", shot:"From the east-side path down at river level, looking along the columned wall with the glacial blue below. Whether the water is turquoise or grey is dam overflow, not your fault."},
+   {name:"Möðrudalur", ll:[65.3606,-15.8867], drive:"30 min", time:"11:45–12:05", tag:"opt", note:"Coffee at Iceland's highest farm, mid-desert.", shot:"The little turf-roofed church with the desert behind it, and Herðubreið on the skyline if the air is clear."},
+   {name:"Dettifoss West + Selfoss", ll:[65.8141,-16.3846], drive:"50 min", time:"12:55–14:10", note:"Europe's most powerful waterfall (Rte 862, paved) + the 30-min Selfoss walk. Picnic lunch here.", shot:"Dettifoss is about volume, not shape, so put a person on the rim or it could be any waterfall. Look for a rainbow in the spray. <b>Selfoss</b> upstream is the wider, quieter, better-composed one."},
+   {name:"Hverir / Námaskarð", ll:[65.6412,-16.8087], drive:"45 min", time:"14:55–15:40", note:"Boiling mud pots and fumaroles.", shot:"Ochre ground, blue steam, and the boardwalk as a line drawn through it. Mind the wind: sulphur on a lens is one thing, on you is another."},
+   {name:"Grjótagjá", ll:[65.6262,-16.8827], drive:"5 min", time:"15:45–16:00", note:"Photo stop; viewing only, no bathing.", shot:"The shaft of daylight through the fissure onto the blue water. It is a small dark hole — a phone braced against the rock beats a hand-held camera."},
+   {name:"Dimmuborgir", ll:[65.5911,-16.9119], drive:"15 min", time:"16:30–17:30", tag:"opt", note:"Lava labyrinth, and the guesthouse is right beside it — so this one costs no driving at all. Skip only if the tank is empty.", shot:"Shoot the lava pillars against the sky, not against the ground: the whole point is that they read as ruined towers."},
+   {name:"Earth Lagoon Mývatn", ll:[65.6304,-16.848], drive:"10 min", time:"18:00–20:00", tag:"book", note:"Book a timed entry — <b>Kvika/Signature</b> at 18:00 is the slot this plan uses. Show the emailed ticket at the door. Signature covers the lagoon, hot tub and steam baths, the lava changing rooms with a locker, a free towel, one free drink and a discount at Earth Bistro. An 18:00 slot admits you between 18:00 and 18:30 — ring ahead if the day runs long. This is the rebuilt and rebranded Mývatn Nature Baths (Jarðböðin), reopened July 2026, so older photos and reviews describe the old building. Cancellation, per the operator's published terms: 100% back until 72 hrs out, 50% between 24 and 72 hrs, only 10% inside 24 hrs. Steam over the lake, then late dinner at Vogafjós ~20:15, or eat at the bistro on the discount.", shot:"Steam over the lake. Phone in a pouch only — silica water and electronics do not mix, and the other bathers did not agree to be in it."}
+  ]},
+ /* depart is set by the whale check-in, not by taste: the 09:30 sailing closes
+    check-in at 08:50, that minus the 45-min drive from Mývatn, minus 10 min of
+    margin. The two bookings used to collide here — a 10:00 ride in front of a
+    12:30 sail — and the rebooking to 09:30 whales / 14:00 horses is what pulled
+    them apart, so don't reshuffle this day without re-reading both stop notes.
+    Do NOT push this to 08:10 for the Dimmuborgir breakfast: service starts 08:00,
+    the latest departure that still makes check-in is 08:05 with zero margin, and a
+    missed check-in is charged in full. The breakfast gets packed instead. */
+ {n:7, dow:"Fri", date:"Sep 25", km:"~140 km", depart:"07:55", arrive:"17:35",
+  title:"Húsavík whales · Saltvík horses · Akureyri",
+  base:"Akureyri", baseLL:[65.6885,-18.1262], stay:STAY7,
+  food:{lunch:"<b>Naustið</b> in Húsavík at 11:45, already in the run-sheet — a tiny place doing fish soup and plokkfiskur two minutes from where the boat lands. <b>Gamli Baukur</b>, the timber house on the harbour, is the fallback if it is full.", dinner:"Akureyri, after the old-town walk: <b>Strikið</b> on the top floor for the fjord view — book — or <b>Bautinn</b>, the town's dependable family standby.", coffee:"<b>Bláa Kannan</b> — the deep-blue timber house with the red roof on Hafnarstræti, standing directly on the old-town walk, serving homemade cake all day.", sweet:"<b>Brynja</b> is already a stop and is the whole point: Akureyri's ice-cream institution, thick soft-serve that people drive in from the countryside for.", buy:"<b>Hafnarstræti</b> in Akureyri is the north's shopping street and you are already walking it — small Icelandic labels rather than tourist tat. The <b>Húsavík Whale Museum</b> shop, next to where the boat lands, is the good version of a gift-shop stop.", fuel:"Easy day for pumps — Reykjahlíð, Húsavík and Akureyri all have them. Fill in <b>Akureyri</b> tonight rather than tomorrow morning: day 8 is 450 km and rolls at 08:00.", shop:"<b>Akureyri</b> is the biggest supermarket town in the north, with Bónus, Nettó and Krónan. This is the provisioning stop for tomorrow — the Lunch row above explains why it is not optional.", extra:"<b>Rub23</b> is the best sushi and fish in Akureyri, but it is a proper sit-down evening on a day that has already spent two hours on a boat and ninety minutes on a horse."},
+  stops:[
+   {name:"Húsavík whale watching", ll:[66.0464,-17.3459], drive:"45 min", time:"09:30–11:30", tag:"book", note:"Gentle Giants GG2 Big Whale Safari & Puffins — book the 09:30 sailing ahead (booking online is cheaper); it settles on arrival, so bring a card. Check in by 08:50 — 40 min before departure, and a missed check-in is charged in full. Gentle Giants Ticket Center, Hafnarstétt 7, 640 Húsavík; look for the blue flags, and the pin here is that door. A RIB speedboat, 12 passengers, about 2 hrs on Skjálfandi Bay — faster, closer to the whales and far colder than the oak boat it replaced. Obligatory overalls and rain jackets are handed out; wear thermals, hat, gloves and closed warm shoes underneath. Their RIB rules: minimum age 8 and minimum height 130 cm, and nobody with heart or back trouble — measure younger kids first, the same check the booster-seat rule needs. Don't count on the puffins: nearly all of them have left for the open Atlantic by the second week of September, and the operator reserves the right to skip Puffin Island regardless. Free to move or cancel up to 24 hrs before; inside that it is charged in full, unpaid or not, and weather cancellations are refunded or moved. Lunch at Naustið after, 11:45–12:45, then ten minutes out to the horses.", shot:"From a twelve-seat RIB at speed, a phone on a lanyard beats a long lens you cannot brace. Shoot the blow and the back — if you can see the fluke it has already gone. The other picture is the harbour coming back in, wooden church above it."},
+   {name:"Saltvík horse ride — The Seaside tour", ll:[65.999,-17.3631], drive:"10 min", time:"14:00–15:30", tag:"book", note:"Saltvík's Seaside tour — book the 14:00 departure ahead: an hour in the saddle, plus about half an hour getting on and off, which is why this reads 14:00–15:30. Along the shore and up into the hills behind the farm, looking out over Skjálfandi Bay — the same water you sailed this morning. Beginners welcome; minimum age 10 and a 110 kg limit per rider. Everything starts inside the riding hall — drive up to the stable, park, and the guide is in there with the horses. Hestamiðstöðin Saltvík is 4 km south of Húsavík, ten minutes down from the harbour, so there is room to eat properly before you come out. +354 847 9515, info@saltvik.is. Their site doesn't spell out what comes with the horses, so ask about helmets and rain gear when you ring, and dress warm underneath either way — the shoreline is fully exposed. It is paid up front rather than on arrival, so read the cancellation terms before you book.", shot:"Mane and shoreline. You cannot really shoot from the saddle at a tölt, so ask the guide for a halt; they are used to being asked."},
+   {name:"Goðafoss", ll:[65.6828,-17.5502], drive:"45 min", time:"16:15–16:55", note:"The waterfall of the gods, right off the route south.", shot:"The horseshoe from the west bank. Go wide enough to hold the whole curve or it is just water."},
+   {name:"Akureyri old town + Brynja", ll:[65.6826,-18.0907], drive:"45 min", time:"17:40–19:10", note:"Church steps, Hafnarstræti stroll, the famous ice cream, dinner to follow. The hostel is on Hafnarstræti itself, a couple of minutes from all of this — park once and do the evening on foot.", shot:"Down the church steps to the fjord, and the <b>red heart-shaped traffic lights</b> — the town's own joke and nobody else's postcard. The ice cream is the last frame of the day."}
+  ]},
+ {n:8, dow:"Sat", date:"Sep 26", km:"~450 km", depart:"08:00", arrive:"18:10",
+  title:"Tröllaskagi · Hofsós pool · the long haul west",
+  base:"Stykkishólmur", baseLL:[65.0757,-22.7297], stay:STAY8,
+  food:{lunch:"The thin day — 450 km and almost nothing open between them. <b>Kaffi Rauðka</b>, the red house on Siglufjörður's marina, is open year-round, but you are there at 09:15, which is coffee rather than lunch. Provision in Akureyri before you leave and eat at Hofsós.", dinner:"Stykkishólmur, ten minutes north of the hotel: <b>Narfeyrarstofa</b>, the oldest restaurant in town and open year-round, doing scallops and the local catch — or <b>Sjávarpakkhúsið</b> on the harbour, known for Breiðafjörður blue mussels. Either is a short drive back out to the room.", coffee:"Kaffi Rauðka at 09:15 is exactly right for this, and it is the last good cup for a long time — after Siglufjörður it is petrol-station coffee for most of 400 km.", sweet:"<b>Geirabakarí</b>, the bakery and café on the main road through Borgarnes, catches the 17:20 fuel stop — a proper bakery at the hour of the day when morale needs one.", fuel:"Two fills. <b>Staðarskáli</b> on Route 1 is the classic mid-route service stop, and <b>Borgarnes</b> is the last one before the peninsula.", shop:"<b>Borgarnes</b> at the 17:10 fuel stop has Bónus and Nettó — the last proper supermarket of the day. Stykkishólmur has a Bónus too, but you arrive at 18:10 and its hours are shorter.", extra:"<b>Bjargarsteinn Mathús</b> in Grundarfjörður is the best food on Snæfellsnes — a wooden house moved 140 km to sit on the harbour with Kirkjufell out of the window. It was the reason to sleep in Grundarfjörður, and you no longer do: it is 40 min west of the hotel, so it costs an 80-minute round trip after a 450 km day. Book ahead if you want it anyway."},
+  stops:[
+   {name:"Siglufjörður", ll:[66.1512,-18.9054], drive:"1 hr 15", time:"09:15–10:30", note:"Harbor + old town via the fjord tunnels. Herring Era Museum often runs afternoon-only September hours — verify the night before.", shot:"The marina with coloured houses stacked under the fjord wall."},
+   {name:"Hofsós pool", ll:[65.8965,-19.4108], drive:"45 min", time:"11:15–12:15", tag:"soak", note:"Fjord-edge infinity swim — confirm Saturday hours; swimsuits in the day bag. Quick lunch after, 12:15–12:45.", shot:"The picture is the infinity edge — the pool's lip dissolving into Skagafjörður with <b>Drangey</b> out on the water beyond. Phone only, and be quick: people are swimming."},
+   {name:"Glaumbær turf farm", ll:[65.6099,-19.5058], drive:"35 min", time:"13:20–14:05", note:"Exterior is the show if the museum's on short hours.", shot:"The row of grass-roofed gables end-on, so the turf reads as one wall of green. Better from outside than in."},
+   {name:"Kolugljúfur", ll:[65.3293,-20.5732], drive:"1 hr 15", time:"15:20–15:40", tag:"opt", note:"15-min leg stretch off Rte 1, then ~2.5 hrs west — fuel + snack in Borgarnes ~17:10, and the hotel is on Route 54 south of Stykkishólmur, so you pass the turn rather than doubling back.", shot:"Twenty minutes, one frame: the falls stepping through the gorge, taken from the bridge."}
+  ]},
+ {n:9, dow:"Sun", date:"Sep 27", km:"~280 km", depart:"08:15", arrive:"18:15",
+  title:"Snæfellsnes, tip to toe",
+  base:"Reykholt", baseLL:[64.6652,-21.291], stay:STAY9,
+  food:{lunch:"<b>Ólafsvík</b> at 11:40 as planned, between Stykkishólmur and Djúpalónssandur — the harbour town holds the only dependable kitchens on that stretch of the peninsula.", dinner:"<b>Fosshotel Reykholt</b>'s own restaurant, 18:00–21:30, which in Reykholt is effectively the only kitchen — you arrive 18:15, so ring +354 435 1260 during the day and have a table waiting rather than hoping.", coffee:"Stykkishólmur at 08:30 is the first stop of the day and its harbour cafés open early for the Flatey ferry crowd. <b>Arnarstapi</b> at 14:15 is the only other dependable one on the peninsula's south side.", sweet:"<b>Geirabakarí</b> on the main road through Borgarnes catches you at about 17:10 on the way inland — the last bakery before Reykholt, which has none.", buy:"<b>Stykkishólmur</b>'s old harbour houses hold a handful of craft and design shops, open by the time you arrive at 08:30 — the last proper browse before the airport run.", fuel:"Fill in <b>Stykkishólmur</b> before you set off, or <b>Ólafsvík</b> at lunch: the peninsula's south side, from Arnarstapi round to Búðir, has no pumps at all.", shop:"<b>Borgarnes</b> on the way inland — Bónus and Nettó, and the last big shop before the airport run. Reykholt itself has nothing.", extra:"The <b>Settlement Centre</b> in Borgarnes — mashed fish, lamb, mussels and langoustine tails in a 19th-century warehouse — sits right on the road in at about 17:15. Earlier than you would choose, but it beats waiting for the hotel to open at 18:00 if everyone is hungry."},
+  stops:[
+   {name:"Stykkishólmur", ll:[65.0757,-22.7297], drive:"10 min", time:"08:30–09:30", note:"Harbor, Súgandisey lighthouse hill, Danish-era houses — ten minutes north of the hotel, and first because you sleep beside it — staying here rather than in Grundarfjörður deletes the backtrack.", shot:"Up on Súgandisey, the orange lighthouse against the fjord. The harbour and the Danish-era houses come free on the way back down."},
+   {name:"Kirkjufell + Kirkjufellsfoss", ll:[64.942,-23.3068], drive:"40 min", time:"10:10–10:55", note:"The mountain everyone photographs, and the falls in front of it.", shot:"The most photographed frame in Iceland, and genuinely worth it: <b>Kirkjufellsfoss</b> in the foreground, the mountain behind. Stand north-east of the falls looking north-west."},
+   {name:"Djúpalónssandur", ll:[64.7527,-23.9033], drive:"50 min + Ólafsvík lunch", time:"12:30–13:15", note:"Lunch stop in Ólafsvík 11:40–12:10 en route. Pebble beach, lifting stones, wreck iron — same ocean caution as Reynisfjara.", shot:"The rusted ribs of the trawler on black pebbles, taken low and close so the iron is huge and the beach is only backdrop. The lifting stones are the second frame, with a hand on one for scale."},
+   {name:"Vatnshellir lava cave", ll:[64.748,-23.818], drive:"5 min", time:"13:20–14:05", tag:"opt", note:"45-min guided cave, tours on the hour, kid-friendly.", shot:"Almost nothing works down there — pitch dark, and the guide's lamp is the only light. Shoot the spiral staircase looking back up at the entrance hole instead; that one frame is the cave."},
+   {name:"Arnarstapi · Gatklettur", pq:"Gatklettur Arnarstapi", ll:[64.7686,-23.6216], drive:"10 min", time:"14:15–15:10", note:"Stone arch plus a stretch of the clifftop walk toward Hellnar.", shot:"Gatklettur becomes a near-perfect circle when you find the angle — keep walking until the sea fills the hole. The kittiwake cliffs and the basalt columns are on the same short walk."},
+   {name:"Búðakirkja", ll:[64.8221,-23.3843], drive:"10 min", time:"15:20–15:45", note:"The black church in the lava field.", shot:"The black church wants a low, wide frame with lava in front and mountains behind; it is small, and head-on makes it look smaller."},
+   {name:"Ytri-Tunga seal beach", ll:[64.8037,-23.0784], drive:"15 min", time:"16:00–16:40", note:"Seals haul out most days; then ~1 hr 30 inland to Reykholt, passing Borgarnes on the way.", shot:"Longest lens you have, from where you already are. The picture is seals ignoring you — walking closer ends the scene, and is not allowed anyway."}
+  ]},
+ /* depart is load-bearing, like day 7's: a 10:30 tour sits 1 hr 40 away up a
+    mountain road — but night 9 is now Reykholt, which is already ON Route 518:
+    25 min to Húsafell, then ~30 min up 550, so 08:45 puts you at Klaki with 50
+    min spare. It was 08:10 when this day started from Borgarnes. */
+ {n:10, dow:"Mon", date:"Sep 28", km:"~200 km", depart:"08:45", arrive:"18:15",
+  title:"Into the Glacier · lava falls · hot spring",
+  base:"Kópavogur", baseLL:[64.0886,-21.7938], stay:STAY10,
+  note:"Read this before the day starts. Road 550 up to Klaki is an F-road — 4x4 only, and the operator's own page has it closed October to June. Check that your rental contract allows F-roads — many do not, even on a 4x4 — and if it doesn't, Into the Glacier runs a departure from Húsafell instead. The road itself is rough gravel and wants gravel speed rather than confidence, and it is seasonal: it can close in late September, so check umferdin.is before you set off. Before you go, Snorralaug — the medieval stone bathing pool Snorri Sturluson used — sits beside the church in Reykholt, a short walk from the hotel and free to look at. Snorrastofa's museum doesn't open until 10:00, so the pool is the ten minutes you can actually take. If the tour falls to weather or road conditions the valley still holds a full day: Víðgelmir, the guided lava tube 5 km past Húsafell on 518, is indoors and unbothered by anything; Hraunfossar and Krauma are on the run-sheet below and both work in rain; the Settlement Centre in Borgarnes is indoors. Further south, Raufarhólshellir — the lava tube this route leaves out — and Perlan or FlyOver Iceland in Reykjavík are both weatherproof. If instead it is Fagradalsfjall you were counting on and the trails are shut, Krauma is the swap and the departure morning is the second chance. safetravel.is decides the trails, vedur.is the wind.",
+  food:{lunch:"<b>Húsafell Bistró</b>, open 11:00–17:00 daily, sits fifteen minutes down from the glacier road and lands exactly when you come off the ice — buffet, burgers, waffles.", dinner:"You reach the lake about 19:30, so the easy answer is <b>Kríunes's own restaurant</b> — home cooking, and you do not get back in the car. Otherwise Reykjavík is 15 min northwest and everything from day 1 is still there. Ring +354 567 2245 during the day so the kitchen expects you.", coffee:"<b>Húsafell Bistró</b> pours with lunch, and Krauma has a café alongside the baths if you would rather sit and watch the spring than get in it. Before you leave Reykholt, the hotel does its own.", sweet:"Húsafell's bistro does waffles, which is the correct thing to eat coming off a glacier.", fuel:"You are already inland, so fill at <b>Húsafell</b> on the way up — Road 550 is not where you want to be watching the gauge, and Reykholt has no pump. Then remember the car goes back <b>full</b> tomorrow — the departure card has the last fill.", shop:"<b>Borgarnes</b> on the way south, about an hour after the glacier. After that you are into the capital area, where every chain is open late — the last easy shop of the trip.", extra:"If the glacier tour is weathered off, Krauma stops being a coffee stop and becomes the afternoon — the baths are right there. See the day note."},
+  stops:[
+   {name:"Into the Glacier — Klaki Base Camp", ll:[64.6502,-20.5827], drive:"55 min", time:"10:30–13:30", tag:"book", note:"Book ahead and bring the ticket, printed or on a phone. Snowmobiles up onto Langjökull, then an hour inside the world's largest man-made ice tunnel, chapel included, and back down: about 20 minutes riding each way, so the three hours here is a deliberately loose block against an operator page that says three to four. The licence rule decides who drives: 17 and over with a valid licence, passengers 8 and over, and guests without licences cannot outnumber those with — so kids ride pillion behind a licensed adult. They hand out the helmet, overall suit, balaclava, mask and gloves; you bring waterproof shoes, warm socks, base and mid layers, a waterproof coat and sunglasses. Free to cancel until 24 hrs out, after which the whole fare is gone. Klaki is the meeting point only until mid-October — after that it moves down to the Húsafell Activity Center, and an early snow can move it sooner, so ring ahead. +354 578 2550, info@intotheglacier.is.", shot:"Two different problems. Outside on Langjökull the light is flat white: expose for the snow or the whole frame greys out, and the line of snowmobiles across the cap is the shot. Inside, the tunnel is LED-lit blue ice — brace against the wall, and the chapel is the one room worth stopping in."},
+   /* Fagradalsfjall now carries no clock: it is the ALTERNATIVE to Krauma, not a
+      stop after it, so the run-sheet must not chain through it. Its drive is
+      measured from Hraunfossar — the branch point — which is why Krauma's 30 min
+      from the same place lands exactly on 15:10. */
+   {name:"Hraunfossar + Barnafoss", ll:[64.7028,-20.975], drive:"40 min", time:"14:10–14:40", note:"Spring water seeps out of the lava field and fans down into the Hvítá along a kilometre of bank, with Barnafoss churning through a rock gap 200 m upstream. Fifteen minutes past Húsafell on 518, so it costs no detour at all coming off the glacier — and after three hours on ice, thirty minutes of walking is about right.", shot:"A kilometre of water coming straight out of a lava wall: shoot along the bank so the springs repeat into the distance, not across it. Late September is peak <b>autumn colour</b> in Borgarfjörður, and the birch on that bank is why this stop photographs better now than in summer."},
+   {name:"Krauma · Deildartunguhver", pq:"Deildartunguhver", ll:[64.6636,-21.4053], drive:"30 min", time:"15:10–16:40", tag:"soak", note:"Deildartunguhver is Europe's highest-flow hot spring — 180 litres a second at 100°C — and <b>Krauma</b> is the bath house built over it, mixing that water with glacier melt to something you can sit in. Open 11:00–21:00 daily; capacity is deliberately small, so book ahead rather than turning up on spec. This is the right shape for the day: you come off a glacier cold, and the last thing before a two-and-a-half hour drive south is ninety minutes in hot water. Towels can be hired; the day bag has yours.", shot:"The spring, not the baths. Water leaving the ground at 100°C and 180 litres a second makes a wall of steam you can shoot straight into."},
+   {name:"Fagradalsfjall / Geldingadalir", ll:[63.889,-22.238], drive:"2 hr 30", time:"flex · swap for Krauma", tag:"opt", note:"This is the swap for Krauma rather than an addition, and it is the longer day: <b>+85 km</b> against the Krauma version, which is why it needs the light it gets. The crater hike, and the alternative to Krauma rather than an addition. It is 2 hrs 30 the other way, on Reykjanes: leave Hraunfossar at 14:40 and you are at the trailhead about 17:10 with daylight running out — the viewpoint, not the full crater circuit, and headlamps for the way down. Take it only if the trails are open and everyone still has legs after the ice; check safetravel.is that morning. Otherwise the departure morning has it as a second chance with a whole day of light.", shot:"Black on black — new lava reads as texture, so it needs something for scale. A person on the ridge does it."},
+  ]}
+];
+
+
+/* Sep 29 shows as card 11 but it is the flight home, not an eleventh day, and it
+   must stay OUT of DAYS: the hero's km, stop and night counts all reduce over DAYS,
+   the map has no route or base ring to draw for a day with no leg and no night, and
+   the rail would grow a pill that dims the whole map to nothing. The number and
+   --d11 are presentation; membership in DAYS is not.
+   It is shaped like a day anyway so buildDeparture() can push it through the same
+   card markup and the same run-sheet.
+   Logistics rows deliberately carry no `ll`: the rental counter is not in this
+   file, so the fuel-and-keys row is a time, not a pin. */
+const DEPARTURE = {
+  dow:"Tue", date:"Sep 29", depart:"08:15", keys:"14:00", flight:"KEF, late afternoon",
+  title:"Reykjanes loop · last fill · fly out",
+  base:"Keflavík", baseLL:KEF,
+  note:"If day 10 lost Fagradalsfjall to weather, this morning is its second chance and the only one left — swap it for the four Reykjanes stops below, leave at 08:00 and it fits. Everything out here is weather-exposed and free, so if it is blowing there is no shame in the other answer: the Blue Lagoon is 20 min away if you want a second soak. safetravel.is decides the trails.",
+  stops:[
+   {name:"Leave Hotel Kríunes", ll:[64.0886,-21.7938], time:"08:15", note:"Breakfast first. The last night is at Elliðavatn rather than the airport, so the morning drives back out to Reykjanes on purpose: the peninsula's tip is the one corner of Iceland this route never reaches otherwise."},
+   {name:"Bridge Between Continents", ll:[63.868,-22.675], time:"09:10", note:"The footbridge over the rift between the North American and Eurasian plates — ten minutes, and a good photograph for anyone who has just spent ten days on top of the seam.", shot:"Stand in the rift and shoot along it with the bridge overhead — a person in the trench is what makes it read as a plate boundary."},
+   {name:"Gunnuhver", ll:[63.8188,-22.6836], time:"09:40", note:"The boiling mud field, walked on boardwalks.", shot:"The big vent throws a plume worth shooting into. Boardwalks only: the crust is thin and the ground is actually boiling."},
+   {name:"Reykjanesviti + Valahnúkamöl", ll:[63.8125,-22.7075], time:"10:10", note:"Iceland's oldest lighthouse on the cliff, and the sea stacks below it.", shot:"Two frames — the lighthouse alone on its mound, and <b>Karl</b>, the sea stack, from the shore below with the surf breaking round it."},
+   {name:"Brimketill", ll:[63.8331,-22.5122], time:"11:00", note:"The lava rock pool the surf fills and empties. Watch it from the platform — people have been swept off these rocks.", shot:"Wait for a set. The picture is the instant the surf pours over the lip and fills the pool; between waves it is just a rock. From the platform — people have been swept off trying for better."},
+   {name:"Kaffi Duus — lunch", ll:[64.0033,-22.5636], time:"11:45", note:"Fish on Keflavík harbour, ten minutes from the airport. If you want one last proper coffee, this is where it is: past security the airport side is chain-only."},
+   {name:"Last fill in Njarðvík, then keys back", time:"13:30", note:"The car goes back full, due 14:00, and the rental shuttle runs you to the terminal. Claiming the VAT refund? The desk is in the arrival hall opposite the car rentals, which is exactly where that shuttle puts you, and it has to be done before you check the bags — so drop at 13:30 rather than 14:00 and give yourself the half hour."},
+   {name:"KEF terminal", ll:KEF, time:"14:40", note:"For a ~17:00 departure, bag drop opens about 14:10 and shuts 45–60 min before the flight. Duty free on the way out is the cheapest alcohol and chocolate in the country."}
+  ]};
+
+const TRIP = {
+  desc:"Ten nights counterclockwise: the south-coast icons and the Katla ice cave, the east fjords, whales and horses at Húsavík, Mývatn, Snæfellsnes, and Into the Glacier on the last full day. One F-road — Road 550 up to Klaki — so check your rental allows it.",
+  days: DAYS,
+  upgrades: [["Dyrhólaey",3],["Katla ice cave",3],["Svartifoss",4],["Mývatn baths",6],["Saltvík horses",7],["Húsavík whales",7],["Hofsós pool",8],["Ytri-Tunga seals",9]],
+  /* Lodging is NOT listed here — buildReservations() derives it from DAYS[].stay,
+     so an address can only ever be written once. This list is the car and the
+     timed tours worth booking ahead. Date order, the order you meet them. */
+  reservations: [
+   {when:"Sep 19, 11:00", what:"Car hire — 4x4, automatic", tel:null,
+    meta:"Pick up and drop at KEF, full-to-full. Take gravel (GP) and sand &amp; ash (SAAP) cover on top of collision and theft, and get it in writing that the contract allows F-roads if you want to drive Road 550 on day 10."},
+   {when:"Sep 19, 12:00", what:"Blue Lagoon — Premium", tel:null,
+    meta:"Timed entry. Premium covers three in-water mask-bar masks, one drink, a bathrobe and towel on loan, and a skincare gift. Put the voucher on a phone before you fly."},
+   {when:"Sep 21, 14:00", what:"Katla ice cave — Troll Expeditions", tel:null,
+    meta:"Super jeep from the Víkinn Hotel lobby, Vík — check in by 13:40. No jeans; boots and waterproofs rent on site. Free to cancel until 24 hrs before."},
+   {when:"Sep 22, 15:10", what:"Jökulsárlón — Zodiac boat tour", tel:"+354 478 2222",
+    meta:"15:10–16:25. Check in at the ticket office by 14:40 and swap the voucher for tickets. ISK 1000 park parking, paid at the kiosk. Free to cancel 24 hrs out, 50% back inside that, nothing for a no-show; weather cancellations refund in full."},
+   {when:"Sep 24, 18:00", what:"Earth Lagoon Mývatn", tel:null,
+    meta:"Kvika/Signature, doors 18:00–18:30 — show the emailed ticket. Towel, one drink and an Earth Bistro discount included."},
+   {when:"Sep 25, 09:30", what:"Húsavík whales — Gentle Giants GG2", tel:null,
+    meta:"Big Whale Safari &amp; Puffins, 09:30–11:30, pay on arrival. Check in by 08:50 at the Ticket Center, Hafnarstétt 7. RIB: min age 8, min height 130 cm. Free to move or cancel until 24 hrs before."},
+   {when:"Sep 25, 14:00", what:"Saltvík horse ride — The Seaside tour", tel:"+354 847 9515",
+    meta:"14:00–15:30, paid up front. Hestamiðstöðin Saltvík, 4 km south of Húsavík — start is inside the riding hall. Min age 10, 110 kg per rider. info@saltvik.is"},
+   {when:"Sep 28, 10:30", what:"Into the Glacier — Klaki Base Camp", tel:"+354 578 2550",
+    meta:"Drivers 17+ with a licence, passengers 8+. Road 550 is an F-road — confirm your rental allows it, or take the Húsafell departure. Free to cancel until 24 hrs out. info@intotheglacier.is"},
+   {when:"Sep 28, 15:10", what:"Krauma", tel:null,
+    meta:"Capacity is deliberately small — book a slot rather than turning up on spec. Open 11:00–21:00 daily."}
+  ],
+  /* Legend labels describe MARKER RULES (tag: book|soak|opt).
+     These stat numbers are TRIP FACTS from docs/itinerary.md: 5 anchor tours
+     (Katla, the Jökulsárlón Zodiac, the Saltvík horses, the whale watch and Into
+     the Glacier — each a paid timed slot its day is built around) and 4 soak
+     options — Blue Lagoon, Earth Lagoon, Hofsós and Krauma — two of which carry
+     `book` because they are paid, timed tickets:
+     the Blue Lagoon and Earth Lagoon are counted as SOAKS, not tours, so neither
+     inflates the anchor-tour number — that stays the five built-around slots. GeoSea
+     was a soak until the horse ride displaced it; Krauma restored the count when it
+     replaced the Reykjanes tip on day 10. km is the sum of the
+     day km and it is exact — keep it that way.
+     Keep the two vocabularies disjoint. */
+  stats:{km:"~2,250", stops:0, soaks:4, flex:"<b>5</b> anchor tours"}
+};
+TRIP.stats.stops = DAYS.reduce((a,d)=>a+d.stops.length,0);
+
+/* Simplified clockwise coastline (lat, lon) */
+const COAST = [
+ [63.81,-22.71],[63.90,-22.74],[64.04,-22.72],[64.09,-22.66],[64.05,-22.20],[64.10,-21.98],
+ [64.16,-21.86],[64.24,-21.95],[64.32,-22.05],[64.44,-21.95],[64.52,-22.10],[64.60,-22.55],
+ [64.72,-23.10],[64.78,-23.65],[64.90,-24.04],[64.95,-23.55],[64.91,-23.22],[65.02,-22.95],
+ [65.08,-22.72],[65.10,-22.15],[65.30,-22.10],[65.42,-22.85],[65.46,-23.90],[65.50,-24.45],
+ [65.68,-24.10],[65.86,-23.85],[66.06,-23.70],[66.20,-23.20],[66.34,-22.95],[66.45,-22.40],
+ [66.20,-21.85],[65.90,-21.35],[65.55,-21.20],[65.35,-21.05],[65.58,-20.75],[65.62,-20.55],
+ [65.55,-20.35],[65.75,-20.32],[66.02,-20.20],[66.12,-20.05],[65.90,-19.70],[65.68,-19.52],
+ [65.78,-19.38],[65.95,-19.35],[66.13,-19.02],[66.16,-18.85],[65.97,-18.55],[65.70,-18.12],
+ [65.90,-18.15],[66.17,-18.30],[66.10,-17.85],[66.05,-17.35],[66.20,-17.10],[66.10,-16.55],
+ [66.32,-16.48],[66.53,-16.20],[66.45,-15.75],[66.20,-15.40],[66.30,-15.05],[66.38,-14.55],
+ [66.22,-14.90],[66.03,-15.10],[65.77,-14.82],[65.63,-14.15],[65.55,-13.80],[65.30,-13.65],
+ [65.07,-13.52],[64.90,-13.85],[64.74,-14.10],[64.66,-14.30],[64.42,-14.65],[64.28,-14.95],
+ [64.30,-15.35],[64.10,-16.05],[63.88,-16.65],[63.75,-17.10],[63.60,-17.80],[63.47,-18.40],
+ [63.40,-18.80],[63.40,-19.15],[63.46,-19.75],[63.56,-20.35],[63.72,-20.75],[63.80,-21.10],
+ [63.84,-21.45],[63.82,-21.80],[63.86,-22.30]
+];
+const GLACIERS = [
+ [64.42,-16.80,0.85,0.38],[64.68,-20.05,0.30,0.30],[64.80,-18.85,0.27,0.23],
+ [63.65,-19.15,0.25,0.15],[64.80,-23.77,0.09,0.07]
+];
+
+/* ================= MAP ================= */
+const B = {latMin:63.15, latMax:66.75, lonMin:-24.9, lonMax:-13.2};
+const W = 1000, H = Math.round(W * (B.latMax-B.latMin) / ((B.lonMax-B.lonMin)*Math.cos(65*Math.PI/180)));
+const px = ll => [ (ll[1]-B.lonMin)/(B.lonMax-B.lonMin)*W, (B.latMax-ll[0])/(B.latMax-B.latMin)*H ];
+/* CSS var, not a resolved color — keeps the map live across theme flips.
+   Must be assigned via .style.*, never as an SVG presentation attribute:
+   stroke="var(--d3)" is invalid as an attribute and falls back to initial. */
+const dayVar = n => `var(--d${n})`;
+
+function smoothPath(pts, close){
+  if(pts.length<3) return "M"+pts.map(p=>p.join(",")).join("L");
+  const P = close ? [pts[pts.length-1],...pts,pts[0],pts[1]] : [pts[0],...pts,pts[pts.length-1]];
+  let d = "M"+P[1][0]+","+P[1][1];
+  for(let i=1;i<P.length-2;i++){
+    const p0=P[i-1],p1=P[i],p2=P[i+1],p3=P[i+2];
+    const c1=[p1[0]+(p2[0]-p0[0])/6, p1[1]+(p2[1]-p0[1])/6];
+    const c2=[p2[0]-(p3[0]-p1[0])/6, p2[1]-(p3[1]-p1[1])/6];
+    d += "C"+c1[0].toFixed(1)+","+c1[1].toFixed(1)+" "+c2[0].toFixed(1)+","+c2[1].toFixed(1)+" "+p2[0].toFixed(1)+","+p2[1].toFixed(1);
+  }
+  if(close) d+="Z";
+  return d;
+}
+
+const svg = document.getElementById("icemap");
+const NS = "http://www.w3.org/2000/svg";
+const el = (t,attrs)=>{const e=document.createElementNS(NS,t);for(const k in attrs)e.setAttribute(k,attrs[k]);return e};
+
+function buildMapStatic(){
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  svg.appendChild(el("path",{d:smoothPath(COAST.map(px),true),class:"coast"}));
+  GLACIERS.forEach(g=>{
+    const c=px([g[0],g[1]]);
+    svg.appendChild(el("ellipse",{cx:c[0],cy:c[1],rx:g[2]/(B.lonMax-B.lonMin)*W,ry:g[3]/(B.latMax-B.latMin)*H,class:"glacier"}));
+  });
+  const kp = px(KEF);
+  const pulse = el("circle",{cx:kp[0],cy:kp[1],r:9,fill:"none","stroke-width":1.5,class:"startpulse"});
+  pulse.style.stroke = "var(--ember)";
+  svg.appendChild(pulse);
+}
+
+function buildMapDynamic(){
+  const old = document.getElementById("dyn");
+  if(old) old.remove();
+  const dyn = el("g",{id:"dyn"});
+  const routes = el("g",{class:"route"}); dyn.appendChild(routes);
+  DAYS.forEach((d,i)=>{
+    const prev = i===0 ? KEF : DAYS[i-1].baseLL;
+    const pts = [prev, ...d.stops.map(s=>s.ll), d.baseLL].map(px);
+    const p = el("path",{d:smoothPath(pts,false), pathLength:"1", "data-day":d.n});
+    p.style.stroke = dayVar(d.n);
+    p.style.animationDelay = (i*0.12)+"s";
+    routes.appendChild(p);
+  });
+  DAYS.forEach(d=>{
+    const g = el("g",{class:"daylayer","data-day":d.n});
+    d.stops.forEach(s=>{
+      const c = px(s.ll);
+      const grp = el("g",{class:"stop",tabindex:"0",role:"button","aria-label":s.name+", day "+d.n});
+      grp.appendChild(el("circle",{cx:c[0],cy:c[1],r:11,fill:"transparent"}));
+      let fill = dayVar(d.n), stroke="none", sw=0;
+      // amber = a timed booking; the card chip says "Book ahead"
+      if(s.tag==="book"){fill="var(--ember)";}
+      else if(s.tag==="soak"){fill="#59d7e8";}
+      else if(s.tag==="opt"){fill="transparent";stroke=dayVar(d.n);sw=1.6;}
+      const core = el("circle",{cx:c[0],cy:c[1],r:5,"stroke-width":sw,class:"core"});
+      core.style.fill = fill; core.style.stroke = stroke;
+      grp.appendChild(core);
+      grp.addEventListener("pointerenter",e=>showTip(e,s,d));
+      grp.addEventListener("pointermove",moveTip);
+      grp.addEventListener("pointerleave",hideTip);
+      /* Focus mirrors hover: every stop is a tabbable role="button", and without
+         these a keyboard user could reach all 51 and see none of their notes. */
+      grp.addEventListener("focus",e=>showTip(e,s,d));
+      grp.addEventListener("blur",hideTip);
+      grp.addEventListener("click",()=>{selectDay(d.n,true);});
+      grp.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectDay(d.n,true);}});
+      g.appendChild(grp);
+    });
+    const bc = px(d.baseLL);
+    const base = el("g",{class:"base"});
+    const ring = el("circle",{cx:bc[0],cy:bc[1],r:10,class:"ring"});
+    ring.style.stroke = dayVar(d.n);
+    base.appendChild(ring);
+    const t = el("text",{x:bc[0],y:bc[1]+0.5}); t.textContent=d.n; base.appendChild(t);
+    g.appendChild(base);
+    dyn.appendChild(g);
+  });
+  svg.appendChild(dyn);
+}
+
+/* tooltip */
+const tip = document.getElementById("tip"), mapbox = document.getElementById("mapbox");
+function showTip(e,s,d){
+  tip.innerHTML = `<div class="tday" style="color:${dayVar(d.n)}">Day ${d.n} · ${d.dow} ${d.date}${s.time?" · "+s.time:""}</div><div><b>${s.name}</b></div><div class="tnote">${s.note||""}</div>`;
+  tip.style.opacity=1; moveTip(e);
+}
+function moveTip(e){
+  const r = mapbox.getBoundingClientRect();
+  /* A focus event carries no pointer coordinates, so fall back to the middle of
+     whatever took focus — reading e.clientX off it would give NaN. Check against
+     undefined rather than truthiness: clientX is legitimately 0 at the left edge. */
+  let cx = e.clientX, cy = e.clientY;
+  if(cx === undefined || cy === undefined){
+    const b = (e.currentTarget || e.target).getBoundingClientRect();
+    cx = b.left + b.width/2; cy = b.top + b.height/2;
+  }
+  let x = cx - r.left + 14, y = cy - r.top + 14;
+  x = Math.max(8, Math.min(x, r.width - tip.offsetWidth - 10));
+  y = Math.max(8, Math.min(y, r.height - tip.offsetHeight - 10));
+  tip.style.left = x+"px"; tip.style.top = y+"px";
+}
+function hideTip(){ tip.style.opacity=0; }
+
+/* ================= MAP VIEW ================= */
+/* Two views of the same trip. The stylized SVG is the default because it is the
+   one that works with no signal, dims to a single day when you tap the rail, and
+   follows the theme. The real map is a Google My Maps iframe — no API key, no
+   billing — and it is inserted LAZILY and only when navigator.onLine reports a
+   network.
+
+   That gate is not belt-and-braces, it is the only option: sw.js returns without
+   respondWith() for cross-origin, so an iframe that cannot load renders the
+   browser's own error document inside the box, and that failure is undetectable
+   from here — onerror does not fire for a cross-origin frame and onload may fire
+   for the error page. Google's terms also forbid caching tiles, so it cannot be
+   added to SHELL. Insert only when we already know there is a network; never
+   insert and hope to catch the failure.
+
+   To enable it: run `node tools/build-kml.mjs`, import docs/iceland-2026.kml
+   into Google My Maps, share the map, and paste its mid= below. */
+const MYMAP_MID = "1KE0tHQClsFTubMpvcoIlNQT-PjrP84c";
+
+const realmap = document.getElementById("realmap");
+const mapviewBtn = document.getElementById("mapview");
+const legendEl = document.querySelector(".mapwrap .legend");
+const mapnoteEl = document.querySelector(".mapwrap .mapnote");
+
+function realmapNote(html){ realmap.innerHTML = `<p class="rmnote">${html}</p>`; }
+
+/* Builds the frame at most once. Returns false when it could not, so the caller
+   can decide whether that is worth switching views for. */
+function mountRealmap(){
+  if(realmap.querySelector("iframe")) return true;
+  if(!MYMAP_MID){
+    realmapNote("The custom map isn't linked yet. Run <b>node tools/build-kml.mjs</b>, "
+      + "import <b>docs/iceland-2026.kml</b> into Google My Maps, share the map, and paste its "
+      + "<b>mid=</b> into <b>MYMAP_MID</b>. Every stop, base and day leg is already in that file.");
+    return false;
+  }
+  if(!navigator.onLine){
+    realmapNote("No network, so the real map can't load — and a Google map cannot be cached for "
+      + "offline use. The stylized map works without signal, which is exactly what it is for.");
+    return false;
+  }
+  const f = document.createElement("iframe");
+  f.src = "https://www.google.com/maps/d/embed?mid=" + encodeURIComponent(MYMAP_MID);
+  f.title = "Iceland trip — every stop, base and day leg on a Google map";
+  f.loading = "lazy";
+  f.referrerPolicy = "no-referrer-when-downgrade";
+  realmap.innerHTML = "";
+  realmap.appendChild(f);
+  return true;
+}
+
+let mapview = "svg";
+function setMapView(v, save){
+  const wants = v === "real";
+  const real = wants && mountRealmap();      // false when it could not be built
+  mapview = real ? "real" : "svg";
+  mapbox.hidden = real;
+  /* The legend describes SVG marker rules and the mapnote describes the SVG's
+     projection — neither is true of the Google map, so they go with it. */
+  if(legendEl) legendEl.hidden = real;
+  if(mapnoteEl) mapnoteEl.hidden = real;
+  /* Note the asymmetry: the container shows whenever the real map was ASKED for,
+     but the stylized map only hides when it actually mounted. A failed mount puts
+     the explanation beside a working map instead of replacing it — giving up the
+     map that works in order to read why the other one won't load is the wrong
+     trade, and it leaves the button offering "Real map" so moving into signal and
+     tapping again just works. */
+  realmap.hidden = !wants;
+  mapviewBtn.textContent = real ? "Stylized map" : "Real map";
+  mapviewBtn.setAttribute("aria-pressed", String(real));
+  if(save){ try{ localStorage.setItem("iceland26.mapview", mapview); }catch(e){} }
+}
+
+mapviewBtn.addEventListener("click",()=>setMapView(mapview === "real" ? "svg" : "real", true));
+
+/* ================= CARDS + RAIL ================= */
+const cards = document.getElementById("cards");
+const rail = document.getElementById("rail");
+
+const gURL = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const aURL = q => "https://maps.apple.com/?q=" + encodeURIComponent(q);
+const gLL = ll => "https://www.google.com/maps/search/?api=1&query=" + ll[0] + "," + ll[1];
+const aLL = (ll,name) => "https://maps.apple.com/?ll=" + ll[0] + "," + ll[1] + "&q=" + encodeURIComponent(name);
+/* Reference images, not embedded ones. Photographs of these places belong to the
+   people who took them and this page is deployed publicly, so the diamond link
+   opens an image search for the subject rather than reproducing anyone's work —
+   no bytes, nothing to license, and it behaves exactly like the G/A links beside
+   it. Only stops carrying a `shot` get one: the airport and the fuel stop do not
+   need looking at. The query is derived from the name — first segment before a
+   "·", trailing "— tail" dropped — so "Jökulsárlón — Zodiac boat tour" searches
+   for Jökulsárlón. `pq` overrides that where the rule picks the wrong subject. */
+const photoQ = s => s.pq || s.name.split(" · ")[0].split(" — ")[0];
+const pIMG = s => {
+  const q = photoQ(s);
+  return "https://www.google.com/search?tbm=isch&q=" +
+    encodeURIComponent(/iceland/i.test(q) ? q : q + " Iceland");
+};
+const stayG = st => st.q ? gURL(st.q) : gLL(st.ll);
+const stayA = st => st.q ? aURL(st.q) : aLL(st.ll, st.name);
+const hotelQ = (h,base) => h.replace(/^(Alt:|Worth-it mid:|Mid:)\s*/,"").replace(/\s*\(.*?\)/g,"") + " " + base.replace(/\s*\(.*?\)/g,"") + " Iceland";
+
+function chip(tag){
+  if(tag==="book") return '<span class="chip book">Book ahead</span>';
+  if(tag==="soak") return '<span class="chip soak">Soak</span>';
+  if(tag==="opt")  return '<span class="chip opt">Optional</span>';
+  return "";
+}
+
+function stayBox(d){
+  if(d.stay){
+    return `<div class="stay">
+      <span class="eyebrow">Overnight · where this route stays</span>
+      <div style="margin-top:7px"><b>${d.stay.name}</b>${d.arrive?` <span class="arr">check-in ~${d.arrive}</span>`:""}</div>
+      <div class="addr"><a href="${stayG(d.stay)}" target="_blank" rel="noopener">${d.stay.addr}</a><span class="mlinks"><a href="${stayG(d.stay)}" target="_blank" rel="noopener" title="Open in Google Maps">Google Maps</a><a href="${stayA(d.stay)}" target="_blank" rel="noopener" title="Open in Apple Maps">Apple Maps</a></span></div>
+      <div class="cxl">${d.stay.status}</div>
+    </div>`;
+  }
+  return `<div class="stay">
+    <span class="eyebrow">Overnight · budget picks, sleeps 3</span> &nbsp;<b>${d.base}</b>${d.arrive?` <span class="arr">check-in ~${d.arrive}</span>`:""}
+    <div class="hotels">${d.hotels.map(h=>`<a class="hotel" href="${gURL(hotelQ(h,d.base))}" target="_blank" rel="noopener">${h}</a>`).join("")}</div>
+    <div class="maphint">not booked yet — tap a name to open it in Google Maps</div>
+  </div>`;
+}
+
+/* `food` is optional per day and every field inside it is optional too, so a day
+   with only a dinner worth naming renders one row rather than a gap. `extra` is
+   the deliberately-doesn't-fit pick — a place worth knowing about that the
+   run-sheet has no room for, kept visually distinct from the two that do fit. */
+function foodBox(d){
+  if(!d.food) return "";
+  const row = (label, text, cls) => text
+    ? `<div class="frow${cls?" "+cls:""}"><span class="flab">${label}</span><span>${text}</span></div>` : "";
+  /* `fuel` opens the logistics half of the card, so it carries the hairline —
+     but only when something above it actually rendered, or the rule floats. */
+  const ate = !!(d.food.lunch || d.food.dinner || d.food.coffee || d.food.sweet);
+  return `<div class="food">${row("Lunch", d.food.lunch)}${row("Dinner", d.food.dinner)}`
+    + `${row("Coffee", d.food.coffee)}${row("Sweet", d.food.sweet)}`
+    + `${row("Fuel", d.food.fuel, ate ? "fsplit" : "")}${row("Shop", d.food.shop)}${row("Buy", d.food.buy)}`
+    + `${row("Detour", d.food.extra)}</div>`;
+}
+
+/* Shared by the ten day cards and the departure card so both run-sheets render
+   from one place. `ll` is optional: the departure's logistics rows — the fuel
+   stop, the key handover — are times without anywhere to pin, and every stop in
+   DAYS has coordinates, so day cards are unaffected by the branch. */
+function stopList(stops){
+  return `<ul class="stops">
+          ${stops.map(s=>`
+            ${s.drive?`<li class="hop"><span class="stime"></span><span class="vdash"></span><span class="hoptext">drive ${s.drive}</span></li>`:""}
+            <li class="${s.tag==="opt"?"opt":""}">
+              <span class="stime">${s.time||"flex"}</span>
+              <span class="sdot"></span>
+              <div><div class="sname">${s.name}${s.tag?" "+chip(s.tag):""}${s.ll?` <span class="mlinks"><a href="${gLL(s.ll)}" target="_blank" rel="noopener" title="Open in Google Maps">G</a><a href="${aLL(s.ll,s.name)}" target="_blank" rel="noopener" title="Open in Apple Maps">A</a>${s.shot?`<a href="${pIMG(s)}" target="_blank" rel="noopener" title="Reference photos of ${photoQ(s)}">◈</a>`:""}</span>`:""}</div>
+              <div class="snote">${s.note||""}</div>
+              ${s.shot?`<div class="sshot">${s.shot}</div>`:""}</div>
+            </li>`).join("")}
+        </ul>`;
+}
+
+/* The flight home, pushed through the same card as the other ten so it reads the
+   same way. It shows as 11 and carries --d11, but it is still not one of them:
+   no rail pill and no leg on the map, because DEPARTURE is not in DAYS. */
+function buildDeparture(){
+  const host = document.getElementById("depcard");
+  if(!host) return;
+  host.innerHTML = `
+    <details class="day" id="day-11" style="--c:var(--d11)">
+      <summary>
+        <span class="dnum">11</span>
+        <span class="dmeta">
+          <span class="eyebrow">${DEPARTURE.dow} ${DEPARTURE.date} · out ${DEPARTURE.depart} · keys back ${DEPARTURE.keys}</span>
+          <span class="dtitle">${DEPARTURE.title}</span>
+        </span>
+        <span class="dbase">flight <b>${DEPARTURE.flight}</b></span>
+        <span class="chev"></span>
+      </summary>
+      <div class="dbody">
+        <p class="daynote">${DEPARTURE.note}</p>
+        ${stopList(DEPARTURE.stops)}
+      </div>
+    </details>`;
+}
+
+function buildCards(){
+  cards.innerHTML = DAYS.map(d=>`
+    <details class="day" id="day-${d.n}" style="--c:var(--d${d.n})">
+      <summary>
+        <span class="dnum">${String(d.n).padStart(2,"0")}</span>
+        <span class="dmeta">
+          <span class="eyebrow">${d.dow} ${d.date}${d.depart?" · out "+d.depart:""} · ${d.km}</span>
+          <span class="dtitle">${d.title}</span>
+        </span>
+        <span class="dbase">night in <b>${d.base}</b></span>
+        <span class="chev"></span>
+      </summary>
+      <div class="dbody">
+        ${d.note?`<p class="daynote">${d.note}</p>`:""}
+        ${stopList(d.stops)}
+        ${foodBox(d)}
+        ${stayBox(d)}
+      </div>
+    </details>`).join("");
+}
+
+function buildRail(){
+  let html = `<button class="pill all on" data-day="all">All days</button>`;
+  html += DAYS.map(d=>`<button class="pill" data-day="${d.n}" style="--c:var(--d${d.n})"><i></i>${d.n} · ${d.dow} ${d.date.split(" ")[1]}</button>`).join("");
+  rail.innerHTML = html;
+  rail.querySelectorAll(".pill").forEach(p=>{
+    p.addEventListener("click",()=>{
+      const v = p.dataset.day;
+      selectDay(v==="all"?null:Number(v), v!=="all");
+    });
+  });
+}
+
+function buildUpgrades(){
+  document.getElementById("upgrades").innerHTML =
+    TRIP.upgrades.map(u=>`<button class="upg" data-day="${u[1]}">${u[0]}<b>· Day ${u[1]}</b></button>`).join("");
+  document.querySelectorAll(".upg").forEach(b=>b.addEventListener("click",()=>selectDay(Number(b.dataset.day),true)));
+}
+
+function selectDay(n, scroll){
+  document.querySelectorAll("#icemap .daylayer, #icemap .route path").forEach(g=>{
+    const d = Number(g.getAttribute("data-day"));
+    g.classList.toggle("dim", n!==null && d!==n);
+  });
+  rail.querySelectorAll(".pill").forEach(p=>{
+    p.classList.toggle("on", n===null ? p.dataset.day==="all" : Number(p.dataset.day)===n);
+  });
+  if(n!==null){
+    const card = document.getElementById("day-"+n);
+    if(card){ card.open = true; if(scroll) card.scrollIntoView({block:"start",behavior:"smooth"}); }
+  }
+}
+
+/* ================= RESERVATIONS ================= */
+/* Lodging rows are DERIVED from DAYS[].stay — the address and the room notes
+   exist once, on the stay object the day card also renders, so
+   the two can never disagree. Unbooked nights fall out of the same pass and are
+   what the "before you go" list points at. Tours and the car come from
+   TRIP.reservations, because a tour is a stop rather than a night. */
+const resv = document.getElementById("resv");
+function buildReservations(){
+  const rows = [];
+  for(const d of DAYS){
+    const night = `Night ${d.n} · ${d.dow} ${d.date}`;
+    if(d.stay){
+      rows.push({when:night, what:d.stay.name, sub:d.stay.addr, meta:d.stay.status, open:false});
+    }else{
+      rows.push({when:night, what:d.base, sub:null,
+        meta:"Not booked. Budget picks are on the day card — take a refundable rate.", open:true});
+    }
+  }
+  for(const r of TRIP.reservations){
+    rows.push({when:r.when, what:r.what, sub:r.tel||null,
+      meta:r.meta, open:false});
+  }
+  resv.innerHTML = rows.map(r=>`
+    <li${r.open?' class="open"':""}>
+      <span class="rwhen">${r.when}</span>
+      <div class="rbody">
+        <div class="rwhat">${r.what}</div>
+        ${r.sub?`<div class="rsub">${r.sub}</div>`:""}
+        <div class="rmeta">${r.meta}</div>
+      </div>
+    </li>`).join("");
+}
+
+/* ================= RENDER ================= */
+function render(){
+  document.getElementById("plandesc").textContent = TRIP.desc;
+  const s = TRIP.stats;
+  document.getElementById("st-km").textContent = s.km;
+  document.getElementById("st-stops").textContent = s.stops;
+  document.getElementById("st-soak").textContent = s.soaks;
+  document.getElementById("st-flex").innerHTML = s.flex;
+  buildMapDynamic(); buildRail(); buildCards(); buildDeparture(); buildUpgrades(); buildReservations();
+  selectDay(null,false);
+  document.getElementById("day-1").open = true;
+}
+
+/* ================= THEME ================= */
+const themeBtn = document.getElementById("themeToggle");
+function applyTheme(t, save){
+  document.documentElement.dataset.theme = t;
+  if(save){ try{ localStorage.setItem("iceland26.theme", t); }catch(e){} }
+  const next = t==="dark" ? "light" : "dark";
+  themeBtn.textContent = "◐ " + next;
+  themeBtn.setAttribute("aria-label", "Switch to "+next+" theme");
+  const m = document.querySelector('meta[name="theme-color"]');
+  if(m) m.content = t==="dark" ? "#0a1422" : "#f6f9fc";
+}
+themeBtn.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark", true));
+applyTheme(document.documentElement.dataset.theme || "dark", false);
+
+/* ================= LIVE KP (NOAA — vedur.is blocks CORS) ================= */
+async function loadKp(){
+  const box = document.getElementById("kpline");
+  try{
+    const opts = typeof AbortSignal!=="undefined" && AbortSignal.timeout ? {signal:AbortSignal.timeout(8000)} : {};
+    const r = await fetch("https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json", opts);
+    if(!r.ok) throw 0;
+    const rows = (await r.json()).filter(x=>x && typeof x.kp==="number");
+    const obs = rows.filter(x=>x.observed==="observed");
+    const now = obs[obs.length-1];
+    const horizon = Date.now() + 24*3600e3;
+    const ahead = rows.filter(x=>x.observed!=="observed" && +new Date(x.time_tag+"Z")<=horizon);
+    const peak = ahead.length ? Math.max(...ahead.map(x=>x.kp)) : null;
+    if(!now && peak===null) throw 0;
+    const label = k => k>=5?"storm — go outside":k>=4?"active":k>=3?"worth a look":"quiet";
+    box.innerHTML = `live via NOAA · Kp ${now?now.kp.toFixed(1):"–"} now`
+      + (peak!==null?` · 24 h peak ${peak.toFixed(1)} — ${label(peak)}`:"")
+      + ` · clouds: <a href="https://en.vedur.is/weather/forecasts/aurora/" target="_blank" rel="noopener">vedur.is ↗</a>`;
+    box.hidden = false;
+  }catch(e){ /* offline or blocked — the routine above still stands */ }
+}
+
+/* ================= PRINT ================= */
+window.addEventListener("beforeprint",()=>{document.querySelectorAll("details").forEach(d=>{d.dataset.was=d.open?"1":"";d.open=true;});});
+window.addEventListener("afterprint",()=>{document.querySelectorAll("details").forEach(d=>{d.open=d.dataset.was==="1";});});
+
+/* ================= OFFLINE ================= */
+if("serviceWorker" in navigator && (location.protocol==="https:" || ["localhost","127.0.0.1"].includes(location.hostname))){
+  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+
+/* ================= INIT ================= */
+buildMapStatic();
+document.getElementById("resetDay").addEventListener("click",()=>selectDay(null,false));
+/* A saved "real" choice is only honoured if it can actually be honoured — with no
+   network, or with no map linked yet, restoring it would hand you a message where
+   you expected a map. Fall back to the stylized view and don't overwrite the
+   preference, so it comes back when the signal does. */
+let savedView = null;
+try{ savedView = localStorage.getItem("iceland26.mapview"); }catch(e){}
+setMapView(savedView === "real" && MYMAP_MID && navigator.onLine ? "real" : "svg", false);
+render();
+loadKp();
+</script>
+</body>
+</html>
